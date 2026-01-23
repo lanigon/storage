@@ -57,7 +57,7 @@
 				
 				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/les/debug/main.go (0.0%)</option>
 				
-				<option value="file1">github.com/morph-l2/go-ethereum/tests/fuzzers/les/les-fuzzer.go (21.5%)</option>
+				<option value="file1">github.com/morph-l2/go-ethereum/tests/fuzzers/les/les-fuzzer.go (96.6%)</option>
 				
 				</select>
 			</div>
@@ -244,7 +244,7 @@ type fuzzer struct {
         exhausted bool
 }
 
-func newFuzzer(input []byte) *fuzzer <span class="cov0" title="0">{
+func newFuzzer(input []byte) *fuzzer <span class="cov8" title="1">{
         return &amp;fuzzer{
                 chain:     chain,
                 chainLen:  testChainLen,
@@ -260,149 +260,149 @@ func newFuzzer(input []byte) *fuzzer <span class="cov0" title="0">{
         }
 }</span>
 
-func (f *fuzzer) read(size int) []byte <span class="cov0" title="0">{
+func (f *fuzzer) read(size int) []byte <span class="cov8" title="1">{
         out := make([]byte, size)
-        if _, err := f.input.Read(out); err != nil </span><span class="cov0" title="0">{
+        if _, err := f.input.Read(out); err != nil </span><span class="cov8" title="1">{
                 f.exhausted = true
         }</span>
-        <span class="cov0" title="0">return out</span>
+        <span class="cov8" title="1">return out</span>
 }
 
-func (f *fuzzer) randomByte() byte <span class="cov0" title="0">{
+func (f *fuzzer) randomByte() byte <span class="cov8" title="1">{
         d := f.read(1)
         return d[0]
 }</span>
 
-func (f *fuzzer) randomBool() bool <span class="cov0" title="0">{
+func (f *fuzzer) randomBool() bool <span class="cov8" title="1">{
         d := f.read(1)
         return d[0]&amp;1 == 1
 }</span>
 
-func (f *fuzzer) randomInt(max int) int <span class="cov0" title="0">{
+func (f *fuzzer) randomInt(max int) int <span class="cov8" title="1">{
         if max == 0 </span><span class="cov0" title="0">{
                 return 0
         }</span>
-        <span class="cov0" title="0">if max &lt;= 256 </span><span class="cov0" title="0">{
+        <span class="cov8" title="1">if max &lt;= 256 </span><span class="cov8" title="1">{
                 return int(f.randomByte()) % max
         }</span>
-        <span class="cov0" title="0">var a uint16
-        if err := binary.Read(f.input, binary.LittleEndian, &amp;a); err != nil </span><span class="cov0" title="0">{
+        <span class="cov8" title="1">var a uint16
+        if err := binary.Read(f.input, binary.LittleEndian, &amp;a); err != nil </span><span class="cov8" title="1">{
                 f.exhausted = true
         }</span>
-        <span class="cov0" title="0">return int(a % uint16(max))</span>
+        <span class="cov8" title="1">return int(a % uint16(max))</span>
 }
 
-func (f *fuzzer) randomX(max int) uint64 <span class="cov0" title="0">{
+func (f *fuzzer) randomX(max int) uint64 <span class="cov8" title="1">{
         var a uint16
-        if err := binary.Read(f.input, binary.LittleEndian, &amp;a); err != nil </span><span class="cov0" title="0">{
+        if err := binary.Read(f.input, binary.LittleEndian, &amp;a); err != nil </span><span class="cov8" title="1">{
                 f.exhausted = true
         }</span>
-        <span class="cov0" title="0">if a &lt; 0x8000 </span><span class="cov0" title="0">{
+        <span class="cov8" title="1">if a &lt; 0x8000 </span><span class="cov8" title="1">{
                 return uint64(a%uint16(max+1)) - 1
         }</span>
-        <span class="cov0" title="0">return (uint64(1)&lt;&lt;(a%64+1) - 1) &amp; (uint64(a) * 343897772345826595)</span>
+        <span class="cov8" title="1">return (uint64(1)&lt;&lt;(a%64+1) - 1) &amp; (uint64(a) * 343897772345826595)</span>
 }
 
-func (f *fuzzer) randomBlockHash() common.Hash <span class="cov0" title="0">{
+func (f *fuzzer) randomBlockHash() common.Hash <span class="cov8" title="1">{
         h := f.chain.GetCanonicalHash(uint64(f.randomInt(3 * f.chainLen)))
-        if h != (common.Hash{}) </span><span class="cov0" title="0">{
+        if h != (common.Hash{}) </span><span class="cov8" title="1">{
                 return h
         }</span>
-        <span class="cov0" title="0">return common.BytesToHash(f.read(common.HashLength))</span>
+        <span class="cov8" title="1">return common.BytesToHash(f.read(common.HashLength))</span>
 }
 
-func (f *fuzzer) randomAddrHash() []byte <span class="cov0" title="0">{
+func (f *fuzzer) randomAddrHash() []byte <span class="cov8" title="1">{
         i := f.randomInt(3 * len(f.addr))
-        if i &lt; len(f.addr) </span><span class="cov0" title="0">{
+        if i &lt; len(f.addr) </span><span class="cov8" title="1">{
                 return f.addr[i].Bytes()
         }</span>
-        <span class="cov0" title="0">return f.read(common.HashLength)</span>
+        <span class="cov8" title="1">return f.read(common.HashLength)</span>
 }
 
-func (f *fuzzer) randomCHTTrieKey() []byte <span class="cov0" title="0">{
+func (f *fuzzer) randomCHTTrieKey() []byte <span class="cov8" title="1">{
         i := f.randomInt(3 * len(f.chtKeys))
-        if i &lt; len(f.chtKeys) </span><span class="cov0" title="0">{
+        if i &lt; len(f.chtKeys) </span><span class="cov8" title="1">{
                 return f.chtKeys[i]
         }</span>
-        <span class="cov0" title="0">return f.read(8)</span>
+        <span class="cov8" title="1">return f.read(8)</span>
 }
 
-func (f *fuzzer) randomBloomTrieKey() []byte <span class="cov0" title="0">{
+func (f *fuzzer) randomBloomTrieKey() []byte <span class="cov8" title="1">{
         i := f.randomInt(3 * len(f.bloomKeys))
-        if i &lt; len(f.bloomKeys) </span><span class="cov0" title="0">{
+        if i &lt; len(f.bloomKeys) </span><span class="cov8" title="1">{
                 return f.bloomKeys[i]
         }</span>
-        <span class="cov0" title="0">return f.read(10)</span>
+        <span class="cov8" title="1">return f.read(10)</span>
 }
 
-func (f *fuzzer) randomTxHash() common.Hash <span class="cov0" title="0">{
+func (f *fuzzer) randomTxHash() common.Hash <span class="cov8" title="1">{
         i := f.randomInt(3 * len(f.txs))
-        if i &lt; len(f.txs) </span><span class="cov0" title="0">{
+        if i &lt; len(f.txs) </span><span class="cov8" title="1">{
                 return f.txs[i]
         }</span>
-        <span class="cov0" title="0">return common.BytesToHash(f.read(common.HashLength))</span>
+        <span class="cov8" title="1">return common.BytesToHash(f.read(common.HashLength))</span>
 }
 
-func (f *fuzzer) BlockChain() *core.BlockChain <span class="cov0" title="0">{
+func (f *fuzzer) BlockChain() *core.BlockChain <span class="cov8" title="1">{
         return f.chain
 }</span>
 
-func (f *fuzzer) TxPool() *core.TxPool <span class="cov0" title="0">{
+func (f *fuzzer) TxPool() *core.TxPool <span class="cov8" title="1">{
         return f.pool
 }</span>
 
-func (f *fuzzer) ArchiveMode() bool <span class="cov0" title="0">{
+func (f *fuzzer) ArchiveMode() bool <span class="cov8" title="1">{
         return false
 }</span>
 
-func (f *fuzzer) AddTxsSync() bool <span class="cov0" title="0">{
+func (f *fuzzer) AddTxsSync() bool <span class="cov8" title="1">{
         return false
 }</span>
 
-func (f *fuzzer) GetHelperTrie(typ uint, index uint64) *trie.Trie <span class="cov0" title="0">{
-        if typ == 0 </span><span class="cov0" title="0">{
+func (f *fuzzer) GetHelperTrie(typ uint, index uint64) *trie.Trie <span class="cov8" title="1">{
+        if typ == 0 </span><span class="cov8" title="1">{
                 return f.chtTrie
-        }</span> else<span class="cov0" title="0"> if typ == 1 </span><span class="cov0" title="0">{
+        }</span> else<span class="cov8" title="1"> if typ == 1 </span><span class="cov8" title="1">{
                 return f.bloomTrie
         }</span>
-        <span class="cov0" title="0">return nil</span>
+        <span class="cov8" title="1">return nil</span>
 }
 
 type dummyMsg struct {
         data []byte
 }
 
-func (d dummyMsg) Decode(val interface{}) error <span class="cov0" title="0">{
+func (d dummyMsg) Decode(val interface{}) error <span class="cov8" title="1">{
         return rlp.DecodeBytes(d.data, val)
 }</span>
 
-func (f *fuzzer) doFuzz(msgCode uint64, packet interface{}) <span class="cov0" title="0">{
+func (f *fuzzer) doFuzz(msgCode uint64, packet interface{}) <span class="cov8" title="1">{
         enc, err := rlp.EncodeToBytes(packet)
         if err != nil </span><span class="cov0" title="0">{
                 panic(err)</span>
         }
-        <span class="cov0" title="0">version := f.randomInt(3) + 2 // [LES2, LES3, LES4]
+        <span class="cov8" title="1">version := f.randomInt(3) + 2 // [LES2, LES3, LES4]
         peer, closeFn := l.NewFuzzerPeer(version)
         defer closeFn()
         fn, _, _, err := l.Les3[msgCode].Handle(dummyMsg{enc})
         if err != nil </span><span class="cov0" title="0">{
                 panic(err)</span>
         }
-        <span class="cov0" title="0">fn(f, peer, func() bool </span><span class="cov0" title="0">{ return true }</span>)
+        <span class="cov8" title="1">fn(f, peer, func() bool </span><span class="cov8" title="1">{ return true }</span>)
 }
 
-func Fuzz(input []byte) int <span class="cov0" title="0">{
+func Fuzz(input []byte) int <span class="cov8" title="1">{
         // We expect some large inputs
-        if len(input) &lt; 100 </span><span class="cov0" title="0">{
+        if len(input) &lt; 100 </span><span class="cov8" title="1">{
                 return -1
         }</span>
-        <span class="cov0" title="0">f := newFuzzer(input)
+        <span class="cov8" title="1">f := newFuzzer(input)
         if f.exhausted </span><span class="cov0" title="0">{
                 return -1
         }</span>
-        <span class="cov0" title="0">for !f.exhausted </span><span class="cov0" title="0">{
+        <span class="cov8" title="1">for !f.exhausted </span><span class="cov8" title="1">{
                 switch f.randomInt(8) </span>{
-                case 0:<span class="cov0" title="0">
+                case 0:<span class="cov8" title="1">
                         req := &amp;l.GetBlockHeadersPacket{
                                 Query: l.GetBlockHeadersData{
                                         Amount:  f.randomX(l.MaxHeaderFetch + 1),
@@ -410,48 +410,48 @@ func Fuzz(input []byte) int <span class="cov0" title="0">{
                                         Reverse: f.randomBool(),
                                 },
                         }
-                        if f.randomBool() </span><span class="cov0" title="0">{
+                        if f.randomBool() </span><span class="cov8" title="1">{
                                 req.Query.Origin.Hash = f.randomBlockHash()
-                        }</span> else<span class="cov0" title="0"> {
+                        }</span> else<span class="cov8" title="1"> {
                                 req.Query.Origin.Number = uint64(f.randomInt(f.chainLen * 2))
                         }</span>
-                        <span class="cov0" title="0">f.doFuzz(l.GetBlockHeadersMsg, req)</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetBlockHeadersMsg, req)</span>
 
-                case 1:<span class="cov0" title="0">
+                case 1:<span class="cov8" title="1">
                         req := &amp;l.GetBlockBodiesPacket{Hashes: make([]common.Hash, f.randomInt(l.MaxBodyFetch+1))}
-                        for i := range req.Hashes </span><span class="cov0" title="0">{
+                        for i := range req.Hashes </span><span class="cov8" title="1">{
                                 req.Hashes[i] = f.randomBlockHash()
                         }</span>
-                        <span class="cov0" title="0">f.doFuzz(l.GetBlockBodiesMsg, req)</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetBlockBodiesMsg, req)</span>
 
-                case 2:<span class="cov0" title="0">
+                case 2:<span class="cov8" title="1">
                         req := &amp;l.GetCodePacket{Reqs: make([]l.CodeReq, f.randomInt(l.MaxCodeFetch+1))}
-                        for i := range req.Reqs </span><span class="cov0" title="0">{
+                        for i := range req.Reqs </span><span class="cov8" title="1">{
                                 req.Reqs[i] = l.CodeReq{
                                         BHash:  f.randomBlockHash(),
                                         AccKey: f.randomAddrHash(),
                                 }
                         }</span>
-                        <span class="cov0" title="0">f.doFuzz(l.GetCodeMsg, req)</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetCodeMsg, req)</span>
 
-                case 3:<span class="cov0" title="0">
+                case 3:<span class="cov8" title="1">
                         req := &amp;l.GetReceiptsPacket{Hashes: make([]common.Hash, f.randomInt(l.MaxReceiptFetch+1))}
-                        for i := range req.Hashes </span><span class="cov0" title="0">{
+                        for i := range req.Hashes </span><span class="cov8" title="1">{
                                 req.Hashes[i] = f.randomBlockHash()
                         }</span>
-                        <span class="cov0" title="0">f.doFuzz(l.GetReceiptsMsg, req)</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetReceiptsMsg, req)</span>
 
-                case 4:<span class="cov0" title="0">
+                case 4:<span class="cov8" title="1">
                         req := &amp;l.GetProofsPacket{Reqs: make([]l.ProofReq, f.randomInt(l.MaxProofsFetch+1))}
-                        for i := range req.Reqs </span><span class="cov0" title="0">{
-                                if f.randomBool() </span><span class="cov0" title="0">{
+                        for i := range req.Reqs </span><span class="cov8" title="1">{
+                                if f.randomBool() </span><span class="cov8" title="1">{
                                         req.Reqs[i] = l.ProofReq{
                                                 BHash:     f.randomBlockHash(),
                                                 AccKey:    f.randomAddrHash(),
                                                 Key:       f.randomAddrHash(),
                                                 FromLevel: uint(f.randomX(3)),
                                         }
-                                }</span> else<span class="cov0" title="0"> {
+                                }</span> else<span class="cov8" title="1"> {
                                         req.Reqs[i] = l.ProofReq{
                                                 BHash:     f.randomBlockHash(),
                                                 Key:       f.randomAddrHash(),
@@ -459,13 +459,13 @@ func Fuzz(input []byte) int <span class="cov0" title="0">{
                                         }
                                 }</span>
                         }
-                        <span class="cov0" title="0">f.doFuzz(l.GetProofsV2Msg, req)</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetProofsV2Msg, req)</span>
 
-                case 5:<span class="cov0" title="0">
+                case 5:<span class="cov8" title="1">
                         req := &amp;l.GetHelperTrieProofsPacket{Reqs: make([]l.HelperTrieReq, f.randomInt(l.MaxHelperTrieProofsFetch+1))}
-                        for i := range req.Reqs </span><span class="cov0" title="0">{
+                        for i := range req.Reqs </span><span class="cov8" title="1">{
                                 switch f.randomInt(3) </span>{
-                                case 0:<span class="cov0" title="0">
+                                case 0:<span class="cov8" title="1">
                                         // Canonical hash trie
                                         req.Reqs[i] = l.HelperTrieReq{
                                                 Type:      0,
@@ -474,7 +474,7 @@ func Fuzz(input []byte) int <span class="cov0" title="0">{
                                                 FromLevel: uint(f.randomX(3)),
                                                 AuxReq:    uint(2),
                                         }</span>
-                                case 1:<span class="cov0" title="0">
+                                case 1:<span class="cov8" title="1">
                                         // Bloom trie
                                         req.Reqs[i] = l.HelperTrieReq{
                                                 Type:      1,
@@ -483,7 +483,7 @@ func Fuzz(input []byte) int <span class="cov0" title="0">{
                                                 FromLevel: uint(f.randomX(3)),
                                                 AuxReq:    0,
                                         }</span>
-                                default:<span class="cov0" title="0">
+                                default:<span class="cov8" title="1">
                                         // Random trie
                                         req.Reqs[i] = l.HelperTrieReq{
                                                 Type:      2,
@@ -494,32 +494,32 @@ func Fuzz(input []byte) int <span class="cov0" title="0">{
                                         }</span>
                                 }
                         }
-                        <span class="cov0" title="0">f.doFuzz(l.GetHelperTrieProofsMsg, req)</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetHelperTrieProofsMsg, req)</span>
 
-                case 6:<span class="cov0" title="0">
+                case 6:<span class="cov8" title="1">
                         req := &amp;l.SendTxPacket{Txs: make([]*types.Transaction, f.randomInt(l.MaxTxSend+1))}
                         signer := types.HomesteadSigner{}
-                        for i := range req.Txs </span><span class="cov0" title="0">{
+                        for i := range req.Txs </span><span class="cov8" title="1">{
                                 var nonce uint64
-                                if f.randomBool() </span><span class="cov0" title="0">{
+                                if f.randomBool() </span><span class="cov8" title="1">{
                                         nonce = uint64(f.randomByte())
-                                }</span> else<span class="cov0" title="0"> {
+                                }</span> else<span class="cov8" title="1"> {
                                         nonce = f.nonce
                                         f.nonce += 1
                                 }</span>
-                                <span class="cov0" title="0">req.Txs[i], _ = types.SignTx(types.NewTransaction(nonce, common.Address{}, big.NewInt(10000), params.TxGas, big.NewInt(1000000000*int64(f.randomByte())), nil), signer, bankKey)</span>
+                                <span class="cov8" title="1">req.Txs[i], _ = types.SignTx(types.NewTransaction(nonce, common.Address{}, big.NewInt(10000), params.TxGas, big.NewInt(1000000000*int64(f.randomByte())), nil), signer, bankKey)</span>
                         }
-                        <span class="cov0" title="0">f.doFuzz(l.SendTxV2Msg, req)</span>
+                        <span class="cov8" title="1">f.doFuzz(l.SendTxV2Msg, req)</span>
 
-                case 7:<span class="cov0" title="0">
+                case 7:<span class="cov8" title="1">
                         req := &amp;l.GetTxStatusPacket{Hashes: make([]common.Hash, f.randomInt(l.MaxTxStatus+1))}
-                        for i := range req.Hashes </span><span class="cov0" title="0">{
+                        for i := range req.Hashes </span><span class="cov8" title="1">{
                                 req.Hashes[i] = f.randomTxHash()
                         }</span>
-                        <span class="cov0" title="0">f.doFuzz(l.GetTxStatusMsg, req)</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetTxStatusMsg, req)</span>
                 }
         }
-        <span class="cov0" title="0">return 0</span>
+        <span class="cov8" title="1">return 0</span>
 }
 </pre>
 		

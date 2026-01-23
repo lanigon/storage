@@ -55,7 +55,7 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/vflux/clientpool-fuzzer.go (86.6%)</option>
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/vflux/clientpool-fuzzer.go (94.9%)</option>
 				
 				<option value="file1">github.com/morph-l2/go-ethereum/tests/fuzzers/vflux/debug/main.go (0.0%)</option>
 				
@@ -225,8 +225,8 @@ func (f *fuzzer) randomTokenAmount(signed bool) int64 <span class="cov8" title="
         x := uint64(f.randomInt(65000))
         x = x * x * x * x
 
-        if signed &amp;&amp; (x&amp;1) == 1 </span><span class="cov0" title="0">{
-                if x &lt;= math.MaxInt64 </span><span class="cov0" title="0">{
+        if signed &amp;&amp; (x&amp;1) == 1 </span><span class="cov8" title="1">{
+                if x &lt;= math.MaxInt64 </span><span class="cov8" title="1">{
                         return -int64(x)
                 }</span>
                 <span class="cov0" title="0">return math.MinInt64</span>
@@ -270,17 +270,17 @@ func (f *fuzzer) connectedBalanceOp(balance vfs.ConnectedBalance, id enode.ID) <
         }
 }
 
-func (f *fuzzer) atomicBalanceOp(balance vfs.AtomicBalanceOperator, id enode.ID) <span class="cov0" title="0">{
+func (f *fuzzer) atomicBalanceOp(balance vfs.AtomicBalanceOperator, id enode.ID) <span class="cov8" title="1">{
         switch f.randomInt(3) </span>{
-        case 0:<span class="cov0" title="0">
+        case 0:<span class="cov8" title="1">
                 amount := f.randomTokenAmount(true)
                 balance.AddBalance(amount)
                 doLog("Add balance", "id", id, "amount", amount)</span>
-        case 1:<span class="cov0" title="0">
+        case 1:<span class="cov8" title="1">
                 pos, neg := uint64(f.randomTokenAmount(false)), uint64(f.randomTokenAmount(false))
                 balance.SetBalance(pos, neg)
                 doLog("Set balance", "id", id, "pos", pos, "neg", neg)</span>
-        case 2:<span class="cov0" title="0">
+        case 2:<span class="cov8" title="1">
                 balance.GetBalance()
                 balance.GetRawBalance()
                 balance.GetPriceFactors()</span>
@@ -353,7 +353,7 @@ func FuzzClientPool(input []byte) int <span class="cov8" title="1">{
                         index := f.randomByte()
                         pool.BalanceOperation(f.peers[index].node.ID(), f.peers[index].freeID, func(balance vfs.AtomicBalanceOperator) </span><span class="cov8" title="1">{
                                 count := f.randomInt(4)
-                                for i := 0; i &lt; count; i++ </span><span class="cov0" title="0">{
+                                for i := 0; i &lt; count; i++ </span><span class="cov8" title="1">{
                                         f.atomicBalanceOp(balance, f.peers[index].node.ID())
                                 }</span>
                         })
