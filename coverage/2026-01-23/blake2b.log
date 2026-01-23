@@ -19,13 +19,13 @@
 === RUN   TestSelfTest
 --- PASS: TestSelfTest (0.00s)
 === RUN   FuzzBlake2bF
+=== RUN   FuzzBlake2bF/00e14c6ef59816760e2c9b5a57157e8ac9de4012
 === RUN   FuzzBlake2bF/172afb391f7df21dbf98faa4ae7047f2d97072d5
 === RUN   FuzzBlake2bF/3d12146922fe85ebedd71ab28f2f3edc1d9bf5d3
+=== RUN   FuzzBlake2bF/42f8d35809af74356146ed23cff8c8b02157a846
 === RUN   FuzzBlake2bF/52e67205fa022befc742874857f69219a1f3e8bb
 === RUN   FuzzBlake2bF/5ed8ad5660b24aef5e426b6bce9286ad1efd0327
 === RUN   FuzzBlake2bF/632e902d3877ebd1548aca510203b19ee0dd18f3
-=== RUN   FuzzBlake2bF/73ff191e97d05a2027a6d40faf1895e70ce41750
-=== RUN   FuzzBlake2bF/7550454e8a1125d63cfdb1b6ff0954701256387b
 === RUN   FuzzBlake2bF/76b356ef270ed590d7bfa4f58a08fe46daf366b4
 === RUN   FuzzBlake2bF/7d98818a305120c960d518ea4207fcea557e330f
 === RUN   FuzzBlake2bF/85e53271e14006f0265921d02d4d736cdc580b0b
@@ -35,13 +35,13 @@
 === RUN   FuzzBlake2bF/e51e49ac8fb8eae2bc28dafc329b0fab53972ee5
 === RUN   FuzzBlake2bF/f79092b73be02f8aad0117d585be05d46834a08f
 --- PASS: FuzzBlake2bF (0.00s)
+    --- PASS: FuzzBlake2bF/00e14c6ef59816760e2c9b5a57157e8ac9de4012 (0.00s)
     --- PASS: FuzzBlake2bF/172afb391f7df21dbf98faa4ae7047f2d97072d5 (0.00s)
     --- PASS: FuzzBlake2bF/3d12146922fe85ebedd71ab28f2f3edc1d9bf5d3 (0.00s)
+    --- PASS: FuzzBlake2bF/42f8d35809af74356146ed23cff8c8b02157a846 (0.00s)
     --- PASS: FuzzBlake2bF/52e67205fa022befc742874857f69219a1f3e8bb (0.00s)
     --- PASS: FuzzBlake2bF/5ed8ad5660b24aef5e426b6bce9286ad1efd0327 (0.00s)
     --- PASS: FuzzBlake2bF/632e902d3877ebd1548aca510203b19ee0dd18f3 (0.00s)
-    --- PASS: FuzzBlake2bF/73ff191e97d05a2027a6d40faf1895e70ce41750 (0.00s)
-    --- PASS: FuzzBlake2bF/7550454e8a1125d63cfdb1b6ff0954701256387b (0.00s)
     --- PASS: FuzzBlake2bF/76b356ef270ed590d7bfa4f58a08fe46daf366b4 (0.00s)
     --- PASS: FuzzBlake2bF/7d98818a305120c960d518ea4207fcea557e330f (0.00s)
     --- PASS: FuzzBlake2bF/85e53271e14006f0265921d02d4d736cdc580b0b (0.00s)

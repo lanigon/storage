@@ -28,11 +28,9 @@
 === RUN   FuzzABI/116dae93246c0b9abffa451fb916d609c86c1dd2
 === RUN   FuzzABI/11a29f31ef0a3515438cbb8a4ccb0a12bdc71a2b
 === RUN   FuzzABI/1206e44be7bfc456c45f060a07e20cb160f05b05
-=== RUN   FuzzABI/1243dfc8a88043bede5915dc1ea39f957f883f1a
 === RUN   FuzzABI/12f3697b46a6149358e0d7a6e50804966a133628
 === RUN   FuzzABI/1348630327ddd7e21f79914c5a1d5af4c634ff7d
 === RUN   FuzzABI/13ba59d60fc20a79c8136edef25584201f7e2fbf
-=== RUN   FuzzABI/14242db5003f5acea15b04d7bbbb086cb63430ce
 === RUN   FuzzABI/1490c320db0419ecb3869e91ecce0d5cdaeba6eb
 === RUN   FuzzABI/154e3a032b7168a00fe5aa59c84570ee2b518c5e
 === RUN   FuzzABI/15cb9b74fea38291a66f1909d8de382ea034b53d
@@ -43,7 +41,6 @@
 === RUN   FuzzABI/18863e20e8c890ddbe088e117baa6300a2a95da4
 === RUN   FuzzABI/18b0b71b9e74a01bdda0fd63031eb3463f4164b0
 === RUN   FuzzABI/1c30f06fac13891f9ba63bfc4d37bc84a7ac8c1d
-=== RUN   FuzzABI/1d13aa24483d9d69722cbe72b04d85813c166631
 === RUN   FuzzABI/1d69a2066ab7d129dc71fbd91a02f8e487629ec7
 === RUN   FuzzABI/201527576d1631d42fcd10a88f46c9e03996bc57
 === RUN   FuzzABI/21bfcd0ef421b6b8e632639b4023a876cd15b9cd
@@ -61,7 +58,6 @@
 === RUN   FuzzABI/287aca65626097af284a45c9beec9b4d5ca3c2ac
 === RUN   FuzzABI/28a90c788c2129e682a01ed3f7090e358b2f485b
 === RUN   FuzzABI/29667cfa25dab6d415391c9898b778ab175d54a8
-=== RUN   FuzzABI/2a325dc51b843e9c5e165f1277b028c586bb3788
 === RUN   FuzzABI/2a855ca1c6ddfc4745cb2a6ad4d114a8c3bbaeb3
 === RUN   FuzzABI/2b1f8767e4433258978c62b715aa453ecf070699
 === RUN   FuzzABI/2c90d2641714df6ca51ca7d5a652089a99c79dab
@@ -273,7 +269,7 @@
 === RUN   FuzzABI/fd21c6f47170c77e39c66935ca06a75987080467
 === RUN   FuzzABI/fdf9102b8c53924213ca410871d8668d6bb02819
 === RUN   FuzzABI/ffc2fe3aca7b2e7955e23149dd62ae05c4fa6658
---- PASS: FuzzABI (0.07s)
+--- PASS: FuzzABI (0.06s)
     --- PASS: FuzzABI/002bc0f955dbe539309d6cfb26be5cdf431326f6 (0.00s)
     --- PASS: FuzzABI/004dfe8ccf4644b1f01908e17cbe9677f67c30db (0.00s)
     --- PASS: FuzzABI/01fdf29681da493ee7f18038d9a4a41194cdb853 (0.00s)
@@ -299,11 +295,9 @@
     --- PASS: FuzzABI/116dae93246c0b9abffa451fb916d609c86c1dd2 (0.00s)
     --- PASS: FuzzABI/11a29f31ef0a3515438cbb8a4ccb0a12bdc71a2b (0.00s)
     --- PASS: FuzzABI/1206e44be7bfc456c45f060a07e20cb160f05b05 (0.00s)
-    --- PASS: FuzzABI/1243dfc8a88043bede5915dc1ea39f957f883f1a (0.00s)
     --- PASS: FuzzABI/12f3697b46a6149358e0d7a6e50804966a133628 (0.00s)
     --- PASS: FuzzABI/1348630327ddd7e21f79914c5a1d5af4c634ff7d (0.00s)
     --- PASS: FuzzABI/13ba59d60fc20a79c8136edef25584201f7e2fbf (0.00s)
-    --- PASS: FuzzABI/14242db5003f5acea15b04d7bbbb086cb63430ce (0.00s)
     --- PASS: FuzzABI/1490c320db0419ecb3869e91ecce0d5cdaeba6eb (0.00s)
     --- PASS: FuzzABI/154e3a032b7168a00fe5aa59c84570ee2b518c5e (0.00s)
     --- PASS: FuzzABI/15cb9b74fea38291a66f1909d8de382ea034b53d (0.00s)
@@ -314,7 +308,6 @@
     --- PASS: FuzzABI/18863e20e8c890ddbe088e117baa6300a2a95da4 (0.00s)
     --- PASS: FuzzABI/18b0b71b9e74a01bdda0fd63031eb3463f4164b0 (0.00s)
     --- PASS: FuzzABI/1c30f06fac13891f9ba63bfc4d37bc84a7ac8c1d (0.00s)
-    --- PASS: FuzzABI/1d13aa24483d9d69722cbe72b04d85813c166631 (0.00s)
     --- PASS: FuzzABI/1d69a2066ab7d129dc71fbd91a02f8e487629ec7 (0.00s)
     --- PASS: FuzzABI/201527576d1631d42fcd10a88f46c9e03996bc57 (0.00s)
     --- PASS: FuzzABI/21bfcd0ef421b6b8e632639b4023a876cd15b9cd (0.00s)
@@ -332,7 +325,6 @@
     --- PASS: FuzzABI/287aca65626097af284a45c9beec9b4d5ca3c2ac (0.00s)
     --- PASS: FuzzABI/28a90c788c2129e682a01ed3f7090e358b2f485b (0.00s)
     --- PASS: FuzzABI/29667cfa25dab6d415391c9898b778ab175d54a8 (0.00s)
-    --- PASS: FuzzABI/2a325dc51b843e9c5e165f1277b028c586bb3788 (0.00s)
     --- PASS: FuzzABI/2a855ca1c6ddfc4745cb2a6ad4d114a8c3bbaeb3 (0.00s)
     --- PASS: FuzzABI/2b1f8767e4433258978c62b715aa453ecf070699 (0.00s)
     --- PASS: FuzzABI/2c90d2641714df6ca51ca7d5a652089a99c79dab (0.00s)
@@ -546,4 +538,4 @@
     --- PASS: FuzzABI/ffc2fe3aca7b2e7955e23149dd62ae05c4fa6658 (0.00s)
 PASS
 coverage: 83.3% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/abi	0.081s	coverage: 83.3% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/abi	0.079s	coverage: 83.3% of statements
