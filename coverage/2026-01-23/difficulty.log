@@ -1,17 +1,3 @@
-go: downloading github.com/deckarep/golang-set v1.8.0
-go: downloading github.com/edsrzf/mmap-go v1.0.0
-go: downloading github.com/hashicorp/golang-lru v0.5.5-0.20210104140557-80c98217689d
-go: downloading github.com/gorilla/websocket v1.4.2
-go: downloading github.com/VictoriaMetrics/fastcache v1.12.1
-go: downloading github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
-go: downloading github.com/golang/snappy v0.0.5-0.20220116011046-fa5810519dcb
-go: downloading github.com/olekukonko/tablewriter v0.0.5
-go: downloading github.com/prometheus/tsdb v0.7.1
-go: downloading github.com/holiman/bloomfilter/v2 v2.0.3
-go: downloading github.com/mattn/go-runewidth v0.0.13
-go: downloading github.com/rivo/uniseg v0.2.0
-go: downloading github.com/cespare/xxhash/v2 v2.2.0
-go: downloading github.com/pkg/errors v0.9.1
 === RUN   FuzzDifficulty
 === RUN   FuzzDifficulty/01404d6c08aa47e3588b578562fc239b04c769e9
 === RUN   FuzzDifficulty/0267d155f502eb4b4384519496c5456633e24b2a
@@ -27,7 +13,6 @@ go: downloading github.com/pkg/errors v0.9.1
 === RUN   FuzzDifficulty/14ff58ea947b7c4acd87b45e90ca0509db8e354a
 === RUN   FuzzDifficulty/17ee136b888d5c51c8b77b7abc30a64f186d8897
 === RUN   FuzzDifficulty/19ebe4e9f010971bfe557bc46e75d4cf7580cc11
-=== RUN   FuzzDifficulty/1b8325e549ecdf2e3499b1a8c9ab60ced30c43ea
 === RUN   FuzzDifficulty/1d04e1f88861134073e086130734d96fe1c65651
 === RUN   FuzzDifficulty/1d44ee65607b99bdd5e88fdfb7359dc7e5032288
 === RUN   FuzzDifficulty/1e5e677e89ec82aa1b594ac544a7dc254bc55442
@@ -49,7 +34,6 @@ go: downloading github.com/pkg/errors v0.9.1
 === RUN   FuzzDifficulty/4d4fd69201701035e87b6c1c2c1316171ce4cb1c
 === RUN   FuzzDifficulty/526bcce852fcc146bae513d274f560f47283a0da
 === RUN   FuzzDifficulty/5407175877958de89f0fafe9ef3227b92cdaf50b
-=== RUN   FuzzDifficulty/55d8284e954ed9b52708c0e55a656ff4afd180e5
 === RUN   FuzzDifficulty/581f4c3fb69ab8ac93fc758c23190ae353431218
 === RUN   FuzzDifficulty/5f6a8265cad2c240d0caff33a25e361a416f4fcc
 === RUN   FuzzDifficulty/5fb1014f24420f0b27ecafb7fed2f51faab2ce2c
@@ -59,7 +43,6 @@ go: downloading github.com/pkg/errors v0.9.1
 === RUN   FuzzDifficulty/73ef28e18afe5cd245fe8cb8e737b55640ae22ef
 === RUN   FuzzDifficulty/752f1131cac9eaf3a6af9c311d65b98a01916ccb
 === RUN   FuzzDifficulty/7a663f1f2a74f151d034a4a204c0f153cd97ecaf
-=== RUN   FuzzDifficulty/7a86324bd542e2b51477312e3e366c8abd741571
 === RUN   FuzzDifficulty/7ad2835827d4a3fc24ea3ee71614cbd161dff58a
 === RUN   FuzzDifficulty/812b4dc91d247627ef6ee439c360248045fd8845
 === RUN   FuzzDifficulty/832b59b606a2aca8bb4d9338caae1845f5c79453
@@ -88,7 +71,6 @@ go: downloading github.com/pkg/errors v0.9.1
 === RUN   FuzzDifficulty/c572a845c3c2d0eecc55b37b0eb4b6c291329456
 === RUN   FuzzDifficulty/c8abcf0f72e5dba1a17790dcbb07fba857f73482
 === RUN   FuzzDifficulty/cec0c20ac7eaef5fed8c16b97dffde70511964a6
-=== RUN   FuzzDifficulty/d4d9e66472fbd0b56b0dbf4acbbd36178dcd4785
 === RUN   FuzzDifficulty/d7feb391604375721a528fc9ceb2d33ef7fffdd0
 === RUN   FuzzDifficulty/dbec0c5243cb2a93ea115f98eb21e60f58270f44
 === RUN   FuzzDifficulty/dc900a886d4b65e1919982b79a4ce3a5bd1fcd53
@@ -115,7 +97,6 @@ go: downloading github.com/pkg/errors v0.9.1
     --- PASS: FuzzDifficulty/14ff58ea947b7c4acd87b45e90ca0509db8e354a (0.00s)
     --- PASS: FuzzDifficulty/17ee136b888d5c51c8b77b7abc30a64f186d8897 (0.00s)
     --- PASS: FuzzDifficulty/19ebe4e9f010971bfe557bc46e75d4cf7580cc11 (0.00s)
-    --- PASS: FuzzDifficulty/1b8325e549ecdf2e3499b1a8c9ab60ced30c43ea (0.00s)
     --- PASS: FuzzDifficulty/1d04e1f88861134073e086130734d96fe1c65651 (0.00s)
     --- PASS: FuzzDifficulty/1d44ee65607b99bdd5e88fdfb7359dc7e5032288 (0.00s)
     --- PASS: FuzzDifficulty/1e5e677e89ec82aa1b594ac544a7dc254bc55442 (0.00s)
@@ -137,7 +118,6 @@ go: downloading github.com/pkg/errors v0.9.1
     --- PASS: FuzzDifficulty/4d4fd69201701035e87b6c1c2c1316171ce4cb1c (0.00s)
     --- PASS: FuzzDifficulty/526bcce852fcc146bae513d274f560f47283a0da (0.00s)
     --- PASS: FuzzDifficulty/5407175877958de89f0fafe9ef3227b92cdaf50b (0.00s)
-    --- PASS: FuzzDifficulty/55d8284e954ed9b52708c0e55a656ff4afd180e5 (0.00s)
     --- PASS: FuzzDifficulty/581f4c3fb69ab8ac93fc758c23190ae353431218 (0.00s)
     --- PASS: FuzzDifficulty/5f6a8265cad2c240d0caff33a25e361a416f4fcc (0.00s)
     --- PASS: FuzzDifficulty/5fb1014f24420f0b27ecafb7fed2f51faab2ce2c (0.00s)
@@ -147,7 +127,6 @@ go: downloading github.com/pkg/errors v0.9.1
     --- PASS: FuzzDifficulty/73ef28e18afe5cd245fe8cb8e737b55640ae22ef (0.00s)
     --- PASS: FuzzDifficulty/752f1131cac9eaf3a6af9c311d65b98a01916ccb (0.00s)
     --- PASS: FuzzDifficulty/7a663f1f2a74f151d034a4a204c0f153cd97ecaf (0.00s)
-    --- PASS: FuzzDifficulty/7a86324bd542e2b51477312e3e366c8abd741571 (0.00s)
     --- PASS: FuzzDifficulty/7ad2835827d4a3fc24ea3ee71614cbd161dff58a (0.00s)
     --- PASS: FuzzDifficulty/812b4dc91d247627ef6ee439c360248045fd8845 (0.00s)
     --- PASS: FuzzDifficulty/832b59b606a2aca8bb4d9338caae1845f5c79453 (0.00s)
@@ -176,7 +155,6 @@ go: downloading github.com/pkg/errors v0.9.1
     --- PASS: FuzzDifficulty/c572a845c3c2d0eecc55b37b0eb4b6c291329456 (0.00s)
     --- PASS: FuzzDifficulty/c8abcf0f72e5dba1a17790dcbb07fba857f73482 (0.00s)
     --- PASS: FuzzDifficulty/cec0c20ac7eaef5fed8c16b97dffde70511964a6 (0.00s)
-    --- PASS: FuzzDifficulty/d4d9e66472fbd0b56b0dbf4acbbd36178dcd4785 (0.00s)
     --- PASS: FuzzDifficulty/d7feb391604375721a528fc9ceb2d33ef7fffdd0 (0.00s)
     --- PASS: FuzzDifficulty/dbec0c5243cb2a93ea115f98eb21e60f58270f44 (0.00s)
     --- PASS: FuzzDifficulty/dc900a886d4b65e1919982b79a4ce3a5bd1fcd53 (0.00s)

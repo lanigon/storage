@@ -1,13 +1,9 @@
-go: downloading github.com/btcsuite/btcd/btcec/v2 v2.2.0
-go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
 === RUN   TestFuzzer
 --- PASS: TestFuzzer (0.01s)
 === RUN   FuzzSecp256k1
 === RUN   FuzzSecp256k1/00e43ceb4f522fcdaface0d4eb74c51f7c486299
-=== RUN   FuzzSecp256k1/0335a77a15f7cafb7ab3c02613379fc15041bd8e
 === RUN   FuzzSecp256k1/09ad6ba1c52813b2edfd11c88f89d311e9c2d905
 === RUN   FuzzSecp256k1/09e4b9957490582c61894d81e5a0dff10890cba2
-=== RUN   FuzzSecp256k1/0e96ff7a1bf50c16cf81cced003fbca6fae4bc83
 === RUN   FuzzSecp256k1/0eeac3a50ba6596d83fff4754fa982d375b16474
 === RUN   FuzzSecp256k1/11cb5652db9eadf4027a34f4c6126028e95fda73
 === RUN   FuzzSecp256k1/121fcd1efe5e34a6f57a86f899d4d4cba1183467
@@ -16,7 +12,6 @@ go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
 === RUN   FuzzSecp256k1/1b7764926b2be4eb6727697ec1fff3319c7dec3f
 === RUN   FuzzSecp256k1/226c196d06079bf5b2080582c6580f64797e694d
 === RUN   FuzzSecp256k1/24bb97e74ff208ac3ba2e8aa75269e13f0ffc7c2
-=== RUN   FuzzSecp256k1/258b16c6117add13b035a88b23589e6632784c98
 === RUN   FuzzSecp256k1/27b3762f59b68f35f771cb39aca76394a69227ad
 === RUN   FuzzSecp256k1/29195def3253e66deb7700102dce54310e09c68c
 === RUN   FuzzSecp256k1/2bc77a4f58b84657413b7f5327dbf5fe429d282b
@@ -35,7 +30,6 @@ go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
 === RUN   FuzzSecp256k1/57453d83bbc114fa3585a2c779116fd4c496d89f
 === RUN   FuzzSecp256k1/5a68ca33e1ae8ad844315847c7f96a6101a1b32f
 === RUN   FuzzSecp256k1/5c4b9c407937b44090bc19ab1cd7e16e213c7f5a
-=== RUN   FuzzSecp256k1/672b6df45893ee30772567a5229641b8689f5bc2
 === RUN   FuzzSecp256k1/6c2c7fee427d98206dce790a660a9ae9db671504
 === RUN   FuzzSecp256k1/6fb846c7a76dd52318f08929661e0ad7da305b85
 === RUN   FuzzSecp256k1/7259088c8936546e80cfaefdf949e19b2d1d667b
@@ -60,10 +54,8 @@ go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
 === RUN   FuzzSecp256k1/c351e9e38ba9214ff22b141fef2d571071667a56
 === RUN   FuzzSecp256k1/c5a6ee9025dd73b97a9d4fc496c22bb28bf85d38
 === RUN   FuzzSecp256k1/c9de6d35af194bdec7d7f75d64458f95e49b5b6b
-=== RUN   FuzzSecp256k1/ca67509eeed7800bec1bbc99edef8d092638407e
 === RUN   FuzzSecp256k1/cc38bb4fdf29ec18b3c6dc963710d9ab13966a3f
 === RUN   FuzzSecp256k1/cd8eca1eeabd90beb1485feafc8a0b7d6a69e2ab
-=== RUN   FuzzSecp256k1/e246d7a5c1facbe0c9840b30078db1c07b0dcb74
 === RUN   FuzzSecp256k1/e2af11f6a0e1bc6da84b070f93ac2412d9e4ab28
 === RUN   FuzzSecp256k1/e51fc08717f72a31691d87515f55ee08d5901a37
 === RUN   FuzzSecp256k1/ed049a49d35729f513ebcb0b0ea900ec8b2e0c12
@@ -73,14 +65,11 @@ go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
 === RUN   FuzzSecp256k1/f32f3f0361087a8b028c1f79f072fd39f4c2ace9
 === RUN   FuzzSecp256k1/f43b238bd3fba686752495b864842ee34ca48188
 === RUN   FuzzSecp256k1/f831e330bda3ecb2b25da50454cb08cb64a0ae08
-=== RUN   FuzzSecp256k1/fbe6a86ae2282dc11724be6e24c1e520f4822037
 === RUN   FuzzSecp256k1/ff3bbe16153ac5cf44c042e10258ecb3d4470034
 --- PASS: FuzzSecp256k1 (0.01s)
     --- PASS: FuzzSecp256k1/00e43ceb4f522fcdaface0d4eb74c51f7c486299 (0.00s)
-    --- PASS: FuzzSecp256k1/0335a77a15f7cafb7ab3c02613379fc15041bd8e (0.00s)
     --- PASS: FuzzSecp256k1/09ad6ba1c52813b2edfd11c88f89d311e9c2d905 (0.00s)
     --- PASS: FuzzSecp256k1/09e4b9957490582c61894d81e5a0dff10890cba2 (0.00s)
-    --- PASS: FuzzSecp256k1/0e96ff7a1bf50c16cf81cced003fbca6fae4bc83 (0.00s)
     --- PASS: FuzzSecp256k1/0eeac3a50ba6596d83fff4754fa982d375b16474 (0.00s)
     --- PASS: FuzzSecp256k1/11cb5652db9eadf4027a34f4c6126028e95fda73 (0.00s)
     --- PASS: FuzzSecp256k1/121fcd1efe5e34a6f57a86f899d4d4cba1183467 (0.00s)
@@ -89,7 +78,6 @@ go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
     --- PASS: FuzzSecp256k1/1b7764926b2be4eb6727697ec1fff3319c7dec3f (0.00s)
     --- PASS: FuzzSecp256k1/226c196d06079bf5b2080582c6580f64797e694d (0.00s)
     --- PASS: FuzzSecp256k1/24bb97e74ff208ac3ba2e8aa75269e13f0ffc7c2 (0.00s)
-    --- PASS: FuzzSecp256k1/258b16c6117add13b035a88b23589e6632784c98 (0.00s)
     --- PASS: FuzzSecp256k1/27b3762f59b68f35f771cb39aca76394a69227ad (0.00s)
     --- PASS: FuzzSecp256k1/29195def3253e66deb7700102dce54310e09c68c (0.00s)
     --- PASS: FuzzSecp256k1/2bc77a4f58b84657413b7f5327dbf5fe429d282b (0.00s)
@@ -108,7 +96,6 @@ go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
     --- PASS: FuzzSecp256k1/57453d83bbc114fa3585a2c779116fd4c496d89f (0.00s)
     --- PASS: FuzzSecp256k1/5a68ca33e1ae8ad844315847c7f96a6101a1b32f (0.00s)
     --- PASS: FuzzSecp256k1/5c4b9c407937b44090bc19ab1cd7e16e213c7f5a (0.00s)
-    --- PASS: FuzzSecp256k1/672b6df45893ee30772567a5229641b8689f5bc2 (0.00s)
     --- PASS: FuzzSecp256k1/6c2c7fee427d98206dce790a660a9ae9db671504 (0.00s)
     --- PASS: FuzzSecp256k1/6fb846c7a76dd52318f08929661e0ad7da305b85 (0.00s)
     --- PASS: FuzzSecp256k1/7259088c8936546e80cfaefdf949e19b2d1d667b (0.00s)
@@ -133,10 +120,8 @@ go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
     --- PASS: FuzzSecp256k1/c351e9e38ba9214ff22b141fef2d571071667a56 (0.00s)
     --- PASS: FuzzSecp256k1/c5a6ee9025dd73b97a9d4fc496c22bb28bf85d38 (0.00s)
     --- PASS: FuzzSecp256k1/c9de6d35af194bdec7d7f75d64458f95e49b5b6b (0.00s)
-    --- PASS: FuzzSecp256k1/ca67509eeed7800bec1bbc99edef8d092638407e (0.00s)
     --- PASS: FuzzSecp256k1/cc38bb4fdf29ec18b3c6dc963710d9ab13966a3f (0.00s)
     --- PASS: FuzzSecp256k1/cd8eca1eeabd90beb1485feafc8a0b7d6a69e2ab (0.00s)
-    --- PASS: FuzzSecp256k1/e246d7a5c1facbe0c9840b30078db1c07b0dcb74 (0.00s)
     --- PASS: FuzzSecp256k1/e2af11f6a0e1bc6da84b070f93ac2412d9e4ab28 (0.00s)
     --- PASS: FuzzSecp256k1/e51fc08717f72a31691d87515f55ee08d5901a37 (0.00s)
     --- PASS: FuzzSecp256k1/ed049a49d35729f513ebcb0b0ea900ec8b2e0c12 (0.00s)
@@ -146,8 +131,7 @@ go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
     --- PASS: FuzzSecp256k1/f32f3f0361087a8b028c1f79f072fd39f4c2ace9 (0.00s)
     --- PASS: FuzzSecp256k1/f43b238bd3fba686752495b864842ee34ca48188 (0.00s)
     --- PASS: FuzzSecp256k1/f831e330bda3ecb2b25da50454cb08cb64a0ae08 (0.00s)
-    --- PASS: FuzzSecp256k1/fbe6a86ae2282dc11724be6e24c1e520f4822037 (0.00s)
     --- PASS: FuzzSecp256k1/ff3bbe16153ac5cf44c042e10258ecb3d4470034 (0.00s)
 PASS
 coverage: 81.8% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/secp256k1	0.035s	coverage: 81.8% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/secp256k1	0.036s	coverage: 81.8% of statements

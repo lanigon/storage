@@ -20,7 +20,6 @@
 === RUN   FuzzBitutil/510160ff52d543f8a1975a8d1bad4103373c1cc2
 === RUN   FuzzBitutil/565a0aeb47d374340911d5755488d5b0f92b6522
 === RUN   FuzzBitutil/57f96f6b709776002a1f0107f0158140f5638aab
-=== RUN   FuzzBitutil/5d5e8b6aa310563003adc557cc774e5eaf135118
 === RUN   FuzzBitutil/65cf15f98b8378879698164bf301dfbc4937a079
 === RUN   FuzzBitutil/7ca5ad780cb43610fe3231a251f8d3d0184afa35
 === RUN   FuzzBitutil/7dfa139c88a4fa7c5144a7ffae752122a518070d
@@ -72,7 +71,6 @@
     --- PASS: FuzzBitutil/510160ff52d543f8a1975a8d1bad4103373c1cc2 (0.00s)
     --- PASS: FuzzBitutil/565a0aeb47d374340911d5755488d5b0f92b6522 (0.00s)
     --- PASS: FuzzBitutil/57f96f6b709776002a1f0107f0158140f5638aab (0.00s)
-    --- PASS: FuzzBitutil/5d5e8b6aa310563003adc557cc774e5eaf135118 (0.00s)
     --- PASS: FuzzBitutil/65cf15f98b8378879698164bf301dfbc4937a079 (0.00s)
     --- PASS: FuzzBitutil/7ca5ad780cb43610fe3231a251f8d3d0184afa35 (0.00s)
     --- PASS: FuzzBitutil/7dfa139c88a4fa7c5144a7ffae752122a518070d (0.00s)
@@ -104,4 +102,4 @@
     --- PASS: FuzzBitutil/f5b3ce0594bb66c954950b7494f2675f39669cc7 (0.00s)
 PASS
 coverage: 47.6% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/bitutil	0.005s	coverage: 47.6% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/bitutil	0.004s	coverage: 47.6% of statements

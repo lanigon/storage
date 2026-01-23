@@ -1,11 +1,3 @@
-go: downloading github.com/google/gofuzz v1.2.0
-go: downloading golang.org/x/crypto v0.35.0
-go: downloading github.com/holiman/uint256 v1.2.4
-go: downloading github.com/shirou/gopsutil v3.21.4-0.20210419000835-c7a38de76ee5+incompatible
-go: downloading golang.org/x/sys v0.30.0
-go: downloading github.com/go-stack/stack v1.8.1
-go: downloading github.com/tklauser/go-sysconf v0.3.12
-go: downloading github.com/tklauser/numcpus v0.6.1
 === RUN   TestReplicate
 --- PASS: TestReplicate (0.00s)
 === RUN   TestGenerateCorpus
@@ -27,17 +19,14 @@ go: downloading github.com/tklauser/numcpus v0.6.1
 === RUN   FuzzABI/1633c551a59f54443924329691fcab7dac03a37b
 === RUN   FuzzABI/178639fd9fc68ee82e70883294237374c696d73b
 === RUN   FuzzABI/1b4c8851733ef42dea261ff36ff7546a64552e87
-=== RUN   FuzzABI/1beb59719136a5bf50c2077cb9b6ab0609fbe9b3
 === RUN   FuzzABI/1d69a2066ab7d129dc71fbd91a02f8e487629ec7
 === RUN   FuzzABI/26fc7906870c20913a2744724b926acce3e89542
 === RUN   FuzzABI/281eed319cc07da641688af8f0220d980e037756
 === RUN   FuzzABI/28a90c788c2129e682a01ed3f7090e358b2f485b
 === RUN   FuzzABI/29667cfa25dab6d415391c9898b778ab175d54a8
 === RUN   FuzzABI/2a855ca1c6ddfc4745cb2a6ad4d114a8c3bbaeb3
-=== RUN   FuzzABI/2ac90c36d705231523f09b6adc4b5f8af8212942
 === RUN   FuzzABI/2d12ca43d4d39bdf42be9df7df3b30decc3dece6
 === RUN   FuzzABI/300b3e9bb7fd23c9fe69bac8c711c4421ccf0cc7
-=== RUN   FuzzABI/300c66344522c00924acc7624bae8f967f3f0b31
 === RUN   FuzzABI/32ee6c8e5c09a2a49ef0693db74dcd844417b86b
 === RUN   FuzzABI/331cc10375aafdc8f7984fb55185120b42628ff1
 === RUN   FuzzABI/35b9d378e681cf8be8ca8a0f5f8aa5b6ffc90004
@@ -68,9 +57,7 @@ go: downloading github.com/tklauser/numcpus v0.6.1
 === RUN   FuzzABI/6d064613d8e27fd37dda699e91326280e4b32e5a
 === RUN   FuzzABI/6e40a7553bf741ec2f0d6974e8f8d77b21c96415
 === RUN   FuzzABI/71853c6197a6a7f222db0f1978c7cb232b87c5ee
-=== RUN   FuzzABI/723da82eb926792af4c03b73994483949a92ac86
 === RUN   FuzzABI/72a3a9f0ca16791890951f48b0db0558bb7f9faa
-=== RUN   FuzzABI/72b23d70c01c75c87bf201dd0bfd791cfecf9cff
 === RUN   FuzzABI/731273a8cf5123600055b349b945ec9a5f93d0b9
 === RUN   FuzzABI/7343e8ce5e94171487b069d146a7425b49940d5f
 === RUN   FuzzABI/736a6afa6b2593681c414af984b95fb0be7dbbc9
@@ -81,7 +68,6 @@ go: downloading github.com/tklauser/numcpus v0.6.1
 === RUN   FuzzABI/791b63677e972d0d9eb32b695e111f26febcccb9
 === RUN   FuzzABI/79bb43f09b7fbfca25d83446bafde3edfb9a5c4d
 === RUN   FuzzABI/7a77defba8c5e01a6477ae35f8e385077f4e9f24
-=== RUN   FuzzABI/7e3c86620579eeaedfb0a900ef0a22762c8c5816
 === RUN   FuzzABI/7e3fdb813396833862ff219f13aff07b44384f64
 === RUN   FuzzABI/7e610fadcce52bc43156f4c9f13f271557db6e32
 === RUN   FuzzABI/80eb4eea9d8b9f53d19d3df16385eb9c4e9d1c9c
@@ -103,12 +89,10 @@ go: downloading github.com/tklauser/numcpus v0.6.1
 === RUN   FuzzABI/a48ed34266a5815f9071579b4ef7f42324712723
 === RUN   FuzzABI/a6c08ff8c85fe8ae0107543476faac1fc9796a1c
 === RUN   FuzzABI/a767fddc7b70045449c30f5bd0761221ca741587
-=== RUN   FuzzABI/aad21cd665999f9ffd90eeb4a72acf84ca26ecd3
 === RUN   FuzzABI/ab71c8154fcffbc0c9c45af5b2c236cebdd8455e
 === RUN   FuzzABI/ac200fc8c882a22ef4b5827e0f0e902ac23e9d19
 === RUN   FuzzABI/adb1a02b2a698969929fd4fbe9108244941d25dd
 === RUN   FuzzABI/b260cacb8cbbbc0df1690f5208eaee67cca827e4
-=== RUN   FuzzABI/b30febf0d4319a566deef978e6e476ae18801ca9
 === RUN   FuzzABI/b394092fd97b225a5b5a4492d33395768ab6279f
 === RUN   FuzzABI/b3c256c51fd1036c8f0c4bf7384408246fb98122
 === RUN   FuzzABI/b4286c24f730383fcc83f41ba81df8efe78a95da
@@ -118,8 +102,6 @@ go: downloading github.com/tklauser/numcpus v0.6.1
 === RUN   FuzzABI/c63b6723d8f26a4cbec065b7e2406e46d1ddd7a1
 === RUN   FuzzABI/c63d63cea82c01c23b35ea996444a489bdbf1176
 === RUN   FuzzABI/c80713fa3c452210aec945b10da26f7f692fecaf
-=== RUN   FuzzABI/c96bf7d8deba5bd0909e3db381693ebb3bd0e04a
-=== RUN   FuzzABI/cb6a66af88f4abb621805e43f2d628c789448586
 === RUN   FuzzABI/ccdbd9cbd9f391c2cec3beb2bb87886de1cc6d93
 === RUN   FuzzABI/ce27cc53c53b0f13ab66fe6efeec97460d2e9139
 === RUN   FuzzABI/d5fd5b26e009a5586b6a5a4cab4d980a435608c3
@@ -159,17 +141,14 @@ go: downloading github.com/tklauser/numcpus v0.6.1
     --- PASS: FuzzABI/1633c551a59f54443924329691fcab7dac03a37b (0.00s)
     --- PASS: FuzzABI/178639fd9fc68ee82e70883294237374c696d73b (0.00s)
     --- PASS: FuzzABI/1b4c8851733ef42dea261ff36ff7546a64552e87 (0.00s)
-    --- PASS: FuzzABI/1beb59719136a5bf50c2077cb9b6ab0609fbe9b3 (0.00s)
     --- PASS: FuzzABI/1d69a2066ab7d129dc71fbd91a02f8e487629ec7 (0.00s)
     --- PASS: FuzzABI/26fc7906870c20913a2744724b926acce3e89542 (0.00s)
     --- PASS: FuzzABI/281eed319cc07da641688af8f0220d980e037756 (0.00s)
     --- PASS: FuzzABI/28a90c788c2129e682a01ed3f7090e358b2f485b (0.00s)
     --- PASS: FuzzABI/29667cfa25dab6d415391c9898b778ab175d54a8 (0.00s)
     --- PASS: FuzzABI/2a855ca1c6ddfc4745cb2a6ad4d114a8c3bbaeb3 (0.00s)
-    --- PASS: FuzzABI/2ac90c36d705231523f09b6adc4b5f8af8212942 (0.00s)
     --- PASS: FuzzABI/2d12ca43d4d39bdf42be9df7df3b30decc3dece6 (0.00s)
     --- PASS: FuzzABI/300b3e9bb7fd23c9fe69bac8c711c4421ccf0cc7 (0.00s)
-    --- PASS: FuzzABI/300c66344522c00924acc7624bae8f967f3f0b31 (0.00s)
     --- PASS: FuzzABI/32ee6c8e5c09a2a49ef0693db74dcd844417b86b (0.00s)
     --- PASS: FuzzABI/331cc10375aafdc8f7984fb55185120b42628ff1 (0.00s)
     --- PASS: FuzzABI/35b9d378e681cf8be8ca8a0f5f8aa5b6ffc90004 (0.00s)
@@ -200,9 +179,7 @@ go: downloading github.com/tklauser/numcpus v0.6.1
     --- PASS: FuzzABI/6d064613d8e27fd37dda699e91326280e4b32e5a (0.00s)
     --- PASS: FuzzABI/6e40a7553bf741ec2f0d6974e8f8d77b21c96415 (0.00s)
     --- PASS: FuzzABI/71853c6197a6a7f222db0f1978c7cb232b87c5ee (0.00s)
-    --- PASS: FuzzABI/723da82eb926792af4c03b73994483949a92ac86 (0.00s)
     --- PASS: FuzzABI/72a3a9f0ca16791890951f48b0db0558bb7f9faa (0.00s)
-    --- PASS: FuzzABI/72b23d70c01c75c87bf201dd0bfd791cfecf9cff (0.00s)
     --- PASS: FuzzABI/731273a8cf5123600055b349b945ec9a5f93d0b9 (0.00s)
     --- PASS: FuzzABI/7343e8ce5e94171487b069d146a7425b49940d5f (0.00s)
     --- PASS: FuzzABI/736a6afa6b2593681c414af984b95fb0be7dbbc9 (0.00s)
@@ -213,7 +190,6 @@ go: downloading github.com/tklauser/numcpus v0.6.1
     --- PASS: FuzzABI/791b63677e972d0d9eb32b695e111f26febcccb9 (0.00s)
     --- PASS: FuzzABI/79bb43f09b7fbfca25d83446bafde3edfb9a5c4d (0.00s)
     --- PASS: FuzzABI/7a77defba8c5e01a6477ae35f8e385077f4e9f24 (0.00s)
-    --- PASS: FuzzABI/7e3c86620579eeaedfb0a900ef0a22762c8c5816 (0.00s)
     --- PASS: FuzzABI/7e3fdb813396833862ff219f13aff07b44384f64 (0.00s)
     --- PASS: FuzzABI/7e610fadcce52bc43156f4c9f13f271557db6e32 (0.00s)
     --- PASS: FuzzABI/80eb4eea9d8b9f53d19d3df16385eb9c4e9d1c9c (0.00s)
@@ -235,12 +211,10 @@ go: downloading github.com/tklauser/numcpus v0.6.1
     --- PASS: FuzzABI/a48ed34266a5815f9071579b4ef7f42324712723 (0.00s)
     --- PASS: FuzzABI/a6c08ff8c85fe8ae0107543476faac1fc9796a1c (0.00s)
     --- PASS: FuzzABI/a767fddc7b70045449c30f5bd0761221ca741587 (0.00s)
-    --- PASS: FuzzABI/aad21cd665999f9ffd90eeb4a72acf84ca26ecd3 (0.00s)
     --- PASS: FuzzABI/ab71c8154fcffbc0c9c45af5b2c236cebdd8455e (0.00s)
     --- PASS: FuzzABI/ac200fc8c882a22ef4b5827e0f0e902ac23e9d19 (0.00s)
     --- PASS: FuzzABI/adb1a02b2a698969929fd4fbe9108244941d25dd (0.00s)
     --- PASS: FuzzABI/b260cacb8cbbbc0df1690f5208eaee67cca827e4 (0.00s)
-    --- PASS: FuzzABI/b30febf0d4319a566deef978e6e476ae18801ca9 (0.00s)
     --- PASS: FuzzABI/b394092fd97b225a5b5a4492d33395768ab6279f (0.00s)
     --- PASS: FuzzABI/b3c256c51fd1036c8f0c4bf7384408246fb98122 (0.00s)
     --- PASS: FuzzABI/b4286c24f730383fcc83f41ba81df8efe78a95da (0.00s)
@@ -250,8 +224,6 @@ go: downloading github.com/tklauser/numcpus v0.6.1
     --- PASS: FuzzABI/c63b6723d8f26a4cbec065b7e2406e46d1ddd7a1 (0.00s)
     --- PASS: FuzzABI/c63d63cea82c01c23b35ea996444a489bdbf1176 (0.00s)
     --- PASS: FuzzABI/c80713fa3c452210aec945b10da26f7f692fecaf (0.00s)
-    --- PASS: FuzzABI/c96bf7d8deba5bd0909e3db381693ebb3bd0e04a (0.00s)
-    --- PASS: FuzzABI/cb6a66af88f4abb621805e43f2d628c789448586 (0.00s)
     --- PASS: FuzzABI/ccdbd9cbd9f391c2cec3beb2bb87886de1cc6d93 (0.00s)
     --- PASS: FuzzABI/ce27cc53c53b0f13ab66fe6efeec97460d2e9139 (0.00s)
     --- PASS: FuzzABI/d5fd5b26e009a5586b6a5a4cab4d980a435608c3 (0.00s)
@@ -276,4 +248,4 @@ go: downloading github.com/tklauser/numcpus v0.6.1
     --- PASS: FuzzABI/ffe7a09f801867140bda51cb100bacc9aa551cb5 (0.00s)
 PASS
 coverage: 83.3% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/abi	0.043s	coverage: 83.3% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/abi	0.042s	coverage: 83.3% of statements

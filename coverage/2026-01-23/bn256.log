@@ -1,13 +1,12 @@
-go: downloading github.com/ethereum/go-ethereum v1.10.26
 === RUN   TestFuzzPair
     bn256_fuzz_test.go:23: 1000 iterations passed
---- PASS: TestFuzzPair (15.23s)
+--- PASS: TestFuzzPair (15.37s)
 === RUN   TestFuzzAdd
     bn256_fuzz_test.go:40: 1000 iterations passed
 --- PASS: TestFuzzAdd (0.23s)
 === RUN   TestFuzzMul
     bn256_fuzz_test.go:57: 1000 iterations passed
---- PASS: TestFuzzMul (0.18s)
+--- PASS: TestFuzzMul (0.17s)
 === RUN   FuzzBn256Add
 === RUN   FuzzBn256Add/07981c73ffeca0ba772cf3316e5be885b1457be9
 === RUN   FuzzBn256Add/0865791b1a77833d6b8471948d8f3fea48a7dea7
@@ -50,14 +49,12 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
 === RUN   FuzzBn256Add/6ec00dea805bd7e37751b665ee04615d78e64cce
 === RUN   FuzzBn256Add/713df58e788bf337cd6f46f4b9c32f0137ad9903
 === RUN   FuzzBn256Add/753330e12cdd243a130f7cdf767ea724c0e82d0e
-=== RUN   FuzzBn256Add/7795c8fc695ec4f24534ff455aaec7f111d2e94c
 === RUN   FuzzBn256Add/77b0e49f9d2cf293a2dede8bc78b5bba36c54aa9
 === RUN   FuzzBn256Add/7af968c47dbd47ea8ff1b8a187610247486476d4
 === RUN   FuzzBn256Add/7b4b9c17c9152c2b93612f9f8d916c1749d5d8af
 === RUN   FuzzBn256Add/7e15bb5c01e7dd56499e37c634cf791d3a519aee
 === RUN   FuzzBn256Add/7f2a93b9c310c830f0358e3d09f7aad9e356ebb2
 === RUN   FuzzBn256Add/800c049d1810bfc30cf811a1176b99ddf30fdbc2
-=== RUN   FuzzBn256Add/896460372f19914cce815e127aac3c77d27f6556
 === RUN   FuzzBn256Add/8c47b1d16a63742701004baeb0594d90b92401c6
 === RUN   FuzzBn256Add/8c92d1b96e1beed86c83b4d6f1d04f16b40ac003
 === RUN   FuzzBn256Add/8edcf62a8addc7aaa053762d219ba3346aa80136
@@ -85,7 +82,6 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
 === RUN   FuzzBn256Add/b4b68008c7e5d169734883fa44053ed586c884a0
 === RUN   FuzzBn256Add/b77305e8c9f65785f0eedc5e6414bf4991b885a6
 === RUN   FuzzBn256Add/b9c4668a765acbba79706244fb8b6e0f3c6e0633
-=== RUN   FuzzBn256Add/bbf916c309c03447e5b4ea8f2d2452bc690f8f49
 === RUN   FuzzBn256Add/bdb9207a98a75d6915115bc67ee34807b06e195c
 === RUN   FuzzBn256Add/c11897e30b974ac764b057a8047e50999a8f8cfd
 === RUN   FuzzBn256Add/c1c0e2f479ac78414a57dbb8c7658703021dea2d
@@ -95,7 +91,6 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
 === RUN   FuzzBn256Add/d46060a9175eff642e1e0f101e92880275065a13
 === RUN   FuzzBn256Add/df2b61a20ab12a744f4b5a432ad1f5ea26c08335
 === RUN   FuzzBn256Add/e2dfa1425565e154c4b4028657e5bbb74c738455
-=== RUN   FuzzBn256Add/e6414e3a7c2b7068d7525e6b7f0d23d749dad519
 === RUN   FuzzBn256Add/e9a716f56a960561dada6a0b9369b88e8086bbca
 === RUN   FuzzBn256Add/ed251d5a283424507ceb812912b4e03ba9c435ee
 === RUN   FuzzBn256Add/eebbfa33df5979bdaff88de9e27df5e428369041
@@ -151,14 +146,12 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Add/6ec00dea805bd7e37751b665ee04615d78e64cce (0.00s)
     --- PASS: FuzzBn256Add/713df58e788bf337cd6f46f4b9c32f0137ad9903 (0.00s)
     --- PASS: FuzzBn256Add/753330e12cdd243a130f7cdf767ea724c0e82d0e (0.00s)
-    --- PASS: FuzzBn256Add/7795c8fc695ec4f24534ff455aaec7f111d2e94c (0.00s)
     --- PASS: FuzzBn256Add/77b0e49f9d2cf293a2dede8bc78b5bba36c54aa9 (0.00s)
     --- PASS: FuzzBn256Add/7af968c47dbd47ea8ff1b8a187610247486476d4 (0.00s)
     --- PASS: FuzzBn256Add/7b4b9c17c9152c2b93612f9f8d916c1749d5d8af (0.00s)
     --- PASS: FuzzBn256Add/7e15bb5c01e7dd56499e37c634cf791d3a519aee (0.00s)
     --- PASS: FuzzBn256Add/7f2a93b9c310c830f0358e3d09f7aad9e356ebb2 (0.00s)
     --- PASS: FuzzBn256Add/800c049d1810bfc30cf811a1176b99ddf30fdbc2 (0.00s)
-    --- PASS: FuzzBn256Add/896460372f19914cce815e127aac3c77d27f6556 (0.00s)
     --- PASS: FuzzBn256Add/8c47b1d16a63742701004baeb0594d90b92401c6 (0.00s)
     --- PASS: FuzzBn256Add/8c92d1b96e1beed86c83b4d6f1d04f16b40ac003 (0.00s)
     --- PASS: FuzzBn256Add/8edcf62a8addc7aaa053762d219ba3346aa80136 (0.00s)
@@ -186,7 +179,6 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Add/b4b68008c7e5d169734883fa44053ed586c884a0 (0.00s)
     --- PASS: FuzzBn256Add/b77305e8c9f65785f0eedc5e6414bf4991b885a6 (0.00s)
     --- PASS: FuzzBn256Add/b9c4668a765acbba79706244fb8b6e0f3c6e0633 (0.00s)
-    --- PASS: FuzzBn256Add/bbf916c309c03447e5b4ea8f2d2452bc690f8f49 (0.00s)
     --- PASS: FuzzBn256Add/bdb9207a98a75d6915115bc67ee34807b06e195c (0.00s)
     --- PASS: FuzzBn256Add/c11897e30b974ac764b057a8047e50999a8f8cfd (0.00s)
     --- PASS: FuzzBn256Add/c1c0e2f479ac78414a57dbb8c7658703021dea2d (0.00s)
@@ -196,7 +188,6 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Add/d46060a9175eff642e1e0f101e92880275065a13 (0.00s)
     --- PASS: FuzzBn256Add/df2b61a20ab12a744f4b5a432ad1f5ea26c08335 (0.00s)
     --- PASS: FuzzBn256Add/e2dfa1425565e154c4b4028657e5bbb74c738455 (0.00s)
-    --- PASS: FuzzBn256Add/e6414e3a7c2b7068d7525e6b7f0d23d749dad519 (0.00s)
     --- PASS: FuzzBn256Add/e9a716f56a960561dada6a0b9369b88e8086bbca (0.00s)
     --- PASS: FuzzBn256Add/ed251d5a283424507ceb812912b4e03ba9c435ee (0.00s)
     --- PASS: FuzzBn256Add/eebbfa33df5979bdaff88de9e27df5e428369041 (0.00s)
@@ -253,9 +244,7 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
 === RUN   FuzzBn256Mul/5a84c60f4ce727242de37daa8c321002a3477e5b
 === RUN   FuzzBn256Mul/5ac441cf52c65a7ae31daad9f916538665ec5c79
 === RUN   FuzzBn256Mul/5c3d748672cf98cc4bee89a9aeece5c4ac0a422d
-=== RUN   FuzzBn256Mul/65012a8ff0b8832adb2d336e313487214a269536
 === RUN   FuzzBn256Mul/6b40628983c32c26cb5a49b44ed13894ec6ec1be
-=== RUN   FuzzBn256Mul/6dc974740b19cbe1995826c409abf9a4110bba1f
 === RUN   FuzzBn256Mul/741312ca551607299e8fdbc1df257b5d060b9156
 === RUN   FuzzBn256Mul/7450b7f8f76c4df9da21b64422188d642de2fb8d
 === RUN   FuzzBn256Mul/75b04183d0ce5904c6bc0ecdccc1b90158de1b2f
@@ -287,7 +276,6 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
 === RUN   FuzzBn256Mul/9fc1b7cafb3a86373741b2aa97fd179c887c891e
 === RUN   FuzzBn256Mul/a0a7fbe677e1997271d2fecc0a09bbca4b0f9e92
 === RUN   FuzzBn256Mul/a0a98a08794803f73fe5559dfd58647b4f920c7e
-=== RUN   FuzzBn256Mul/a490668f7370d1ad20fc9b678480340102f77620
 === RUN   FuzzBn256Mul/a4f3e2e7ffecd7e342fdb6612fbbb32ebad95820
 === RUN   FuzzBn256Mul/a59c8cfd2e764fd906baa245b92f0275f4de3719
 === RUN   FuzzBn256Mul/aace2715ab6e74bddfd4bad648899706dd24f2c7
@@ -314,7 +302,6 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
 === RUN   FuzzBn256Mul/d18a69ef4d813d8e3ffb09a7cd541a20bf56186f
 === RUN   FuzzBn256Mul/d22692978f6a670b571e097ba15bf7e382955fee
 === RUN   FuzzBn256Mul/d3cbfcdf0dfda31240cf5f84ca934aa89ee666d9
-=== RUN   FuzzBn256Mul/d4a1870716df59a92fd6188dd9841207975b1e5a
 === RUN   FuzzBn256Mul/d5922dfa4809d559fc48c67aa9544b625d72c74f
 === RUN   FuzzBn256Mul/d89aab55ad36e7744361bf2091e2a273e9da6b63
 === RUN   FuzzBn256Mul/dc4dcaf3f8af0aa2742bdc432c0c53aca6565aae
@@ -326,7 +313,6 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
 === RUN   FuzzBn256Mul/e5262dab3e5a015c819aee9542ce0e4e25c4b3ad
 === RUN   FuzzBn256Mul/e57b9098cc066eec5f179a5ff75906c7b279d37b
 === RUN   FuzzBn256Mul/e5fbade6afbae3d99656f4f5d9cb3297e91bf078
-=== RUN   FuzzBn256Mul/e88f9991f370717ce1c3b071231546202f1dc43e
 === RUN   FuzzBn256Mul/e9e6f0d9f8ce4957718be8b0311a97de4c343ec2
 === RUN   FuzzBn256Mul/ead794d9d7f87690b3a20236bc8b18535fd0a979
 === RUN   FuzzBn256Mul/ed03301aa7bfc5d36ced17f6df1febca7da6ab03
@@ -380,9 +366,7 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Mul/5a84c60f4ce727242de37daa8c321002a3477e5b (0.00s)
     --- PASS: FuzzBn256Mul/5ac441cf52c65a7ae31daad9f916538665ec5c79 (0.00s)
     --- PASS: FuzzBn256Mul/5c3d748672cf98cc4bee89a9aeece5c4ac0a422d (0.00s)
-    --- PASS: FuzzBn256Mul/65012a8ff0b8832adb2d336e313487214a269536 (0.00s)
     --- PASS: FuzzBn256Mul/6b40628983c32c26cb5a49b44ed13894ec6ec1be (0.00s)
-    --- PASS: FuzzBn256Mul/6dc974740b19cbe1995826c409abf9a4110bba1f (0.00s)
     --- PASS: FuzzBn256Mul/741312ca551607299e8fdbc1df257b5d060b9156 (0.00s)
     --- PASS: FuzzBn256Mul/7450b7f8f76c4df9da21b64422188d642de2fb8d (0.00s)
     --- PASS: FuzzBn256Mul/75b04183d0ce5904c6bc0ecdccc1b90158de1b2f (0.00s)
@@ -392,7 +376,7 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Mul/795ecbdde1e4110ff8e0289bc601d38f4b78cf6f (0.00s)
     --- PASS: FuzzBn256Mul/7ad03b9c2554f9c14d3d6b06a52e41cb47765257 (0.00s)
     --- PASS: FuzzBn256Mul/7b83ff7d98dacac4856acf1d97bf089401f61d49 (0.00s)
-    --- PASS: FuzzBn256Mul/7ba4fce69e064133252fa53466a53fb5b79145e8 (0.00s)
+    --- PASS: FuzzBn256Mul/7ba4fce69e064133252fa53466a53fb5b79145e8 (0.01s)
     --- PASS: FuzzBn256Mul/7c308fb4d95bfb81c2450ddeee9db9191d483e98 (0.00s)
     --- PASS: FuzzBn256Mul/7c90ce0de36397d933f4a14c1878811925f282f7 (0.00s)
     --- PASS: FuzzBn256Mul/7e6c1452a1dd688659f7649df3de4f8ff3eb3e13 (0.00s)
@@ -414,7 +398,6 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Mul/9fc1b7cafb3a86373741b2aa97fd179c887c891e (0.00s)
     --- PASS: FuzzBn256Mul/a0a7fbe677e1997271d2fecc0a09bbca4b0f9e92 (0.00s)
     --- PASS: FuzzBn256Mul/a0a98a08794803f73fe5559dfd58647b4f920c7e (0.00s)
-    --- PASS: FuzzBn256Mul/a490668f7370d1ad20fc9b678480340102f77620 (0.00s)
     --- PASS: FuzzBn256Mul/a4f3e2e7ffecd7e342fdb6612fbbb32ebad95820 (0.00s)
     --- PASS: FuzzBn256Mul/a59c8cfd2e764fd906baa245b92f0275f4de3719 (0.00s)
     --- PASS: FuzzBn256Mul/aace2715ab6e74bddfd4bad648899706dd24f2c7 (0.00s)
@@ -441,19 +424,17 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Mul/d18a69ef4d813d8e3ffb09a7cd541a20bf56186f (0.00s)
     --- PASS: FuzzBn256Mul/d22692978f6a670b571e097ba15bf7e382955fee (0.00s)
     --- PASS: FuzzBn256Mul/d3cbfcdf0dfda31240cf5f84ca934aa89ee666d9 (0.00s)
-    --- PASS: FuzzBn256Mul/d4a1870716df59a92fd6188dd9841207975b1e5a (0.00s)
     --- PASS: FuzzBn256Mul/d5922dfa4809d559fc48c67aa9544b625d72c74f (0.00s)
     --- PASS: FuzzBn256Mul/d89aab55ad36e7744361bf2091e2a273e9da6b63 (0.00s)
     --- PASS: FuzzBn256Mul/dc4dcaf3f8af0aa2742bdc432c0c53aca6565aae (0.00s)
     --- PASS: FuzzBn256Mul/dc84fae731e67a6562b09e3387c326705c2caa59 (0.00s)
-    --- PASS: FuzzBn256Mul/de9272722661f946a460af820dc9f02a07ba9f51 (0.00s)
+    --- PASS: FuzzBn256Mul/de9272722661f946a460af820dc9f02a07ba9f51 (0.01s)
     --- PASS: FuzzBn256Mul/e088bb604ba844ed5c33f8422d682473c6c67a9c (0.00s)
     --- PASS: FuzzBn256Mul/e143001667b205f4be484c63bbacdd7fd80921ac (0.00s)
     --- PASS: FuzzBn256Mul/e338b09c0611bc3bb8d1057663d7a4662f88d8ae (0.00s)
     --- PASS: FuzzBn256Mul/e5262dab3e5a015c819aee9542ce0e4e25c4b3ad (0.00s)
     --- PASS: FuzzBn256Mul/e57b9098cc066eec5f179a5ff75906c7b279d37b (0.00s)
     --- PASS: FuzzBn256Mul/e5fbade6afbae3d99656f4f5d9cb3297e91bf078 (0.00s)
-    --- PASS: FuzzBn256Mul/e88f9991f370717ce1c3b071231546202f1dc43e (0.00s)
     --- PASS: FuzzBn256Mul/e9e6f0d9f8ce4957718be8b0311a97de4c343ec2 (0.00s)
     --- PASS: FuzzBn256Mul/ead794d9d7f87690b3a20236bc8b18535fd0a979 (0.00s)
     --- PASS: FuzzBn256Mul/ed03301aa7bfc5d36ced17f6df1febca7da6ab03 (0.00s)
@@ -503,7 +484,7 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
 === RUN   FuzzBn256Pair/ebf08229a2ee30fba3d3bb46c4517bcd04a304f8
 === RUN   FuzzBn256Pair/fb3c6e4de85bd9eae26fdc63e75f10a7f39e850e
 === RUN   FuzzBn256Pair/fdec3a2d297aea48644645e25b5a31eb5c33dd1c
---- PASS: FuzzBn256Pair (0.27s)
+--- PASS: FuzzBn256Pair (0.26s)
     --- PASS: FuzzBn256Pair/069d156996eb4e08370cb3fbb9aba9f7b922403a (0.00s)
     --- PASS: FuzzBn256Pair/07690ccfc1c8060bcb66dc80075465667ae8d879 (0.02s)
     --- PASS: FuzzBn256Pair/0cbf124c2ecb2773a456b91515e504297a20b8da (0.02s)
@@ -514,11 +495,11 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Pair/2be3c2225859dff0ed2935416ca4f89dc96c3ca7 (0.02s)
     --- PASS: FuzzBn256Pair/2d82b3a82d41cd371808c1a9f66b2fe5e79ec400 (0.01s)
     --- PASS: FuzzBn256Pair/363ff8e6b3eff146985a4ed5d2b5d6acac3dfb34 (0.00s)
-    --- PASS: FuzzBn256Pair/41857980bec31ffb9f11efad924e03608786eb5a (0.01s)
+    --- PASS: FuzzBn256Pair/41857980bec31ffb9f11efad924e03608786eb5a (0.02s)
     --- PASS: FuzzBn256Pair/50efbb032445c55b93491dcc9441619eec7df841 (0.02s)
     --- PASS: FuzzBn256Pair/520b67222e63324fce7eced0d1ccfbbea95f1c0f (0.00s)
     --- PASS: FuzzBn256Pair/58de4d79a45dadd9a77c5220fde9000351d5103d (0.00s)
-    --- PASS: FuzzBn256Pair/5b87d58384d6a5487b758fa9abb1bf8f53b20ebf (0.01s)
+    --- PASS: FuzzBn256Pair/5b87d58384d6a5487b758fa9abb1bf8f53b20ebf (0.02s)
     --- PASS: FuzzBn256Pair/6337b63d8e3890f03ced2c1495fa0a4dbe32f882 (0.00s)
     --- PASS: FuzzBn256Pair/638891a6bc35467d40db98f75056cc63a0434e86 (0.02s)
     --- PASS: FuzzBn256Pair/63e214dbc5a06e050fd2f15611160d72a5e2ec6e (0.02s)
@@ -533,7 +514,7 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Pair/85e07065b4b7e4e81a496d49a891bfb847816e85 (0.00s)
     --- PASS: FuzzBn256Pair/8616748bd1655feedc5783b614e695c64fce645c (0.02s)
     --- PASS: FuzzBn256Pair/93635f906d2035cd6459c6097cd130f61d4631d7 (0.00s)
-    --- PASS: FuzzBn256Pair/9ad909a7b484d372d509c1b08ef4f47b14a656e2 (0.01s)
+    --- PASS: FuzzBn256Pair/9ad909a7b484d372d509c1b08ef4f47b14a656e2 (0.02s)
     --- PASS: FuzzBn256Pair/9ca53adfba1d8f1e50c19b06c7e83e56c20ecd96 (0.00s)
     --- PASS: FuzzBn256Pair/a5ec3bef6bf4a06e7241ab0b7a86f2c693e93830 (0.00s)
     --- PASS: FuzzBn256Pair/b28b1b279f83c2b76cf6e811f7734123b7aa6d7a (0.02s)
@@ -544,4 +525,4 @@ go: downloading github.com/ethereum/go-ethereum v1.10.26
     --- PASS: FuzzBn256Pair/fdec3a2d297aea48644645e25b5a31eb5c33dd1c (0.00s)
 PASS
 coverage: 65.6% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/bn256	16.095s	coverage: 65.6% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/bn256	16.209s	coverage: 65.6% of statements
