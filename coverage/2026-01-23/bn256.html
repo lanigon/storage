@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>bn256: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/bn256/bn256_fuzz.go (65.6%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">// Copyright 2018 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package bn256
+
+import (
+        "bytes"
+        "fmt"
+        "io"
+        "math/big"
+
+        cloudflare "github.com/morph-l2/go-ethereum/crypto/bn256/cloudflare"
+        gnark "github.com/morph-l2/go-ethereum/crypto/bn256/gnark"
+        google "github.com/morph-l2/go-ethereum/crypto/bn256/google"
+)
+
+func getG1Points(input io.Reader) (*cloudflare.G1, *google.G1, *gnark.G1) <span class="cov8" title="1">{
+        _, xc, err := cloudflare.RandomG1(input)
+        if err != nil </span><span class="cov8" title="1">{
+                // insufficient input
+                return nil, nil, nil
+        }</span>
+        <span class="cov8" title="1">xg := new(google.G1)
+        if _, err := xg.Unmarshal(xc.Marshal()); err != nil </span><span class="cov0" title="0">{
+                panic(fmt.Sprintf("Could not marshal cloudflare -&gt; google: %v", err))</span>
+        }
+        <span class="cov8" title="1">xs := new(gnark.G1)
+        if _, err := xs.Unmarshal(xc.Marshal()); err != nil </span><span class="cov0" title="0">{
+                panic(fmt.Sprintf("Could not marshal cloudflare -&gt; gnark: %v", err))</span>
+        }
+        <span class="cov8" title="1">return xc, xg, xs</span>
+}
+
+func getG2Points(input io.Reader) (*cloudflare.G2, *google.G2, *gnark.G2) <span class="cov8" title="1">{
+        _, xc, err := cloudflare.RandomG2(input)
+        if err != nil </span><span class="cov8" title="1">{
+                // insufficient input
+                return nil, nil, nil
+        }</span>
+        <span class="cov8" title="1">xg := new(google.G2)
+        if _, err := xg.Unmarshal(xc.Marshal()); err != nil </span><span class="cov0" title="0">{
+                panic(fmt.Sprintf("Could not marshal cloudflare -&gt; google: %v", err))</span>
+        }
+        <span class="cov8" title="1">xs := new(gnark.G2)
+        if _, err := xs.Unmarshal(xc.Marshal()); err != nil </span><span class="cov0" title="0">{
+                panic(fmt.Sprintf("Could not marshal cloudflare -&gt; gnark: %v", err))</span>
+        }
+        <span class="cov8" title="1">return xc, xg, xs</span>
+}
+
+// fuzzAdd fuzzes bn256 addition between the Google, Cloudflare and Gnark libraries.
+func fuzzAdd(data []byte) int <span class="cov8" title="1">{
+        input := bytes.NewReader(data)
+        xc, xg, xs := getG1Points(input)
+        if xc == nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">yc, yg, ys := getG1Points(input)
+        if yc == nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        // Ensure libs can parse the second curve point
+        // Add the two points and ensure they result in the same output
+        <span class="cov8" title="1">rc := new(cloudflare.G1)
+        rc.Add(xc, yc)
+
+        rg := new(google.G1)
+        rg.Add(xg, yg)
+
+        rs := new(gnark.G1)
+        rs.Add(xs, ys)
+
+        if !bytes.Equal(rc.Marshal(), rg.Marshal()) </span><span class="cov0" title="0">{
+                panic("add mismatch: cloudflare/google")</span>
+        }
+
+        <span class="cov8" title="1">if !bytes.Equal(rc.Marshal(), rs.Marshal()) </span><span class="cov0" title="0">{
+                panic("add mismatch: cloudflare/gnark")</span>
+        }
+        <span class="cov8" title="1">return 1</span>
+}
+
+// fuzzMul fuzzes bn256 scalar multiplication between the Google, Cloudflare
+// and Gnark libraries.
+func fuzzMul(data []byte) int <span class="cov8" title="1">{
+        input := bytes.NewReader(data)
+        pc, pg, ps := getG1Points(input)
+        if pc == nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        // Add the two points and ensure they result in the same output
+        <span class="cov8" title="1">remaining := input.Len()
+        if remaining == 0 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">if remaining &gt; 128 </span><span class="cov8" title="1">{
+                // The evm only ever uses 32 byte integers, we need to cap this otherwise
+                // we run into slow exec. A 236Kb byte integer cause oss-fuzz to report it as slow.
+                // 128 bytes should be fine though
+                return 0
+        }</span>
+        <span class="cov8" title="1">buf := make([]byte, remaining)
+        input.Read(buf)
+
+        rc := new(cloudflare.G1)
+        rc.ScalarMult(pc, new(big.Int).SetBytes(buf))
+
+        rg := new(google.G1)
+        rg.ScalarMult(pg, new(big.Int).SetBytes(buf))
+
+        rs := new(gnark.G1)
+        rs.ScalarMult(ps, new(big.Int).SetBytes(buf))
+
+        if !bytes.Equal(rc.Marshal(), rg.Marshal()) </span><span class="cov0" title="0">{
+                panic("scalar mul mismatch: cloudflare/google")</span>
+        }
+        <span class="cov8" title="1">if !bytes.Equal(rc.Marshal(), rs.Marshal()) </span><span class="cov0" title="0">{
+                panic("scalar mul mismatch: cloudflare/gnark")</span>
+        }
+        <span class="cov8" title="1">return 1</span>
+}
+
+func fuzzPair(data []byte) int <span class="cov8" title="1">{
+        input := bytes.NewReader(data)
+        pc, pg, ps := getG1Points(input)
+        if pc == nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">tc, tg, ts := getG2Points(input)
+        if tc == nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+
+        // Pair the two points and ensure they result in the same output
+        <span class="cov8" title="1">clPair := cloudflare.Pair(pc, tc).Marshal()
+        gPair := google.Pair(pg, tg).Marshal()
+        sPair := gnark.Pair(ps, ts).Marshal()
+
+        if !bytes.Equal(clPair, gPair) </span><span class="cov0" title="0">{
+                panic("pairing mismatch: cloudflare/google")</span>
+        }
+
+        <span class="cov8" title="1">normalizedClPair := normalizeGTToGnark(clPair).Marshal()
+        if !bytes.Equal(normalizedClPair, sPair) </span><span class="cov0" title="0">{
+                panic("pairing mismatch: cloudflare/gnark")</span>
+        }
+
+        <span class="cov8" title="1">return 1</span>
+}
+
+func fuzzUnmarshalG1(input []byte) int <span class="cov0" title="0">{
+        rc := new(cloudflare.G1)
+        _, errC := rc.Unmarshal(input)
+
+        rg := new(google.G1)
+        _, errG := rg.Unmarshal(input)
+
+        rs := new(gnark.G1)
+        _, errS := rs.Unmarshal(input)
+
+        if errC != nil &amp;&amp; errG != nil &amp;&amp; errS != nil </span><span class="cov0" title="0">{
+                return 0 // bad input
+        }</span>
+        <span class="cov0" title="0">if errC == nil &amp;&amp; errG == nil &amp;&amp; errS == nil </span><span class="cov0" title="0">{
+                //make sure we unmarshalled the same points:
+                if !bytes.Equal(rc.Marshal(), rg.Marshal()) </span><span class="cov0" title="0">{
+                        panic("marshaling mismatch: cloudflare/google")</span>
+                }
+                <span class="cov0" title="0">if !bytes.Equal(rc.Marshal(), rs.Marshal()) </span><span class="cov0" title="0">{
+                        panic("marshaling mismatch: cloudflare/gnark")</span>
+                }
+                <span class="cov0" title="0">return 1</span>
+        } else<span class="cov0" title="0"> {
+                panic(fmt.Sprintf("error missmatch: cf: %v g: %v gn: %v", errC, errG, errS))</span>
+        }
+}
+
+func fuzzUnmarshalG2(input []byte) int <span class="cov0" title="0">{
+        rc := new(cloudflare.G2)
+        _, errC := rc.Unmarshal(input)
+
+        rg := new(google.G2)
+        _, errG := rg.Unmarshal(input)
+
+        rs := new(gnark.G2)
+        _, errS := rs.Unmarshal(input)
+
+        if errC != nil &amp;&amp; errG != nil &amp;&amp; errS != nil </span><span class="cov0" title="0">{
+                return 0 // bad input
+        }</span>
+        <span class="cov0" title="0">if errC == nil &amp;&amp; errG == nil &amp;&amp; errS == nil </span><span class="cov0" title="0">{
+                //make sure we unmarshalled the same points:
+                if !bytes.Equal(rc.Marshal(), rg.Marshal()) </span><span class="cov0" title="0">{
+                        panic("marshaling mismatch: cloudflare/google")</span>
+                }
+                <span class="cov0" title="0">if !bytes.Equal(rc.Marshal(), rs.Marshal()) </span><span class="cov0" title="0">{
+                        panic("marshaling mismatch: cloudflare/gnark")</span>
+                }
+                <span class="cov0" title="0">return 1</span>
+        } else<span class="cov0" title="0"> {
+                panic(fmt.Sprintf("error missmatch: cf: %v g: %v gn: %v", errC, errG, errS))</span>
+        }
+}
+
+// normalizeGTToGnark scales a Cloudflare/Google GT element by `s`
+// so that it can be compared with a gnark GT point.
+//
+// For the definition of `s` see 3.5 in https://eprint.iacr.org/2015/192.pdf
+func normalizeGTToGnark(cloudflareOrGoogleGT []byte) *gnark.GT <span class="cov8" title="1">{
+        // Compute s = 2*u(6*u^2 + 3*u + 1)
+        u, _ := new(big.Int).SetString("0x44e992b44a6909f1", 0)
+        u_exp2 := new(big.Int).Exp(u, big.NewInt(2), nil)   // u^2
+        u_6_exp2 := new(big.Int).Mul(big.NewInt(6), u_exp2) // 6*u^2
+        u_3 := new(big.Int).Mul(big.NewInt(3), u)           // 3*u
+        inner := u_6_exp2.Add(u_6_exp2, u_3)                // 6*u^2 + 3*u
+        inner.Add(inner, big.NewInt(1))                     // 6*u^2 + 3*u + 1
+        u_2 := new(big.Int).Mul(big.NewInt(2), u)           // 2*u
+        s := u_2.Mul(u_2, inner)                            // 2*u(6*u^2 + 3*u + 1)
+
+        // Scale the Cloudflare/Google GT element by `s`
+        gRes := new(gnark.GT)
+        if err := gRes.Unmarshal(cloudflareOrGoogleGT); err != nil </span><span class="cov0" title="0">{
+                panic(err)</span>
+        }
+        <span class="cov8" title="1">gRes = gRes.Exp(*gRes, s)
+
+        return gRes</span>
+}
+
+// FuzzAdd is the exported version of fuzzAdd for use with testing.F
+func FuzzAdd(data []byte) int <span class="cov8" title="1">{
+        return fuzzAdd(data)
+}</span>
+
+// FuzzMul is the exported version of fuzzMul for use with testing.F
+func FuzzMul(data []byte) int <span class="cov8" title="1">{
+        return fuzzMul(data)
+}</span>
+
+// FuzzPair is the exported version of fuzzPair for use with testing.F
+func FuzzPair(data []byte) int <span class="cov8" title="1">{
+        return fuzzPair(data)
+}</span>
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
