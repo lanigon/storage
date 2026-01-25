@@ -1,21 +1,17 @@
 === RUN   FuzzStacktrie
 === RUN   FuzzStacktrie/00c4821d7fe638b4dd1ebee6f77a9d373b80547f
-=== RUN   FuzzStacktrie/010ec476d4dd7aca5a3d57271de3748e42eab89f
 === RUN   FuzzStacktrie/0184704f4485e2ebc293463f3954325cbe838ede
 === RUN   FuzzStacktrie/02202d14cf589f4c36b32ce2031b9c01ddd889d1
 === RUN   FuzzStacktrie/029561401f86bdbd983906d842b194c9eacde885
-=== RUN   FuzzStacktrie/02ba7d7d7c40b048222ad98a0d30cf3d0d48178a
-=== RUN   FuzzStacktrie/030304692f46abaa535c364b26574385d7ed44d6
 === RUN   FuzzStacktrie/051cdba7df3048610889d56e36071afe7486a8df
 === RUN   FuzzStacktrie/067ebca4a819e8ac8fb2ee6e8eac63174618665e
 === RUN   FuzzStacktrie/06db88ae1514a89fa8beafebdb72588c2a6f11e4
 === RUN   FuzzStacktrie/07eca6c87817651b400cce43d4e25a76ba04869b
 === RUN   FuzzStacktrie/08f18c88e4c1399d718aa689c16014457e0e85a8
 === RUN   FuzzStacktrie/096da30099bdc087e5c0b432b984ebd3996aa1d3
-=== RUN   FuzzStacktrie/09c85da37cbf8d534f10714ea8763bfa0ee691e8
 === RUN   FuzzStacktrie/0a2f3f535539aee20f67506aef530479ec218f3f
-=== RUN   FuzzStacktrie/0ae3090b6d4e902325465c53729247004693771e
 === RUN   FuzzStacktrie/0aeeeca61e6edf3abb64e160341a65410f776587
+=== RUN   FuzzStacktrie/0b87e387434b5b1d159b5a591f8e5ad2733d175b
 === RUN   FuzzStacktrie/0d809061a8e76f2a03da1057ef85a6d7409d071c
 === RUN   FuzzStacktrie/0daef61bf41f63fb4f6592968060fce5a286cd05
 === RUN   FuzzStacktrie/0f2f41cbbd5acb9b57ef6ae540eacb44d08509f5
@@ -23,20 +19,20 @@
 === RUN   FuzzStacktrie/0fe318cbe0ca5fca300b1d97f61625679132ee91
 === RUN   FuzzStacktrie/0feab27dd2ec0136f38f4d6a8e011bcdeee87d81
 === RUN   FuzzStacktrie/115f345e09853fb4ff75a0e0a66d427537881161
-=== RUN   FuzzStacktrie/12d3e20cd93c3b73d31f9135c94bc0af475b3e40
 === RUN   FuzzStacktrie/133c2b4133f514f35b68094995207f8bb4907e6e
 === RUN   FuzzStacktrie/13ddbc72ff70c6f6eee29f481e2cc65a85fe1587
 === RUN   FuzzStacktrie/15a2afae484ca1452746d76669b3c69838fcbddd
+=== RUN   FuzzStacktrie/15b1d7712f3464c91bf8b08c151f8b3f71c6dc2a
 === RUN   FuzzStacktrie/16637c53b0f659e2e724cc62bdb267763f55ecc3
 === RUN   FuzzStacktrie/168da817278da73cfc02e4f0c0e6a059472970bb
 === RUN   FuzzStacktrie/179dd4f94e83bf5924da399f8704277d0041b985
 === RUN   FuzzStacktrie/187d197a330586b00bc33c6c966775e9870344d3
-=== RUN   FuzzStacktrie/18f344a979901e58f52319ae9bd9880ca8d30dd0
 === RUN   FuzzStacktrie/19087c3ed1acf7f67227275eea9c26d07866b35a
 === RUN   FuzzStacktrie/1961cca969c34b33cb61e12fbdc31aa891b26200
 === RUN   FuzzStacktrie/1990f99fb6c12381c2f0951cb4f08168e1389239
 === RUN   FuzzStacktrie/1999666312a6666e20481432c37fbb897eba99d8
 === RUN   FuzzStacktrie/1a0052787afbc87be8f8e186f2a3d4ba98b9b18a
+=== RUN   FuzzStacktrie/1b5682a10dd20a8e0e198ffca761f3c0a9086afb
 === RUN   FuzzStacktrie/1c05dd3506dc74a5aa82c4fbc3a75b6297dc6caf
 === RUN   FuzzStacktrie/1c25a9a8aa286e8c35e481ea21ce1b59c43d45b0
 === RUN   FuzzStacktrie/1c4cc3efdb1bda51039d800fdc2c6644443cc9bc
@@ -61,19 +57,17 @@
 === RUN   FuzzStacktrie/28993b294e9e1aa7a87e0c9f9646190141e69d2f
 === RUN   FuzzStacktrie/2972a81c5de600feb2cebd6083e7ac473ea954ca
 === RUN   FuzzStacktrie/29fb540601412a0264cbc1735da51e3a1ab3be3a
-=== RUN   FuzzStacktrie/2a44fb1407c6294420ec23bce3e0da75e53ed80c
 === RUN   FuzzStacktrie/2b1b48cd19fa8f6701a79b7049fdd2df338e138c
 === RUN   FuzzStacktrie/2b2949b8d6b8d085de85aba5c2a9e60eec46809b
 === RUN   FuzzStacktrie/2cb0ea8b1f8c9b30c44b900c8d21a8cdb373d1d8
 === RUN   FuzzStacktrie/2cb3f37a0a687af799f3a4e36b33e2daea4e2c7c
 === RUN   FuzzStacktrie/2cd2d6cd6a19168af61098839ee61523c7c7db58
-=== RUN   FuzzStacktrie/2e2ba65f3a3775c63cd6db4f6e111bb3f2d54138
 === RUN   FuzzStacktrie/2f397400baee0703f46ac8501cc9880bd2880c57
+=== RUN   FuzzStacktrie/2f44be23be8dd47183998b3d5d036d3b56bbff50
 === RUN   FuzzStacktrie/313dc4f7ff0825fa74b254c2dc7584decbdf8ba5
 === RUN   FuzzStacktrie/315462a4a0ff879319806797ba1bed0a3a2ab26a
 === RUN   FuzzStacktrie/3162476ab1088d7cb0498a2bf09632aab8ae1a2d
 === RUN   FuzzStacktrie/31d4cffcdda18c8c03b6d5ac9d33511dfa290186
-=== RUN   FuzzStacktrie/346b1f0158a4e0580a15db6390de07d3ad8e559c
 === RUN   FuzzStacktrie/350022739a986c5208bdeab0baf3851f07caa22d
 === RUN   FuzzStacktrie/35ce2043128c2cd59c1deb151c9b271f71559264
 === RUN   FuzzStacktrie/3722bcf16bec702f19cd804f7c986c1bde02baa3
@@ -86,14 +80,13 @@
 === RUN   FuzzStacktrie/3f7c8a9a434471412ad64454f667588b362a82f8
 === RUN   FuzzStacktrie/40a400d28c4742bad44f9b33ff42ab93921ba381
 === RUN   FuzzStacktrie/40bf22f04adf1a233170c930b20f20da1a392306
-=== RUN   FuzzStacktrie/415f3ce751be02e0159f591b3b9ae807d66f6832
 === RUN   FuzzStacktrie/417076a8168af9cce4ec766a0d3666ab31b5b2b0
 === RUN   FuzzStacktrie/4184c3b503b1a2a558e6aef62dfacd65625636d8
 === RUN   FuzzStacktrie/4215ff04dcadca20b6fdaed7ad7821c5cb8955d6
 === RUN   FuzzStacktrie/42c8b86a71b609cb8907d9e148e1a23c697a25ca
-=== RUN   FuzzStacktrie/42de1412b26dc25d3c4fd47d395296811932f386
 === RUN   FuzzStacktrie/42dfafa86340d73ea2b8f0c9c35efe08f3a87aa6
 === RUN   FuzzStacktrie/438966e77063037b6f256265c5926dc5eb587261
+=== RUN   FuzzStacktrie/449bb54272bcdf96ba0db52161d95fe8af33b236
 === RUN   FuzzStacktrie/452b5ca8439bc535396419efd875584ab3fa044f
 === RUN   FuzzStacktrie/45454c0b08c696555d06df3a3b494a9ed7bb0ee8
 === RUN   FuzzStacktrie/466e17572738ca804a66640ca2df62a686797f73
@@ -104,25 +97,22 @@
 === RUN   FuzzStacktrie/4e00ed44983b3ec8703419d8efdaeaac1f8a13a4
 === RUN   FuzzStacktrie/4e637c1045daad722efd16b5aef16d137d5f18f8
 === RUN   FuzzStacktrie/4e7be01fe2992c323f36693b07e4e92c504da2d8
-=== RUN   FuzzStacktrie/507fa638704c0bf6ebbf1ae26217d3edf5c35ac4
 === RUN   FuzzStacktrie/536760b3903811e5a8ad7c72e6aef2fabfc9f05b
 === RUN   FuzzStacktrie/552c91df0c437ad88ce22270e464ecacb4e08c41
 === RUN   FuzzStacktrie/556e5d8b877e0a9745756c9418d5c605cc36f2d5
 === RUN   FuzzStacktrie/5572592b012555ee330797d3edf0af37c785e6c9
 === RUN   FuzzStacktrie/570fb7f2d2fd4081dbaee162bc2fc08dc8976f60
 === RUN   FuzzStacktrie/572d1e02cbcc0f7d5faaccbd191d8e5d9f4d0828
-=== RUN   FuzzStacktrie/578abfd96d7e9e113f58e972a55228c50ff92c0f
-=== RUN   FuzzStacktrie/58065044f21c9d8002e19ce6e43c3006ba8c0690
 === RUN   FuzzStacktrie/5853528ee952fa6acaf33a3418784bc9abe8e7e2
+=== RUN   FuzzStacktrie/590ba151bfb76585cd88c1dcbfb87ead1a3e3efe
 === RUN   FuzzStacktrie/596177e2ab5bc5558935fd084cf9b1aab2ed0cc4
-=== RUN   FuzzStacktrie/5964becd8f62f645b288e8b8ae5c5e04b3295790
+=== RUN   FuzzStacktrie/5a24acb12888c3891dd4e00a96f02cf05f04a729
 === RUN   FuzzStacktrie/5a6679e5d0ddd4fa8988f2cfa0936bf5188ef650
 === RUN   FuzzStacktrie/5acdd5631ebfdab61444967ba4a19c6b42ac046e
 === RUN   FuzzStacktrie/5b069cb8ee220d23abe8820ce9c2c47874bb66c0
 === RUN   FuzzStacktrie/5b28afa917daf7f799de4c5d2fbd5aa5392bbd22
 === RUN   FuzzStacktrie/5ba44963fe0a82ebf351dc8e18c223467cd01834
 === RUN   FuzzStacktrie/5ba93c9db0cff93f52b521d7420e43f6eda2784f
-=== RUN   FuzzStacktrie/5c99c28aac3ba2c4279795f204ef8498c4b57a40
 === RUN   FuzzStacktrie/5d3c6d4a61533896577dad9001b82922c1e39bd3
 === RUN   FuzzStacktrie/5e39c515254fb6a87dec911630fa173ab78fb132
 === RUN   FuzzStacktrie/5e6ae60f3b587ff1b59abbe81bc377bb587a7d8d
@@ -132,8 +122,6 @@
 === RUN   FuzzStacktrie/622b8af2f04afc9fe987c5ebb90f4c040810a2eb
 === RUN   FuzzStacktrie/63b2f6a9e8f16074e20c10e0072905e1e97b1a2e
 === RUN   FuzzStacktrie/64e4f1e36a264bc93b756e429cfa0bb11022e2a7
-=== RUN   FuzzStacktrie/655122ee63e5c2250858fd150721237c4131369a
-=== RUN   FuzzStacktrie/6631bdb330c745c5fdb04502b6184d8e63def275
 === RUN   FuzzStacktrie/66f3ddcdfb4f9f47d929d1a8053a1f670be8126b
 === RUN   FuzzStacktrie/672dabe59314a610ca8734432d2a75a18b52f878
 === RUN   FuzzStacktrie/684f826eb0a6d4c97c8f4c66c5d8c5425b93a242
@@ -145,7 +133,6 @@
 === RUN   FuzzStacktrie/6c8114eecd57adb77a4233daca4deec9a9c93790
 === RUN   FuzzStacktrie/704bb71022e232461fe4cb4d46d05fbb9f08fa30
 === RUN   FuzzStacktrie/705f99cf44b386984be39e63df48ac22044344e0
-=== RUN   FuzzStacktrie/70b2445a816f0b264910f30370c62835f2460f25
 === RUN   FuzzStacktrie/71853c6197a6a7f222db0f1978c7cb232b87c5ee
 === RUN   FuzzStacktrie/726f85af4496465039826d13a909503c47c32a4a
 === RUN   FuzzStacktrie/72de2303d0363d0a11c52e0ee7a4445dc2013b4c
@@ -162,8 +149,8 @@
 === RUN   FuzzStacktrie/7809ff4a414d733505e3691daf977b2b6a3637d3
 === RUN   FuzzStacktrie/7862fda379bee5707db3816a328841498c74d9c6
 === RUN   FuzzStacktrie/78bd4cddca521cebadac26d1ebf047b74425e645
-=== RUN   FuzzStacktrie/78f0e9fc0d38d6874570205638118ff47cebcb17
 === RUN   FuzzStacktrie/798f9d086160f6d774904683cbefb87ea8cb39c3
+=== RUN   FuzzStacktrie/7a70323b1c8051d0305027ddca88464af05943a1
 === RUN   FuzzStacktrie/7bd822e6d883a247e74191e28a3980cc4af31dfe
 === RUN   FuzzStacktrie/7be4da7483bcb94d7628f05e2a50bc253287ef11
 === RUN   FuzzStacktrie/7c61d42f6ff2953b46d9bd88475fb5e4c7f77e6a
@@ -176,6 +163,7 @@
 === RUN   FuzzStacktrie/7f9a7b759245d975bfbe3af69fd072a3806794a6
 === RUN   FuzzStacktrie/7ff5975d965b41e56b71c3523c9627fbd857be12
 === RUN   FuzzStacktrie/819a17e7b703472895a59e546397ab3bd78b4cc6
+=== RUN   FuzzStacktrie/82331c52dde108227a1b3061c463b1fdacad6e0c
 === RUN   FuzzStacktrie/83bfedf433b1d9962ff545a92d22b813365fb445
 === RUN   FuzzStacktrie/8401e307908e782792fa150e315c9fbcab400c4b
 === RUN   FuzzStacktrie/8577d5827ba608479e75288aea01eaf4259a37d0
@@ -187,15 +175,15 @@
 === RUN   FuzzStacktrie/87cb0eb236011bf28520e2496af5f6b60c7fa73a
 === RUN   FuzzStacktrie/881844c4498d8b706b09a1faf26ea53e2256597c
 === RUN   FuzzStacktrie/89ab18bda54b18355d0e1157bfbccfab2d5a577b
+=== RUN   FuzzStacktrie/8a93b5d726548a001f2f49cb94b58db1de1ba196
 === RUN   FuzzStacktrie/8ab41548193a6a7d63d9b38284f20f7d43f9c782
 === RUN   FuzzStacktrie/8ab852b450c76ac6c982954c8dddaefabb5c8809
 === RUN   FuzzStacktrie/8b8f6520d1b33f4d1f95a5e8c217ebd1685de8e5
-=== RUN   FuzzStacktrie/8bb6068da36e151b8eb364dbe39609519cf3c37f
 === RUN   FuzzStacktrie/8ccf8b32c5c357b78a81bf034f7680b426aef51c
 === RUN   FuzzStacktrie/8d484f6c1be8e0626cce53d530899cd86e1530d6
-=== RUN   FuzzStacktrie/8d5c4455e159eee134803967f595ae13a75bd3a5
 === RUN   FuzzStacktrie/8e77f0410f8746d43182ae1e7486d90fa24b331e
 === RUN   FuzzStacktrie/8e7fb8b7fef78edfc5f8dc827ae7c1ba509d0cec
+=== RUN   FuzzStacktrie/8e86353f6146342458cca9d3cc79b1a329dc9d2f
 === RUN   FuzzStacktrie/8f130813838e0525e68223d2e8ebdb21710bb0c1
 === RUN   FuzzStacktrie/8f276584a19c7146951225cf1dc25d7a8aad32e0
 === RUN   FuzzStacktrie/8f45f171ea22cf86b04fa0f0d84670572b813d71
@@ -213,16 +201,13 @@
 === RUN   FuzzStacktrie/9cc6d6efc1bb708a4a4e7330d5090e215ed654d2
 === RUN   FuzzStacktrie/9d1723e56064733e942f4bc4c3923d21a2db2b8e
 === RUN   FuzzStacktrie/9d9772639a50132fb09ccc229d32c9d7e88be371
-=== RUN   FuzzStacktrie/9dd43bbfed48802ff3397fdae43dffadef6a3cda
 === RUN   FuzzStacktrie/9ddc4bffef13a1c3afa1fba34e32d8134c7bea79
 === RUN   FuzzStacktrie/9f263f1d35899f16c89edf080fb37ad1c6538e8d
 === RUN   FuzzStacktrie/9f900d0c7fc8deb8b8752f397d4ad2b755bac9ac
 === RUN   FuzzStacktrie/9fac76ab19cfffac03e98a0ab052ebce02f07cf3
 === RUN   FuzzStacktrie/a040aab6831d4e93f6676fcae8063346529dcd56
-=== RUN   FuzzStacktrie/a1138fbbad02abab170e59b0b97bae293359220a
 === RUN   FuzzStacktrie/a1af0ed8082d5dba1394dc7ee5fee8a23afff26f
 === RUN   FuzzStacktrie/a2afc8e19e7413a971eaabda8072096204ebdded
-=== RUN   FuzzStacktrie/a45e05f96e5967bc01ffed89bdc375c214055888
 === RUN   FuzzStacktrie/a5287418a184d999f05901a724d23007f2bc956d
 === RUN   FuzzStacktrie/a5abd554b8b0d32870594254c76a53030ddcbc00
 === RUN   FuzzStacktrie/a5c5b0c0f27f3114be5e8cdecce959581b5b181b
@@ -230,6 +215,7 @@
 === RUN   FuzzStacktrie/a6a66802de5984063f7c9493b45774445c0ec418
 === RUN   FuzzStacktrie/a6c522b9ccb39150dfbe077c05ddb87e32e1ae52
 === RUN   FuzzStacktrie/a6e8e7b13d050bb38dab0697bbba84ffecb8911b
+=== RUN   FuzzStacktrie/a6ecf9901398898f9b750ae24ab6c132c63f478a
 === RUN   FuzzStacktrie/a815405bb685575759f67243bb94784aeb29296b
 === RUN   FuzzStacktrie/a81e61725fea39988d6a9559913cbb3d31aee3fa
 === RUN   FuzzStacktrie/a834064162442b24870cbb3b41116460f0982bd7
@@ -252,6 +238,7 @@
 === RUN   FuzzStacktrie/b896c19f82f0ce0c58ac2c02ab69fc6c3346215b
 === RUN   FuzzStacktrie/b8f0eb1cdfafdb1062f9bf08963defe78c696b1b
 === RUN   FuzzStacktrie/b9930a4b603161cbdbe5072a731475dff908e932
+=== RUN   FuzzStacktrie/b9ec199a5271811e71600f85786f2cc4e8e3faf5
 === RUN   FuzzStacktrie/ba44fe96b0e35a75a8431c76fb3f53dbf35f0e03
 === RUN   FuzzStacktrie/ba992ce0bdbce3f23de4e6a2249d5fb191cf2524
 === RUN   FuzzStacktrie/be5b5b068089834aacdb90b8712d7690b7614fc2
@@ -277,28 +264,25 @@
 === RUN   FuzzStacktrie/cdc11e605e7764df05f31621c45d13146becd955
 === RUN   FuzzStacktrie/ce58fef966926593dd3228662d7984905611e640
 === RUN   FuzzStacktrie/cfad0aefcb1e5ef90054e5bd40d4fcd6b9223a6d
-=== RUN   FuzzStacktrie/cffbb02374c4a0d2f1c4e556b0f547d88022fbd1
 === RUN   FuzzStacktrie/d0d8d1542b34cf0ca7ee4b529208ef5f17d25c69
 === RUN   FuzzStacktrie/d2f94f01d557cc687e1a8c1ffc4e7649c837fe03
 === RUN   FuzzStacktrie/d302ce815c44ba6375d055c6b9c72b8393391dc9
 === RUN   FuzzStacktrie/d3cb6980f5499b96f1333e2b3c510b6f6458fc11
 === RUN   FuzzStacktrie/d4374035e2d2f17dad365a7a74e0e0ebcc51377f
-=== RUN   FuzzStacktrie/d60f36dbf2a8836e6cb0c56c6cc986674764df2d
 === RUN   FuzzStacktrie/d673899690d95cf52f22955e56e137e73c558e27
 === RUN   FuzzStacktrie/d6f9134eba8334f6364dcde69d4f1e3379c760d4
 === RUN   FuzzStacktrie/d71026e39284e43ccdfc91d41e58d27ecc4ce501
 === RUN   FuzzStacktrie/d74d4d9a8fa370efb73e9cbe79f5b225439749fe
-=== RUN   FuzzStacktrie/d85741a7815d266a6a9c469dfc9b9f403ee04e7a
 === RUN   FuzzStacktrie/d8be47c6d0a919d3bae6edc50901f8df6c3cd8cf
 === RUN   FuzzStacktrie/d8ce7cb8ee7bcfb2deacbd6223bd15f2aa858ac3
 === RUN   FuzzStacktrie/d9735b938908a2c7e75941be56a6e7ce16f92291
+=== RUN   FuzzStacktrie/d97931e8c5e6330de2e0b4f4f6d70966b35870bf
 === RUN   FuzzStacktrie/d9820322fc9d5007ff93ec89c6854791e1a694c1
 === RUN   FuzzStacktrie/d98cbaa3e5ca2e9bdb13d16085615b25f92ae928
 === RUN   FuzzStacktrie/d9a2653e1b66715d142236457296b00e0dae753d
 === RUN   FuzzStacktrie/da44da03b4d6a9be03fe44a689122833bbd01c7d
 === RUN   FuzzStacktrie/da8416edc71871e8daef2922af8a7c1e6d8d41b7
 === RUN   FuzzStacktrie/db24ff43b52913b94cad438cf003327299b52f66
-=== RUN   FuzzStacktrie/db6f83d30dcddde019cf6d81be34851726849c10
 === RUN   FuzzStacktrie/e03b3b1f3475eed826dbb3543f667973f8b169e0
 === RUN   FuzzStacktrie/e0dd378a4b19a46ff22e84de27265bd8b7f10d81
 === RUN   FuzzStacktrie/e0e6d7d5986fc241d2c8faad1400637563bb6da2
@@ -308,31 +292,34 @@
 === RUN   FuzzStacktrie/e5fe663aa7b43056ceb8aaeb4606522f53c5f9d4
 === RUN   FuzzStacktrie/e75801d9f361c56c655e159c849549aa7629cb0e
 === RUN   FuzzStacktrie/e76020430ff4056c8bf9d8524a2b830e32b5edd7
+=== RUN   FuzzStacktrie/e7769be657564c5480d2aebc6f32d597e646ffea
 === RUN   FuzzStacktrie/e78d7209c99d278a294e50eb2f87d6d7b729976d
 === RUN   FuzzStacktrie/e7e1a4657eba786764c7b7ceeaaa5d8d85ea8c77
 === RUN   FuzzStacktrie/e8f73a350b2e331da49a6c9550108a1327381de6
-=== RUN   FuzzStacktrie/ea230ee52c3c087d01867b2e931f616c92943962
+=== RUN   FuzzStacktrie/e9155ef9f477aacad0e55965e976b2ad5353d941
 === RUN   FuzzStacktrie/eb59f61775f47b620e68082a5a55f9e4a0b8ecad
 === RUN   FuzzStacktrie/eba657b45813e6e6dc274ae1d09c81dde0f79e73
 === RUN   FuzzStacktrie/ebbac270024ebe7f78a3c4596d9088e288f803d1
 === RUN   FuzzStacktrie/ebe5419dc5acf8a522b91f75d86e0acd48fd10f5
+=== RUN   FuzzStacktrie/ed9833620a4251159c965d2b74c41ad4bbd9efc5
 === RUN   FuzzStacktrie/eda5835efa75592cf111831c6d0381a0acac8ef3
 === RUN   FuzzStacktrie/ef69fc151b32155146e75212e99921dc84940003
 === RUN   FuzzStacktrie/efa967af8e516411c257cac56883192de50e3d29
 === RUN   FuzzStacktrie/f143b7d1bd3486c58d6f36539816adbf4f211ec2
 === RUN   FuzzStacktrie/f1e80d3dbf2437a1d1513a00bce7fef347a7513d
 === RUN   FuzzStacktrie/f28a7e7f39dbafde728132d7e0ad23cf94ac7cb3
+=== RUN   FuzzStacktrie/f2a4e5d0f5fa050e42bb1641f456f1ded4485310
 === RUN   FuzzStacktrie/f442db17a0ce39b5d1dd4a94522ae9eec1fc5080
 === RUN   FuzzStacktrie/f4b98c31dfc8782c4178be177fa51f216b97f209
 === RUN   FuzzStacktrie/f4cb3e93afa319474b6ff7a8712f33d4e04febb3
 === RUN   FuzzStacktrie/f54e9357303741e0d4651e57c24083eb8b745269
+=== RUN   FuzzStacktrie/f5a38b094471c5a6420e25d9ef91d75b94b9cefb
 === RUN   FuzzStacktrie/f5d1f70bfb765a948cd829945f9cc798d966fd12
 === RUN   FuzzStacktrie/f60be12141664412dd2bb9de9c91e9fb9b767489
 === RUN   FuzzStacktrie/f60eaa5e244bfb3f97d6b389d2701a8021aa8813
 === RUN   FuzzStacktrie/f60f0d6e781e88df9a8f7037ae9177c3a20a6d69
 === RUN   FuzzStacktrie/f62f97fad7905f5f6621e9333d6aa2b280451210
 === RUN   FuzzStacktrie/f6bf1577c514aa10ebe3a8131aec7e63c82a700b
-=== RUN   FuzzStacktrie/f6ee4b94155231feea2859a55dc3b5549663a07a
 === RUN   FuzzStacktrie/f71b070dd9e740e7a3502520af808afbe82679d7
 === RUN   FuzzStacktrie/f85343ab8c876870ca6f23965ce280cb4eaac054
 === RUN   FuzzStacktrie/f97bbd20a757aa0541d6a55ce4e31b1729cf76a2
@@ -341,6 +328,7 @@
 === RUN   FuzzStacktrie/fc1c69770e26ef9946111827e368c8667317cfb2
 === RUN   FuzzStacktrie/fc77ce99f5c9f307b6ec42f1b7b9c3fe7368e032
 === RUN   FuzzStacktrie/fc8d848ff47105bd40cbf8938af72496611ca575
+=== RUN   FuzzStacktrie/fc964bdf3d56c1ad0590a858bb18f569541102d1
 === RUN   FuzzStacktrie/fcfbc11542382c30c78ac942cc317cf999caef17
 === RUN   FuzzStacktrie/fdd397b04ce7bc3f3696de5690b889a0cc691428
 === RUN   FuzzStacktrie/fee093ed533fe8a4716fe458bd2ed8801d6e86c9
@@ -348,22 +336,18 @@
 === RUN   FuzzStacktrie/ffbb0918862706ce19a03acd6caf9441dea293c9
 --- PASS: FuzzStacktrie (0.13s)
     --- PASS: FuzzStacktrie/00c4821d7fe638b4dd1ebee6f77a9d373b80547f (0.00s)
-    --- PASS: FuzzStacktrie/010ec476d4dd7aca5a3d57271de3748e42eab89f (0.00s)
     --- PASS: FuzzStacktrie/0184704f4485e2ebc293463f3954325cbe838ede (0.00s)
     --- PASS: FuzzStacktrie/02202d14cf589f4c36b32ce2031b9c01ddd889d1 (0.00s)
     --- PASS: FuzzStacktrie/029561401f86bdbd983906d842b194c9eacde885 (0.00s)
-    --- PASS: FuzzStacktrie/02ba7d7d7c40b048222ad98a0d30cf3d0d48178a (0.00s)
-    --- PASS: FuzzStacktrie/030304692f46abaa535c364b26574385d7ed44d6 (0.00s)
     --- PASS: FuzzStacktrie/051cdba7df3048610889d56e36071afe7486a8df (0.00s)
     --- PASS: FuzzStacktrie/067ebca4a819e8ac8fb2ee6e8eac63174618665e (0.00s)
     --- PASS: FuzzStacktrie/06db88ae1514a89fa8beafebdb72588c2a6f11e4 (0.00s)
     --- PASS: FuzzStacktrie/07eca6c87817651b400cce43d4e25a76ba04869b (0.00s)
     --- PASS: FuzzStacktrie/08f18c88e4c1399d718aa689c16014457e0e85a8 (0.00s)
     --- PASS: FuzzStacktrie/096da30099bdc087e5c0b432b984ebd3996aa1d3 (0.00s)
-    --- PASS: FuzzStacktrie/09c85da37cbf8d534f10714ea8763bfa0ee691e8 (0.00s)
     --- PASS: FuzzStacktrie/0a2f3f535539aee20f67506aef530479ec218f3f (0.00s)
-    --- PASS: FuzzStacktrie/0ae3090b6d4e902325465c53729247004693771e (0.00s)
     --- PASS: FuzzStacktrie/0aeeeca61e6edf3abb64e160341a65410f776587 (0.00s)
+    --- PASS: FuzzStacktrie/0b87e387434b5b1d159b5a591f8e5ad2733d175b (0.00s)
     --- PASS: FuzzStacktrie/0d809061a8e76f2a03da1057ef85a6d7409d071c (0.00s)
     --- PASS: FuzzStacktrie/0daef61bf41f63fb4f6592968060fce5a286cd05 (0.00s)
     --- PASS: FuzzStacktrie/0f2f41cbbd5acb9b57ef6ae540eacb44d08509f5 (0.00s)
@@ -371,20 +355,20 @@
     --- PASS: FuzzStacktrie/0fe318cbe0ca5fca300b1d97f61625679132ee91 (0.00s)
     --- PASS: FuzzStacktrie/0feab27dd2ec0136f38f4d6a8e011bcdeee87d81 (0.00s)
     --- PASS: FuzzStacktrie/115f345e09853fb4ff75a0e0a66d427537881161 (0.00s)
-    --- PASS: FuzzStacktrie/12d3e20cd93c3b73d31f9135c94bc0af475b3e40 (0.00s)
     --- PASS: FuzzStacktrie/133c2b4133f514f35b68094995207f8bb4907e6e (0.00s)
     --- PASS: FuzzStacktrie/13ddbc72ff70c6f6eee29f481e2cc65a85fe1587 (0.00s)
     --- PASS: FuzzStacktrie/15a2afae484ca1452746d76669b3c69838fcbddd (0.00s)
+    --- PASS: FuzzStacktrie/15b1d7712f3464c91bf8b08c151f8b3f71c6dc2a (0.00s)
     --- PASS: FuzzStacktrie/16637c53b0f659e2e724cc62bdb267763f55ecc3 (0.00s)
     --- PASS: FuzzStacktrie/168da817278da73cfc02e4f0c0e6a059472970bb (0.00s)
     --- PASS: FuzzStacktrie/179dd4f94e83bf5924da399f8704277d0041b985 (0.00s)
     --- PASS: FuzzStacktrie/187d197a330586b00bc33c6c966775e9870344d3 (0.00s)
-    --- PASS: FuzzStacktrie/18f344a979901e58f52319ae9bd9880ca8d30dd0 (0.00s)
     --- PASS: FuzzStacktrie/19087c3ed1acf7f67227275eea9c26d07866b35a (0.00s)
     --- PASS: FuzzStacktrie/1961cca969c34b33cb61e12fbdc31aa891b26200 (0.00s)
     --- PASS: FuzzStacktrie/1990f99fb6c12381c2f0951cb4f08168e1389239 (0.00s)
     --- PASS: FuzzStacktrie/1999666312a6666e20481432c37fbb897eba99d8 (0.00s)
     --- PASS: FuzzStacktrie/1a0052787afbc87be8f8e186f2a3d4ba98b9b18a (0.00s)
+    --- PASS: FuzzStacktrie/1b5682a10dd20a8e0e198ffca761f3c0a9086afb (0.00s)
     --- PASS: FuzzStacktrie/1c05dd3506dc74a5aa82c4fbc3a75b6297dc6caf (0.00s)
     --- PASS: FuzzStacktrie/1c25a9a8aa286e8c35e481ea21ce1b59c43d45b0 (0.00s)
     --- PASS: FuzzStacktrie/1c4cc3efdb1bda51039d800fdc2c6644443cc9bc (0.00s)
@@ -409,19 +393,17 @@
     --- PASS: FuzzStacktrie/28993b294e9e1aa7a87e0c9f9646190141e69d2f (0.00s)
     --- PASS: FuzzStacktrie/2972a81c5de600feb2cebd6083e7ac473ea954ca (0.00s)
     --- PASS: FuzzStacktrie/29fb540601412a0264cbc1735da51e3a1ab3be3a (0.00s)
-    --- PASS: FuzzStacktrie/2a44fb1407c6294420ec23bce3e0da75e53ed80c (0.00s)
     --- PASS: FuzzStacktrie/2b1b48cd19fa8f6701a79b7049fdd2df338e138c (0.00s)
     --- PASS: FuzzStacktrie/2b2949b8d6b8d085de85aba5c2a9e60eec46809b (0.00s)
     --- PASS: FuzzStacktrie/2cb0ea8b1f8c9b30c44b900c8d21a8cdb373d1d8 (0.00s)
     --- PASS: FuzzStacktrie/2cb3f37a0a687af799f3a4e36b33e2daea4e2c7c (0.00s)
     --- PASS: FuzzStacktrie/2cd2d6cd6a19168af61098839ee61523c7c7db58 (0.00s)
-    --- PASS: FuzzStacktrie/2e2ba65f3a3775c63cd6db4f6e111bb3f2d54138 (0.00s)
     --- PASS: FuzzStacktrie/2f397400baee0703f46ac8501cc9880bd2880c57 (0.00s)
+    --- PASS: FuzzStacktrie/2f44be23be8dd47183998b3d5d036d3b56bbff50 (0.00s)
     --- PASS: FuzzStacktrie/313dc4f7ff0825fa74b254c2dc7584decbdf8ba5 (0.00s)
     --- PASS: FuzzStacktrie/315462a4a0ff879319806797ba1bed0a3a2ab26a (0.00s)
     --- PASS: FuzzStacktrie/3162476ab1088d7cb0498a2bf09632aab8ae1a2d (0.00s)
     --- PASS: FuzzStacktrie/31d4cffcdda18c8c03b6d5ac9d33511dfa290186 (0.00s)
-    --- PASS: FuzzStacktrie/346b1f0158a4e0580a15db6390de07d3ad8e559c (0.00s)
     --- PASS: FuzzStacktrie/350022739a986c5208bdeab0baf3851f07caa22d (0.00s)
     --- PASS: FuzzStacktrie/35ce2043128c2cd59c1deb151c9b271f71559264 (0.00s)
     --- PASS: FuzzStacktrie/3722bcf16bec702f19cd804f7c986c1bde02baa3 (0.00s)
@@ -434,14 +416,13 @@
     --- PASS: FuzzStacktrie/3f7c8a9a434471412ad64454f667588b362a82f8 (0.00s)
     --- PASS: FuzzStacktrie/40a400d28c4742bad44f9b33ff42ab93921ba381 (0.00s)
     --- PASS: FuzzStacktrie/40bf22f04adf1a233170c930b20f20da1a392306 (0.00s)
-    --- PASS: FuzzStacktrie/415f3ce751be02e0159f591b3b9ae807d66f6832 (0.00s)
     --- PASS: FuzzStacktrie/417076a8168af9cce4ec766a0d3666ab31b5b2b0 (0.00s)
     --- PASS: FuzzStacktrie/4184c3b503b1a2a558e6aef62dfacd65625636d8 (0.00s)
     --- PASS: FuzzStacktrie/4215ff04dcadca20b6fdaed7ad7821c5cb8955d6 (0.00s)
     --- PASS: FuzzStacktrie/42c8b86a71b609cb8907d9e148e1a23c697a25ca (0.00s)
-    --- PASS: FuzzStacktrie/42de1412b26dc25d3c4fd47d395296811932f386 (0.00s)
     --- PASS: FuzzStacktrie/42dfafa86340d73ea2b8f0c9c35efe08f3a87aa6 (0.00s)
     --- PASS: FuzzStacktrie/438966e77063037b6f256265c5926dc5eb587261 (0.00s)
+    --- PASS: FuzzStacktrie/449bb54272bcdf96ba0db52161d95fe8af33b236 (0.00s)
     --- PASS: FuzzStacktrie/452b5ca8439bc535396419efd875584ab3fa044f (0.00s)
     --- PASS: FuzzStacktrie/45454c0b08c696555d06df3a3b494a9ed7bb0ee8 (0.00s)
     --- PASS: FuzzStacktrie/466e17572738ca804a66640ca2df62a686797f73 (0.00s)
@@ -452,25 +433,22 @@
     --- PASS: FuzzStacktrie/4e00ed44983b3ec8703419d8efdaeaac1f8a13a4 (0.00s)
     --- PASS: FuzzStacktrie/4e637c1045daad722efd16b5aef16d137d5f18f8 (0.00s)
     --- PASS: FuzzStacktrie/4e7be01fe2992c323f36693b07e4e92c504da2d8 (0.00s)
-    --- PASS: FuzzStacktrie/507fa638704c0bf6ebbf1ae26217d3edf5c35ac4 (0.00s)
     --- PASS: FuzzStacktrie/536760b3903811e5a8ad7c72e6aef2fabfc9f05b (0.00s)
     --- PASS: FuzzStacktrie/552c91df0c437ad88ce22270e464ecacb4e08c41 (0.00s)
     --- PASS: FuzzStacktrie/556e5d8b877e0a9745756c9418d5c605cc36f2d5 (0.00s)
     --- PASS: FuzzStacktrie/5572592b012555ee330797d3edf0af37c785e6c9 (0.00s)
     --- PASS: FuzzStacktrie/570fb7f2d2fd4081dbaee162bc2fc08dc8976f60 (0.00s)
     --- PASS: FuzzStacktrie/572d1e02cbcc0f7d5faaccbd191d8e5d9f4d0828 (0.00s)
-    --- PASS: FuzzStacktrie/578abfd96d7e9e113f58e972a55228c50ff92c0f (0.00s)
-    --- PASS: FuzzStacktrie/58065044f21c9d8002e19ce6e43c3006ba8c0690 (0.00s)
     --- PASS: FuzzStacktrie/5853528ee952fa6acaf33a3418784bc9abe8e7e2 (0.00s)
+    --- PASS: FuzzStacktrie/590ba151bfb76585cd88c1dcbfb87ead1a3e3efe (0.00s)
     --- PASS: FuzzStacktrie/596177e2ab5bc5558935fd084cf9b1aab2ed0cc4 (0.00s)
-    --- PASS: FuzzStacktrie/5964becd8f62f645b288e8b8ae5c5e04b3295790 (0.00s)
+    --- PASS: FuzzStacktrie/5a24acb12888c3891dd4e00a96f02cf05f04a729 (0.00s)
     --- PASS: FuzzStacktrie/5a6679e5d0ddd4fa8988f2cfa0936bf5188ef650 (0.00s)
     --- PASS: FuzzStacktrie/5acdd5631ebfdab61444967ba4a19c6b42ac046e (0.00s)
     --- PASS: FuzzStacktrie/5b069cb8ee220d23abe8820ce9c2c47874bb66c0 (0.00s)
     --- PASS: FuzzStacktrie/5b28afa917daf7f799de4c5d2fbd5aa5392bbd22 (0.00s)
     --- PASS: FuzzStacktrie/5ba44963fe0a82ebf351dc8e18c223467cd01834 (0.00s)
     --- PASS: FuzzStacktrie/5ba93c9db0cff93f52b521d7420e43f6eda2784f (0.00s)
-    --- PASS: FuzzStacktrie/5c99c28aac3ba2c4279795f204ef8498c4b57a40 (0.00s)
     --- PASS: FuzzStacktrie/5d3c6d4a61533896577dad9001b82922c1e39bd3 (0.00s)
     --- PASS: FuzzStacktrie/5e39c515254fb6a87dec911630fa173ab78fb132 (0.00s)
     --- PASS: FuzzStacktrie/5e6ae60f3b587ff1b59abbe81bc377bb587a7d8d (0.00s)
@@ -480,8 +458,6 @@
     --- PASS: FuzzStacktrie/622b8af2f04afc9fe987c5ebb90f4c040810a2eb (0.00s)
     --- PASS: FuzzStacktrie/63b2f6a9e8f16074e20c10e0072905e1e97b1a2e (0.00s)
     --- PASS: FuzzStacktrie/64e4f1e36a264bc93b756e429cfa0bb11022e2a7 (0.00s)
-    --- PASS: FuzzStacktrie/655122ee63e5c2250858fd150721237c4131369a (0.00s)
-    --- PASS: FuzzStacktrie/6631bdb330c745c5fdb04502b6184d8e63def275 (0.00s)
     --- PASS: FuzzStacktrie/66f3ddcdfb4f9f47d929d1a8053a1f670be8126b (0.00s)
     --- PASS: FuzzStacktrie/672dabe59314a610ca8734432d2a75a18b52f878 (0.00s)
     --- PASS: FuzzStacktrie/684f826eb0a6d4c97c8f4c66c5d8c5425b93a242 (0.00s)
@@ -493,7 +469,6 @@
     --- PASS: FuzzStacktrie/6c8114eecd57adb77a4233daca4deec9a9c93790 (0.00s)
     --- PASS: FuzzStacktrie/704bb71022e232461fe4cb4d46d05fbb9f08fa30 (0.00s)
     --- PASS: FuzzStacktrie/705f99cf44b386984be39e63df48ac22044344e0 (0.00s)
-    --- PASS: FuzzStacktrie/70b2445a816f0b264910f30370c62835f2460f25 (0.00s)
     --- PASS: FuzzStacktrie/71853c6197a6a7f222db0f1978c7cb232b87c5ee (0.00s)
     --- PASS: FuzzStacktrie/726f85af4496465039826d13a909503c47c32a4a (0.00s)
     --- PASS: FuzzStacktrie/72de2303d0363d0a11c52e0ee7a4445dc2013b4c (0.00s)
@@ -510,8 +485,8 @@
     --- PASS: FuzzStacktrie/7809ff4a414d733505e3691daf977b2b6a3637d3 (0.00s)
     --- PASS: FuzzStacktrie/7862fda379bee5707db3816a328841498c74d9c6 (0.00s)
     --- PASS: FuzzStacktrie/78bd4cddca521cebadac26d1ebf047b74425e645 (0.00s)
-    --- PASS: FuzzStacktrie/78f0e9fc0d38d6874570205638118ff47cebcb17 (0.00s)
     --- PASS: FuzzStacktrie/798f9d086160f6d774904683cbefb87ea8cb39c3 (0.00s)
+    --- PASS: FuzzStacktrie/7a70323b1c8051d0305027ddca88464af05943a1 (0.00s)
     --- PASS: FuzzStacktrie/7bd822e6d883a247e74191e28a3980cc4af31dfe (0.00s)
     --- PASS: FuzzStacktrie/7be4da7483bcb94d7628f05e2a50bc253287ef11 (0.00s)
     --- PASS: FuzzStacktrie/7c61d42f6ff2953b46d9bd88475fb5e4c7f77e6a (0.00s)
@@ -524,6 +499,7 @@
     --- PASS: FuzzStacktrie/7f9a7b759245d975bfbe3af69fd072a3806794a6 (0.00s)
     --- PASS: FuzzStacktrie/7ff5975d965b41e56b71c3523c9627fbd857be12 (0.00s)
     --- PASS: FuzzStacktrie/819a17e7b703472895a59e546397ab3bd78b4cc6 (0.00s)
+    --- PASS: FuzzStacktrie/82331c52dde108227a1b3061c463b1fdacad6e0c (0.00s)
     --- PASS: FuzzStacktrie/83bfedf433b1d9962ff545a92d22b813365fb445 (0.00s)
     --- PASS: FuzzStacktrie/8401e307908e782792fa150e315c9fbcab400c4b (0.00s)
     --- PASS: FuzzStacktrie/8577d5827ba608479e75288aea01eaf4259a37d0 (0.00s)
@@ -535,15 +511,15 @@
     --- PASS: FuzzStacktrie/87cb0eb236011bf28520e2496af5f6b60c7fa73a (0.00s)
     --- PASS: FuzzStacktrie/881844c4498d8b706b09a1faf26ea53e2256597c (0.00s)
     --- PASS: FuzzStacktrie/89ab18bda54b18355d0e1157bfbccfab2d5a577b (0.00s)
+    --- PASS: FuzzStacktrie/8a93b5d726548a001f2f49cb94b58db1de1ba196 (0.00s)
     --- PASS: FuzzStacktrie/8ab41548193a6a7d63d9b38284f20f7d43f9c782 (0.00s)
     --- PASS: FuzzStacktrie/8ab852b450c76ac6c982954c8dddaefabb5c8809 (0.00s)
     --- PASS: FuzzStacktrie/8b8f6520d1b33f4d1f95a5e8c217ebd1685de8e5 (0.00s)
-    --- PASS: FuzzStacktrie/8bb6068da36e151b8eb364dbe39609519cf3c37f (0.00s)
     --- PASS: FuzzStacktrie/8ccf8b32c5c357b78a81bf034f7680b426aef51c (0.00s)
     --- PASS: FuzzStacktrie/8d484f6c1be8e0626cce53d530899cd86e1530d6 (0.00s)
-    --- PASS: FuzzStacktrie/8d5c4455e159eee134803967f595ae13a75bd3a5 (0.00s)
     --- PASS: FuzzStacktrie/8e77f0410f8746d43182ae1e7486d90fa24b331e (0.00s)
     --- PASS: FuzzStacktrie/8e7fb8b7fef78edfc5f8dc827ae7c1ba509d0cec (0.00s)
+    --- PASS: FuzzStacktrie/8e86353f6146342458cca9d3cc79b1a329dc9d2f (0.00s)
     --- PASS: FuzzStacktrie/8f130813838e0525e68223d2e8ebdb21710bb0c1 (0.00s)
     --- PASS: FuzzStacktrie/8f276584a19c7146951225cf1dc25d7a8aad32e0 (0.00s)
     --- PASS: FuzzStacktrie/8f45f171ea22cf86b04fa0f0d84670572b813d71 (0.00s)
@@ -561,16 +537,13 @@
     --- PASS: FuzzStacktrie/9cc6d6efc1bb708a4a4e7330d5090e215ed654d2 (0.00s)
     --- PASS: FuzzStacktrie/9d1723e56064733e942f4bc4c3923d21a2db2b8e (0.00s)
     --- PASS: FuzzStacktrie/9d9772639a50132fb09ccc229d32c9d7e88be371 (0.00s)
-    --- PASS: FuzzStacktrie/9dd43bbfed48802ff3397fdae43dffadef6a3cda (0.00s)
     --- PASS: FuzzStacktrie/9ddc4bffef13a1c3afa1fba34e32d8134c7bea79 (0.00s)
     --- PASS: FuzzStacktrie/9f263f1d35899f16c89edf080fb37ad1c6538e8d (0.00s)
     --- PASS: FuzzStacktrie/9f900d0c7fc8deb8b8752f397d4ad2b755bac9ac (0.00s)
     --- PASS: FuzzStacktrie/9fac76ab19cfffac03e98a0ab052ebce02f07cf3 (0.00s)
     --- PASS: FuzzStacktrie/a040aab6831d4e93f6676fcae8063346529dcd56 (0.00s)
-    --- PASS: FuzzStacktrie/a1138fbbad02abab170e59b0b97bae293359220a (0.00s)
     --- PASS: FuzzStacktrie/a1af0ed8082d5dba1394dc7ee5fee8a23afff26f (0.00s)
     --- PASS: FuzzStacktrie/a2afc8e19e7413a971eaabda8072096204ebdded (0.00s)
-    --- PASS: FuzzStacktrie/a45e05f96e5967bc01ffed89bdc375c214055888 (0.00s)
     --- PASS: FuzzStacktrie/a5287418a184d999f05901a724d23007f2bc956d (0.00s)
     --- PASS: FuzzStacktrie/a5abd554b8b0d32870594254c76a53030ddcbc00 (0.00s)
     --- PASS: FuzzStacktrie/a5c5b0c0f27f3114be5e8cdecce959581b5b181b (0.00s)
@@ -578,6 +551,7 @@
     --- PASS: FuzzStacktrie/a6a66802de5984063f7c9493b45774445c0ec418 (0.00s)
     --- PASS: FuzzStacktrie/a6c522b9ccb39150dfbe077c05ddb87e32e1ae52 (0.00s)
     --- PASS: FuzzStacktrie/a6e8e7b13d050bb38dab0697bbba84ffecb8911b (0.00s)
+    --- PASS: FuzzStacktrie/a6ecf9901398898f9b750ae24ab6c132c63f478a (0.00s)
     --- PASS: FuzzStacktrie/a815405bb685575759f67243bb94784aeb29296b (0.00s)
     --- PASS: FuzzStacktrie/a81e61725fea39988d6a9559913cbb3d31aee3fa (0.00s)
     --- PASS: FuzzStacktrie/a834064162442b24870cbb3b41116460f0982bd7 (0.00s)
@@ -600,6 +574,7 @@
     --- PASS: FuzzStacktrie/b896c19f82f0ce0c58ac2c02ab69fc6c3346215b (0.00s)
     --- PASS: FuzzStacktrie/b8f0eb1cdfafdb1062f9bf08963defe78c696b1b (0.00s)
     --- PASS: FuzzStacktrie/b9930a4b603161cbdbe5072a731475dff908e932 (0.00s)
+    --- PASS: FuzzStacktrie/b9ec199a5271811e71600f85786f2cc4e8e3faf5 (0.00s)
     --- PASS: FuzzStacktrie/ba44fe96b0e35a75a8431c76fb3f53dbf35f0e03 (0.00s)
     --- PASS: FuzzStacktrie/ba992ce0bdbce3f23de4e6a2249d5fb191cf2524 (0.00s)
     --- PASS: FuzzStacktrie/be5b5b068089834aacdb90b8712d7690b7614fc2 (0.00s)
@@ -625,28 +600,25 @@
     --- PASS: FuzzStacktrie/cdc11e605e7764df05f31621c45d13146becd955 (0.00s)
     --- PASS: FuzzStacktrie/ce58fef966926593dd3228662d7984905611e640 (0.00s)
     --- PASS: FuzzStacktrie/cfad0aefcb1e5ef90054e5bd40d4fcd6b9223a6d (0.00s)
-    --- PASS: FuzzStacktrie/cffbb02374c4a0d2f1c4e556b0f547d88022fbd1 (0.00s)
     --- PASS: FuzzStacktrie/d0d8d1542b34cf0ca7ee4b529208ef5f17d25c69 (0.00s)
     --- PASS: FuzzStacktrie/d2f94f01d557cc687e1a8c1ffc4e7649c837fe03 (0.00s)
     --- PASS: FuzzStacktrie/d302ce815c44ba6375d055c6b9c72b8393391dc9 (0.00s)
     --- PASS: FuzzStacktrie/d3cb6980f5499b96f1333e2b3c510b6f6458fc11 (0.00s)
     --- PASS: FuzzStacktrie/d4374035e2d2f17dad365a7a74e0e0ebcc51377f (0.00s)
-    --- PASS: FuzzStacktrie/d60f36dbf2a8836e6cb0c56c6cc986674764df2d (0.00s)
     --- PASS: FuzzStacktrie/d673899690d95cf52f22955e56e137e73c558e27 (0.00s)
     --- PASS: FuzzStacktrie/d6f9134eba8334f6364dcde69d4f1e3379c760d4 (0.00s)
     --- PASS: FuzzStacktrie/d71026e39284e43ccdfc91d41e58d27ecc4ce501 (0.00s)
     --- PASS: FuzzStacktrie/d74d4d9a8fa370efb73e9cbe79f5b225439749fe (0.00s)
-    --- PASS: FuzzStacktrie/d85741a7815d266a6a9c469dfc9b9f403ee04e7a (0.00s)
     --- PASS: FuzzStacktrie/d8be47c6d0a919d3bae6edc50901f8df6c3cd8cf (0.00s)
     --- PASS: FuzzStacktrie/d8ce7cb8ee7bcfb2deacbd6223bd15f2aa858ac3 (0.00s)
     --- PASS: FuzzStacktrie/d9735b938908a2c7e75941be56a6e7ce16f92291 (0.00s)
+    --- PASS: FuzzStacktrie/d97931e8c5e6330de2e0b4f4f6d70966b35870bf (0.00s)
     --- PASS: FuzzStacktrie/d9820322fc9d5007ff93ec89c6854791e1a694c1 (0.00s)
     --- PASS: FuzzStacktrie/d98cbaa3e5ca2e9bdb13d16085615b25f92ae928 (0.00s)
     --- PASS: FuzzStacktrie/d9a2653e1b66715d142236457296b00e0dae753d (0.00s)
     --- PASS: FuzzStacktrie/da44da03b4d6a9be03fe44a689122833bbd01c7d (0.00s)
     --- PASS: FuzzStacktrie/da8416edc71871e8daef2922af8a7c1e6d8d41b7 (0.00s)
     --- PASS: FuzzStacktrie/db24ff43b52913b94cad438cf003327299b52f66 (0.00s)
-    --- PASS: FuzzStacktrie/db6f83d30dcddde019cf6d81be34851726849c10 (0.00s)
     --- PASS: FuzzStacktrie/e03b3b1f3475eed826dbb3543f667973f8b169e0 (0.00s)
     --- PASS: FuzzStacktrie/e0dd378a4b19a46ff22e84de27265bd8b7f10d81 (0.00s)
     --- PASS: FuzzStacktrie/e0e6d7d5986fc241d2c8faad1400637563bb6da2 (0.00s)
@@ -656,31 +628,34 @@
     --- PASS: FuzzStacktrie/e5fe663aa7b43056ceb8aaeb4606522f53c5f9d4 (0.00s)
     --- PASS: FuzzStacktrie/e75801d9f361c56c655e159c849549aa7629cb0e (0.00s)
     --- PASS: FuzzStacktrie/e76020430ff4056c8bf9d8524a2b830e32b5edd7 (0.00s)
+    --- PASS: FuzzStacktrie/e7769be657564c5480d2aebc6f32d597e646ffea (0.00s)
     --- PASS: FuzzStacktrie/e78d7209c99d278a294e50eb2f87d6d7b729976d (0.00s)
     --- PASS: FuzzStacktrie/e7e1a4657eba786764c7b7ceeaaa5d8d85ea8c77 (0.00s)
     --- PASS: FuzzStacktrie/e8f73a350b2e331da49a6c9550108a1327381de6 (0.00s)
-    --- PASS: FuzzStacktrie/ea230ee52c3c087d01867b2e931f616c92943962 (0.00s)
+    --- PASS: FuzzStacktrie/e9155ef9f477aacad0e55965e976b2ad5353d941 (0.00s)
     --- PASS: FuzzStacktrie/eb59f61775f47b620e68082a5a55f9e4a0b8ecad (0.00s)
     --- PASS: FuzzStacktrie/eba657b45813e6e6dc274ae1d09c81dde0f79e73 (0.00s)
     --- PASS: FuzzStacktrie/ebbac270024ebe7f78a3c4596d9088e288f803d1 (0.00s)
     --- PASS: FuzzStacktrie/ebe5419dc5acf8a522b91f75d86e0acd48fd10f5 (0.00s)
+    --- PASS: FuzzStacktrie/ed9833620a4251159c965d2b74c41ad4bbd9efc5 (0.00s)
     --- PASS: FuzzStacktrie/eda5835efa75592cf111831c6d0381a0acac8ef3 (0.00s)
     --- PASS: FuzzStacktrie/ef69fc151b32155146e75212e99921dc84940003 (0.00s)
     --- PASS: FuzzStacktrie/efa967af8e516411c257cac56883192de50e3d29 (0.00s)
     --- PASS: FuzzStacktrie/f143b7d1bd3486c58d6f36539816adbf4f211ec2 (0.00s)
     --- PASS: FuzzStacktrie/f1e80d3dbf2437a1d1513a00bce7fef347a7513d (0.00s)
     --- PASS: FuzzStacktrie/f28a7e7f39dbafde728132d7e0ad23cf94ac7cb3 (0.00s)
+    --- PASS: FuzzStacktrie/f2a4e5d0f5fa050e42bb1641f456f1ded4485310 (0.00s)
     --- PASS: FuzzStacktrie/f442db17a0ce39b5d1dd4a94522ae9eec1fc5080 (0.00s)
     --- PASS: FuzzStacktrie/f4b98c31dfc8782c4178be177fa51f216b97f209 (0.00s)
     --- PASS: FuzzStacktrie/f4cb3e93afa319474b6ff7a8712f33d4e04febb3 (0.00s)
     --- PASS: FuzzStacktrie/f54e9357303741e0d4651e57c24083eb8b745269 (0.00s)
+    --- PASS: FuzzStacktrie/f5a38b094471c5a6420e25d9ef91d75b94b9cefb (0.00s)
     --- PASS: FuzzStacktrie/f5d1f70bfb765a948cd829945f9cc798d966fd12 (0.00s)
     --- PASS: FuzzStacktrie/f60be12141664412dd2bb9de9c91e9fb9b767489 (0.00s)
     --- PASS: FuzzStacktrie/f60eaa5e244bfb3f97d6b389d2701a8021aa8813 (0.00s)
     --- PASS: FuzzStacktrie/f60f0d6e781e88df9a8f7037ae9177c3a20a6d69 (0.00s)
     --- PASS: FuzzStacktrie/f62f97fad7905f5f6621e9333d6aa2b280451210 (0.00s)
     --- PASS: FuzzStacktrie/f6bf1577c514aa10ebe3a8131aec7e63c82a700b (0.00s)
-    --- PASS: FuzzStacktrie/f6ee4b94155231feea2859a55dc3b5549663a07a (0.00s)
     --- PASS: FuzzStacktrie/f71b070dd9e740e7a3502520af808afbe82679d7 (0.00s)
     --- PASS: FuzzStacktrie/f85343ab8c876870ca6f23965ce280cb4eaac054 (0.00s)
     --- PASS: FuzzStacktrie/f97bbd20a757aa0541d6a55ce4e31b1729cf76a2 (0.00s)
@@ -689,6 +664,7 @@
     --- PASS: FuzzStacktrie/fc1c69770e26ef9946111827e368c8667317cfb2 (0.00s)
     --- PASS: FuzzStacktrie/fc77ce99f5c9f307b6ec42f1b7b9c3fe7368e032 (0.00s)
     --- PASS: FuzzStacktrie/fc8d848ff47105bd40cbf8938af72496611ca575 (0.00s)
+    --- PASS: FuzzStacktrie/fc964bdf3d56c1ad0590a858bb18f569541102d1 (0.00s)
     --- PASS: FuzzStacktrie/fcfbc11542382c30c78ac942cc317cf999caef17 (0.00s)
     --- PASS: FuzzStacktrie/fdd397b04ce7bc3f3696de5690b889a0cc691428 (0.00s)
     --- PASS: FuzzStacktrie/fee093ed533fe8a4716fe458bd2ed8801d6e86c9 (0.00s)
@@ -696,5 +672,5 @@
     --- PASS: FuzzStacktrie/ffbb0918862706ce19a03acd6caf9441dea293c9 (0.00s)
 PASS
 coverage: 75.0% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/stacktrie	0.173s	coverage: 75.0% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/stacktrie	0.172s	coverage: 75.0% of statements
 	github.com/morph-l2/go-ethereum/tests/fuzzers/stacktrie/debug		coverage: 0.0% of statements
