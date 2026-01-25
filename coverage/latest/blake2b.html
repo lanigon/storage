@@ -59,7 +59,7 @@
 				
 				<option value="file1">github.com/morph-l2/go-ethereum/crypto/blake2b/blake2bAVX2_amd64.go (100.0%)</option>
 				
-				<option value="file2">github.com/morph-l2/go-ethereum/crypto/blake2b/blake2b_f_fuzz.go (85.7%)</option>
+				<option value="file2">github.com/morph-l2/go-ethereum/crypto/blake2b/blake2b_f_fuzz.go (7.1%)</option>
 				
 				<option value="file3">github.com/morph-l2/go-ethereum/crypto/blake2b/blake2b_generic.go (92.0%)</option>
 				
@@ -455,7 +455,7 @@ func Fuzz(data []byte) int <span class="cov8" title="1">{
                 return 0
         }</span>
         // Parse everything and call all the implementations
-        <span class="cov8" title="1">var (
+        <span class="cov0" title="0">var (
                 rounds = binary.BigEndian.Uint16(data[0:2])
 
                 h [8]uint64
@@ -463,22 +463,22 @@ func Fuzz(data []byte) int <span class="cov8" title="1">{
                 t [2]uint64
                 f uint64
         )
-        for i := 0; i &lt; 8; i++ </span><span class="cov8" title="1">{
+        for i := 0; i &lt; 8; i++ </span><span class="cov0" title="0">{
                 offset := 2 + i*8
                 h[i] = binary.LittleEndian.Uint64(data[offset : offset+8])
         }</span>
-        <span class="cov8" title="1">for i := 0; i &lt; 16; i++ </span><span class="cov8" title="1">{
+        <span class="cov0" title="0">for i := 0; i &lt; 16; i++ </span><span class="cov0" title="0">{
                 offset := 66 + i*8
                 m[i] = binary.LittleEndian.Uint64(data[offset : offset+8])
         }</span>
-        <span class="cov8" title="1">t[0] = binary.LittleEndian.Uint64(data[194:202])
+        <span class="cov0" title="0">t[0] = binary.LittleEndian.Uint64(data[194:202])
         t[1] = binary.LittleEndian.Uint64(data[202:210])
 
         if data[210]%2 == 1 </span><span class="cov0" title="0">{ // Avoid spinning the fuzzer to hit 0/1
                 f = 0xFFFFFFFFFFFFFFFF
         }</span>
         // Run the blake2b compression on all instruction sets and cross reference
-        <span class="cov8" title="1">want := h
+        <span class="cov0" title="0">want := h
         fGeneric(&amp;want, &amp;m, t[0], t[1], f, uint64(rounds))
 
         have := h
@@ -486,17 +486,17 @@ func Fuzz(data []byte) int <span class="cov8" title="1">{
         if have != want </span><span class="cov0" title="0">{
                 panic("SSE4 mismatches generic algo")</span>
         }
-        <span class="cov8" title="1">have = h
+        <span class="cov0" title="0">have = h
         fAVX(&amp;have, &amp;m, t[0], t[1], f, uint64(rounds))
         if have != want </span><span class="cov0" title="0">{
                 panic("AVX mismatches generic algo")</span>
         }
-        <span class="cov8" title="1">have = h
+        <span class="cov0" title="0">have = h
         fAVX2(&amp;have, &amp;m, t[0], t[1], f, uint64(rounds))
         if have != want </span><span class="cov0" title="0">{
                 panic("AVX2 mismatches generic algo")</span>
         }
-        <span class="cov8" title="1">return 1</span>
+        <span class="cov0" title="0">return 1</span>
 }
 </pre>
 		
