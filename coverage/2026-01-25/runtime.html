@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>bitutil: Go Coverage Report</title>
+		<title>runtime: Go Coverage Report</title>
 		<style>
 			body {
 				background: black;
@@ -55,7 +55,7 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/bitutil/compress_fuzz.go (71.4%)</option>
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/runtime/runtime_fuzz.go (100.0%)</option>
 				
 				</select>
 			</div>
@@ -85,58 +85,24 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
 
-package bitutil
+package runtime
 
 import (
-        "bytes"
-
-        "github.com/morph-l2/go-ethereum/common/bitutil"
+        "github.com/morph-l2/go-ethereum/core/vm/runtime"
 )
 
-// Fuzz implements a go-fuzz fuzzer method to test various encoding method
-// invocations.
-func Fuzz(data []byte) int <span class="cov8" title="1">{
-        if len(data) == 0 </span><span class="cov0" title="0">{
+// Fuzz is the basic entry point for the go-fuzz tool
+//
+// This returns 1 for valid parsable/runable code, 0
+// for invalid opcode.
+func Fuzz(input []byte) int <span class="cov8" title="1">{
+        _, _, err := runtime.Execute(input, input, &amp;runtime.Config{
+                GasLimit: 12000000,
+        })
+        // invalid opcode
+        if err != nil &amp;&amp; len(err.Error()) &gt; 6 &amp;&amp; err.Error()[:7] == "invalid" </span><span class="cov8" title="1">{
                 return 0
         }</span>
-        <span class="cov8" title="1">if data[0]%2 == 0 </span><span class="cov8" title="1">{
-                return fuzzEncode(data[1:])
-        }</span>
-        <span class="cov8" title="1">return fuzzDecode(data[1:])</span>
-}
-
-// fuzzEncode implements a go-fuzz fuzzer method to test the bitset encoding and
-// decoding algorithm.
-func fuzzEncode(data []byte) int <span class="cov8" title="1">{
-        proc, _ := bitutil.DecompressBytes(bitutil.CompressBytes(data), len(data))
-        if !bytes.Equal(data, proc) </span><span class="cov0" title="0">{
-                panic("content mismatch")</span>
-        }
-        <span class="cov8" title="1">return 1</span>
-}
-
-// fuzzDecode implements a go-fuzz fuzzer method to test the bit decoding and
-// reencoding algorithm.
-func fuzzDecode(data []byte) int <span class="cov8" title="1">{
-        blob, err := bitutil.DecompressBytes(data, 1024)
-        if err != nil </span><span class="cov0" title="0">{
-                return 0
-        }</span>
-        // re-compress it (it's OK if the re-compressed differs from the
-        // original - the first input may not have been compressed at all)
-        <span class="cov8" title="1">comp := bitutil.CompressBytes(blob)
-        if len(comp) &gt; len(blob) </span><span class="cov0" title="0">{
-                // After compression, it must be smaller or equal
-                panic("bad compression")</span>
-        }
-        // But decompressing it once again should work
-        <span class="cov8" title="1">decomp, err := bitutil.DecompressBytes(data, 1024)
-        if err != nil </span><span class="cov0" title="0">{
-                panic(err)</span>
-        }
-        <span class="cov8" title="1">if !bytes.Equal(decomp, blob) </span><span class="cov0" title="0">{
-                panic("content mismatch")</span>
-        }
         <span class="cov8" title="1">return 1</span>
 }
 </pre>

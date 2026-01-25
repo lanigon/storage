@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>bitutil: Go Coverage Report</title>
+		<title>secp256k1: Go Coverage Report</title>
 		<style>
 			body {
 				background: black;
@@ -55,7 +55,7 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/bitutil/compress_fuzz.go (71.4%)</option>
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/secp256k1/secp_fuzzer.go (81.8%)</option>
 				
 				</select>
 			</div>
@@ -69,7 +69,7 @@
 		</div>
 		<div id="content">
 		
-		<pre class="file" id="file0" style="display: none">// Copyright 2017 The go-ethereum Authors
+		<pre class="file" id="file0" style="display: none">// Copyright 2021 The go-ethereum Authors
 // This file is part of the go-ethereum library.
 //
 // The go-ethereum library is free software: you can redistribute it and/or modify
@@ -85,59 +85,41 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
 
-package bitutil
+// build +gofuzz
+
+package secp256k1
 
 import (
-        "bytes"
+        "fmt"
 
-        "github.com/morph-l2/go-ethereum/common/bitutil"
+        "github.com/btcsuite/btcd/btcec/v2"
+
+        fuzz "github.com/google/gofuzz"
+
+        "github.com/morph-l2/go-ethereum/crypto/secp256k1"
 )
 
-// Fuzz implements a go-fuzz fuzzer method to test various encoding method
-// invocations.
-func Fuzz(data []byte) int <span class="cov8" title="1">{
-        if len(data) == 0 </span><span class="cov0" title="0">{
-                return 0
-        }</span>
-        <span class="cov8" title="1">if data[0]%2 == 0 </span><span class="cov8" title="1">{
-                return fuzzEncode(data[1:])
-        }</span>
-        <span class="cov8" title="1">return fuzzDecode(data[1:])</span>
-}
-
-// fuzzEncode implements a go-fuzz fuzzer method to test the bitset encoding and
-// decoding algorithm.
-func fuzzEncode(data []byte) int <span class="cov8" title="1">{
-        proc, _ := bitutil.DecompressBytes(bitutil.CompressBytes(data), len(data))
-        if !bytes.Equal(data, proc) </span><span class="cov0" title="0">{
-                panic("content mismatch")</span>
+func Fuzz(input []byte) int <span class="cov8" title="1">{
+        var (
+                fuzzer = fuzz.NewFromGoFuzz(input)
+                curveA = secp256k1.S256()
+                curveB = btcec.S256()
+                dataP1 []byte
+                dataP2 []byte
+        )
+        // first point
+        fuzzer.Fuzz(&amp;dataP1)
+        x1, y1 := curveB.ScalarBaseMult(dataP1)
+        // second point
+        fuzzer.Fuzz(&amp;dataP2)
+        x2, y2 := curveB.ScalarBaseMult(dataP2)
+        resAX, resAY := curveA.Add(x1, y1, x2, y2)
+        resBX, resBY := curveB.Add(x1, y1, x2, y2)
+        if resAX.Cmp(resBX) != 0 || resAY.Cmp(resBY) != 0 </span><span class="cov0" title="0">{
+                fmt.Printf("%s %s %s %s\n", x1, y1, x2, y2)
+                panic(fmt.Sprintf("Addition failed: geth: %s %s btcd: %s %s", resAX, resAY, resBX, resBY))</span>
         }
-        <span class="cov8" title="1">return 1</span>
-}
-
-// fuzzDecode implements a go-fuzz fuzzer method to test the bit decoding and
-// reencoding algorithm.
-func fuzzDecode(data []byte) int <span class="cov8" title="1">{
-        blob, err := bitutil.DecompressBytes(data, 1024)
-        if err != nil </span><span class="cov0" title="0">{
-                return 0
-        }</span>
-        // re-compress it (it's OK if the re-compressed differs from the
-        // original - the first input may not have been compressed at all)
-        <span class="cov8" title="1">comp := bitutil.CompressBytes(blob)
-        if len(comp) &gt; len(blob) </span><span class="cov0" title="0">{
-                // After compression, it must be smaller or equal
-                panic("bad compression")</span>
-        }
-        // But decompressing it once again should work
-        <span class="cov8" title="1">decomp, err := bitutil.DecompressBytes(data, 1024)
-        if err != nil </span><span class="cov0" title="0">{
-                panic(err)</span>
-        }
-        <span class="cov8" title="1">if !bytes.Equal(decomp, blob) </span><span class="cov0" title="0">{
-                panic("content mismatch")</span>
-        }
-        <span class="cov8" title="1">return 1</span>
+        <span class="cov8" title="1">return 0</span>
 }
 </pre>
 		

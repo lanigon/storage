@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>debug: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/debug/main.go (0.0%)</option>
+				
+				<option value="file1">github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/rangeproof-fuzzer.go (93.3%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">// Copyright 2020 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package main
+
+import (
+        "fmt"
+        "io/ioutil"
+        "os"
+
+        "github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof"
+)
+
+func main() <span class="cov0" title="0">{
+        if len(os.Args) != 2 </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Usage: debug &lt;file&gt;\n")
+                fmt.Fprintf(os.Stderr, "Example\n")
+                fmt.Fprintf(os.Stderr, "        $ debug ../crashers/4bbef6857c733a87ecf6fd8b9e7238f65eb9862a\n")
+                os.Exit(1)
+        }</span>
+        <span class="cov0" title="0">crasher := os.Args[1]
+        data, err := ioutil.ReadFile(crasher)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "error loading crasher %v: %v", crasher, err)
+                os.Exit(1)
+        }</span>
+        <span class="cov0" title="0">rangeproof.Fuzz(data)</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">// Copyright 2020 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package rangeproof
+
+import (
+        "bytes"
+        "encoding/binary"
+        "fmt"
+        "io"
+        "sort"
+
+        "github.com/morph-l2/go-ethereum/common"
+        "github.com/morph-l2/go-ethereum/ethdb/memorydb"
+        "github.com/morph-l2/go-ethereum/trie"
+)
+
+type kv struct {
+        k, v []byte
+        t    bool
+}
+
+type entrySlice []*kv
+
+func (p entrySlice) Len() int           <span class="cov8" title="1">{ return len(p) }</span>
+func (p entrySlice) Less(i, j int) bool <span class="cov8" title="1">{ return bytes.Compare(p[i].k, p[j].k) &lt; 0 }</span>
+func (p entrySlice) Swap(i, j int)      <span class="cov8" title="1">{ p[i], p[j] = p[j], p[i] }</span>
+
+type fuzzer struct {
+        input     io.Reader
+        exhausted bool
+}
+
+func (f *fuzzer) randBytes(n int) []byte <span class="cov8" title="1">{
+        r := make([]byte, n)
+        if _, err := f.input.Read(r); err != nil </span><span class="cov8" title="1">{
+                f.exhausted = true
+        }</span>
+        <span class="cov8" title="1">return r</span>
+}
+
+func (f *fuzzer) readInt() uint64 <span class="cov8" title="1">{
+        var x uint64
+        if err := binary.Read(f.input, binary.LittleEndian, &amp;x); err != nil </span><span class="cov8" title="1">{
+                f.exhausted = true
+        }</span>
+        <span class="cov8" title="1">return x</span>
+}
+
+func (f *fuzzer) randomTrie(n int) (*trie.Trie, map[string]*kv) <span class="cov8" title="1">{
+
+        trie := new(trie.Trie)
+        vals := make(map[string]*kv)
+        size := f.readInt()
+        // Fill it with some fluff
+        for i := byte(0); i &lt; byte(size); i++ </span><span class="cov8" title="1">{
+                value := &amp;kv{common.LeftPadBytes([]byte{i}, 32), []byte{i}, false}
+                value2 := &amp;kv{common.LeftPadBytes([]byte{i + 10}, 32), []byte{i}, false}
+                trie.Update(value.k, value.v)
+                trie.Update(value2.k, value2.v)
+                vals[string(value.k)] = value
+                vals[string(value2.k)] = value2
+        }</span>
+        <span class="cov8" title="1">if f.exhausted </span><span class="cov0" title="0">{
+                return nil, nil
+        }</span>
+        // And now fill with some random
+        <span class="cov8" title="1">for i := 0; i &lt; n; i++ </span><span class="cov8" title="1">{
+                k := f.randBytes(32)
+                v := f.randBytes(20)
+                value := &amp;kv{k, v, false}
+                trie.Update(k, v)
+                vals[string(k)] = value
+                if f.exhausted </span><span class="cov8" title="1">{
+                        return nil, nil
+                }</span>
+        }
+        <span class="cov8" title="1">return trie, vals</span>
+}
+
+func (f *fuzzer) fuzz() int <span class="cov8" title="1">{
+        maxSize := 200
+        tr, vals := f.randomTrie(1 + int(f.readInt())%maxSize)
+        if f.exhausted </span><span class="cov8" title="1">{
+                return 0 // input too short
+        }</span>
+        <span class="cov8" title="1">var entries entrySlice
+        for _, kv := range vals </span><span class="cov8" title="1">{
+                entries = append(entries, kv)
+        }</span>
+        <span class="cov8" title="1">if len(entries) &lt;= 1 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">sort.Sort(entries)
+
+        var ok = 0
+        for </span><span class="cov8" title="1">{
+                start := int(f.readInt() % uint64(len(entries)))
+                end := 1 + int(f.readInt()%uint64(len(entries)-1))
+                testcase := int(f.readInt() % uint64(6))
+                index := int(f.readInt() &amp; 0xFFFFFFFF)
+                index2 := int(f.readInt() &amp; 0xFFFFFFFF)
+                if f.exhausted </span><span class="cov8" title="1">{
+                        break</span>
+                }
+                <span class="cov8" title="1">proof := memorydb.New()
+                if err := tr.Prove(entries[start].k, 0, proof); err != nil </span><span class="cov0" title="0">{
+                        panic(fmt.Sprintf("Failed to prove the first node %v", err))</span>
+                }
+                <span class="cov8" title="1">if err := tr.Prove(entries[end-1].k, 0, proof); err != nil </span><span class="cov0" title="0">{
+                        panic(fmt.Sprintf("Failed to prove the last node %v", err))</span>
+                }
+                <span class="cov8" title="1">var keys [][]byte
+                var vals [][]byte
+                for i := start; i &lt; end; i++ </span><span class="cov8" title="1">{
+                        keys = append(keys, entries[i].k)
+                        vals = append(vals, entries[i].v)
+                }</span>
+                <span class="cov8" title="1">if len(keys) == 0 </span><span class="cov8" title="1">{
+                        return 0
+                }</span>
+                <span class="cov8" title="1">var first, last = keys[0], keys[len(keys)-1]
+                testcase %= 6
+                switch testcase </span>{
+                case 0:<span class="cov8" title="1">
+                        // Modified key
+                        keys[index%len(keys)] = f.randBytes(32)</span> // In theory it can't be same
+                case 1:<span class="cov8" title="1">
+                        // Modified val
+                        vals[index%len(vals)] = f.randBytes(20)</span> // In theory it can't be same
+                case 2:<span class="cov8" title="1">
+                        // Gapped entry slice
+                        index = index % len(keys)
+                        keys = append(keys[:index], keys[index+1:]...)
+                        vals = append(vals[:index], vals[index+1:]...)</span>
+                case 3:<span class="cov8" title="1">
+                        // Out of order
+                        index1 := index % len(keys)
+                        index2 := index2 % len(keys)
+                        keys[index1], keys[index2] = keys[index2], keys[index1]
+                        vals[index1], vals[index2] = vals[index2], vals[index1]</span>
+                case 4:<span class="cov8" title="1">
+                        // Set random key to nil, do nothing
+                        keys[index%len(keys)] = nil</span>
+                case 5:<span class="cov8" title="1">
+                        // Set random value to nil, deletion
+                        vals[index%len(vals)] = nil</span>
+
+                        // Other cases:
+                        // Modify something in the proof db
+                        // add stuff to proof db
+                        // drop stuff from proof db
+
+                }
+                <span class="cov8" title="1">if f.exhausted </span><span class="cov0" title="0">{
+                        break</span>
+                }
+                <span class="cov8" title="1">ok = 1
+                //nodes, subtrie
+                hasMore, err := trie.VerifyRangeProof(tr.Hash(), first, last, keys, vals, proof)
+                if err != nil </span><span class="cov8" title="1">{
+                        if hasMore </span><span class="cov0" title="0">{
+                                panic("err != nil &amp;&amp; hasMore == true")</span>
+                        }
+                }
+        }
+        <span class="cov8" title="1">return ok</span>
+}
+
+// The function must return
+// 1 if the fuzzer should increase priority of the
+//
+//        given input during subsequent fuzzing (for example, the input is lexically
+//        correct and was parsed successfully);
+//
+// -1 if the input must not be added to corpus even if gives new coverage; and
+// 0 otherwise; other values are reserved for future use.
+func Fuzz(input []byte) int <span class="cov8" title="1">{
+        if len(input) &lt; 100 </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">r := bytes.NewReader(input)
+        f := fuzzer{
+                input:     r,
+                exhausted: false,
+        }
+        return f.fuzz()</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
