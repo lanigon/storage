@@ -303,7 +303,6 @@
 === RUN   FuzzCrossG2MultiExp/2056e6abda5d36e5e0012b5fd965a91c7bb84315
 === RUN   FuzzCrossG2MultiExp/2171c7793a729cb8ff2c977fc0b8caac17c131a2
 === RUN   FuzzCrossG2MultiExp/229b3650a180c6ff87b51896ff3821958d91ba40
-=== RUN   FuzzCrossG2MultiExp/22a27b1b8d8d6dadea86ad3ea168992d9ce74be2
 === RUN   FuzzCrossG2MultiExp/22faf57a7aeb7cf2e83b140133aa0e176e0da14f
 === RUN   FuzzCrossG2MultiExp/2331e922eec999d27a7b7a86ad159ea7f6c7af1f
 === RUN   FuzzCrossG2MultiExp/24222a6b8d881e91b8d0903fdff90bd9fc917a65
@@ -361,7 +360,6 @@
 === RUN   FuzzCrossG2MultiExp/567e84e3d436048844294eade431d3dbdc3130df
 === RUN   FuzzCrossG2MultiExp/56afd27327a1d335768cdb717ad0cd1113b314f1
 === RUN   FuzzCrossG2MultiExp/580cd4e3250179ab891d496dfa9f4fca1512fd19
-=== RUN   FuzzCrossG2MultiExp/5814d98182be004e706f1a212a4eb2f7e92b9c90
 === RUN   FuzzCrossG2MultiExp/59a5c87b99370886a76221925f590a0bece14e17
 === RUN   FuzzCrossG2MultiExp/5b7d040fd6033082df1e3e8883c2790d8ba99205
 === RUN   FuzzCrossG2MultiExp/5bdaf027b1dc0aff20b51e72b54ea35f7e586d51
@@ -404,7 +402,6 @@
 === RUN   FuzzCrossG2MultiExp/7dbcf1bc0c4180b820d223ef90c417178abd463a
 === RUN   FuzzCrossG2MultiExp/7f52ebeb857c94cbb00b4f353a394dafc39c163d
 === RUN   FuzzCrossG2MultiExp/7f85a88acceb09b3fa52367a39e21519253844af
-=== RUN   FuzzCrossG2MultiExp/7f9539d1aa04ec16ed04c381a78dc82ac4890a26
 === RUN   FuzzCrossG2MultiExp/8024b8808a49d0041087a4b5c91b6dd57b593c7b
 === RUN   FuzzCrossG2MultiExp/80649bea51634d6ea51503f147cc9ffe21518ac3
 === RUN   FuzzCrossG2MultiExp/80ebfaeae013b13654db56f695f3e2755d5dfffb
@@ -451,7 +448,6 @@
 === RUN   FuzzCrossG2MultiExp/aca1033f47878813af1bc73569ceaec12ed881eb
 === RUN   FuzzCrossG2MultiExp/adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 === RUN   FuzzCrossG2MultiExp/ae10de843b344fdc759bb4085657258470a20c84
-=== RUN   FuzzCrossG2MultiExp/af069405d723b0c58c26058687c71d591f4554aa
 === RUN   FuzzCrossG2MultiExp/b09d4ad0c272f3cbe28df3b19465550a2b775f7c
 === RUN   FuzzCrossG2MultiExp/b13d63e6607344400245fce70465300ec5afcb17
 === RUN   FuzzCrossG2MultiExp/b202c0769fb19e943e9403b1089dee6dcbc2b3b3
@@ -507,7 +503,6 @@
 === RUN   FuzzCrossG2MultiExp/d61fd09218b635a60791bcd337bc7a05ecf1189e
 === RUN   FuzzCrossG2MultiExp/d753a98c08ddd25ca2e7e345c467b21062d3df45
 === RUN   FuzzCrossG2MultiExp/d77b26ae854b5d294fa6b4085e5cb4adbce83513
-=== RUN   FuzzCrossG2MultiExp/d7f9c2c02de580e9975302235f605a6de385b7ab
 === RUN   FuzzCrossG2MultiExp/d81467a00bdae3095c4a7f0000cc7a9f91209d6b
 === RUN   FuzzCrossG2MultiExp/d9ad9aff2c256b657f7ffd5da494e42c7dfeb445
 === RUN   FuzzCrossG2MultiExp/da498a4a3a6d7de338e147e10a350452b1a8d437
@@ -560,14 +555,14 @@
 === RUN   FuzzCrossG2MultiExp/fdf8794e36743472f93b8b7c843c607276dd933b
 === RUN   FuzzCrossG2MultiExp/fecd241dcc9dd453111bcb03bd0db3eefb78cc68
 === RUN   FuzzCrossG2MultiExp/fedf55341beaedf89a0619443ebc3913bd8557a7
---- PASS: FuzzCrossG2MultiExp (1.81s)
+--- PASS: FuzzCrossG2MultiExp (1.71s)
     --- PASS: FuzzCrossG2MultiExp/00b95cbef4be1f4f58aedca8c8be8fa936348100 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/00e8f5804e974deca056da603a9e4918b8264f77 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/01a765fd7c58a9268dee88f53f2b5d46653ca76d (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/01d96a26e029519cd75c2fdb0fbe20b1fceab55c (0.02s)
+    --- PASS: FuzzCrossG2MultiExp/01d96a26e029519cd75c2fdb0fbe20b1fceab55c (0.01s)
     --- PASS: FuzzCrossG2MultiExp/028976a85f05e9f65cb8be960f00367bca920539 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/03cd13932583a14de5498eed7011cacb745bc60f (0.01s)
-    --- PASS: FuzzCrossG2MultiExp/041e88f27e381ee0711d138d9383fbc5bdbca6cd (0.01s)
+    --- PASS: FuzzCrossG2MultiExp/041e88f27e381ee0711d138d9383fbc5bdbca6cd (0.02s)
     --- PASS: FuzzCrossG2MultiExp/049306c5a7104a04eaf87208a3cec1d12c00075d (0.00s)
     --- PASS: FuzzCrossG2MultiExp/04baa2d8fd9b12b15c8d1c22214c862e5bd10d84 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/04f41d80add6e807caf7fdec36c70fc137b12269 (0.00s)
@@ -585,7 +580,7 @@
     --- PASS: FuzzCrossG2MultiExp/0d75e78fc865d5eb499efdecb796f6bfac7a6c2a (0.00s)
     --- PASS: FuzzCrossG2MultiExp/0e015c479b13aeffd59bdfa48572950f048240a2 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/0e6646c7314736c288f5f56bca2d2eaaaed36e1a (0.01s)
-    --- PASS: FuzzCrossG2MultiExp/0ed7b229911b74d09436be470aa7694d5495e0d0 (0.02s)
+    --- PASS: FuzzCrossG2MultiExp/0ed7b229911b74d09436be470aa7694d5495e0d0 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/103c61a61ad27bc234eb71faf963fb88229c2215 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/10656be464631e672a925dbff16b2360cdf6580c (0.01s)
     --- PASS: FuzzCrossG2MultiExp/1142790492d7f6e44c651ff3288262e80777982c (0.00s)
@@ -609,7 +604,6 @@
     --- PASS: FuzzCrossG2MultiExp/2056e6abda5d36e5e0012b5fd965a91c7bb84315 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/2171c7793a729cb8ff2c977fc0b8caac17c131a2 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/229b3650a180c6ff87b51896ff3821958d91ba40 (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/22a27b1b8d8d6dadea86ad3ea168992d9ce74be2 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/22faf57a7aeb7cf2e83b140133aa0e176e0da14f (0.00s)
     --- PASS: FuzzCrossG2MultiExp/2331e922eec999d27a7b7a86ad159ea7f6c7af1f (0.00s)
     --- PASS: FuzzCrossG2MultiExp/24222a6b8d881e91b8d0903fdff90bd9fc917a65 (0.01s)
@@ -624,7 +618,7 @@
     --- PASS: FuzzCrossG2MultiExp/2d259f7d0cb6457ee0c3a578108e6efc35a0c46b (0.01s)
     --- PASS: FuzzCrossG2MultiExp/2dc210e98476033578bf63dd9e227ad8f10ee085 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/2e59467c15f02bd0c6ccc4d73ef4c685316828cc (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/2e9fddedf97fa5c0197c43d3ae7175b2d0a2514f (0.01s)
+    --- PASS: FuzzCrossG2MultiExp/2e9fddedf97fa5c0197c43d3ae7175b2d0a2514f (0.00s)
     --- PASS: FuzzCrossG2MultiExp/2f71d6b0cc3bd7d023808f6b70fba4850b52a5bf (0.00s)
     --- PASS: FuzzCrossG2MultiExp/2f9c4cfda19ce1d88ca2a88329f326b0920f2a99 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/2f9d28bb1428ffe9f3be739eb192621a133690d5 (0.01s)
@@ -667,7 +661,6 @@
     --- PASS: FuzzCrossG2MultiExp/567e84e3d436048844294eade431d3dbdc3130df (0.01s)
     --- PASS: FuzzCrossG2MultiExp/56afd27327a1d335768cdb717ad0cd1113b314f1 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/580cd4e3250179ab891d496dfa9f4fca1512fd19 (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/5814d98182be004e706f1a212a4eb2f7e92b9c90 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/59a5c87b99370886a76221925f590a0bece14e17 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/5b7d040fd6033082df1e3e8883c2790d8ba99205 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/5bdaf027b1dc0aff20b51e72b54ea35f7e586d51 (0.01s)
@@ -678,7 +671,7 @@
     --- PASS: FuzzCrossG2MultiExp/60a985331bc2a43407277ed0f171687301b84678 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/60fb81dc6f8b286b8628663469087cfcb7e20f8e (0.00s)
     --- PASS: FuzzCrossG2MultiExp/61189268ad4c14918fe123f5201b31b09a05d6c8 (0.01s)
-    --- PASS: FuzzCrossG2MultiExp/61e179bf2226bbd3139ae6efd13c024d41d3d5e7 (0.02s)
+    --- PASS: FuzzCrossG2MultiExp/61e179bf2226bbd3139ae6efd13c024d41d3d5e7 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/62d828b2b064ea012db37763dae1ff75a6191d38 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/633ad0ef96444edc8a67eacfa40ef8882e82d8d3 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/639b9da64f0dfa3b2f1278c411392015cc1fbecf (0.00s)
@@ -695,7 +688,7 @@
     --- PASS: FuzzCrossG2MultiExp/72682b6ac831d12c9a374b7223932e117de67aff (0.00s)
     --- PASS: FuzzCrossG2MultiExp/732371508a574cb9235a59f24be1266ea3504b9c (0.00s)
     --- PASS: FuzzCrossG2MultiExp/74911b2b5960c55eafc1041e6898220a20716992 (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/757540cb89f27af5c51829c3ddcde5f2dcce981b (0.01s)
+    --- PASS: FuzzCrossG2MultiExp/757540cb89f27af5c51829c3ddcde5f2dcce981b (0.00s)
     --- PASS: FuzzCrossG2MultiExp/757baef508bf5b7f1eb118cfc61452efb16d2d78 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/76363c3de170d38285c4c2416459f4cdbaa5285e (0.00s)
     --- PASS: FuzzCrossG2MultiExp/764fb0992674040a941d1826ae4518267ed601a7 (0.01s)
@@ -709,8 +702,7 @@
     --- PASS: FuzzCrossG2MultiExp/7ccf08445c38db7f011cd7e8ba4d01f658d9f014 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/7dbcf1bc0c4180b820d223ef90c417178abd463a (0.01s)
     --- PASS: FuzzCrossG2MultiExp/7f52ebeb857c94cbb00b4f353a394dafc39c163d (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/7f85a88acceb09b3fa52367a39e21519253844af (0.02s)
-    --- PASS: FuzzCrossG2MultiExp/7f9539d1aa04ec16ed04c381a78dc82ac4890a26 (0.01s)
+    --- PASS: FuzzCrossG2MultiExp/7f85a88acceb09b3fa52367a39e21519253844af (0.01s)
     --- PASS: FuzzCrossG2MultiExp/8024b8808a49d0041087a4b5c91b6dd57b593c7b (0.01s)
     --- PASS: FuzzCrossG2MultiExp/80649bea51634d6ea51503f147cc9ffe21518ac3 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/80ebfaeae013b13654db56f695f3e2755d5dfffb (0.00s)
@@ -732,7 +724,7 @@
     --- PASS: FuzzCrossG2MultiExp/9511ba873a7393744ec762496f6c0d349db95c02 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/9871b113d8ca0e27900325ce27e11acc8d1f1d17 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/9897db8e8e01c44bb80f7acef7c91e7a83df7e39 (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/98c8c3be26c207c4aed90ce05c3833b3dd044be6 (0.02s)
+    --- PASS: FuzzCrossG2MultiExp/98c8c3be26c207c4aed90ce05c3833b3dd044be6 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/9988ebc63e118f08eb70f977180a2819a5304a07 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/9ba61ee77494dc506d86073e7c29bbfbd0cee401 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/9c3909fdebb8adee1561261a6576694e799961a3 (0.00s)
@@ -757,7 +749,6 @@
     --- PASS: FuzzCrossG2MultiExp/aca1033f47878813af1bc73569ceaec12ed881eb (0.00s)
     --- PASS: FuzzCrossG2MultiExp/adc83b19e793491b1c6ea0fd8b46cd9f32e592fc (0.00s)
     --- PASS: FuzzCrossG2MultiExp/ae10de843b344fdc759bb4085657258470a20c84 (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/af069405d723b0c58c26058687c71d591f4554aa (0.00s)
     --- PASS: FuzzCrossG2MultiExp/b09d4ad0c272f3cbe28df3b19465550a2b775f7c (0.00s)
     --- PASS: FuzzCrossG2MultiExp/b13d63e6607344400245fce70465300ec5afcb17 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/b202c0769fb19e943e9403b1089dee6dcbc2b3b3 (0.00s)
@@ -767,22 +758,22 @@
     --- PASS: FuzzCrossG2MultiExp/b5ecfe022ce66ffe31137c7f0f16843c5f4f87e1 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/b6b15aa42a017a714ede43ddfe0b59e294c959f1 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/b7833815fbc1b856b8d8150ed78d5004e852ac1c (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/b7f8af1adebb233d95c2a2defc04c4d20b164e9d (0.01s)
+    --- PASS: FuzzCrossG2MultiExp/b7f8af1adebb233d95c2a2defc04c4d20b164e9d (0.00s)
     --- PASS: FuzzCrossG2MultiExp/b827788a150e68516177b79957c8d4e0ab6bdbd7 (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/b832a3a7807007a621a79b6591962b96365a2efc (0.02s)
-    --- PASS: FuzzCrossG2MultiExp/b852bbbe366be89ee01b96efe460acecd3b85aae (0.02s)
+    --- PASS: FuzzCrossG2MultiExp/b832a3a7807007a621a79b6591962b96365a2efc (0.01s)
+    --- PASS: FuzzCrossG2MultiExp/b852bbbe366be89ee01b96efe460acecd3b85aae (0.01s)
     --- PASS: FuzzCrossG2MultiExp/ba05931448e81d10d315c4a708ebf126f69954cb (0.00s)
     --- PASS: FuzzCrossG2MultiExp/bab53e3cad9d8706e2f19395c1c34ff92d99e207 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/bb9343f9cacfe9adf5e24f91ddd702e2b9219c4b (0.00s)
     --- PASS: FuzzCrossG2MultiExp/bc3c8e1e5a59b2ed2a9f4cc7e06c8ab85c0e7479 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/bc437153b08735ebc0bcf2e906f4034cb70988d6 (0.01s)
-    --- PASS: FuzzCrossG2MultiExp/bc59fed4e09f9e937beb8c5e648aef276fba99c2 (0.02s)
+    --- PASS: FuzzCrossG2MultiExp/bc59fed4e09f9e937beb8c5e648aef276fba99c2 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/bc69e79d3725a326b07182346d02df49d4368065 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/bd647d2b97e1e53bcb5ba84f3d776bf9a669f922 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/bee0f274f1872e1be46d2e00973fa4a41e2cf92b (0.01s)
     --- PASS: FuzzCrossG2MultiExp/bf5255cc45de61cc61d86533941f379c020ab8a6 (0.02s)
     --- PASS: FuzzCrossG2MultiExp/c01e1c483c62d8e5ff15ebe6ad75371d76cfc332 (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/c1ae7fc42610212eec9dc5f5718e549aacac5727 (0.01s)
+    --- PASS: FuzzCrossG2MultiExp/c1ae7fc42610212eec9dc5f5718e549aacac5727 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/c2ca8aeecb487bbfb13ec72b56e2e53d327ea046 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/c2ea7e1b6be2a93ef6a8e41a955cc2c0ee067d1c (0.00s)
     --- PASS: FuzzCrossG2MultiExp/c4f275e0fe8edcb3720914e67a0ed7ff22b6c852 (0.00s)
@@ -799,7 +790,7 @@
     --- PASS: FuzzCrossG2MultiExp/ce3eaee7f95903c95d6d0377e0aafadde19e2170 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/cee5d909fc89ef2e2ccff986328049cfb47e5fdc (0.00s)
     --- PASS: FuzzCrossG2MultiExp/cf97f2503307306f0119547b4d1e90d33a762dfd (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/d012b7271782e509669592f02ead0f4020db1024 (0.02s)
+    --- PASS: FuzzCrossG2MultiExp/d012b7271782e509669592f02ead0f4020db1024 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/d0d58cc79411d102ff41f5fe78ca21b685eaac87 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/d0f7f7e3ec00e7ae2efb6d74e33050a3a7b81382 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/d117fe20eac5b8a593de6d4124a3ca65ce0559c3 (0.01s)
@@ -813,7 +804,6 @@
     --- PASS: FuzzCrossG2MultiExp/d61fd09218b635a60791bcd337bc7a05ecf1189e (0.01s)
     --- PASS: FuzzCrossG2MultiExp/d753a98c08ddd25ca2e7e345c467b21062d3df45 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/d77b26ae854b5d294fa6b4085e5cb4adbce83513 (0.01s)
-    --- PASS: FuzzCrossG2MultiExp/d7f9c2c02de580e9975302235f605a6de385b7ab (0.00s)
     --- PASS: FuzzCrossG2MultiExp/d81467a00bdae3095c4a7f0000cc7a9f91209d6b (0.00s)
     --- PASS: FuzzCrossG2MultiExp/d9ad9aff2c256b657f7ffd5da494e42c7dfeb445 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/da498a4a3a6d7de338e147e10a350452b1a8d437 (0.00s)
@@ -825,7 +815,7 @@
     --- PASS: FuzzCrossG2MultiExp/dd23804cd3cc65a8aeb2f738e42fcfe993f04651 (0.01s)
     --- PASS: FuzzCrossG2MultiExp/e0149fb23be7fd2733d64be5d56a9a56c5f53fbc (0.01s)
     --- PASS: FuzzCrossG2MultiExp/e04814b0036f716e64845b16dde095997dfdb52a (0.00s)
-    --- PASS: FuzzCrossG2MultiExp/e18081d687b5dfcf3862e926d503aa8c5b20e9ed (0.01s)
+    --- PASS: FuzzCrossG2MultiExp/e18081d687b5dfcf3862e926d503aa8c5b20e9ed (0.00s)
     --- PASS: FuzzCrossG2MultiExp/e1877a933e3f580b14db6049c9cfd77bbc6d4848 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/e1a9952aa93a334a3cf8cd6b4e06598f01658dc4 (0.00s)
     --- PASS: FuzzCrossG2MultiExp/e3191d268b8ac805da55f483e761ad098fa32ba0 (0.00s)
@@ -918,7 +908,6 @@
 === RUN   FuzzCrossG1Add/55c9f1b695adabb37eb846ddf90f6ebb3ff2b2ac
 === RUN   FuzzCrossG1Add/5a99da728af258aa16914af71e4e27ae08a4fc1d
 === RUN   FuzzCrossG1Add/5ab10f8c5bd83d156b5a1dc6305d928e71e26664
-=== RUN   FuzzCrossG1Add/61abba765cc425a8cd4489ddc62b71a7493b0994
 === RUN   FuzzCrossG1Add/6390cf9aee95c95b94bc3eeba4ab0eed5902251d
 === RUN   FuzzCrossG1Add/6561bf0edb133d1a6a92fa99758d9869ebe14bf5
 === RUN   FuzzCrossG1Add/66360d52bf15ee0e4702cce6425813b096ae857f
@@ -929,11 +918,11 @@
 === RUN   FuzzCrossG1Add/76cf42fd4d90ffd2027077b4c23c7b910e406e91
 === RUN   FuzzCrossG1Add/783ac8fc911e9213bbd645cc96617acce4e9a113
 === RUN   FuzzCrossG1Add/787e996d315d109016a35f4861f0a81e8acdcaf2
-=== RUN   FuzzCrossG1Add/7e1389079a33b367af9b0109a95633a50caeab33
 === RUN   FuzzCrossG1Add/7e9246e02a01f07ee4d024a06373507f5b172f7f
 === RUN   FuzzCrossG1Add/7fc10dbba4e512d4b8fe45ad19ac936f66af6cea
 === RUN   FuzzCrossG1Add/8115957680b0d87068973b531369b0f452babb20
 === RUN   FuzzCrossG1Add/84152fcf2d3551caadbe94c69ace364274cb7fa7
+=== RUN   FuzzCrossG1Add/84d56dacef606ca6e7e0add41427a275156bad43
 === RUN   FuzzCrossG1Add/85cc5c05dae1fa27e2288ace70579bcd2a746307
 === RUN   FuzzCrossG1Add/86c71e43a8b5e00f2abfe392ffab6580dafbf087
 === RUN   FuzzCrossG1Add/8d7eb5774700f8124b2d4344d30b1557f99912df
@@ -941,25 +930,26 @@
 === RUN   FuzzCrossG1Add/9003cc81afbf2619da01a33117800542b6ae911d
 === RUN   FuzzCrossG1Add/9069ca78e7450a285173431b3e52c5c25299e473
 === RUN   FuzzCrossG1Add/93de18a11aa646a7e245b2bda49c0f033a119062
+=== RUN   FuzzCrossG1Add/9799572bf876d1ccb00013d02449dc6740982b55
 === RUN   FuzzCrossG1Add/9a6e7551f5339a7391f58e5d906fd253765d10d8
 === RUN   FuzzCrossG1Add/9d3e573cc261dd50e834e3d178b165197d82ae48
-=== RUN   FuzzCrossG1Add/a05959b069cc20c15d6d79035baeaf7d662b9825
 === RUN   FuzzCrossG1Add/a0af70a49bcc29d62237bbbbe33c1a9bc2c73469
 === RUN   FuzzCrossG1Add/a0dc87e2971d07059e7fb2fbdbad0f532e5837cd
+=== RUN   FuzzCrossG1Add/a2c57b38a4e11d4ebf419e6558d983ff9b25e4d4
 === RUN   FuzzCrossG1Add/a69773508afe91152dcde9a09495fc69687f63f4
 === RUN   FuzzCrossG1Add/a6a36a62c6eb87d156dead17e88f3306b8b81c7c
-=== RUN   FuzzCrossG1Add/a8b78eedfb186ca8ac2bee3f9d4098ae5774254e
-=== RUN   FuzzCrossG1Add/a8be27f8e678c0ab9bb12d9b26847ffdf215d029
 === RUN   FuzzCrossG1Add/aab520ec40a667ad6eb3ad506f4c0ecc87f13c5c
 === RUN   FuzzCrossG1Add/ab011820907b4f5edfd109658e6abc8677b4d2dc
 === RUN   FuzzCrossG1Add/adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 === RUN   FuzzCrossG1Add/b2beb1625f3d884cea23a1c5a986ed8c33e1e856
 === RUN   FuzzCrossG1Add/b4cf34191748bc8b9e67a0080db533a02d1ada33
 === RUN   FuzzCrossG1Add/b5bb59056a99f22eb32ca6bfb67b9ecc661b513d
+=== RUN   FuzzCrossG1Add/b6ce57ddbd4fab3968d39cf0d3ac78f8fa59d976
 === RUN   FuzzCrossG1Add/bb93d679625a0b939af0646758b7399985418353
 === RUN   FuzzCrossG1Add/bf9f83fe16e26cab99b1a5a2e329939a1a5df412
 === RUN   FuzzCrossG1Add/bfc4bb4cd1369be597aefd833b87bfce08e04547
 === RUN   FuzzCrossG1Add/c010dca38f57a7d46ff0e6394ddf2e3a11cc0fdc
+=== RUN   FuzzCrossG1Add/c01630eeb9239924728f38bb0ecd99ac5d74f8d6
 === RUN   FuzzCrossG1Add/c0b03d5903a34f797abc0f9255f33c887459bec4
 === RUN   FuzzCrossG1Add/c79eee23f9918f907a069636c8c4f28c17b948ad
 === RUN   FuzzCrossG1Add/d271206eeb00abbd65a4a07ccd7a51ee651e4a72
@@ -977,11 +967,10 @@
 === RUN   FuzzCrossG1Add/eb16c07d60dff11bb2cbffb27893b93515948c53
 === RUN   FuzzCrossG1Add/eba0d3f06074d70d19ac0f4de3a96b42f1a44df5
 === RUN   FuzzCrossG1Add/ec64447485344ff6d863bf724e8b36811fa01dd5
-=== RUN   FuzzCrossG1Add/edc46982aa1df3b4164fc658ddf2ee232642fe51
 === RUN   FuzzCrossG1Add/eedf7882b733ccf8603fcfc7be5e36cbf3b09855
 === RUN   FuzzCrossG1Add/f6ef36342ed258b664afc734b6772c671545d8f0
 === RUN   FuzzCrossG1Add/f9804d735ffca640ab0e64751d6ca0b43c6fc112
---- PASS: FuzzCrossG1Add (0.04s)
+--- PASS: FuzzCrossG1Add (0.05s)
     --- PASS: FuzzCrossG1Add/016862c9e98b2508f347e40f2b6c0e0d8571b865 (0.00s)
     --- PASS: FuzzCrossG1Add/05a79f06cf3f67f726dae68d18a2290f6c9a50c9 (0.00s)
     --- PASS: FuzzCrossG1Add/09244889dcbbddae31b12c4b7ab0d19f15e2d36b (0.00s)
@@ -1033,7 +1022,6 @@
     --- PASS: FuzzCrossG1Add/55c9f1b695adabb37eb846ddf90f6ebb3ff2b2ac (0.00s)
     --- PASS: FuzzCrossG1Add/5a99da728af258aa16914af71e4e27ae08a4fc1d (0.00s)
     --- PASS: FuzzCrossG1Add/5ab10f8c5bd83d156b5a1dc6305d928e71e26664 (0.00s)
-    --- PASS: FuzzCrossG1Add/61abba765cc425a8cd4489ddc62b71a7493b0994 (0.00s)
     --- PASS: FuzzCrossG1Add/6390cf9aee95c95b94bc3eeba4ab0eed5902251d (0.00s)
     --- PASS: FuzzCrossG1Add/6561bf0edb133d1a6a92fa99758d9869ebe14bf5 (0.00s)
     --- PASS: FuzzCrossG1Add/66360d52bf15ee0e4702cce6425813b096ae857f (0.00s)
@@ -1044,11 +1032,11 @@
     --- PASS: FuzzCrossG1Add/76cf42fd4d90ffd2027077b4c23c7b910e406e91 (0.00s)
     --- PASS: FuzzCrossG1Add/783ac8fc911e9213bbd645cc96617acce4e9a113 (0.00s)
     --- PASS: FuzzCrossG1Add/787e996d315d109016a35f4861f0a81e8acdcaf2 (0.00s)
-    --- PASS: FuzzCrossG1Add/7e1389079a33b367af9b0109a95633a50caeab33 (0.00s)
     --- PASS: FuzzCrossG1Add/7e9246e02a01f07ee4d024a06373507f5b172f7f (0.00s)
     --- PASS: FuzzCrossG1Add/7fc10dbba4e512d4b8fe45ad19ac936f66af6cea (0.00s)
     --- PASS: FuzzCrossG1Add/8115957680b0d87068973b531369b0f452babb20 (0.00s)
     --- PASS: FuzzCrossG1Add/84152fcf2d3551caadbe94c69ace364274cb7fa7 (0.00s)
+    --- PASS: FuzzCrossG1Add/84d56dacef606ca6e7e0add41427a275156bad43 (0.00s)
     --- PASS: FuzzCrossG1Add/85cc5c05dae1fa27e2288ace70579bcd2a746307 (0.00s)
     --- PASS: FuzzCrossG1Add/86c71e43a8b5e00f2abfe392ffab6580dafbf087 (0.00s)
     --- PASS: FuzzCrossG1Add/8d7eb5774700f8124b2d4344d30b1557f99912df (0.00s)
@@ -1056,25 +1044,26 @@
     --- PASS: FuzzCrossG1Add/9003cc81afbf2619da01a33117800542b6ae911d (0.00s)
     --- PASS: FuzzCrossG1Add/9069ca78e7450a285173431b3e52c5c25299e473 (0.00s)
     --- PASS: FuzzCrossG1Add/93de18a11aa646a7e245b2bda49c0f033a119062 (0.00s)
+    --- PASS: FuzzCrossG1Add/9799572bf876d1ccb00013d02449dc6740982b55 (0.00s)
     --- PASS: FuzzCrossG1Add/9a6e7551f5339a7391f58e5d906fd253765d10d8 (0.00s)
     --- PASS: FuzzCrossG1Add/9d3e573cc261dd50e834e3d178b165197d82ae48 (0.00s)
-    --- PASS: FuzzCrossG1Add/a05959b069cc20c15d6d79035baeaf7d662b9825 (0.00s)
     --- PASS: FuzzCrossG1Add/a0af70a49bcc29d62237bbbbe33c1a9bc2c73469 (0.00s)
     --- PASS: FuzzCrossG1Add/a0dc87e2971d07059e7fb2fbdbad0f532e5837cd (0.00s)
+    --- PASS: FuzzCrossG1Add/a2c57b38a4e11d4ebf419e6558d983ff9b25e4d4 (0.00s)
     --- PASS: FuzzCrossG1Add/a69773508afe91152dcde9a09495fc69687f63f4 (0.00s)
     --- PASS: FuzzCrossG1Add/a6a36a62c6eb87d156dead17e88f3306b8b81c7c (0.00s)
-    --- PASS: FuzzCrossG1Add/a8b78eedfb186ca8ac2bee3f9d4098ae5774254e (0.00s)
-    --- PASS: FuzzCrossG1Add/a8be27f8e678c0ab9bb12d9b26847ffdf215d029 (0.00s)
     --- PASS: FuzzCrossG1Add/aab520ec40a667ad6eb3ad506f4c0ecc87f13c5c (0.00s)
     --- PASS: FuzzCrossG1Add/ab011820907b4f5edfd109658e6abc8677b4d2dc (0.00s)
     --- PASS: FuzzCrossG1Add/adc83b19e793491b1c6ea0fd8b46cd9f32e592fc (0.00s)
     --- PASS: FuzzCrossG1Add/b2beb1625f3d884cea23a1c5a986ed8c33e1e856 (0.00s)
     --- PASS: FuzzCrossG1Add/b4cf34191748bc8b9e67a0080db533a02d1ada33 (0.00s)
     --- PASS: FuzzCrossG1Add/b5bb59056a99f22eb32ca6bfb67b9ecc661b513d (0.00s)
+    --- PASS: FuzzCrossG1Add/b6ce57ddbd4fab3968d39cf0d3ac78f8fa59d976 (0.00s)
     --- PASS: FuzzCrossG1Add/bb93d679625a0b939af0646758b7399985418353 (0.00s)
     --- PASS: FuzzCrossG1Add/bf9f83fe16e26cab99b1a5a2e329939a1a5df412 (0.00s)
     --- PASS: FuzzCrossG1Add/bfc4bb4cd1369be597aefd833b87bfce08e04547 (0.00s)
     --- PASS: FuzzCrossG1Add/c010dca38f57a7d46ff0e6394ddf2e3a11cc0fdc (0.00s)
+    --- PASS: FuzzCrossG1Add/c01630eeb9239924728f38bb0ecd99ac5d74f8d6 (0.00s)
     --- PASS: FuzzCrossG1Add/c0b03d5903a34f797abc0f9255f33c887459bec4 (0.00s)
     --- PASS: FuzzCrossG1Add/c79eee23f9918f907a069636c8c4f28c17b948ad (0.00s)
     --- PASS: FuzzCrossG1Add/d271206eeb00abbd65a4a07ccd7a51ee651e4a72 (0.00s)
@@ -1092,7 +1081,6 @@
     --- PASS: FuzzCrossG1Add/eb16c07d60dff11bb2cbffb27893b93515948c53 (0.00s)
     --- PASS: FuzzCrossG1Add/eba0d3f06074d70d19ac0f4de3a96b42f1a44df5 (0.00s)
     --- PASS: FuzzCrossG1Add/ec64447485344ff6d863bf724e8b36811fa01dd5 (0.00s)
-    --- PASS: FuzzCrossG1Add/edc46982aa1df3b4164fc658ddf2ee232642fe51 (0.00s)
     --- PASS: FuzzCrossG1Add/eedf7882b733ccf8603fcfc7be5e36cbf3b09855 (0.00s)
     --- PASS: FuzzCrossG1Add/f6ef36342ed258b664afc734b6772c671545d8f0 (0.00s)
     --- PASS: FuzzCrossG1Add/f9804d735ffca640ab0e64751d6ca0b43c6fc112 (0.00s)
@@ -1284,30 +1272,23 @@
     --- PASS: FuzzCrossG2Add/f91bdd1647f8042cec8206870e6490f25b7c47ea (0.00s)
 === RUN   FuzzCrossG1MultiExp
 === RUN   FuzzCrossG1MultiExp/00f5e002099785c124d74321f0a2058fd361d60c
-=== RUN   FuzzCrossG1MultiExp/02a8d58b2b30901e592f876c191e86365b94e9d3
-=== RUN   FuzzCrossG1MultiExp/02d9d947f3c4d45806cf0991246015c1b11f3311
-=== RUN   FuzzCrossG1MultiExp/02f838060fb3698b3b4eb7a0c0a5d1dd7e116576
 === RUN   FuzzCrossG1MultiExp/0358694d95131da0fd39b040f15d90903496db53
 === RUN   FuzzCrossG1MultiExp/0418ce87836fbbdbe10cab3f437a0a3536c77659
 === RUN   FuzzCrossG1MultiExp/04dcf8422b6fc4811894a174d658a45051f5f725
-=== RUN   FuzzCrossG1MultiExp/05535079baa03049f5a1281aa7d22edff6fe1909
 === RUN   FuzzCrossG1MultiExp/055f693b3783eb1b863b58c1e9cad732f1e39887
+=== RUN   FuzzCrossG1MultiExp/05de9d2f67a170a409b5d2f8d1664372d516b5a7
 === RUN   FuzzCrossG1MultiExp/05f20d60b361661b21966626e856eb9094abe121
 === RUN   FuzzCrossG1MultiExp/06000297cc4c69021de6777f6c2ad5b308190fda
 === RUN   FuzzCrossG1MultiExp/06940562e5c3486f2bff2002940eeb5f6a699125
 === RUN   FuzzCrossG1MultiExp/07347a0f0bc987a0f12c8f8683376e3f8d6551c9
-=== RUN   FuzzCrossG1MultiExp/09509c96b13fbdc548be4b535266fda172c7f279
 === RUN   FuzzCrossG1MultiExp/09b0adba10c9e758c27aaafbd6ae45cf3f710c72
-=== RUN   FuzzCrossG1MultiExp/0bc18615a7ef68f6c09520b1339bce959092b9c2
 === RUN   FuzzCrossG1MultiExp/0e40723d0f3867146387ac03ade8f1e809561667
 === RUN   FuzzCrossG1MultiExp/103f816ff619dffc00c2a7b26fbea5ef42bffa69
 === RUN   FuzzCrossG1MultiExp/10826657ef169d36bc76a88a492039a04e6f6bd2
 === RUN   FuzzCrossG1MultiExp/10b3c9711fb8859100de35a430b7acd762cea568
 === RUN   FuzzCrossG1MultiExp/1194e428fc0c31be1985315452458d85d95cc245
 === RUN   FuzzCrossG1MultiExp/1238a297127b7ec69615681cd979f72edd8b8846
-=== RUN   FuzzCrossG1MultiExp/12952b8dda374953c2661d6db7934e48580e11d0
 === RUN   FuzzCrossG1MultiExp/12d99425939b691ef19b7de0d2a8d865f87791c9
-=== RUN   FuzzCrossG1MultiExp/13334728738a1711f2218883e048d825dc892040
 === RUN   FuzzCrossG1MultiExp/13e067b8d850a78ffd5cc205134e5d145af6bd8f
 === RUN   FuzzCrossG1MultiExp/141225efcb573645151b48c74b08702b0cc1c25f
 === RUN   FuzzCrossG1MultiExp/14bc5001261d1276d1bf044c89c7f55b3a6510c7
@@ -1320,60 +1301,61 @@
 === RUN   FuzzCrossG1MultiExp/1793c78ec7466c67a09ce300d50d644cc5968c29
 === RUN   FuzzCrossG1MultiExp/17b818a046ecf674a999852d41b715819a33cf0b
 === RUN   FuzzCrossG1MultiExp/17d84e3150b33e0138d21172bf083561765b26fb
-=== RUN   FuzzCrossG1MultiExp/19c614a900eaae08b9979b181d316c0526b82be0
 === RUN   FuzzCrossG1MultiExp/1a3d7b17ad2d0216557b7c350d4fd120cf0f794c
 === RUN   FuzzCrossG1MultiExp/1a930637d47abe3d64522c1a198a81bd18a4c733
 === RUN   FuzzCrossG1MultiExp/1aa5588c24b0605e1497fe950cfcf4eb57343388
+=== RUN   FuzzCrossG1MultiExp/1cb4bb8bf0df5471f6b61e557845efdc96cd1f4b
 === RUN   FuzzCrossG1MultiExp/1d2930b04f112fa0cdb20807afad49a2259fdfd5
 === RUN   FuzzCrossG1MultiExp/1d55737fa0d2262b517239842a8f5b5472211067
 === RUN   FuzzCrossG1MultiExp/1d9da8e196554db50f16d3a490b72f6b70f3bed9
 === RUN   FuzzCrossG1MultiExp/200034c2ded20d58d60a2a508c4754ac385e2d3f
-=== RUN   FuzzCrossG1MultiExp/2047abe01b2730ab85932b92bfd414fa794875a9
 === RUN   FuzzCrossG1MultiExp/208f7377c7056f3552df7b5689f8743003a4eed9
+=== RUN   FuzzCrossG1MultiExp/20f2f10239f8b41fd81717f3cde56da8bfff6e88
 === RUN   FuzzCrossG1MultiExp/22d35bcd7c551e5582cdeb5cd7565c2e38bffef3
 === RUN   FuzzCrossG1MultiExp/24636f5e8a0b155392e388daa66bb5f1a9167919
-=== RUN   FuzzCrossG1MultiExp/25821359735e28ec4b02a8a6e1cee1f0555c2000
 === RUN   FuzzCrossG1MultiExp/26296291fd77944a4402174899c3ea485f5cb4d4
 === RUN   FuzzCrossG1MultiExp/26b86ab06b1880322dd46da3e881e1a39b69fdb7
-=== RUN   FuzzCrossG1MultiExp/26b9e047d77fc645b42683f8f91bec23749960c2
+=== RUN   FuzzCrossG1MultiExp/27183e93624c10d19ca5b86a4e5d0d01f9acc048
 === RUN   FuzzCrossG1MultiExp/27257cf2648dd91af040e493f956813a69dc4e3b
 === RUN   FuzzCrossG1MultiExp/283ee9e7c57757d7a6aafbab086c24cb14b68298
 === RUN   FuzzCrossG1MultiExp/297b465e0474c6f380fb3f35c44998f5d5bbcf59
 === RUN   FuzzCrossG1MultiExp/29a614242e9d967542bed425a548556c3900e99c
 === RUN   FuzzCrossG1MultiExp/2a310366d8063b324a52e0d8d1233bdcb996adc3
 === RUN   FuzzCrossG1MultiExp/2a4145c68bdbc3c72783787f35b71a6c135c27a3
+=== RUN   FuzzCrossG1MultiExp/2b0b8e11ad620edc78234e1e735b60975f2a2b65
 === RUN   FuzzCrossG1MultiExp/2b9fa07babd5a8abff1e531700236b0023baf319
 === RUN   FuzzCrossG1MultiExp/2d0c3000fc79ad3aa69544ae988a4027cf22deba
 === RUN   FuzzCrossG1MultiExp/2ee3d8d5e70f6e3658d57030945c069e1d15661f
 === RUN   FuzzCrossG1MultiExp/2f0a53d01b6875718a160e4fff605305690899e1
-=== RUN   FuzzCrossG1MultiExp/31702c0ed5353ec656582a12a829c76b0aea39b8
+=== RUN   FuzzCrossG1MultiExp/3278644dc1387a4d26b8569c13f6af605b559ad5
 === RUN   FuzzCrossG1MultiExp/328ef86abc1bc06cfc77ab6ba9afde3cec946e8a
 === RUN   FuzzCrossG1MultiExp/32bf85756c77b60b969b44f48c9cdf6e61671482
 === RUN   FuzzCrossG1MultiExp/32e526af537c897ce989cfb41fc9be98b8cb1132
 === RUN   FuzzCrossG1MultiExp/335443c9e3e4a47916bc73e9c27c44ce849d8c16
+=== RUN   FuzzCrossG1MultiExp/3370ae989ef08c42410fff18488d94952b3403a1
 === RUN   FuzzCrossG1MultiExp/34e15cd03120ab856e660280e08ce1dcc419d9f0
 === RUN   FuzzCrossG1MultiExp/34ee143e36b12c71681b5e9bff46de60981f8bfb
 === RUN   FuzzCrossG1MultiExp/34fbac495787436c66509e6b9736071fd355abcf
+=== RUN   FuzzCrossG1MultiExp/35d1e50a1450160a4bb9e977bb74282deff0a3ed
 === RUN   FuzzCrossG1MultiExp/378cd725b458a28b668303a3b9f5a48944c55913
 === RUN   FuzzCrossG1MultiExp/3a52ce780950d4d969792a2559cd519d7ee8c727
 === RUN   FuzzCrossG1MultiExp/3daf11a3ee7388f06e768d00a73346a0e1a9bf33
 === RUN   FuzzCrossG1MultiExp/3df1fd6d05dfabe5d0093a63756d7bee601d8f27
 === RUN   FuzzCrossG1MultiExp/3e0770416ee030188c6fa99786fe50554423e1ed
-=== RUN   FuzzCrossG1MultiExp/3fa76fbe7f5cb82d8078684a5c6b59487a783373
+=== RUN   FuzzCrossG1MultiExp/406cba8bcb19e60765f41ed4b04346fb16d59f5c
 === RUN   FuzzCrossG1MultiExp/435982ffa009125fd431eb1d53c2fc7c0af1b651
 === RUN   FuzzCrossG1MultiExp/441401e7c13463defeef432690c186a535b85796
 === RUN   FuzzCrossG1MultiExp/4528b8dd1cd03f5b335e08ddf5edda72d822dbf2
 === RUN   FuzzCrossG1MultiExp/46087f5338fb8b6da2b1f6076ac92c0e7ffd2569
 === RUN   FuzzCrossG1MultiExp/481667e91e419f456fbd41fa8a8d00f145ff15aa
-=== RUN   FuzzCrossG1MultiExp/4837586ee3ae2c74aa99ee7705cd40f10c46e96a
 === RUN   FuzzCrossG1MultiExp/487987f02d020e1f2feaf6d0206681ba3dfaf55d
+=== RUN   FuzzCrossG1MultiExp/4883c7bc07a565609d1863d4b6150251a534426a
 === RUN   FuzzCrossG1MultiExp/4891dd56198499f95a8d258cfb61bf2be22704fa
 === RUN   FuzzCrossG1MultiExp/48b2c616e42a305d76923df70b805873fad7a8ff
 === RUN   FuzzCrossG1MultiExp/48e70534570113d927bff5bcb12cda5899d6065c
 === RUN   FuzzCrossG1MultiExp/49d60083f43210114fca04046ca8484fc77fe174
 === RUN   FuzzCrossG1MultiExp/4a31e3538fbb6cc597fc101640f0fcb7035f6ab3
-=== RUN   FuzzCrossG1MultiExp/4af09b377a2b3f1ba48a16492ef38e4e5ed9fba6
-=== RUN   FuzzCrossG1MultiExp/4b7bda15366971b5acc84d412c4ec428242cffa5
+=== RUN   FuzzCrossG1MultiExp/4a683b1667aac64712966fced88c8b14cff7d724
 === RUN   FuzzCrossG1MultiExp/4bddad3736d40015022c4c0f1659e7828bcca5b8
 === RUN   FuzzCrossG1MultiExp/4cb367b4646e879bbf8883fd297dc4c682a58e6d
 === RUN   FuzzCrossG1MultiExp/4cf6e5ae327a5686265632177d794a689b8213af
@@ -1396,29 +1378,28 @@
 === RUN   FuzzCrossG1MultiExp/57fa4d2186c140eba7fc963d78555067988a3554
 === RUN   FuzzCrossG1MultiExp/581e70777cae0f57d9a9a67a57f47c05183472c8
 === RUN   FuzzCrossG1MultiExp/58875b5782808a3d641bc45a940805ce304fb308
-=== RUN   FuzzCrossG1MultiExp/595b689595f69bded9a3b418287c902b3c792e8e
 === RUN   FuzzCrossG1MultiExp/597ee62d2b798ea18baa1d7b0c28a394911da36b
 === RUN   FuzzCrossG1MultiExp/59d69d0470a2d71b616d4fea15d2e8979afc8982
 === RUN   FuzzCrossG1MultiExp/5a49adba5eec1b2dfd53fc4b9db7bd4bd48ba593
 === RUN   FuzzCrossG1MultiExp/5a64295a8b6286b493a4fd897f7cc2839a308205
 === RUN   FuzzCrossG1MultiExp/5afcee88232882cdcc44bdd9d35bfb4d55cbbe78
+=== RUN   FuzzCrossG1MultiExp/5bc47827106f4816eac60367768fdd54ff29176c
 === RUN   FuzzCrossG1MultiExp/5cbed66ea545771d03997a4884a45d8b5c2bd506
-=== RUN   FuzzCrossG1MultiExp/5ce79471aef46355f3ba80b678fb4c65b4414c6b
 === RUN   FuzzCrossG1MultiExp/5cfec8229bf60c862b47570f3e92f432d8958e1e
 === RUN   FuzzCrossG1MultiExp/5e090e2b97e3ca63fb0b69989efb87398c88f379
 === RUN   FuzzCrossG1MultiExp/5e2a3e2e3fd883b861a363f07e3456f41b1bb9b9
 === RUN   FuzzCrossG1MultiExp/60416d2553b0a064066fc6782779b05c22e827b8
 === RUN   FuzzCrossG1MultiExp/625c6bbf8bd869498f11c9a97d2bb10b8487f264
-=== RUN   FuzzCrossG1MultiExp/633f9e02d1d4d5340052d558067bc0a9113c3d59
 === RUN   FuzzCrossG1MultiExp/6585713c81559c925d03f7633cfb0bdfaa384a56
+=== RUN   FuzzCrossG1MultiExp/661700ea4d071e38a4c6ebf60b21a460d32bbe43
 === RUN   FuzzCrossG1MultiExp/66498f0fb50c9c88c41066e9438b20f2480dfd80
-=== RUN   FuzzCrossG1MultiExp/66697b9558e1cdabdfb230f819cb66065bb8e42f
 === RUN   FuzzCrossG1MultiExp/66cd436aea49b8e9c319ec3437cbe0146433e609
 === RUN   FuzzCrossG1MultiExp/6755770ac2bfe572bfa633b3760b55ed575481f4
 === RUN   FuzzCrossG1MultiExp/6c3cec0f3bd8db4ce78dd97944775097112f3284
 === RUN   FuzzCrossG1MultiExp/6c97274c0259ad9b930d10423d9154393648c079
+=== RUN   FuzzCrossG1MultiExp/6d7c9667c561d0077390ea0aba07309d5d04c6e1
+=== RUN   FuzzCrossG1MultiExp/6e2fa3bc8c0c4c260c9e9bca2933beb732ac0103
 === RUN   FuzzCrossG1MultiExp/6e4604641f29c2dd3c1d2904b7aa4742ac4de78b
-=== RUN   FuzzCrossG1MultiExp/6ec71147aa7bb27cbfb658eca8f35de2e10624ae
 === RUN   FuzzCrossG1MultiExp/6fc0f5f791a9488a7846df2b5bd05c7aa0d28a62
 === RUN   FuzzCrossG1MultiExp/6fe15f79e55c59ed1042d6ff559653cc536494f9
 === RUN   FuzzCrossG1MultiExp/7013ff11f3cfe807c0e1b0f5d85121fb2367c345
@@ -1426,15 +1407,14 @@
 === RUN   FuzzCrossG1MultiExp/71dea771942b52917a09c99fdf1fec647b0dbd74
 === RUN   FuzzCrossG1MultiExp/72069b61472961a6ac6b512eefad0b6bfbc3df65
 === RUN   FuzzCrossG1MultiExp/73e7ad395cdd5e22b0191dffc71beeb3360f040f
+=== RUN   FuzzCrossG1MultiExp/74c7398744eef0cf153236eee6b6049292fd10b7
 === RUN   FuzzCrossG1MultiExp/761708f2d5e880cafad9430d7549294237352f32
 === RUN   FuzzCrossG1MultiExp/76600cef7ebf29505058fca2e76cbdbc90e7d7c2
 === RUN   FuzzCrossG1MultiExp/76dd8e95fc930ff38b385cdf76307522c7ec9c3d
 === RUN   FuzzCrossG1MultiExp/772cedb504e962cc45569b6231f5e4636ae0df4d
 === RUN   FuzzCrossG1MultiExp/77acd615a43a54236948481e767a81f90b29a523
-=== RUN   FuzzCrossG1MultiExp/79f66804b5825232312a8de0a108d6cdb705f0ee
 === RUN   FuzzCrossG1MultiExp/7a38d8cbd20d9932ba948efaa364bb62651d5ad4
 === RUN   FuzzCrossG1MultiExp/7ab4c21a5af19e460d7e40aa86704fb7b5fa34b2
-=== RUN   FuzzCrossG1MultiExp/7b5eb505d91ecc264fe71bb4fb0d915e3511196b
 === RUN   FuzzCrossG1MultiExp/7cc28a01a34d43eadfc7a6cd579439a62bdeb3ec
 === RUN   FuzzCrossG1MultiExp/7de09c6e4ce4075fabcf8080500e4e75fd8039c6
 === RUN   FuzzCrossG1MultiExp/7fb018c6babefc89a2b923fcc28e7253619a81d5
@@ -1443,10 +1423,13 @@
 === RUN   FuzzCrossG1MultiExp/8168200925b87e22ea7f3d37b22816f54038cd71
 === RUN   FuzzCrossG1MultiExp/822b42073f700166c9fdd9389ad3309cbe412a87
 === RUN   FuzzCrossG1MultiExp/8237669020705612a6e9146b28c79cafdfffcfff
+=== RUN   FuzzCrossG1MultiExp/823b2ed4eab37913250b76b0a7f3a4f88cc1fdce
 === RUN   FuzzCrossG1MultiExp/83550cda17dd21a647937d0b3c41ced3ce29792f
 === RUN   FuzzCrossG1MultiExp/83aa1eea0c44e083fc20737a1276141099391726
 === RUN   FuzzCrossG1MultiExp/83ae61ddf7edc76da40c94053a23d1c97eed3043
+=== RUN   FuzzCrossG1MultiExp/83b31e254dc50aab71358f1f93477d50ba5dc57e
 === RUN   FuzzCrossG1MultiExp/844a6b0ac20c77c4007ca06a9358f58cb3584985
+=== RUN   FuzzCrossG1MultiExp/84ad84dc4c22936571e72c0a9756279bdc763330
 === RUN   FuzzCrossG1MultiExp/853c86e5bcb6572917d97c873ea9e27347fa3c90
 === RUN   FuzzCrossG1MultiExp/86f666a3b6d1f9fc83000c27b6ff25948d4c5f60
 === RUN   FuzzCrossG1MultiExp/8759df21b760ce7193f4ed9f87f7b2ea9250c650
@@ -1460,7 +1443,6 @@
 === RUN   FuzzCrossG1MultiExp/8ddd655c3a7ffb481c67a4b15e0391ef8d013d8d
 === RUN   FuzzCrossG1MultiExp/8e496ac801387496c574b28e8d0baf31e1897b59
 === RUN   FuzzCrossG1MultiExp/8e59789ecd627ea6ff0c3b9514ce7d768e067255
-=== RUN   FuzzCrossG1MultiExp/8f76fb3a93fefe225e2eaace30ca08225374671b
 === RUN   FuzzCrossG1MultiExp/9069ca78e7450a285173431b3e52c5c25299e473
 === RUN   FuzzCrossG1MultiExp/90879a4180f11b9c8db96ab335fefa5a7512ed68
 === RUN   FuzzCrossG1MultiExp/90cc7d2c09011fa8039b050ca48540a7328c6ea2
@@ -1468,14 +1450,15 @@
 === RUN   FuzzCrossG1MultiExp/927b3584172c652037d4856663e8efed5bb0e2b8
 === RUN   FuzzCrossG1MultiExp/93b85e7eb42a61c355a1b569b38059c0d9f87b95
 === RUN   FuzzCrossG1MultiExp/95ec94025ffd3d2691242381a3be653da922966c
-=== RUN   FuzzCrossG1MultiExp/96510570890b1e103797bfc6116cbe80a86d8439
+=== RUN   FuzzCrossG1MultiExp/95f2012ceab2357275c2853ef85fd840143e97f7
 === RUN   FuzzCrossG1MultiExp/98619beec566b4e435b7127640ff4897cd44678e
 === RUN   FuzzCrossG1MultiExp/98fa9c671c98676d52c3807ae1ddfbd0a3f49fdc
 === RUN   FuzzCrossG1MultiExp/997d35a77ffa98180f2b358ef530042ace3f8f82
-=== RUN   FuzzCrossG1MultiExp/99e07603694f900f1b166447890de0e35bcdece9
 === RUN   FuzzCrossG1MultiExp/9a7e16b41cc27b3d445d089ff3bbe3bb7e28a7d2
 === RUN   FuzzCrossG1MultiExp/9abf87b3ebe4a3c8b954978b59f976efd29240a4
+=== RUN   FuzzCrossG1MultiExp/9ae3e78df1a5573200db82f2cf0f6d0d970b7aec
 === RUN   FuzzCrossG1MultiExp/9bb5bd5963d60585c78dd315504579433130f494
+=== RUN   FuzzCrossG1MultiExp/9c234379b70f56b2e526c9673afba3b4e0d6c4c6
 === RUN   FuzzCrossG1MultiExp/9ccca01929d4d9effa1e889ffcd122843a585c35
 === RUN   FuzzCrossG1MultiExp/9cf1b88a085a61acbf880ae12d0f32a36f9ad37a
 === RUN   FuzzCrossG1MultiExp/9d01484cd48405348c3bdce650bbfbf6b57e3c8a
@@ -1485,25 +1468,26 @@
 === RUN   FuzzCrossG1MultiExp/9e7a838bd61d7ece726189bf5a295382306c4afc
 === RUN   FuzzCrossG1MultiExp/9e8d881a953a239c03a6ec869d0ce9de9aeb6143
 === RUN   FuzzCrossG1MultiExp/9ee517e70b4b02e219c3434865ff42ed1cbc41dc
-=== RUN   FuzzCrossG1MultiExp/9f93f9ee914530b493f26bd10b7d5fa907dcd90d
 === RUN   FuzzCrossG1MultiExp/9fdcba0782dd2487f60fa25d21b408866bef1e94
+=== RUN   FuzzCrossG1MultiExp/a0561d3deec698b724e514ec11c56cfbb1d9f5c5
 === RUN   FuzzCrossG1MultiExp/a1e6615e5ed8663d88a2f16066d6d048b20b5920
 === RUN   FuzzCrossG1MultiExp/a21a0e2a3798148eda516c0e96fc66601170f9c4
 === RUN   FuzzCrossG1MultiExp/a25ae1899063794b63af2a7fe91693ec58296cdd
 === RUN   FuzzCrossG1MultiExp/a26f17f8045ed7ce2217f656142b5457b7c3635e
 === RUN   FuzzCrossG1MultiExp/a35ba85a34e2f75a415f4af4a6cbcfd22b4aecf5
 === RUN   FuzzCrossG1MultiExp/a45fa8b50ccd960b3f3be7ca8b3dd96e34038c1e
+=== RUN   FuzzCrossG1MultiExp/a486dc03d5a5c3afd08d65ce59f6c14af51cc5a0
 === RUN   FuzzCrossG1MultiExp/a49025f77554933fa718ac4f201cc8440c564461
 === RUN   FuzzCrossG1MultiExp/a4d1b7cbd484d515f28d2c27253e870d7cf5edd6
 === RUN   FuzzCrossG1MultiExp/a58c554e7964506e3a3d67065c8be5ec0c46cc3f
 === RUN   FuzzCrossG1MultiExp/a5c022c6a5c04dd8dffc17bf9762300b32c7af3f
 === RUN   FuzzCrossG1MultiExp/a69001e39568e6efaf36dfa681d7bf4e9b0bc650
+=== RUN   FuzzCrossG1MultiExp/a6c4bd4b4fcf7f0af6937ed212f928747d58eaeb
 === RUN   FuzzCrossG1MultiExp/a6e7e83c6184eb8a57e4a18d5f51a84a516031ae
+=== RUN   FuzzCrossG1MultiExp/a75c6a1b8c0169f0dfe16a332cd9551206227d53
+=== RUN   FuzzCrossG1MultiExp/a88409474621face325189057bbe9feeaf0b5d9f
 === RUN   FuzzCrossG1MultiExp/a96a9d0d22ba203004f7093049a4850eaecddca0
-=== RUN   FuzzCrossG1MultiExp/aa0fa7dc0f738902dfc6bb76f382dbcc1512e01b
 === RUN   FuzzCrossG1MultiExp/ab20202901162ca0b667495d3d3b18d38a2aa991
-=== RUN   FuzzCrossG1MultiExp/aba7f4e75dd1dc8cc8e324d15e55703a95fadc3c
-=== RUN   FuzzCrossG1MultiExp/ac05ac0693111aa4aa3a2f8affb3115d96d4fdab
 === RUN   FuzzCrossG1MultiExp/ac47b67bcdecaf30c6d7d1788d68f66053d135f7
 === RUN   FuzzCrossG1MultiExp/ae8103039bf130db9ab44702b4af898ffe32deb5
 === RUN   FuzzCrossG1MultiExp/ae9dc5cd1b45d67221e883a6c290e82238085849
@@ -1514,38 +1498,36 @@
 === RUN   FuzzCrossG1MultiExp/b092b151651937b28dcf998b2343bea1a94cbeff
 === RUN   FuzzCrossG1MultiExp/b17fa97284db7434f60778574c7999b3dfd6ed6b
 === RUN   FuzzCrossG1MultiExp/b1e785db5a2ff0304f849588946a08762d24b06d
-=== RUN   FuzzCrossG1MultiExp/b228b862241ab07b0c02c80045b916d05d65812d
+=== RUN   FuzzCrossG1MultiExp/b21f639c2e67f75da9cbe6e98977a467e3c31577
 === RUN   FuzzCrossG1MultiExp/b30209025468d943ad7bd805c3fa2d398d65eae1
 === RUN   FuzzCrossG1MultiExp/b34c5eebd84c54d375f01b9916382887c8410c1e
 === RUN   FuzzCrossG1MultiExp/b3add3c4a260452d2bbb41ac76de88fe16b314da
-=== RUN   FuzzCrossG1MultiExp/b3b52693335ba3aa2d5ebfa546fac31ab7d5f8fa
 === RUN   FuzzCrossG1MultiExp/b3ed4defbb51a95b5d9c1f82b8af75be72ffed9a
+=== RUN   FuzzCrossG1MultiExp/b41b1dd77cdd248b4dd06e1e28b331757f1eb2d9
 === RUN   FuzzCrossG1MultiExp/b4978d8838b10fa1ab24379deb744907367bba25
-=== RUN   FuzzCrossG1MultiExp/b519a0bd55bacd90fe8f65e7f8c20f15c9ef8ca8
+=== RUN   FuzzCrossG1MultiExp/b5bc8258d4f7176550f4aaf0caf6f77b3f556822
 === RUN   FuzzCrossG1MultiExp/b6ec6f2a7a11166d369b57c70a3ce86f33f3681d
 === RUN   FuzzCrossG1MultiExp/b73f1a37bc0720879be31b7a1da519aa294a76f7
 === RUN   FuzzCrossG1MultiExp/b7fdee51c606ac75d4a304c409e7067362b3b4a8
 === RUN   FuzzCrossG1MultiExp/b82f0da4753e0b942c599339e979071ba081cd7c
 === RUN   FuzzCrossG1MultiExp/b8e41d9a10929f773c7bfc1484e456438125909c
+=== RUN   FuzzCrossG1MultiExp/b970a62a227413f3e5819e1b54cb2f0395367828
 === RUN   FuzzCrossG1MultiExp/ba0a6722c89bbde3a0d8b5de54bdb11999d0dbe7
 === RUN   FuzzCrossG1MultiExp/bb15923022559524aee5d20ef6c8a492fdb8193a
 === RUN   FuzzCrossG1MultiExp/bb768adbde170dcbb5ca374246fe672dc1f6fdb8
-=== RUN   FuzzCrossG1MultiExp/bc17f75d19839a22f5ac57780b2b5f8b5b21b29c
 === RUN   FuzzCrossG1MultiExp/bdeb0c598ab651164d3fe3d12918044db3fe13ee
 === RUN   FuzzCrossG1MultiExp/be456d7d4f0c5315fdadd2c8d14ab152a92966fd
 === RUN   FuzzCrossG1MultiExp/bed845e2998044c27bcb4d599d72eb7d465e4ef6
+=== RUN   FuzzCrossG1MultiExp/c0b02726698d0551d3feddefacf708f2f5726bf8
 === RUN   FuzzCrossG1MultiExp/c113ec8498276dd34dbcf31df20b9d2faea20f9f
-=== RUN   FuzzCrossG1MultiExp/c2694fa15c28fb1f9e2c62ce99ce83a4452cb702
 === RUN   FuzzCrossG1MultiExp/c2ea1872c517a36b8bf3148aaec05d0258e638c1
 === RUN   FuzzCrossG1MultiExp/c4aa8c3aaae61abef247c24c2e217c77b5d9faf8
 === RUN   FuzzCrossG1MultiExp/c4c2276035be5354e74db640afa26a1195338b77
 === RUN   FuzzCrossG1MultiExp/c62b5e521f920f9a7bb85a437e9e39643166feaa
-=== RUN   FuzzCrossG1MultiExp/c63e5b407404528d148f6a97a2bd23c5203377aa
 === RUN   FuzzCrossG1MultiExp/c6f664a1b0c2ffe222164390f00c455879cd2c7a
 === RUN   FuzzCrossG1MultiExp/c87e2df726492c96522ef87973a17cc07f944f38
 === RUN   FuzzCrossG1MultiExp/c9b5c89bb7a85acdfb67cdc8f22b41a69fbdaab2
 === RUN   FuzzCrossG1MultiExp/ca5121f99003cf2aa21fb5588d46986c3dfde4b2
-=== RUN   FuzzCrossG1MultiExp/ca82414c89a28ea87752840107cb9ad6f001e1f7
 === RUN   FuzzCrossG1MultiExp/cb85bff0d936548815ae60333e1ad7e1a01d634d
 === RUN   FuzzCrossG1MultiExp/cba3509454b49c0a5aaf570c678054e94d5bb829
 === RUN   FuzzCrossG1MultiExp/ccaa7403be146f088449f2558df4348667081f2e
@@ -1565,6 +1547,7 @@
 === RUN   FuzzCrossG1MultiExp/d55507d538f656574020c52beef8d636b16f4f4b
 === RUN   FuzzCrossG1MultiExp/d60916948d96b0ba4c970d4a71274437b118c3e7
 === RUN   FuzzCrossG1MultiExp/d67377e627342316c015ee8dd236caec37bd1dd7
+=== RUN   FuzzCrossG1MultiExp/d7983d4031d44dea066b19cbfbf9d6352b830583
 === RUN   FuzzCrossG1MultiExp/d825ff749bbcb8cad0a7c871aa8b897f86b070f4
 === RUN   FuzzCrossG1MultiExp/d8386731f286539a73b1348b4f72520abc41af86
 === RUN   FuzzCrossG1MultiExp/d86775a2c7b68c7cae87ecf10a22884c671e026f
@@ -1585,70 +1568,61 @@
 === RUN   FuzzCrossG1MultiExp/e3c0e978a641c177d622654cbcccd3fa230669b7
 === RUN   FuzzCrossG1MultiExp/e462dadb88145fb33d91af7ee0621d880a94facc
 === RUN   FuzzCrossG1MultiExp/e61b47043954e6f69061e25bb08e38f8e8d6a19a
-=== RUN   FuzzCrossG1MultiExp/e66a5c5fad7b6a5a2b32757c2d56e6c9bc97de3f
 === RUN   FuzzCrossG1MultiExp/e67e1404d32153efb6bf39540c17a69a8c64c010
 === RUN   FuzzCrossG1MultiExp/e698208c27df469baec3d928a8268e8216c399de
-=== RUN   FuzzCrossG1MultiExp/e6a4534a6506c571b79306f8ba8d6c4097af8ee1
-=== RUN   FuzzCrossG1MultiExp/e73513fba4cd852477ce2121485acb7601457d99
 === RUN   FuzzCrossG1MultiExp/e78b2c3db332e6bce369cfc8e8657f0db0c4d86a
-=== RUN   FuzzCrossG1MultiExp/e7daee41ce1f55abd0824203860217b7193ae77b
 === RUN   FuzzCrossG1MultiExp/e80df427f85b6f4b2637a3f3fae44a4233dc6870
 === RUN   FuzzCrossG1MultiExp/e92d8e29580368c267b3c1074d847ce7a616db49
 === RUN   FuzzCrossG1MultiExp/e97bc5141786b0be19fb586dad0c478ab9093644
 === RUN   FuzzCrossG1MultiExp/ea3d5ef6cb350d4852eade05969db8564ab94589
 === RUN   FuzzCrossG1MultiExp/ea59f33e638c982f217c58c46417f11115fca960
 === RUN   FuzzCrossG1MultiExp/ead99d2a1cb64beb2247551cd478335552145e33
+=== RUN   FuzzCrossG1MultiExp/eb7815711b560eb2cdf03fa11b6bb81d8a9bd84e
 === RUN   FuzzCrossG1MultiExp/ebc8f80e65d6ef76b8da7735dd48965e0a92a94d
 === RUN   FuzzCrossG1MultiExp/ebc98dc15b8e4f73bcf31e8a4fb5b55535825948
+=== RUN   FuzzCrossG1MultiExp/ebf3efca3a16cb84cbe6b59317ef7f7e508cb64b
 === RUN   FuzzCrossG1MultiExp/ebfabaaa31cbd4a69b373547f4bcbe690a2bc6a9
 === RUN   FuzzCrossG1MultiExp/ec81517c2cca4149d9b3b62b718eb85dffed7270
 === RUN   FuzzCrossG1MultiExp/ecaaccdf41e804080d635b7d6492c079e47ef476
 === RUN   FuzzCrossG1MultiExp/ed47a0ea6dced03c314242f7c47d24b02a361ada
 === RUN   FuzzCrossG1MultiExp/efa4e0fc3583dc5af6231a1bff1ede7621cc95aa
-=== RUN   FuzzCrossG1MultiExp/f0c89035794d34a72e8cb22aae0d6c8d58dba294
 === RUN   FuzzCrossG1MultiExp/f16b3be89201454d58047da3848cc2c69b47464d
+=== RUN   FuzzCrossG1MultiExp/f2cd599772da8123c0c75f42efab0063bb90e72a
 === RUN   FuzzCrossG1MultiExp/f315e6eb08eda5ec7a49712a8224d1b6700628f7
 === RUN   FuzzCrossG1MultiExp/f392c925eb26367beff70272f12da5ac320e3262
 === RUN   FuzzCrossG1MultiExp/f4609d84d97dc3f8ba959daef5f7fc376f965492
-=== RUN   FuzzCrossG1MultiExp/f4d4476f0b23fd43f892e0acb95cfe0b9218e800
 === RUN   FuzzCrossG1MultiExp/f63235609de7d065793ddfbc5b4852dd0310876d
 === RUN   FuzzCrossG1MultiExp/f650efd8fc4d2df4e9f988c9e4d9f57983057d2a
 === RUN   FuzzCrossG1MultiExp/f696a5520cef37c86ac776c6096adb9ae4f1910d
 === RUN   FuzzCrossG1MultiExp/f92f2a38eceed07b389c626b0b3fe797df6890f4
-=== RUN   FuzzCrossG1MultiExp/f93a58ad7801890b06564f4dc1f40844019fbcd3
 === RUN   FuzzCrossG1MultiExp/f9a388542638fc5c23ba7704e66b52aac1f7ee7a
 === RUN   FuzzCrossG1MultiExp/fb78e0dc35ea397f99b8e1704c903493d67dc11b
+=== RUN   FuzzCrossG1MultiExp/fb9ea8e30f428d2e93686efb1c940e00f0d186fd
 === RUN   FuzzCrossG1MultiExp/fbdfe8bb4f125e09293a98cffd5e1f1e5b1e5990
 === RUN   FuzzCrossG1MultiExp/fc74d58e6af97e2d4878477cf6679d3943f940e6
 === RUN   FuzzCrossG1MultiExp/fd0c50b735e1a8e66c5097ef37d27c0386f522de
 === RUN   FuzzCrossG1MultiExp/ff2e157dba62f325277d5823b3de77ae41f8a1a7
 === RUN   FuzzCrossG1MultiExp/ffc174cfcc64cb595f7760ccba26b175b7b9275e
---- PASS: FuzzCrossG1MultiExp (0.87s)
+=== RUN   FuzzCrossG1MultiExp/fff9566327761e07c56424bdcba9191e5bc67baa
+--- PASS: FuzzCrossG1MultiExp (0.85s)
     --- PASS: FuzzCrossG1MultiExp/00f5e002099785c124d74321f0a2058fd361d60c (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/02a8d58b2b30901e592f876c191e86365b94e9d3 (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/02d9d947f3c4d45806cf0991246015c1b11f3311 (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/02f838060fb3698b3b4eb7a0c0a5d1dd7e116576 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/0358694d95131da0fd39b040f15d90903496db53 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/0418ce87836fbbdbe10cab3f437a0a3536c77659 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/04dcf8422b6fc4811894a174d658a45051f5f725 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/05535079baa03049f5a1281aa7d22edff6fe1909 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/055f693b3783eb1b863b58c1e9cad732f1e39887 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/05de9d2f67a170a409b5d2f8d1664372d516b5a7 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/05f20d60b361661b21966626e856eb9094abe121 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/06000297cc4c69021de6777f6c2ad5b308190fda (0.00s)
     --- PASS: FuzzCrossG1MultiExp/06940562e5c3486f2bff2002940eeb5f6a699125 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/07347a0f0bc987a0f12c8f8683376e3f8d6551c9 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/09509c96b13fbdc548be4b535266fda172c7f279 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/09b0adba10c9e758c27aaafbd6ae45cf3f710c72 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/0bc18615a7ef68f6c09520b1339bce959092b9c2 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/0e40723d0f3867146387ac03ade8f1e809561667 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/103f816ff619dffc00c2a7b26fbea5ef42bffa69 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/10826657ef169d36bc76a88a492039a04e6f6bd2 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/10b3c9711fb8859100de35a430b7acd762cea568 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/1194e428fc0c31be1985315452458d85d95cc245 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/1238a297127b7ec69615681cd979f72edd8b8846 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/12952b8dda374953c2661d6db7934e48580e11d0 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/12d99425939b691ef19b7de0d2a8d865f87791c9 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/13334728738a1711f2218883e048d825dc892040 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/13e067b8d850a78ffd5cc205134e5d145af6bd8f (0.00s)
     --- PASS: FuzzCrossG1MultiExp/141225efcb573645151b48c74b08702b0cc1c25f (0.00s)
     --- PASS: FuzzCrossG1MultiExp/14bc5001261d1276d1bf044c89c7f55b3a6510c7 (0.00s)
@@ -1661,66 +1635,67 @@
     --- PASS: FuzzCrossG1MultiExp/1793c78ec7466c67a09ce300d50d644cc5968c29 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/17b818a046ecf674a999852d41b715819a33cf0b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/17d84e3150b33e0138d21172bf083561765b26fb (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/19c614a900eaae08b9979b181d316c0526b82be0 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/1a3d7b17ad2d0216557b7c350d4fd120cf0f794c (0.00s)
     --- PASS: FuzzCrossG1MultiExp/1a930637d47abe3d64522c1a198a81bd18a4c733 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/1aa5588c24b0605e1497fe950cfcf4eb57343388 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/1cb4bb8bf0df5471f6b61e557845efdc96cd1f4b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/1d2930b04f112fa0cdb20807afad49a2259fdfd5 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/1d55737fa0d2262b517239842a8f5b5472211067 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/1d9da8e196554db50f16d3a490b72f6b70f3bed9 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/200034c2ded20d58d60a2a508c4754ac385e2d3f (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/2047abe01b2730ab85932b92bfd414fa794875a9 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/208f7377c7056f3552df7b5689f8743003a4eed9 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/20f2f10239f8b41fd81717f3cde56da8bfff6e88 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/22d35bcd7c551e5582cdeb5cd7565c2e38bffef3 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/24636f5e8a0b155392e388daa66bb5f1a9167919 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/25821359735e28ec4b02a8a6e1cee1f0555c2000 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/26296291fd77944a4402174899c3ea485f5cb4d4 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/26b86ab06b1880322dd46da3e881e1a39b69fdb7 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/26b9e047d77fc645b42683f8f91bec23749960c2 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/27183e93624c10d19ca5b86a4e5d0d01f9acc048 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/27257cf2648dd91af040e493f956813a69dc4e3b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/283ee9e7c57757d7a6aafbab086c24cb14b68298 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/297b465e0474c6f380fb3f35c44998f5d5bbcf59 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/29a614242e9d967542bed425a548556c3900e99c (0.00s)
     --- PASS: FuzzCrossG1MultiExp/2a310366d8063b324a52e0d8d1233bdcb996adc3 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/2a4145c68bdbc3c72783787f35b71a6c135c27a3 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/2b0b8e11ad620edc78234e1e735b60975f2a2b65 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/2b9fa07babd5a8abff1e531700236b0023baf319 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/2d0c3000fc79ad3aa69544ae988a4027cf22deba (0.00s)
     --- PASS: FuzzCrossG1MultiExp/2ee3d8d5e70f6e3658d57030945c069e1d15661f (0.00s)
     --- PASS: FuzzCrossG1MultiExp/2f0a53d01b6875718a160e4fff605305690899e1 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/31702c0ed5353ec656582a12a829c76b0aea39b8 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/3278644dc1387a4d26b8569c13f6af605b559ad5 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/328ef86abc1bc06cfc77ab6ba9afde3cec946e8a (0.00s)
     --- PASS: FuzzCrossG1MultiExp/32bf85756c77b60b969b44f48c9cdf6e61671482 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/32e526af537c897ce989cfb41fc9be98b8cb1132 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/335443c9e3e4a47916bc73e9c27c44ce849d8c16 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/3370ae989ef08c42410fff18488d94952b3403a1 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/34e15cd03120ab856e660280e08ce1dcc419d9f0 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/34ee143e36b12c71681b5e9bff46de60981f8bfb (0.00s)
     --- PASS: FuzzCrossG1MultiExp/34fbac495787436c66509e6b9736071fd355abcf (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/35d1e50a1450160a4bb9e977bb74282deff0a3ed (0.00s)
     --- PASS: FuzzCrossG1MultiExp/378cd725b458a28b668303a3b9f5a48944c55913 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/3a52ce780950d4d969792a2559cd519d7ee8c727 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/3daf11a3ee7388f06e768d00a73346a0e1a9bf33 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/3df1fd6d05dfabe5d0093a63756d7bee601d8f27 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/3e0770416ee030188c6fa99786fe50554423e1ed (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/3fa76fbe7f5cb82d8078684a5c6b59487a783373 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/406cba8bcb19e60765f41ed4b04346fb16d59f5c (0.01s)
     --- PASS: FuzzCrossG1MultiExp/435982ffa009125fd431eb1d53c2fc7c0af1b651 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/441401e7c13463defeef432690c186a535b85796 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/4528b8dd1cd03f5b335e08ddf5edda72d822dbf2 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/46087f5338fb8b6da2b1f6076ac92c0e7ffd2569 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/481667e91e419f456fbd41fa8a8d00f145ff15aa (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/4837586ee3ae2c74aa99ee7705cd40f10c46e96a (0.01s)
     --- PASS: FuzzCrossG1MultiExp/487987f02d020e1f2feaf6d0206681ba3dfaf55d (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/4883c7bc07a565609d1863d4b6150251a534426a (0.00s)
     --- PASS: FuzzCrossG1MultiExp/4891dd56198499f95a8d258cfb61bf2be22704fa (0.01s)
     --- PASS: FuzzCrossG1MultiExp/48b2c616e42a305d76923df70b805873fad7a8ff (0.00s)
     --- PASS: FuzzCrossG1MultiExp/48e70534570113d927bff5bcb12cda5899d6065c (0.00s)
     --- PASS: FuzzCrossG1MultiExp/49d60083f43210114fca04046ca8484fc77fe174 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/4a31e3538fbb6cc597fc101640f0fcb7035f6ab3 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/4af09b377a2b3f1ba48a16492ef38e4e5ed9fba6 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/4b7bda15366971b5acc84d412c4ec428242cffa5 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/4a683b1667aac64712966fced88c8b14cff7d724 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/4bddad3736d40015022c4c0f1659e7828bcca5b8 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/4cb367b4646e879bbf8883fd297dc4c682a58e6d (0.01s)
     --- PASS: FuzzCrossG1MultiExp/4cf6e5ae327a5686265632177d794a689b8213af (0.00s)
     --- PASS: FuzzCrossG1MultiExp/4cf997735475afd79f8711e22efaa9d306294785 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/4def547a50ba3984f21979d94962bc3f6ec03a59 (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/4e167f4b4afb74521b813250b53e1118f1c7c05e (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/4e167f4b4afb74521b813250b53e1118f1c7c05e (0.01s)
     --- PASS: FuzzCrossG1MultiExp/50c52f8b58aeeb9aee6c59eca8df3ed7ba96ab58 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/50d9b6495fa88fe98bbb19bd3ea0b435336ba6c4 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/5126644dbabb13ac639aea45994509a32e91af0f (0.00s)
@@ -1737,29 +1712,28 @@
     --- PASS: FuzzCrossG1MultiExp/57fa4d2186c140eba7fc963d78555067988a3554 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/581e70777cae0f57d9a9a67a57f47c05183472c8 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/58875b5782808a3d641bc45a940805ce304fb308 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/595b689595f69bded9a3b418287c902b3c792e8e (0.00s)
     --- PASS: FuzzCrossG1MultiExp/597ee62d2b798ea18baa1d7b0c28a394911da36b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/59d69d0470a2d71b616d4fea15d2e8979afc8982 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/5a49adba5eec1b2dfd53fc4b9db7bd4bd48ba593 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/5a64295a8b6286b493a4fd897f7cc2839a308205 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/5afcee88232882cdcc44bdd9d35bfb4d55cbbe78 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/5bc47827106f4816eac60367768fdd54ff29176c (0.01s)
     --- PASS: FuzzCrossG1MultiExp/5cbed66ea545771d03997a4884a45d8b5c2bd506 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/5ce79471aef46355f3ba80b678fb4c65b4414c6b (0.01s)
     --- PASS: FuzzCrossG1MultiExp/5cfec8229bf60c862b47570f3e92f432d8958e1e (0.00s)
     --- PASS: FuzzCrossG1MultiExp/5e090e2b97e3ca63fb0b69989efb87398c88f379 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/5e2a3e2e3fd883b861a363f07e3456f41b1bb9b9 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/60416d2553b0a064066fc6782779b05c22e827b8 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/625c6bbf8bd869498f11c9a97d2bb10b8487f264 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/633f9e02d1d4d5340052d558067bc0a9113c3d59 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/6585713c81559c925d03f7633cfb0bdfaa384a56 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/661700ea4d071e38a4c6ebf60b21a460d32bbe43 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/66498f0fb50c9c88c41066e9438b20f2480dfd80 (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/66697b9558e1cdabdfb230f819cb66065bb8e42f (0.00s)
     --- PASS: FuzzCrossG1MultiExp/66cd436aea49b8e9c319ec3437cbe0146433e609 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/6755770ac2bfe572bfa633b3760b55ed575481f4 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/6c3cec0f3bd8db4ce78dd97944775097112f3284 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/6c97274c0259ad9b930d10423d9154393648c079 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/6d7c9667c561d0077390ea0aba07309d5d04c6e1 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/6e2fa3bc8c0c4c260c9e9bca2933beb732ac0103 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/6e4604641f29c2dd3c1d2904b7aa4742ac4de78b (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/6ec71147aa7bb27cbfb658eca8f35de2e10624ae (0.01s)
     --- PASS: FuzzCrossG1MultiExp/6fc0f5f791a9488a7846df2b5bd05c7aa0d28a62 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/6fe15f79e55c59ed1042d6ff559653cc536494f9 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/7013ff11f3cfe807c0e1b0f5d85121fb2367c345 (0.00s)
@@ -1767,15 +1741,14 @@
     --- PASS: FuzzCrossG1MultiExp/71dea771942b52917a09c99fdf1fec647b0dbd74 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/72069b61472961a6ac6b512eefad0b6bfbc3df65 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/73e7ad395cdd5e22b0191dffc71beeb3360f040f (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/74c7398744eef0cf153236eee6b6049292fd10b7 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/761708f2d5e880cafad9430d7549294237352f32 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/76600cef7ebf29505058fca2e76cbdbc90e7d7c2 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/76dd8e95fc930ff38b385cdf76307522c7ec9c3d (0.00s)
     --- PASS: FuzzCrossG1MultiExp/772cedb504e962cc45569b6231f5e4636ae0df4d (0.00s)
     --- PASS: FuzzCrossG1MultiExp/77acd615a43a54236948481e767a81f90b29a523 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/79f66804b5825232312a8de0a108d6cdb705f0ee (0.01s)
     --- PASS: FuzzCrossG1MultiExp/7a38d8cbd20d9932ba948efaa364bb62651d5ad4 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/7ab4c21a5af19e460d7e40aa86704fb7b5fa34b2 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/7b5eb505d91ecc264fe71bb4fb0d915e3511196b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/7cc28a01a34d43eadfc7a6cd579439a62bdeb3ec (0.00s)
     --- PASS: FuzzCrossG1MultiExp/7de09c6e4ce4075fabcf8080500e4e75fd8039c6 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/7fb018c6babefc89a2b923fcc28e7253619a81d5 (0.00s)
@@ -1784,10 +1757,13 @@
     --- PASS: FuzzCrossG1MultiExp/8168200925b87e22ea7f3d37b22816f54038cd71 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/822b42073f700166c9fdd9389ad3309cbe412a87 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/8237669020705612a6e9146b28c79cafdfffcfff (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/823b2ed4eab37913250b76b0a7f3a4f88cc1fdce (0.00s)
     --- PASS: FuzzCrossG1MultiExp/83550cda17dd21a647937d0b3c41ced3ce29792f (0.01s)
     --- PASS: FuzzCrossG1MultiExp/83aa1eea0c44e083fc20737a1276141099391726 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/83ae61ddf7edc76da40c94053a23d1c97eed3043 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/83b31e254dc50aab71358f1f93477d50ba5dc57e (0.01s)
     --- PASS: FuzzCrossG1MultiExp/844a6b0ac20c77c4007ca06a9358f58cb3584985 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/84ad84dc4c22936571e72c0a9756279bdc763330 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/853c86e5bcb6572917d97c873ea9e27347fa3c90 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/86f666a3b6d1f9fc83000c27b6ff25948d4c5f60 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/8759df21b760ce7193f4ed9f87f7b2ea9250c650 (0.00s)
@@ -1801,7 +1777,6 @@
     --- PASS: FuzzCrossG1MultiExp/8ddd655c3a7ffb481c67a4b15e0391ef8d013d8d (0.00s)
     --- PASS: FuzzCrossG1MultiExp/8e496ac801387496c574b28e8d0baf31e1897b59 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/8e59789ecd627ea6ff0c3b9514ce7d768e067255 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/8f76fb3a93fefe225e2eaace30ca08225374671b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/9069ca78e7450a285173431b3e52c5c25299e473 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/90879a4180f11b9c8db96ab335fefa5a7512ed68 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/90cc7d2c09011fa8039b050ca48540a7328c6ea2 (0.00s)
@@ -1809,14 +1784,15 @@
     --- PASS: FuzzCrossG1MultiExp/927b3584172c652037d4856663e8efed5bb0e2b8 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/93b85e7eb42a61c355a1b569b38059c0d9f87b95 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/95ec94025ffd3d2691242381a3be653da922966c (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/96510570890b1e103797bfc6116cbe80a86d8439 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/95f2012ceab2357275c2853ef85fd840143e97f7 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/98619beec566b4e435b7127640ff4897cd44678e (0.00s)
     --- PASS: FuzzCrossG1MultiExp/98fa9c671c98676d52c3807ae1ddfbd0a3f49fdc (0.00s)
     --- PASS: FuzzCrossG1MultiExp/997d35a77ffa98180f2b358ef530042ace3f8f82 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/99e07603694f900f1b166447890de0e35bcdece9 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/9a7e16b41cc27b3d445d089ff3bbe3bb7e28a7d2 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/9abf87b3ebe4a3c8b954978b59f976efd29240a4 (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/9bb5bd5963d60585c78dd315504579433130f494 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/9ae3e78df1a5573200db82f2cf0f6d0d970b7aec (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/9bb5bd5963d60585c78dd315504579433130f494 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/9c234379b70f56b2e526c9673afba3b4e0d6c4c6 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/9ccca01929d4d9effa1e889ffcd122843a585c35 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/9cf1b88a085a61acbf880ae12d0f32a36f9ad37a (0.00s)
     --- PASS: FuzzCrossG1MultiExp/9d01484cd48405348c3bdce650bbfbf6b57e3c8a (0.01s)
@@ -1826,25 +1802,26 @@
     --- PASS: FuzzCrossG1MultiExp/9e7a838bd61d7ece726189bf5a295382306c4afc (0.00s)
     --- PASS: FuzzCrossG1MultiExp/9e8d881a953a239c03a6ec869d0ce9de9aeb6143 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/9ee517e70b4b02e219c3434865ff42ed1cbc41dc (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/9f93f9ee914530b493f26bd10b7d5fa907dcd90d (0.00s)
     --- PASS: FuzzCrossG1MultiExp/9fdcba0782dd2487f60fa25d21b408866bef1e94 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/a0561d3deec698b724e514ec11c56cfbb1d9f5c5 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/a1e6615e5ed8663d88a2f16066d6d048b20b5920 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/a21a0e2a3798148eda516c0e96fc66601170f9c4 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/a25ae1899063794b63af2a7fe91693ec58296cdd (0.01s)
     --- PASS: FuzzCrossG1MultiExp/a26f17f8045ed7ce2217f656142b5457b7c3635e (0.01s)
     --- PASS: FuzzCrossG1MultiExp/a35ba85a34e2f75a415f4af4a6cbcfd22b4aecf5 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/a45fa8b50ccd960b3f3be7ca8b3dd96e34038c1e (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/a486dc03d5a5c3afd08d65ce59f6c14af51cc5a0 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/a49025f77554933fa718ac4f201cc8440c564461 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/a4d1b7cbd484d515f28d2c27253e870d7cf5edd6 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/a58c554e7964506e3a3d67065c8be5ec0c46cc3f (0.00s)
     --- PASS: FuzzCrossG1MultiExp/a5c022c6a5c04dd8dffc17bf9762300b32c7af3f (0.00s)
     --- PASS: FuzzCrossG1MultiExp/a69001e39568e6efaf36dfa681d7bf4e9b0bc650 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/a6c4bd4b4fcf7f0af6937ed212f928747d58eaeb (0.00s)
     --- PASS: FuzzCrossG1MultiExp/a6e7e83c6184eb8a57e4a18d5f51a84a516031ae (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/a75c6a1b8c0169f0dfe16a332cd9551206227d53 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/a88409474621face325189057bbe9feeaf0b5d9f (0.00s)
     --- PASS: FuzzCrossG1MultiExp/a96a9d0d22ba203004f7093049a4850eaecddca0 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/aa0fa7dc0f738902dfc6bb76f382dbcc1512e01b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ab20202901162ca0b667495d3d3b18d38a2aa991 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/aba7f4e75dd1dc8cc8e324d15e55703a95fadc3c (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/ac05ac0693111aa4aa3a2f8affb3115d96d4fdab (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ac47b67bcdecaf30c6d7d1788d68f66053d135f7 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/ae8103039bf130db9ab44702b4af898ffe32deb5 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ae9dc5cd1b45d67221e883a6c290e82238085849 (0.00s)
@@ -1855,38 +1832,36 @@
     --- PASS: FuzzCrossG1MultiExp/b092b151651937b28dcf998b2343bea1a94cbeff (0.00s)
     --- PASS: FuzzCrossG1MultiExp/b17fa97284db7434f60778574c7999b3dfd6ed6b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/b1e785db5a2ff0304f849588946a08762d24b06d (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/b228b862241ab07b0c02c80045b916d05d65812d (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/b21f639c2e67f75da9cbe6e98977a467e3c31577 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/b30209025468d943ad7bd805c3fa2d398d65eae1 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/b34c5eebd84c54d375f01b9916382887c8410c1e (0.00s)
     --- PASS: FuzzCrossG1MultiExp/b3add3c4a260452d2bbb41ac76de88fe16b314da (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/b3b52693335ba3aa2d5ebfa546fac31ab7d5f8fa (0.01s)
     --- PASS: FuzzCrossG1MultiExp/b3ed4defbb51a95b5d9c1f82b8af75be72ffed9a (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/b41b1dd77cdd248b4dd06e1e28b331757f1eb2d9 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/b4978d8838b10fa1ab24379deb744907367bba25 (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/b519a0bd55bacd90fe8f65e7f8c20f15c9ef8ca8 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/b5bc8258d4f7176550f4aaf0caf6f77b3f556822 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/b6ec6f2a7a11166d369b57c70a3ce86f33f3681d (0.00s)
     --- PASS: FuzzCrossG1MultiExp/b73f1a37bc0720879be31b7a1da519aa294a76f7 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/b7fdee51c606ac75d4a304c409e7067362b3b4a8 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/b82f0da4753e0b942c599339e979071ba081cd7c (0.00s)
     --- PASS: FuzzCrossG1MultiExp/b8e41d9a10929f773c7bfc1484e456438125909c (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/b970a62a227413f3e5819e1b54cb2f0395367828 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ba0a6722c89bbde3a0d8b5de54bdb11999d0dbe7 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/bb15923022559524aee5d20ef6c8a492fdb8193a (0.00s)
     --- PASS: FuzzCrossG1MultiExp/bb768adbde170dcbb5ca374246fe672dc1f6fdb8 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/bc17f75d19839a22f5ac57780b2b5f8b5b21b29c (0.00s)
     --- PASS: FuzzCrossG1MultiExp/bdeb0c598ab651164d3fe3d12918044db3fe13ee (0.00s)
     --- PASS: FuzzCrossG1MultiExp/be456d7d4f0c5315fdadd2c8d14ab152a92966fd (0.01s)
     --- PASS: FuzzCrossG1MultiExp/bed845e2998044c27bcb4d599d72eb7d465e4ef6 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/c0b02726698d0551d3feddefacf708f2f5726bf8 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/c113ec8498276dd34dbcf31df20b9d2faea20f9f (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/c2694fa15c28fb1f9e2c62ce99ce83a4452cb702 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/c2ea1872c517a36b8bf3148aaec05d0258e638c1 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/c4aa8c3aaae61abef247c24c2e217c77b5d9faf8 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/c4c2276035be5354e74db640afa26a1195338b77 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/c62b5e521f920f9a7bb85a437e9e39643166feaa (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/c63e5b407404528d148f6a97a2bd23c5203377aa (0.00s)
     --- PASS: FuzzCrossG1MultiExp/c6f664a1b0c2ffe222164390f00c455879cd2c7a (0.00s)
     --- PASS: FuzzCrossG1MultiExp/c87e2df726492c96522ef87973a17cc07f944f38 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/c9b5c89bb7a85acdfb67cdc8f22b41a69fbdaab2 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/ca5121f99003cf2aa21fb5588d46986c3dfde4b2 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/ca82414c89a28ea87752840107cb9ad6f001e1f7 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/cb85bff0d936548815ae60333e1ad7e1a01d634d (0.00s)
     --- PASS: FuzzCrossG1MultiExp/cba3509454b49c0a5aaf570c678054e94d5bb829 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ccaa7403be146f088449f2558df4348667081f2e (0.00s)
@@ -1906,6 +1881,7 @@
     --- PASS: FuzzCrossG1MultiExp/d55507d538f656574020c52beef8d636b16f4f4b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/d60916948d96b0ba4c970d4a71274437b118c3e7 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/d67377e627342316c015ee8dd236caec37bd1dd7 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/d7983d4031d44dea066b19cbfbf9d6352b830583 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/d825ff749bbcb8cad0a7c871aa8b897f86b070f4 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/d8386731f286539a73b1348b4f72520abc41af86 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/d86775a2c7b68c7cae87ecf10a22884c671e026f (0.00s)
@@ -1926,49 +1902,46 @@
     --- PASS: FuzzCrossG1MultiExp/e3c0e978a641c177d622654cbcccd3fa230669b7 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/e462dadb88145fb33d91af7ee0621d880a94facc (0.00s)
     --- PASS: FuzzCrossG1MultiExp/e61b47043954e6f69061e25bb08e38f8e8d6a19a (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/e66a5c5fad7b6a5a2b32757c2d56e6c9bc97de3f (0.01s)
     --- PASS: FuzzCrossG1MultiExp/e67e1404d32153efb6bf39540c17a69a8c64c010 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/e698208c27df469baec3d928a8268e8216c399de (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/e6a4534a6506c571b79306f8ba8d6c4097af8ee1 (0.01s)
-    --- PASS: FuzzCrossG1MultiExp/e73513fba4cd852477ce2121485acb7601457d99 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/e78b2c3db332e6bce369cfc8e8657f0db0c4d86a (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/e7daee41ce1f55abd0824203860217b7193ae77b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/e80df427f85b6f4b2637a3f3fae44a4233dc6870 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/e92d8e29580368c267b3c1074d847ce7a616db49 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/e97bc5141786b0be19fb586dad0c478ab9093644 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/ea3d5ef6cb350d4852eade05969db8564ab94589 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ea59f33e638c982f217c58c46417f11115fca960 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ead99d2a1cb64beb2247551cd478335552145e33 (0.01s)
+    --- PASS: FuzzCrossG1MultiExp/eb7815711b560eb2cdf03fa11b6bb81d8a9bd84e (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ebc8f80e65d6ef76b8da7735dd48965e0a92a94d (0.01s)
     --- PASS: FuzzCrossG1MultiExp/ebc98dc15b8e4f73bcf31e8a4fb5b55535825948 (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/ebf3efca3a16cb84cbe6b59317ef7f7e508cb64b (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ebfabaaa31cbd4a69b373547f4bcbe690a2bc6a9 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/ec81517c2cca4149d9b3b62b718eb85dffed7270 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ecaaccdf41e804080d635b7d6492c079e47ef476 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ed47a0ea6dced03c314242f7c47d24b02a361ada (0.00s)
     --- PASS: FuzzCrossG1MultiExp/efa4e0fc3583dc5af6231a1bff1ede7621cc95aa (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/f0c89035794d34a72e8cb22aae0d6c8d58dba294 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/f16b3be89201454d58047da3848cc2c69b47464d (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/f2cd599772da8123c0c75f42efab0063bb90e72a (0.00s)
     --- PASS: FuzzCrossG1MultiExp/f315e6eb08eda5ec7a49712a8224d1b6700628f7 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/f392c925eb26367beff70272f12da5ac320e3262 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/f4609d84d97dc3f8ba959daef5f7fc376f965492 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/f4d4476f0b23fd43f892e0acb95cfe0b9218e800 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/f63235609de7d065793ddfbc5b4852dd0310876d (0.01s)
     --- PASS: FuzzCrossG1MultiExp/f650efd8fc4d2df4e9f988c9e4d9f57983057d2a (0.00s)
     --- PASS: FuzzCrossG1MultiExp/f696a5520cef37c86ac776c6096adb9ae4f1910d (0.00s)
     --- PASS: FuzzCrossG1MultiExp/f92f2a38eceed07b389c626b0b3fe797df6890f4 (0.00s)
-    --- PASS: FuzzCrossG1MultiExp/f93a58ad7801890b06564f4dc1f40844019fbcd3 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/f9a388542638fc5c23ba7704e66b52aac1f7ee7a (0.01s)
     --- PASS: FuzzCrossG1MultiExp/fb78e0dc35ea397f99b8e1704c903493d67dc11b (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/fb9ea8e30f428d2e93686efb1c940e00f0d186fd (0.01s)
     --- PASS: FuzzCrossG1MultiExp/fbdfe8bb4f125e09293a98cffd5e1f1e5b1e5990 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/fc74d58e6af97e2d4878477cf6679d3943f940e6 (0.01s)
     --- PASS: FuzzCrossG1MultiExp/fd0c50b735e1a8e66c5097ef37d27c0386f522de (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ff2e157dba62f325277d5823b3de77ae41f8a1a7 (0.00s)
     --- PASS: FuzzCrossG1MultiExp/ffc174cfcc64cb595f7760ccba26b175b7b9275e (0.00s)
+    --- PASS: FuzzCrossG1MultiExp/fff9566327761e07c56424bdcba9191e5bc67baa (0.00s)
 === RUN   FuzzG1Add
 === RUN   FuzzG1Add/053a8ba45f3ee31e39ce3c48f9fc889de49f63a1
 === RUN   FuzzG1Add/05afb14ebad169fe0914e196ba3f5032d7e879d8
 === RUN   FuzzG1Add/0784b17a1143ec637f7d49ee64ac521509e595d9
-=== RUN   FuzzG1Add/1a897e488132916b88bbbaaa6cbc6649aab268eb
 === RUN   FuzzG1Add/1e2e1eaddca636e7f6cf988b867ca86a5722d6e7
 === RUN   FuzzG1Add/3f8985dc104aadd527aebe163a7a8fe02dff9031
 === RUN   FuzzG1Add/47ad8694b5d4747fea71097ffb90bfd8b068d94b
@@ -1988,13 +1961,13 @@
 === RUN   FuzzG1Add/c66be7210915f39e91456fc2eac9441012a0a3ea
 === RUN   FuzzG1Add/ccf2418dbc1ab1ee5b351e86d16cd7fd00fd599e
 === RUN   FuzzG1Add/cf414400993574b8379dc9f2f10542a98d4d4047
+=== RUN   FuzzG1Add/dc1b35f432d45a2a51e7d3fc796deddd006fb5a1
 === RUN   FuzzG1Add/ed8b2ec9428aee48a0c173efe39c25a5a78d7bb3
 === RUN   FuzzG1Add/f2ee452dfaeefaefae7c7dd00c4a15f6c4d7638f
 --- PASS: FuzzG1Add (0.00s)
     --- PASS: FuzzG1Add/053a8ba45f3ee31e39ce3c48f9fc889de49f63a1 (0.00s)
     --- PASS: FuzzG1Add/05afb14ebad169fe0914e196ba3f5032d7e879d8 (0.00s)
     --- PASS: FuzzG1Add/0784b17a1143ec637f7d49ee64ac521509e595d9 (0.00s)
-    --- PASS: FuzzG1Add/1a897e488132916b88bbbaaa6cbc6649aab268eb (0.00s)
     --- PASS: FuzzG1Add/1e2e1eaddca636e7f6cf988b867ca86a5722d6e7 (0.00s)
     --- PASS: FuzzG1Add/3f8985dc104aadd527aebe163a7a8fe02dff9031 (0.00s)
     --- PASS: FuzzG1Add/47ad8694b5d4747fea71097ffb90bfd8b068d94b (0.00s)
@@ -2014,6 +1987,7 @@
     --- PASS: FuzzG1Add/c66be7210915f39e91456fc2eac9441012a0a3ea (0.00s)
     --- PASS: FuzzG1Add/ccf2418dbc1ab1ee5b351e86d16cd7fd00fd599e (0.00s)
     --- PASS: FuzzG1Add/cf414400993574b8379dc9f2f10542a98d4d4047 (0.00s)
+    --- PASS: FuzzG1Add/dc1b35f432d45a2a51e7d3fc796deddd006fb5a1 (0.00s)
     --- PASS: FuzzG1Add/ed8b2ec9428aee48a0c173efe39c25a5a78d7bb3 (0.00s)
     --- PASS: FuzzG1Add/f2ee452dfaeefaefae7c7dd00c4a15f6c4d7638f (0.00s)
 === RUN   FuzzG1MultiExp
@@ -2056,7 +2030,6 @@
 === RUN   FuzzG1MultiExp/7d2157a4515f42fd3fb38b25c7b0440532c4f4a8
 === RUN   FuzzG1MultiExp/7e4f3e1c6e7b19aa55cf533b12b6ed37953e04f9
 === RUN   FuzzG1MultiExp/81716021b8d680c551e6bd1a96de9a9f0b8d315e
-=== RUN   FuzzG1MultiExp/82ab874d2cd2486a9416d5c7e718f74d914bc155
 === RUN   FuzzG1MultiExp/894c95f71df1fe5e11920dfe97a35e25b0b2aab9
 === RUN   FuzzG1MultiExp/8c13ac9134e0acb234c1a7ef41be87c878c2a662
 === RUN   FuzzG1MultiExp/8c1a848b9716bcc9b0bedc0cb7f71872d2b2d064
@@ -2138,7 +2111,6 @@
     --- PASS: FuzzG1MultiExp/7d2157a4515f42fd3fb38b25c7b0440532c4f4a8 (0.00s)
     --- PASS: FuzzG1MultiExp/7e4f3e1c6e7b19aa55cf533b12b6ed37953e04f9 (0.00s)
     --- PASS: FuzzG1MultiExp/81716021b8d680c551e6bd1a96de9a9f0b8d315e (0.00s)
-    --- PASS: FuzzG1MultiExp/82ab874d2cd2486a9416d5c7e718f74d914bc155 (0.00s)
     --- PASS: FuzzG1MultiExp/894c95f71df1fe5e11920dfe97a35e25b0b2aab9 (0.00s)
     --- PASS: FuzzG1MultiExp/8c13ac9134e0acb234c1a7ef41be87c878c2a662 (0.00s)
     --- PASS: FuzzG1MultiExp/8c1a848b9716bcc9b0bedc0cb7f71872d2b2d064 (0.00s)
@@ -2190,13 +2162,12 @@
 === RUN   FuzzG2Add/20c27368396bbd97a6b7dd645b12b5824d01eb65
 === RUN   FuzzG2Add/22ea1c649c82946aa6e479e1ffd321e4a318b1b0
 === RUN   FuzzG2Add/283e3662dd78ae6e89c111962c9f5a509398cc8e
-=== RUN   FuzzG2Add/39e0d7c4aaa5564be725bb6d29d262434645520d
+=== RUN   FuzzG2Add/2dcab223b4702f812b207d774b33fd9b2a24a2de
 === RUN   FuzzG2Add/3c5b2f58e1fb33ab1310b9ae86b36e1d1997ce8b
 === RUN   FuzzG2Add/4a61f3148e1a050a765b780912315e098e93f189
-=== RUN   FuzzG2Add/5114b36052a4cc9f21947b26ed0447e984629cb5
 === RUN   FuzzG2Add/516b9783fca517eecbd1d064da2d165310b19759
+=== RUN   FuzzG2Add/56593e18b6cd0d3258f93678df1466b3fc1990cf
 === RUN   FuzzG2Add/61a500ee95441c5694c1ac5798a624ea9c1c958b
-=== RUN   FuzzG2Add/628913f489db25bbebd52f5b79ae252ed9b343f5
 === RUN   FuzzG2Add/6299c502bc19f86cc1b154ac0e0500c59e52e840
 === RUN   FuzzG2Add/64cd1b7a22dee73e383dea81af5e969559730823
 === RUN   FuzzG2Add/691cac2fda2895be0391e431e59dc2b7c90791d7
@@ -2205,7 +2176,7 @@
 === RUN   FuzzG2Add/7ea894406f4f79afa28760fe4b88a56d64c4d607
 === RUN   FuzzG2Add/86627fa8121d5b7bb3a5a3d0ffe654b8ebdc2481
 === RUN   FuzzG2Add/9069ca78e7450a285173431b3e52c5c25299e473
-=== RUN   FuzzG2Add/ac555685e32da3748ff4d19423a48bde2f1305ba
+=== RUN   FuzzG2Add/9a29e2fa90e39c18c08561e7612218a2786f52a0
 === RUN   FuzzG2Add/c27e818b817cb3a58bc6a3fa6bfc62f1ec2399ef
 === RUN   FuzzG2Add/cf22b92be95e3dbb62d4c48162d1a0dae9442484
 === RUN   FuzzG2Add/d98ebbf8dc0042e22e28a4c6e99643dfc851b1aa
@@ -2224,13 +2195,12 @@
     --- PASS: FuzzG2Add/20c27368396bbd97a6b7dd645b12b5824d01eb65 (0.00s)
     --- PASS: FuzzG2Add/22ea1c649c82946aa6e479e1ffd321e4a318b1b0 (0.00s)
     --- PASS: FuzzG2Add/283e3662dd78ae6e89c111962c9f5a509398cc8e (0.00s)
-    --- PASS: FuzzG2Add/39e0d7c4aaa5564be725bb6d29d262434645520d (0.00s)
+    --- PASS: FuzzG2Add/2dcab223b4702f812b207d774b33fd9b2a24a2de (0.00s)
     --- PASS: FuzzG2Add/3c5b2f58e1fb33ab1310b9ae86b36e1d1997ce8b (0.00s)
     --- PASS: FuzzG2Add/4a61f3148e1a050a765b780912315e098e93f189 (0.00s)
-    --- PASS: FuzzG2Add/5114b36052a4cc9f21947b26ed0447e984629cb5 (0.00s)
     --- PASS: FuzzG2Add/516b9783fca517eecbd1d064da2d165310b19759 (0.00s)
+    --- PASS: FuzzG2Add/56593e18b6cd0d3258f93678df1466b3fc1990cf (0.00s)
     --- PASS: FuzzG2Add/61a500ee95441c5694c1ac5798a624ea9c1c958b (0.00s)
-    --- PASS: FuzzG2Add/628913f489db25bbebd52f5b79ae252ed9b343f5 (0.00s)
     --- PASS: FuzzG2Add/6299c502bc19f86cc1b154ac0e0500c59e52e840 (0.00s)
     --- PASS: FuzzG2Add/64cd1b7a22dee73e383dea81af5e969559730823 (0.00s)
     --- PASS: FuzzG2Add/691cac2fda2895be0391e431e59dc2b7c90791d7 (0.00s)
@@ -2239,7 +2209,7 @@
     --- PASS: FuzzG2Add/7ea894406f4f79afa28760fe4b88a56d64c4d607 (0.00s)
     --- PASS: FuzzG2Add/86627fa8121d5b7bb3a5a3d0ffe654b8ebdc2481 (0.00s)
     --- PASS: FuzzG2Add/9069ca78e7450a285173431b3e52c5c25299e473 (0.00s)
-    --- PASS: FuzzG2Add/ac555685e32da3748ff4d19423a48bde2f1305ba (0.00s)
+    --- PASS: FuzzG2Add/9a29e2fa90e39c18c08561e7612218a2786f52a0 (0.00s)
     --- PASS: FuzzG2Add/c27e818b817cb3a58bc6a3fa6bfc62f1ec2399ef (0.00s)
     --- PASS: FuzzG2Add/cf22b92be95e3dbb62d4c48162d1a0dae9442484 (0.00s)
     --- PASS: FuzzG2Add/d98ebbf8dc0042e22e28a4c6e99643dfc851b1aa (0.00s)
@@ -2592,6 +2562,7 @@
 === RUN   FuzzMapG2/11a53a88e34f832e3dfc3c0860002dc28b2b31f4
 === RUN   FuzzMapG2/175c3b3991ac2641e1136a80588c005ea06a112a
 === RUN   FuzzMapG2/1a91e2263639d38f55e9fd1cbae32b2e181751a2
+=== RUN   FuzzMapG2/1b0657830ffccabed5f3a95a9cbfce38acdb1424
 === RUN   FuzzMapG2/1c117d2cee144f88f4e9bf363d66b627d7f1572b
 === RUN   FuzzMapG2/1cade0abb0b2cd027babd807f10aa96cb15d967f
 === RUN   FuzzMapG2/25b5a4306f8e982f4886ca6d6be66a64e1277fee
@@ -2619,6 +2590,7 @@
 === RUN   FuzzMapG2/c6ba21a27ea41d782edd4b86192d37049f6369a0
 === RUN   FuzzMapG2/ca7a13142ce7f1043f690af92a07c5d1f99b3fd1
 === RUN   FuzzMapG2/cb0e4ee385f82444bc53f698c484a4372ab645de
+=== RUN   FuzzMapG2/cb1cd858f13bd3b8f524b276c6004157fecaa6b9
 === RUN   FuzzMapG2/cbd77f48f0e4961731dc0d53cf042ed3842d17b9
 === RUN   FuzzMapG2/d01592e0179db0487ea601d2bfa0f9557041fb45
 === RUN   FuzzMapG2/da87e04658dd8cd549d11f1f6499dae453816a2c
@@ -2626,14 +2598,14 @@
 === RUN   FuzzMapG2/e0ddd5a7b2e2a0808301537027b1f93164aef838
 === RUN   FuzzMapG2/e1c130081e6eeffe23848e95a7164cf309cc0927
 === RUN   FuzzMapG2/e2ee9276a4886b47177ea3105447b79a5d2ee5f2
-=== RUN   FuzzMapG2/f02d92629113e437afb91e6eddea68dde7078198
+=== RUN   FuzzMapG2/f4b5deb485ef1528645676eb99ce7dc28d222aa7
 === RUN   FuzzMapG2/f695260621608b67d511dc6bf263b5e2449fefa2
-=== RUN   FuzzMapG2/f6ccf3828033382bc15e9997f0cc44f212388b9c
 === RUN   FuzzMapG2/fa981bca28ad20178a603dc77fdd55fddc7a6c77
 --- PASS: FuzzMapG2 (0.00s)
     --- PASS: FuzzMapG2/11a53a88e34f832e3dfc3c0860002dc28b2b31f4 (0.00s)
     --- PASS: FuzzMapG2/175c3b3991ac2641e1136a80588c005ea06a112a (0.00s)
     --- PASS: FuzzMapG2/1a91e2263639d38f55e9fd1cbae32b2e181751a2 (0.00s)
+    --- PASS: FuzzMapG2/1b0657830ffccabed5f3a95a9cbfce38acdb1424 (0.00s)
     --- PASS: FuzzMapG2/1c117d2cee144f88f4e9bf363d66b627d7f1572b (0.00s)
     --- PASS: FuzzMapG2/1cade0abb0b2cd027babd807f10aa96cb15d967f (0.00s)
     --- PASS: FuzzMapG2/25b5a4306f8e982f4886ca6d6be66a64e1277fee (0.00s)
@@ -2661,6 +2633,7 @@
     --- PASS: FuzzMapG2/c6ba21a27ea41d782edd4b86192d37049f6369a0 (0.00s)
     --- PASS: FuzzMapG2/ca7a13142ce7f1043f690af92a07c5d1f99b3fd1 (0.00s)
     --- PASS: FuzzMapG2/cb0e4ee385f82444bc53f698c484a4372ab645de (0.00s)
+    --- PASS: FuzzMapG2/cb1cd858f13bd3b8f524b276c6004157fecaa6b9 (0.00s)
     --- PASS: FuzzMapG2/cbd77f48f0e4961731dc0d53cf042ed3842d17b9 (0.00s)
     --- PASS: FuzzMapG2/d01592e0179db0487ea601d2bfa0f9557041fb45 (0.00s)
     --- PASS: FuzzMapG2/da87e04658dd8cd549d11f1f6499dae453816a2c (0.00s)
@@ -2668,9 +2641,8 @@
     --- PASS: FuzzMapG2/e0ddd5a7b2e2a0808301537027b1f93164aef838 (0.00s)
     --- PASS: FuzzMapG2/e1c130081e6eeffe23848e95a7164cf309cc0927 (0.00s)
     --- PASS: FuzzMapG2/e2ee9276a4886b47177ea3105447b79a5d2ee5f2 (0.00s)
-    --- PASS: FuzzMapG2/f02d92629113e437afb91e6eddea68dde7078198 (0.00s)
+    --- PASS: FuzzMapG2/f4b5deb485ef1528645676eb99ce7dc28d222aa7 (0.00s)
     --- PASS: FuzzMapG2/f695260621608b67d511dc6bf263b5e2449fefa2 (0.00s)
-    --- PASS: FuzzMapG2/f6ccf3828033382bc15e9997f0cc44f212388b9c (0.00s)
     --- PASS: FuzzMapG2/fa981bca28ad20178a603dc77fdd55fddc7a6c77 (0.00s)
 === RUN   FuzzG1SubgroupChecks
 === RUN   FuzzG1SubgroupChecks/020c1a47d18666c738b44c69962f5f1581a14805
@@ -2774,7 +2746,7 @@
 === RUN   FuzzG1SubgroupChecks/fc3252ab9f04c2cbc3487fc5d523876f6aa6c644
 === RUN   FuzzG1SubgroupChecks/fd9cedee83346a8f72999742c9b94c90a64a62b9
 === RUN   FuzzG1SubgroupChecks/ff531c09f0edb00e53a247b3c7091809becdb132
---- PASS: FuzzG1SubgroupChecks (0.04s)
+--- PASS: FuzzG1SubgroupChecks (0.05s)
     --- PASS: FuzzG1SubgroupChecks/020c1a47d18666c738b44c69962f5f1581a14805 (0.00s)
     --- PASS: FuzzG1SubgroupChecks/0a896cf4bcf215fb87f79318b85579ee99bd3134 (0.00s)
     --- PASS: FuzzG1SubgroupChecks/0c9f26c52c38b9fd138c341b227299dc0dd6891e (0.00s)
@@ -2906,30 +2878,27 @@
 === RUN   FuzzG2SubgroupChecks/4d0f657848dc4d1d8a85fc24d46d59e2ec229324
 === RUN   FuzzG2SubgroupChecks/4ec1349d89b9bf185cb30a8996f1297cc29ffb61
 === RUN   FuzzG2SubgroupChecks/58668e7669fd564d99db5d581fcdb6a5618440b5
-=== RUN   FuzzG2SubgroupChecks/5d25a5aed0c5aa482a7ea18acbb1207b2b4d16fe
-=== RUN   FuzzG2SubgroupChecks/5db2b4ee8f4a62323bf6000b46752f745ae364b3
 === RUN   FuzzG2SubgroupChecks/5e5879e10bcefac123fa6cda693a1c36613bd6f8
 === RUN   FuzzG2SubgroupChecks/6341c5d2a34f23684547bd0f952acb1ced670aeb
 === RUN   FuzzG2SubgroupChecks/6402f0e90827cc24f9b43b2ec22efa9844cf6c1b
 === RUN   FuzzG2SubgroupChecks/64289f79d4da9d9f05459cd258d393fc4a36303c
-=== RUN   FuzzG2SubgroupChecks/6dac65468444f984290a9ebd7d0485fa5d789055
 === RUN   FuzzG2SubgroupChecks/702ef9007dc0da2ed33db62edc65ad310a8dc47c
-=== RUN   FuzzG2SubgroupChecks/75e6fc81d86ac47301d03117bdd073bda2b10cc1
 === RUN   FuzzG2SubgroupChecks/78670e88a9c2c711124471d2f24a8dbc8ce5dba9
 === RUN   FuzzG2SubgroupChecks/7899d1f56b4eb6b636ac755bdb7414d5bbed413a
 === RUN   FuzzG2SubgroupChecks/80417d2fff2ee2f862d0085d24c2b199aa07705f
 === RUN   FuzzG2SubgroupChecks/849d4d63f6595ce97d2f8052bcb830c41a7da978
+=== RUN   FuzzG2SubgroupChecks/8653a7bb32e0c5408069ef3a02f2714b946465c3
 === RUN   FuzzG2SubgroupChecks/87f4eb1945d7ca51457bbcdb0018c162efaa04ae
 === RUN   FuzzG2SubgroupChecks/8d8a149fa05d83c3268e4e02729846ce570db053
 === RUN   FuzzG2SubgroupChecks/8ddb1898198ec23885cc7ae40db9103995dab85d
 === RUN   FuzzG2SubgroupChecks/9069ca78e7450a285173431b3e52c5c25299e473
+=== RUN   FuzzG2SubgroupChecks/91f5afa559ae7f19a22e2c57d67e3a14567c9ecd
 === RUN   FuzzG2SubgroupChecks/9a328294c46909b15661320845fcc0e0d1aec31a
 === RUN   FuzzG2SubgroupChecks/9df7c622ae83006386d196ddc4d08277f54337bc
 === RUN   FuzzG2SubgroupChecks/a29d2ca25b489ba83202a0ff838db9e0a2b26198
 === RUN   FuzzG2SubgroupChecks/a35bd754d968a6b99defeeff314c00263721269d
 === RUN   FuzzG2SubgroupChecks/a80aedfc78433fb82b02866b681ec1705dba9ade
 === RUN   FuzzG2SubgroupChecks/ae4f281df5a5d0ff3cad6371f76d5c29b6d953ec
-=== RUN   FuzzG2SubgroupChecks/b5a3ef29786a65cce284de9daab3abf5ffb84c14
 === RUN   FuzzG2SubgroupChecks/b5f23a7ac4feefc2ad43c3834507e1cc56e0c768
 === RUN   FuzzG2SubgroupChecks/c0e915bee52cafd64c6dd2027036cdeb8700cbac
 === RUN   FuzzG2SubgroupChecks/c4fecdc8eadd3f8d0b46741884b67b386142e3d4
@@ -2949,13 +2918,16 @@
 === RUN   FuzzG2SubgroupChecks/e624056f1aa9c99a76f6e511c13fe33d448f9274
 === RUN   FuzzG2SubgroupChecks/e7fd96b41764796dbbbb0f0ff58eb34562eeea91
 === RUN   FuzzG2SubgroupChecks/e9ae859bf94e424a73f5a18cfc1054b5053750c1
+=== RUN   FuzzG2SubgroupChecks/eafbf782658b7c19a8b86bf1df62191508a1a2c6
 === RUN   FuzzG2SubgroupChecks/ecf673c9f634effa10b03cfe590703e691c26fe8
 === RUN   FuzzG2SubgroupChecks/ef3944799e8080a73fb4a37e042b420717ec2cce
 === RUN   FuzzG2SubgroupChecks/ef420c0d696e844286adfc98082e088881ae1f65
 === RUN   FuzzG2SubgroupChecks/f4183420d45eda1b3de78be2dd234d5c1336ea68
+=== RUN   FuzzG2SubgroupChecks/f6beca50f995b46434cd44cdd232de490da71eec
 === RUN   FuzzG2SubgroupChecks/f8ab6102982344a0fc6d79b658a83d04977ca97c
 === RUN   FuzzG2SubgroupChecks/f974afe6d43f3463cba28323d81de39eca33f299
 === RUN   FuzzG2SubgroupChecks/fcd0906406b4a6435c9299b50734f701027e3d7c
+=== RUN   FuzzG2SubgroupChecks/fe6d6e0345dd59663a1624c001200f76e16070a4
 === RUN   FuzzG2SubgroupChecks/fee005097e6ebebd1407eedad6f15d43f62daeab
 --- PASS: FuzzG2SubgroupChecks (0.05s)
     --- PASS: FuzzG2SubgroupChecks/01c6d58b22683d9cff412b1e204de0944b9afd75 (0.00s)
@@ -2987,30 +2959,27 @@
     --- PASS: FuzzG2SubgroupChecks/4d0f657848dc4d1d8a85fc24d46d59e2ec229324 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/4ec1349d89b9bf185cb30a8996f1297cc29ffb61 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/58668e7669fd564d99db5d581fcdb6a5618440b5 (0.00s)
-    --- PASS: FuzzG2SubgroupChecks/5d25a5aed0c5aa482a7ea18acbb1207b2b4d16fe (0.00s)
-    --- PASS: FuzzG2SubgroupChecks/5db2b4ee8f4a62323bf6000b46752f745ae364b3 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/5e5879e10bcefac123fa6cda693a1c36613bd6f8 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/6341c5d2a34f23684547bd0f952acb1ced670aeb (0.00s)
     --- PASS: FuzzG2SubgroupChecks/6402f0e90827cc24f9b43b2ec22efa9844cf6c1b (0.00s)
     --- PASS: FuzzG2SubgroupChecks/64289f79d4da9d9f05459cd258d393fc4a36303c (0.00s)
-    --- PASS: FuzzG2SubgroupChecks/6dac65468444f984290a9ebd7d0485fa5d789055 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/702ef9007dc0da2ed33db62edc65ad310a8dc47c (0.00s)
-    --- PASS: FuzzG2SubgroupChecks/75e6fc81d86ac47301d03117bdd073bda2b10cc1 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/78670e88a9c2c711124471d2f24a8dbc8ce5dba9 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/7899d1f56b4eb6b636ac755bdb7414d5bbed413a (0.00s)
     --- PASS: FuzzG2SubgroupChecks/80417d2fff2ee2f862d0085d24c2b199aa07705f (0.00s)
     --- PASS: FuzzG2SubgroupChecks/849d4d63f6595ce97d2f8052bcb830c41a7da978 (0.00s)
+    --- PASS: FuzzG2SubgroupChecks/8653a7bb32e0c5408069ef3a02f2714b946465c3 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/87f4eb1945d7ca51457bbcdb0018c162efaa04ae (0.00s)
     --- PASS: FuzzG2SubgroupChecks/8d8a149fa05d83c3268e4e02729846ce570db053 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/8ddb1898198ec23885cc7ae40db9103995dab85d (0.00s)
     --- PASS: FuzzG2SubgroupChecks/9069ca78e7450a285173431b3e52c5c25299e473 (0.00s)
+    --- PASS: FuzzG2SubgroupChecks/91f5afa559ae7f19a22e2c57d67e3a14567c9ecd (0.00s)
     --- PASS: FuzzG2SubgroupChecks/9a328294c46909b15661320845fcc0e0d1aec31a (0.00s)
     --- PASS: FuzzG2SubgroupChecks/9df7c622ae83006386d196ddc4d08277f54337bc (0.00s)
     --- PASS: FuzzG2SubgroupChecks/a29d2ca25b489ba83202a0ff838db9e0a2b26198 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/a35bd754d968a6b99defeeff314c00263721269d (0.00s)
     --- PASS: FuzzG2SubgroupChecks/a80aedfc78433fb82b02866b681ec1705dba9ade (0.00s)
     --- PASS: FuzzG2SubgroupChecks/ae4f281df5a5d0ff3cad6371f76d5c29b6d953ec (0.00s)
-    --- PASS: FuzzG2SubgroupChecks/b5a3ef29786a65cce284de9daab3abf5ffb84c14 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/b5f23a7ac4feefc2ad43c3834507e1cc56e0c768 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/c0e915bee52cafd64c6dd2027036cdeb8700cbac (0.00s)
     --- PASS: FuzzG2SubgroupChecks/c4fecdc8eadd3f8d0b46741884b67b386142e3d4 (0.00s)
@@ -3030,14 +2999,17 @@
     --- PASS: FuzzG2SubgroupChecks/e624056f1aa9c99a76f6e511c13fe33d448f9274 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/e7fd96b41764796dbbbb0f0ff58eb34562eeea91 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/e9ae859bf94e424a73f5a18cfc1054b5053750c1 (0.00s)
+    --- PASS: FuzzG2SubgroupChecks/eafbf782658b7c19a8b86bf1df62191508a1a2c6 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/ecf673c9f634effa10b03cfe590703e691c26fe8 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/ef3944799e8080a73fb4a37e042b420717ec2cce (0.00s)
     --- PASS: FuzzG2SubgroupChecks/ef420c0d696e844286adfc98082e088881ae1f65 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/f4183420d45eda1b3de78be2dd234d5c1336ea68 (0.00s)
+    --- PASS: FuzzG2SubgroupChecks/f6beca50f995b46434cd44cdd232de490da71eec (0.00s)
     --- PASS: FuzzG2SubgroupChecks/f8ab6102982344a0fc6d79b658a83d04977ca97c (0.00s)
     --- PASS: FuzzG2SubgroupChecks/f974afe6d43f3463cba28323d81de39eca33f299 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/fcd0906406b4a6435c9299b50734f701027e3d7c (0.00s)
+    --- PASS: FuzzG2SubgroupChecks/fe6d6e0345dd59663a1624c001200f76e16070a4 (0.00s)
     --- PASS: FuzzG2SubgroupChecks/fee005097e6ebebd1407eedad6f15d43f62daeab (0.00s)
 PASS
 coverage: 88.2% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/bls12381	3.088s	coverage: 88.2% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/bls12381	2.965s	coverage: 88.2% of statements
