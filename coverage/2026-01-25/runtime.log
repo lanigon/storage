@@ -2370,7 +2370,7 @@
 === RUN   FuzzRuntime/ffb665b59a6f68b676f8c568dbd57c3bcc494724
 === RUN   FuzzRuntime/ffbf57954a819dcb7d4e3a8b3cc9d9fdef4cf0b3
 === RUN   FuzzRuntime/ffedf9d53c92e0afedfd79a5af6235a0f0d7df76
---- PASS: FuzzRuntime (1.02s)
+--- PASS: FuzzRuntime (1.09s)
     --- PASS: FuzzRuntime/001b41e5addc964cbc0877fd2e2bf4d2aec99cc0 (0.00s)
     --- PASS: FuzzRuntime/0047760a4d9f16e705ee99f60f630b7cec42fa76 (0.00s)
     --- PASS: FuzzRuntime/0047f5be7f873001199d0e565a2bd91c02a8afe4 (0.00s)
@@ -2707,7 +2707,7 @@
     --- PASS: FuzzRuntime/205272397a56d0d6bf52d74e7e31316ed8c70292 (0.00s)
     --- PASS: FuzzRuntime/206018def69bb1e5213432f8caf15257c245a951 (0.00s)
     --- PASS: FuzzRuntime/20900c69b79033df4d445e1af84902152eae348a (0.00s)
-    --- PASS: FuzzRuntime/20cf5c557df0bc409239ca54b7d357c792dd8e10 (0.01s)
+    --- PASS: FuzzRuntime/20cf5c557df0bc409239ca54b7d357c792dd8e10 (0.00s)
     --- PASS: FuzzRuntime/2106e0f077478de3e603da80cef9de9ed4acfe53 (0.00s)
     --- PASS: FuzzRuntime/212827e511689c972ebcd4142bf837d733381222 (0.00s)
     --- PASS: FuzzRuntime/21402ea75abe5a9ab2775669d90d5ebda390e740 (0.00s)
@@ -3370,7 +3370,7 @@
     --- PASS: FuzzRuntime/6a259e313bf0a99c9d26ee5a6194987c829376da (0.00s)
     --- PASS: FuzzRuntime/6a378f42db4f9930b4d4c8ba83de5047edb7d6d7 (0.00s)
     --- PASS: FuzzRuntime/6a49b62abd790a2cad2ff0bb54ec3f3850750c92 (0.00s)
-    --- PASS: FuzzRuntime/6a613f8e0b5f421ad59cc4a139ce4dca0f25e835 (0.05s)
+    --- PASS: FuzzRuntime/6a613f8e0b5f421ad59cc4a139ce4dca0f25e835 (0.06s)
     --- PASS: FuzzRuntime/6ad5c4e361091676f5f9e85fea649bf698c67b09 (0.00s)
     --- PASS: FuzzRuntime/6ada823a5edd25fcbd095d6f5bf95c48ca3bdefe (0.00s)
     --- PASS: FuzzRuntime/6adf3cf0266895823f8962417c321634a078b361 (0.00s)
@@ -3452,7 +3452,7 @@
     --- PASS: FuzzRuntime/72054080bf20550ee79dde5967d50af28feb20e0 (0.00s)
     --- PASS: FuzzRuntime/7245d4649d5f92a371db1bb83d2cabbb7177a62e (0.00s)
     --- PASS: FuzzRuntime/729074ce3d4cd0d3cf2b087548ad173b9223a51d (0.00s)
-    --- PASS: FuzzRuntime/729c7fa8e63f83c32ba8565c1362f0a2e8ee928a (0.05s)
+    --- PASS: FuzzRuntime/729c7fa8e63f83c32ba8565c1362f0a2e8ee928a (0.06s)
     --- PASS: FuzzRuntime/72a3e5aa67e8141ea162485e05f31661902d2d57 (0.00s)
     --- PASS: FuzzRuntime/72b4a65a1675ed3d55b7821a84b4271a480c8ff6 (0.00s)
     --- PASS: FuzzRuntime/72b4de60ba0d9c5cf5329c0dfa4199341038d200 (0.00s)
@@ -3781,7 +3781,7 @@
     --- PASS: FuzzRuntime/9548b4e7a799cd985411288470a75af4055d5fc3 (0.00s)
     --- PASS: FuzzRuntime/9578fec9b7e905401e89979abd9791f0ffc06562 (0.00s)
     --- PASS: FuzzRuntime/95a64a61e5239d222dd5c52352befe9b354f54ee (0.00s)
-    --- PASS: FuzzRuntime/95c3af3e56adb3184026b513b8d49799c470317f (0.06s)
+    --- PASS: FuzzRuntime/95c3af3e56adb3184026b513b8d49799c470317f (0.07s)
     --- PASS: FuzzRuntime/95d42230833b97e519541709add54018bb9df5bc (0.00s)
     --- PASS: FuzzRuntime/9626997fc4985d3c45515ac7a9f9af92c0dd06fe (0.00s)
     --- PASS: FuzzRuntime/963755fa3982201c66c2577f07ae3295dc21f083 (0.00s)
@@ -4082,7 +4082,7 @@
     --- PASS: FuzzRuntime/b8e976dde7402e05f78c932717c39e45dbd18acd (0.00s)
     --- PASS: FuzzRuntime/b8f50eb8ca5967aaf69fd86a5799f6b8fc7749bc (0.00s)
     --- PASS: FuzzRuntime/b8fe8d92f40c2d6ba3b95cf5b141f02949d0a61d (0.00s)
-    --- PASS: FuzzRuntime/b92343366fa854ffc76055fae5792a4f245f6818 (0.00s)
+    --- PASS: FuzzRuntime/b92343366fa854ffc76055fae5792a4f245f6818 (0.01s)
     --- PASS: FuzzRuntime/b928a5651ca8f6b8b6a9b7e4afaec1062403dadb (0.00s)
     --- PASS: FuzzRuntime/b9294c01434419a6580110433ae720c343d341b6 (0.00s)
     --- PASS: FuzzRuntime/b941e6ac52180337b2c6d135db6d9728880ce40d (0.00s)
@@ -4309,7 +4309,7 @@
     --- PASS: FuzzRuntime/d11c0dcaac2e301777271cd6e54a66d9dd1401e2 (0.00s)
     --- PASS: FuzzRuntime/d12ad61856b16f18949608589a84a496cc5fef67 (0.00s)
     --- PASS: FuzzRuntime/d144606ca173d9ff557cb976079094c51aba2e2f (0.00s)
-    --- PASS: FuzzRuntime/d146a8e929b29257534a2b632bfc7905d2e8bdb9 (0.01s)
+    --- PASS: FuzzRuntime/d146a8e929b29257534a2b632bfc7905d2e8bdb9 (0.00s)
     --- PASS: FuzzRuntime/d159a1cb8193f08c2c42f5001f73986ce3b8df1a (0.00s)
     --- PASS: FuzzRuntime/d18eee41b2ecc67f0a2a81697d9e3073ac6548f4 (0.00s)
     --- PASS: FuzzRuntime/d19d174fc801f5200401983c2c70f43fe9ee9496 (0.00s)
@@ -4438,7 +4438,7 @@
     --- PASS: FuzzRuntime/dcb71c496736371c51a713c4d283219595ed409d (0.00s)
     --- PASS: FuzzRuntime/dcd0d50c9bdd77e4c87c7fe76fbb04cb82e7f006 (0.00s)
     --- PASS: FuzzRuntime/dd24663799ffcfba161118de55d9134f92fd4062 (0.00s)
-    --- PASS: FuzzRuntime/dd478ff64a773a4594ad784bf0c8399f95a035e4 (0.01s)
+    --- PASS: FuzzRuntime/dd478ff64a773a4594ad784bf0c8399f95a035e4 (0.00s)
     --- PASS: FuzzRuntime/dd47d1ad9cfb0e979bf40904ea8f9f4c32ebae3e (0.00s)
     --- PASS: FuzzRuntime/dd4aab62d1f1cf46c2624cb582c43868dc3d0933 (0.00s)
     --- PASS: FuzzRuntime/dd50deceac0d8e0263a5b868caa4db1f1bf40d28 (0.00s)
@@ -4744,4 +4744,4 @@
     --- PASS: FuzzRuntime/ffedf9d53c92e0afedfd79a5af6235a0f0d7df76 (0.00s)
 PASS
 coverage: 100.0% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/runtime	1.061s	coverage: 100.0% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/runtime	1.135s	coverage: 100.0% of statements

@@ -1049,7 +1049,7 @@
 === RUN   FuzzVfluxClientPool/feda78854794dcd2b10ad8e0c19e55cff98820b5
 === RUN   FuzzVfluxClientPool/ff0ad84a8f0bb08cbd63698c84fe0b488dbc18fb
 === RUN   FuzzVfluxClientPool/ff800a78ecaebc46e2764581d302609dc6f8beec
---- PASS: FuzzVfluxClientPool (1.25s)
+--- PASS: FuzzVfluxClientPool (1.26s)
     --- PASS: FuzzVfluxClientPool/001bbfe708b2030e8a265b80c7b5700c51a25cd5 (0.00s)
     --- PASS: FuzzVfluxClientPool/00620f9c2c9665a5857e8982ccf1ba8ffe734b9b (0.00s)
     --- PASS: FuzzVfluxClientPool/014810dc55994c4257bf296416df51ad3ae69d59 (0.00s)
@@ -2102,5 +2102,5 @@
     --- PASS: FuzzVfluxClientPool/ff800a78ecaebc46e2764581d302609dc6f8beec (0.00s)
 PASS
 coverage: 95.5% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/vflux	1.267s	coverage: 95.5% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/vflux	1.274s	coverage: 95.5% of statements
 	github.com/morph-l2/go-ethereum/tests/fuzzers/vflux/debug		coverage: 0.0% of statements
