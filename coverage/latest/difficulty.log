@@ -4,8 +4,8 @@
 === RUN   FuzzDifficulty/0367b6ea96cf3736e2e783baf70a86204091bf2c
 === RUN   FuzzDifficulty/0aec0729955da51647e1b9e3325923b433d09a4c
 === RUN   FuzzDifficulty/0afbe4c1ed26e643c3f54b8bc9177788af0d573f
+=== RUN   FuzzDifficulty/0f7cbd4ec29d027a4c6dd0ae2481497f6c649783
 === RUN   FuzzDifficulty/0fecf5fcc68884724117f652dc81bf73a3495f07
-=== RUN   FuzzDifficulty/104fc95ddf3ea2e67c8292ce0f6ffe3d3c6ac10d
 === RUN   FuzzDifficulty/1187fabc545cea2cdf57c67d42353b16c538cd45
 === RUN   FuzzDifficulty/161b40a6973a8c4913f81ec35ed83dfcf84cdcc8
 === RUN   FuzzDifficulty/17098603adf6cff79f9de88e583c1511a1d43172
@@ -27,7 +27,6 @@
 === RUN   FuzzDifficulty/3ce0a1af90b6e7a3dd8d45e410884b588ea2d04c
 === RUN   FuzzDifficulty/429bdca7a27d456c911d8f4dbe3196742cf81c70
 === RUN   FuzzDifficulty/45c86cd3e836ed1c1476678bfd149797f1e62708
-=== RUN   FuzzDifficulty/46b1c8e0af464bf11942e81cd64e2775a5802bdc
 === RUN   FuzzDifficulty/4b705c67d8ff8247468bf928c6688288853abb06
 === RUN   FuzzDifficulty/4c7f7800326996d676d502fc567e0cf82f3619ae
 === RUN   FuzzDifficulty/4d2c961d95444ee570ee3f436d4117f753765b81
@@ -36,7 +35,6 @@
 === RUN   FuzzDifficulty/5b1054f9a1898c14c2f686c587253425b5feed03
 === RUN   FuzzDifficulty/5f27c9daa39421ceabf903221d9f7ba91a8bd9df
 === RUN   FuzzDifficulty/6958301c622daef7e396123069e4233b0282a0cb
-=== RUN   FuzzDifficulty/6bfe5f6e2c1a024b351dd4aa3d0f9779cf770e04
 === RUN   FuzzDifficulty/6eb98f06874b2095fd3047232991c8326fc5fc7f
 === RUN   FuzzDifficulty/78fce057629c096daa9593d08f9aeffa6eee4e7c
 === RUN   FuzzDifficulty/7e9973b8720f155667839e2d073e097dde3adf80
@@ -48,6 +46,7 @@
 === RUN   FuzzDifficulty/8e164a3df57ac17b8cea60ce30446af102570e31
 === RUN   FuzzDifficulty/900cbfda588b0d8546f6ba49b288bc2e5a48e3bf
 === RUN   FuzzDifficulty/9069ca78e7450a285173431b3e52c5c25299e473
+=== RUN   FuzzDifficulty/927c66d37b4f72772c050f3fb15b3482cf97c285
 === RUN   FuzzDifficulty/94a9cd4ea3e710f31ca72dd692912ae967dbd3b1
 === RUN   FuzzDifficulty/964b7bec403d51b609027eea6a6ebf19c2614890
 === RUN   FuzzDifficulty/97bd029bc79be8640e4cd487f45e59704e313183
@@ -63,29 +62,30 @@
 === RUN   FuzzDifficulty/adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 === RUN   FuzzDifficulty/ae33b21ab4c297ccf9c387d7802604fd4884ba77
 === RUN   FuzzDifficulty/b212c8726f1bf1b03b8ee43287edf1b6e1f28079
+=== RUN   FuzzDifficulty/b3c82c64d4aee8e4af114914c4b3fe8128204a83
 === RUN   FuzzDifficulty/b3f61d94a4fc5c13393e4f52c9314aac290ac489
 === RUN   FuzzDifficulty/b4c2a7f40c240599cd7cb02bd9519df975112fd3
-=== RUN   FuzzDifficulty/b6402a3c62426324fb0cbadd6f124935a40750ae
 === RUN   FuzzDifficulty/b74bfbec5d3b7f44eeb07e95be68794e420a337f
 === RUN   FuzzDifficulty/b7a28c34393bae60260d8fd980281b73c3b9b311
 === RUN   FuzzDifficulty/b7b5a8d9d4616feb00a37347b3ea580539068591
-=== RUN   FuzzDifficulty/b91db3fd8d798069c98dcec51735cc27572180fe
 === RUN   FuzzDifficulty/b9c055dd5d3929021f65276a4e96a616cc71644f
 === RUN   FuzzDifficulty/bb948a02b1a527a9eb1d1551c306b9969c86e475
 === RUN   FuzzDifficulty/bd1d500984ddee95d63afa0e4cf2a51383be0e39
+=== RUN   FuzzDifficulty/c3f2f90af27067b0adc6bd7bf6542c01c63ac7e0
 === RUN   FuzzDifficulty/c5221206b722798d784e2dfbde8b7e3895872300
 === RUN   FuzzDifficulty/cacbd57f686124737a5993cb5191fa5190bfe83e
 === RUN   FuzzDifficulty/cda4408c388da74931e69d901e400c4dbe917c60
-=== RUN   FuzzDifficulty/d61f6da3db2329d480904b22355625a19e17a71c
 === RUN   FuzzDifficulty/def1c0fca29d5a9998197b39d999c32a1d8501d0
 === RUN   FuzzDifficulty/e74273b33aea439ffabde3f52ed67c10226806b8
 === RUN   FuzzDifficulty/e7ba8600beed46bc6dcf8eaea8da622fb1e1e7d8
 === RUN   FuzzDifficulty/e852ee9f38d3c8230539c1a1cb9b47f4d28cbeff
-=== RUN   FuzzDifficulty/ed1db6e5df7d976584b1b25d653fb1dc29a1acd7
 === RUN   FuzzDifficulty/ee4df18ee6420c2515ce3fa75b486ff6903141c5
+=== RUN   FuzzDifficulty/eedcead06daec549e1265508052cf4b87834e888
 === RUN   FuzzDifficulty/f276a738453eb8299c9926038af5ad33efaa5756
 === RUN   FuzzDifficulty/f717ca1b0c14ea03e099e32c657f0debe6b20141
+=== RUN   FuzzDifficulty/f7b7bcd3afab228bf14832d82cdec6f9f4e85d71
 === RUN   FuzzDifficulty/f9ba891768e2bb28ee9fbc54829fef1579a60830
+=== RUN   FuzzDifficulty/f9f8d18a1220562d7606a4b59111e7554392f992
 === RUN   FuzzDifficulty/fa3e1dff9229457fbccd7137c9d748891675b8f4
 === RUN   FuzzDifficulty/fc1b8bd542b97084b46fb18d485f3fd59d072fec
 === RUN   FuzzDifficulty/fc8c068d4fb82c290827def318c2bf53f38241ab
@@ -96,8 +96,8 @@
     --- PASS: FuzzDifficulty/0367b6ea96cf3736e2e783baf70a86204091bf2c (0.00s)
     --- PASS: FuzzDifficulty/0aec0729955da51647e1b9e3325923b433d09a4c (0.00s)
     --- PASS: FuzzDifficulty/0afbe4c1ed26e643c3f54b8bc9177788af0d573f (0.00s)
+    --- PASS: FuzzDifficulty/0f7cbd4ec29d027a4c6dd0ae2481497f6c649783 (0.00s)
     --- PASS: FuzzDifficulty/0fecf5fcc68884724117f652dc81bf73a3495f07 (0.00s)
-    --- PASS: FuzzDifficulty/104fc95ddf3ea2e67c8292ce0f6ffe3d3c6ac10d (0.00s)
     --- PASS: FuzzDifficulty/1187fabc545cea2cdf57c67d42353b16c538cd45 (0.00s)
     --- PASS: FuzzDifficulty/161b40a6973a8c4913f81ec35ed83dfcf84cdcc8 (0.00s)
     --- PASS: FuzzDifficulty/17098603adf6cff79f9de88e583c1511a1d43172 (0.00s)
@@ -119,7 +119,6 @@
     --- PASS: FuzzDifficulty/3ce0a1af90b6e7a3dd8d45e410884b588ea2d04c (0.00s)
     --- PASS: FuzzDifficulty/429bdca7a27d456c911d8f4dbe3196742cf81c70 (0.00s)
     --- PASS: FuzzDifficulty/45c86cd3e836ed1c1476678bfd149797f1e62708 (0.00s)
-    --- PASS: FuzzDifficulty/46b1c8e0af464bf11942e81cd64e2775a5802bdc (0.00s)
     --- PASS: FuzzDifficulty/4b705c67d8ff8247468bf928c6688288853abb06 (0.00s)
     --- PASS: FuzzDifficulty/4c7f7800326996d676d502fc567e0cf82f3619ae (0.00s)
     --- PASS: FuzzDifficulty/4d2c961d95444ee570ee3f436d4117f753765b81 (0.00s)
@@ -128,7 +127,6 @@
     --- PASS: FuzzDifficulty/5b1054f9a1898c14c2f686c587253425b5feed03 (0.00s)
     --- PASS: FuzzDifficulty/5f27c9daa39421ceabf903221d9f7ba91a8bd9df (0.00s)
     --- PASS: FuzzDifficulty/6958301c622daef7e396123069e4233b0282a0cb (0.00s)
-    --- PASS: FuzzDifficulty/6bfe5f6e2c1a024b351dd4aa3d0f9779cf770e04 (0.00s)
     --- PASS: FuzzDifficulty/6eb98f06874b2095fd3047232991c8326fc5fc7f (0.00s)
     --- PASS: FuzzDifficulty/78fce057629c096daa9593d08f9aeffa6eee4e7c (0.00s)
     --- PASS: FuzzDifficulty/7e9973b8720f155667839e2d073e097dde3adf80 (0.00s)
@@ -140,6 +138,7 @@
     --- PASS: FuzzDifficulty/8e164a3df57ac17b8cea60ce30446af102570e31 (0.00s)
     --- PASS: FuzzDifficulty/900cbfda588b0d8546f6ba49b288bc2e5a48e3bf (0.00s)
     --- PASS: FuzzDifficulty/9069ca78e7450a285173431b3e52c5c25299e473 (0.00s)
+    --- PASS: FuzzDifficulty/927c66d37b4f72772c050f3fb15b3482cf97c285 (0.00s)
     --- PASS: FuzzDifficulty/94a9cd4ea3e710f31ca72dd692912ae967dbd3b1 (0.00s)
     --- PASS: FuzzDifficulty/964b7bec403d51b609027eea6a6ebf19c2614890 (0.00s)
     --- PASS: FuzzDifficulty/97bd029bc79be8640e4cd487f45e59704e313183 (0.00s)
@@ -155,34 +154,35 @@
     --- PASS: FuzzDifficulty/adc83b19e793491b1c6ea0fd8b46cd9f32e592fc (0.00s)
     --- PASS: FuzzDifficulty/ae33b21ab4c297ccf9c387d7802604fd4884ba77 (0.00s)
     --- PASS: FuzzDifficulty/b212c8726f1bf1b03b8ee43287edf1b6e1f28079 (0.00s)
+    --- PASS: FuzzDifficulty/b3c82c64d4aee8e4af114914c4b3fe8128204a83 (0.00s)
     --- PASS: FuzzDifficulty/b3f61d94a4fc5c13393e4f52c9314aac290ac489 (0.00s)
     --- PASS: FuzzDifficulty/b4c2a7f40c240599cd7cb02bd9519df975112fd3 (0.00s)
-    --- PASS: FuzzDifficulty/b6402a3c62426324fb0cbadd6f124935a40750ae (0.00s)
     --- PASS: FuzzDifficulty/b74bfbec5d3b7f44eeb07e95be68794e420a337f (0.00s)
     --- PASS: FuzzDifficulty/b7a28c34393bae60260d8fd980281b73c3b9b311 (0.00s)
     --- PASS: FuzzDifficulty/b7b5a8d9d4616feb00a37347b3ea580539068591 (0.00s)
-    --- PASS: FuzzDifficulty/b91db3fd8d798069c98dcec51735cc27572180fe (0.00s)
     --- PASS: FuzzDifficulty/b9c055dd5d3929021f65276a4e96a616cc71644f (0.00s)
     --- PASS: FuzzDifficulty/bb948a02b1a527a9eb1d1551c306b9969c86e475 (0.00s)
     --- PASS: FuzzDifficulty/bd1d500984ddee95d63afa0e4cf2a51383be0e39 (0.00s)
+    --- PASS: FuzzDifficulty/c3f2f90af27067b0adc6bd7bf6542c01c63ac7e0 (0.00s)
     --- PASS: FuzzDifficulty/c5221206b722798d784e2dfbde8b7e3895872300 (0.00s)
     --- PASS: FuzzDifficulty/cacbd57f686124737a5993cb5191fa5190bfe83e (0.00s)
     --- PASS: FuzzDifficulty/cda4408c388da74931e69d901e400c4dbe917c60 (0.00s)
-    --- PASS: FuzzDifficulty/d61f6da3db2329d480904b22355625a19e17a71c (0.00s)
     --- PASS: FuzzDifficulty/def1c0fca29d5a9998197b39d999c32a1d8501d0 (0.00s)
     --- PASS: FuzzDifficulty/e74273b33aea439ffabde3f52ed67c10226806b8 (0.00s)
     --- PASS: FuzzDifficulty/e7ba8600beed46bc6dcf8eaea8da622fb1e1e7d8 (0.00s)
     --- PASS: FuzzDifficulty/e852ee9f38d3c8230539c1a1cb9b47f4d28cbeff (0.00s)
-    --- PASS: FuzzDifficulty/ed1db6e5df7d976584b1b25d653fb1dc29a1acd7 (0.00s)
     --- PASS: FuzzDifficulty/ee4df18ee6420c2515ce3fa75b486ff6903141c5 (0.00s)
+    --- PASS: FuzzDifficulty/eedcead06daec549e1265508052cf4b87834e888 (0.00s)
     --- PASS: FuzzDifficulty/f276a738453eb8299c9926038af5ad33efaa5756 (0.00s)
     --- PASS: FuzzDifficulty/f717ca1b0c14ea03e099e32c657f0debe6b20141 (0.00s)
+    --- PASS: FuzzDifficulty/f7b7bcd3afab228bf14832d82cdec6f9f4e85d71 (0.00s)
     --- PASS: FuzzDifficulty/f9ba891768e2bb28ee9fbc54829fef1579a60830 (0.00s)
+    --- PASS: FuzzDifficulty/f9f8d18a1220562d7606a4b59111e7554392f992 (0.00s)
     --- PASS: FuzzDifficulty/fa3e1dff9229457fbccd7137c9d748891675b8f4 (0.00s)
     --- PASS: FuzzDifficulty/fc1b8bd542b97084b46fb18d485f3fd59d072fec (0.00s)
     --- PASS: FuzzDifficulty/fc8c068d4fb82c290827def318c2bf53f38241ab (0.00s)
     --- PASS: FuzzDifficulty/fefc96fe3c92677dccd2cee5ca4823080787e378 (0.00s)
 PASS
 coverage: 95.7% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/difficulty	0.044s	coverage: 95.7% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/difficulty	0.046s	coverage: 95.7% of statements
 	github.com/morph-l2/go-ethereum/tests/fuzzers/difficulty/debug		coverage: 0.0% of statements
