@@ -652,7 +652,6 @@
 === RUN   FuzzRuntime/46142d57de1f865502989c569717814e24e609bc
 === RUN   FuzzRuntime/463851f730bb0a3ba9c90fd294bea8cace249376
 === RUN   FuzzRuntime/464a962790f497659829e3a7cb8fbce344d823fa
-=== RUN   FuzzRuntime/46620823e0ecba6d87e8037ebe64f0332e9ab5e2
 === RUN   FuzzRuntime/4663d9b901d543e88fff3ac4da597394f4bcf6d6
 === RUN   FuzzRuntime/46933df22a3fa72e128fa6705affc85a1c258cbb
 === RUN   FuzzRuntime/46cb9deb9c37d3ab61c02cdea5ec1e4fa914b489
@@ -1075,7 +1074,6 @@
 === RUN   FuzzRuntime/73b027404a14c0741d3a263edea360bd7c8fe1ca
 === RUN   FuzzRuntime/73c5bbcb01e8328c4ca96b520642ec548d730fe8
 === RUN   FuzzRuntime/73d1730dd827bc5fb4720630673a6e91b13c7081
-=== RUN   FuzzRuntime/73e32495f4d437da1f41c857970f4018187fe944
 === RUN   FuzzRuntime/73f1377b4ad2796f8d94a45c860c366806ed5b77
 === RUN   FuzzRuntime/740f16ee0152b89b0c97fa71faa57db06f5f68ed
 === RUN   FuzzRuntime/7444f399e02622f07347258dd1516a40262d6bd8
@@ -2320,7 +2318,7 @@
 === RUN   FuzzRuntime/ffbf57954a819dcb7d4e3a8b3cc9d9fdef4cf0b3
 === RUN   FuzzRuntime/ffdd726e7ac989577d6374412115c3ee87a5e851
 === RUN   FuzzRuntime/ffedf9d53c92e0afedfd79a5af6235a0f0d7df76
---- PASS: FuzzRuntime (1.04s)
+--- PASS: FuzzRuntime (1.06s)
     --- PASS: FuzzRuntime/000ad181eca5b2efd129d6d101efa5499a3e7083 (0.00s)
     --- PASS: FuzzRuntime/0028e84d0f5dd66f6f8e4b16c82eeea64318ba46 (0.00s)
     --- PASS: FuzzRuntime/0047760a4d9f16e705ee99f60f630b7cec42fa76 (0.00s)
@@ -2974,7 +2972,6 @@
     --- PASS: FuzzRuntime/46142d57de1f865502989c569717814e24e609bc (0.00s)
     --- PASS: FuzzRuntime/463851f730bb0a3ba9c90fd294bea8cace249376 (0.00s)
     --- PASS: FuzzRuntime/464a962790f497659829e3a7cb8fbce344d823fa (0.00s)
-    --- PASS: FuzzRuntime/46620823e0ecba6d87e8037ebe64f0332e9ab5e2 (0.00s)
     --- PASS: FuzzRuntime/4663d9b901d543e88fff3ac4da597394f4bcf6d6 (0.00s)
     --- PASS: FuzzRuntime/46933df22a3fa72e128fa6705affc85a1c258cbb (0.00s)
     --- PASS: FuzzRuntime/46cb9deb9c37d3ab61c02cdea5ec1e4fa914b489 (0.00s)
@@ -3384,7 +3381,7 @@
     --- PASS: FuzzRuntime/71fbf18fd4c9d1d44e1f0c14659fa1c773aa315f (0.00s)
     --- PASS: FuzzRuntime/7245d4649d5f92a371db1bb83d2cabbb7177a62e (0.00s)
     --- PASS: FuzzRuntime/72495e24dec9f8afce530b97ba5ff99af1c9947b (0.00s)
-    --- PASS: FuzzRuntime/729c7fa8e63f83c32ba8565c1362f0a2e8ee928a (0.05s)
+    --- PASS: FuzzRuntime/729c7fa8e63f83c32ba8565c1362f0a2e8ee928a (0.06s)
     --- PASS: FuzzRuntime/72b4de60ba0d9c5cf5329c0dfa4199341038d200 (0.00s)
     --- PASS: FuzzRuntime/72c8ebe82733734aa98341227151f832d3b5d955 (0.00s)
     --- PASS: FuzzRuntime/72d4bd015d418d3aa26d76ae4e8d04d71c70b9d7 (0.00s)
@@ -3397,7 +3394,6 @@
     --- PASS: FuzzRuntime/73b027404a14c0741d3a263edea360bd7c8fe1ca (0.00s)
     --- PASS: FuzzRuntime/73c5bbcb01e8328c4ca96b520642ec548d730fe8 (0.00s)
     --- PASS: FuzzRuntime/73d1730dd827bc5fb4720630673a6e91b13c7081 (0.00s)
-    --- PASS: FuzzRuntime/73e32495f4d437da1f41c857970f4018187fe944 (0.00s)
     --- PASS: FuzzRuntime/73f1377b4ad2796f8d94a45c860c366806ed5b77 (0.00s)
     --- PASS: FuzzRuntime/740f16ee0152b89b0c97fa71faa57db06f5f68ed (0.00s)
     --- PASS: FuzzRuntime/7444f399e02622f07347258dd1516a40262d6bd8 (0.00s)
@@ -3482,7 +3478,7 @@
     --- PASS: FuzzRuntime/7d0b4cd71d9db5994564e8f3c29b0a49fc965482 (0.00s)
     --- PASS: FuzzRuntime/7d0e6356f9c4208383f2ca02cf6cffc8aa284b14 (0.00s)
     --- PASS: FuzzRuntime/7d4841ea5806d21451406ca833674c8a8d1ccd87 (0.00s)
-    --- PASS: FuzzRuntime/7d4e83c1e10a4148c12fc1918763d31b18851a08 (0.00s)
+    --- PASS: FuzzRuntime/7d4e83c1e10a4148c12fc1918763d31b18851a08 (0.01s)
     --- PASS: FuzzRuntime/7d92d7704ba61e0b106134ec593f99d0178245e8 (0.00s)
     --- PASS: FuzzRuntime/7d9dcb703a25dfa9334be776a7d81a7df4b669f1 (0.00s)
     --- PASS: FuzzRuntime/7dc4c82dc0085f12cf78f688505917c04a6204c8 (0.00s)
@@ -4644,4 +4640,4 @@
     --- PASS: FuzzRuntime/ffedf9d53c92e0afedfd79a5af6235a0f0d7df76 (0.00s)
 PASS
 coverage: 100.0% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/runtime	1.086s	coverage: 100.0% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/runtime	1.100s	coverage: 100.0% of statements
