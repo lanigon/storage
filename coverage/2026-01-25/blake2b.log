@@ -13,7 +13,7 @@
     blake2b_test.go:60: AVX version
     blake2b_test.go:65: SSE4 version
     blake2b_test.go:69: generic version
---- PASS: TestHashes2X (0.03s)
+--- PASS: TestHashes2X (0.02s)
 === RUN   TestMarshal
 --- PASS: TestMarshal (0.00s)
 === RUN   TestSelfTest
@@ -54,4 +54,4 @@
     --- PASS: FuzzBlake2bF/fcce5f8c70156a1095fe8e86628960583b0cbde7 (0.00s)
 PASS
 coverage: 84.6% of statements
-ok  	github.com/morph-l2/go-ethereum/crypto/blake2b	0.036s	coverage: 84.6% of statements
+ok  	github.com/morph-l2/go-ethereum/crypto/blake2b	0.032s	coverage: 84.6% of statements
