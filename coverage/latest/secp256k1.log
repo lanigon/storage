@@ -1,9 +1,12 @@
 === RUN   TestFuzzer
 --- PASS: TestFuzzer (0.01s)
 === RUN   FuzzSecp256k1
+=== RUN   FuzzSecp256k1/05fe405753166f125559e7c9ac558654f107c7e9
+=== RUN   FuzzSecp256k1/0620a258e2b7832e5622ef1ce6bf70feef382efd
+=== RUN   FuzzSecp256k1/06812b0df6c01248e732b43beae69e44b9c8e2b4
 === RUN   FuzzSecp256k1/07e49e14d52913576022944479ea90f4238fce1c
+=== RUN   FuzzSecp256k1/07ea139fda130fe993990d2524c78c9c28b94787
 === RUN   FuzzSecp256k1/089a07ae7f5d0240a1fdfa1dd6e09f2ce4140cea
-=== RUN   FuzzSecp256k1/090a4e09296174c452c0e009cfcc47efc227e5d6
 === RUN   FuzzSecp256k1/0f5b32304662179a482bd921c39f2038b1ffebe6
 === RUN   FuzzSecp256k1/0ff574c1acaa9925f7ff05eb34eed7f133abe6de
 === RUN   FuzzSecp256k1/11d3eac0682a82b9661b87873d75799e6ef7475d
@@ -12,57 +15,58 @@
 === RUN   FuzzSecp256k1/14915c61b99f4a13a3f1db6eb36974bc1b7fbe63
 === RUN   FuzzSecp256k1/19b522e8f8dbd01682b7def5ef5e265c97817658
 === RUN   FuzzSecp256k1/1c3a925f3f8c46ed93247912b5177e0034cdbe24
+=== RUN   FuzzSecp256k1/1f1c81a54ebba761887c66c3fed772a68a546088
 === RUN   FuzzSecp256k1/2030562bf9d67c6f371eb85504fe080db3d797d2
 === RUN   FuzzSecp256k1/20bd590a7054aeb457cc2f66fcc95a7ad6a6fad5
 === RUN   FuzzSecp256k1/225c29d61521473110f4e26a22a23f896ee5eced
 === RUN   FuzzSecp256k1/24bb97e74ff208ac3ba2e8aa75269e13f0ffc7c2
 === RUN   FuzzSecp256k1/28c1494f8fa9c3f6927ac3ba961f7d1a486b9c1f
 === RUN   FuzzSecp256k1/2aea4511700ca5e250049878400e62015d4ae2d5
+=== RUN   FuzzSecp256k1/2c96f9a6f89ea2788ec9c3a4b630fb2e44f4e36b
 === RUN   FuzzSecp256k1/2ed3ce0129a65472a50d8ed6f9e08b4d993799fc
 === RUN   FuzzSecp256k1/313fabad7d38957770ac320dd2282d3db527f484
 === RUN   FuzzSecp256k1/3164794e9fddb0beedcac6fc4ef2306a0209b3ff
-=== RUN   FuzzSecp256k1/37c7d4560696cd59f33afbb04e08c83d9f67a5fb
 === RUN   FuzzSecp256k1/3a86f7dcb54371acd51eabc32e3deae16bfaa4ca
 === RUN   FuzzSecp256k1/3b50cfb2aee67acbcee63eacc30a3d2f51645815
-=== RUN   FuzzSecp256k1/3c56b4be58e5edd963227c3766698ecf608f53ba
 === RUN   FuzzSecp256k1/3ceaf1d0f3e8dc54ea3390f260a996a810747202
 === RUN   FuzzSecp256k1/3de8e95cc2f3294602d96e44bd7ae0e14629d06f
-=== RUN   FuzzSecp256k1/3eb0050cca7b743843d1521471c2cbfca5074e96
 === RUN   FuzzSecp256k1/422a3fa9b32ea134ae03c73d075bf0e54859b59c
 === RUN   FuzzSecp256k1/423beffda29e2e6d512d0faf886dd021d298622f
 === RUN   FuzzSecp256k1/4582a68d29607a82e388500e3b830f6ffe96415f
 === RUN   FuzzSecp256k1/45c66502d88ba2129c2c73dc235df4f8b51a8e88
 === RUN   FuzzSecp256k1/46738511eae361dba2c2a7244b16b69a5a8a1162
 === RUN   FuzzSecp256k1/4c716d847b9082f7b77bf15c00880a90056c78e6
+=== RUN   FuzzSecp256k1/4c85543952e42d7ad73175f422d8a50b6f3d076f
+=== RUN   FuzzSecp256k1/4f30c21ed75d6b1ec95fe569802dfb34eaeebd11
 === RUN   FuzzSecp256k1/5406e35958d4c561136692cf82fbd812932e5866
 === RUN   FuzzSecp256k1/54619edc3f170e8d951cd12d0bb3826ac0890496
 === RUN   FuzzSecp256k1/586d9ff8fa8bf8e5791c4f25ea072c4d96430e85
+=== RUN   FuzzSecp256k1/58d91d1b54af191d42c8f3c4c1b25ca923e9defe
+=== RUN   FuzzSecp256k1/5965aa0426ba58e5707753865ef2f2163ebc575f
+=== RUN   FuzzSecp256k1/59f2e8db52abbcd97bef17e2b40569ecdfcc3a97
 === RUN   FuzzSecp256k1/5d8abb0744463457e9a78f5041820b78798506bb
 === RUN   FuzzSecp256k1/6051e434425840225d2c3c1988974bbf30f74681
 === RUN   FuzzSecp256k1/61252b0538adae8d27ca4f94ae7c1a01f9c508e6
 === RUN   FuzzSecp256k1/684d900f2208dd5463770cb5697aeafa2c811fb7
-=== RUN   FuzzSecp256k1/69621a4bcb239a70ea35b1337d7eede2995183be
-=== RUN   FuzzSecp256k1/69ac08a6b58a2135811d91bde93a8b26ef18ba91
 === RUN   FuzzSecp256k1/6aea0a4640f7866a1a89aedcc8d9827d3ec6e796
-=== RUN   FuzzSecp256k1/6ebb78761afbe6429fd06e8f0f9394cc8e061c59
+=== RUN   FuzzSecp256k1/78dbeecefa17978b14df35a71692d4a1591380c1
 === RUN   FuzzSecp256k1/7944086159a46b2fbf898041f3e2cb58b5ff9b35
 === RUN   FuzzSecp256k1/7fa548ed0a0e408dc6c22a4f3d911268bab8d365
 === RUN   FuzzSecp256k1/8219ccfca45d4d160ca147e0c4c6c89b6e00a6a8
 === RUN   FuzzSecp256k1/82b0a732824daf549d4358e334aacd2fa4c4a091
 === RUN   FuzzSecp256k1/85435e7da8d723670a2bdcccd15ab874e056887f
-=== RUN   FuzzSecp256k1/880c81cf9304f8cc681fdb97f5ebd205ab456df7
+=== RUN   FuzzSecp256k1/89127bacada76183579f586a179ea4860bc44866
 === RUN   FuzzSecp256k1/8c80d8ebc6cec26edd28571c12ff2500c818dd50
 === RUN   FuzzSecp256k1/8cbaa8cbefccbcfd9544140620c1541532d81e8b
 === RUN   FuzzSecp256k1/9069ca78e7450a285173431b3e52c5c25299e473
 === RUN   FuzzSecp256k1/93deee3a7f948d00d2f3c068db57942cf2297ec2
 === RUN   FuzzSecp256k1/940e152914387c2be23f39047f23cf1c347f3c2d
+=== RUN   FuzzSecp256k1/97130b0b991251826ce0b59716d281c25fbb4978
 === RUN   FuzzSecp256k1/9a0c810a04c2a838071fde218d0a6deff5d8a466
 === RUN   FuzzSecp256k1/9d3a92314c7939290f2d35c166d7c97b4fa2c0d2
 === RUN   FuzzSecp256k1/9eb8b3bc9c819f2622f62bfbc796243c4b6f6341
 === RUN   FuzzSecp256k1/a7cd10d1dc9d60482b62dde597800052b1ef2d75
 === RUN   FuzzSecp256k1/a7f7b23a9b0e7fecdbf2075126ce3271958aa140
-=== RUN   FuzzSecp256k1/a9f72e1f2ca945bf0c880224599d50d307e77b5b
-=== RUN   FuzzSecp256k1/ad9cead8be717bde2e41a8c638ded0c576ae98b9
 === RUN   FuzzSecp256k1/ad9f754253769d6447847c06e4f04728347659c7
 === RUN   FuzzSecp256k1/adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 === RUN   FuzzSecp256k1/b020310a3fc50e80859fed2537af65c6ad0dce2b
@@ -71,7 +75,6 @@
 === RUN   FuzzSecp256k1/b3c2882da63d50056f88a289c46c9c11d90cdaae
 === RUN   FuzzSecp256k1/b809f0a9f3eaa4815ddfc8ff6e4406f9c640502b
 === RUN   FuzzSecp256k1/b85f4cf41c92c9c49216b5109ff3ae2aad2d3c43
-=== RUN   FuzzSecp256k1/b96c07a1f7d0851de3c5ef93137c51342bdc72e5
 === RUN   FuzzSecp256k1/bb8351c814f4776f359cbc867de102296623ea7d
 === RUN   FuzzSecp256k1/bba07eae746b1048bb81dde01edba98c0d65d835
 === RUN   FuzzSecp256k1/c54c8600545b848169cb742af5abbccff31b00b2
@@ -80,24 +83,30 @@
 === RUN   FuzzSecp256k1/cc6b9d2f6a754c3365e4a94dfd4cb8e1fd797aa8
 === RUN   FuzzSecp256k1/d36c16ae8df5de8d3c39c8d64a120626b0889762
 === RUN   FuzzSecp256k1/d45a1324b15366a6beb9fe300f38ce3c5726648a
-=== RUN   FuzzSecp256k1/d5201fd9c0c81dec0195209c752e23395ce9d7a9
 === RUN   FuzzSecp256k1/d552d66fbce6e865713fa6294ac02499b44691de
-=== RUN   FuzzSecp256k1/dff3a52e0cde3b881ba312e1979220fe804ef99d
-=== RUN   FuzzSecp256k1/e0b8f728a63b062a7fe9d16539cbf06505f38dfe
+=== RUN   FuzzSecp256k1/d5c9c328b35412612f2b4d9bb666e3c6ff08dea5
+=== RUN   FuzzSecp256k1/d8d9cedb3077f2a5431bd05e57644b9faab359a3
+=== RUN   FuzzSecp256k1/dc24be1aa18c0d927bba3fb58f7737bafdb2ba06
 === RUN   FuzzSecp256k1/e1d424626f99df6146a88cd1bf7e9f6007ff11ab
+=== RUN   FuzzSecp256k1/e443ecf54be167a2c528795c7bfbeeb147240e3b
 === RUN   FuzzSecp256k1/e4c51fd29834324e2542d81a46b52948ce2c81ba
 === RUN   FuzzSecp256k1/e6a49d4f053b3ed8fd189299b2c81b4919dc2850
 === RUN   FuzzSecp256k1/f1a8aa6b9389e655b68b08eb9bdc6d6b2eda8841
 === RUN   FuzzSecp256k1/f274d5683859c55af345f25805f6b8a7c4cfc9c4
 === RUN   FuzzSecp256k1/f4ace2a6db96f9dcf1625b9f1adc5bf56d8ece86
+=== RUN   FuzzSecp256k1/f66a0337265a8d2a8b6ac0a04f9c78a54d8b6e86
+=== RUN   FuzzSecp256k1/f6d1d3f6da7b231c391dad85ac9b3335186a4574
 === RUN   FuzzSecp256k1/f953ec8f0a7ae7653bc18aed2736ce892dd42e0b
 === RUN   FuzzSecp256k1/fc467926f95d22fab61c57ce3ab7fc48b4212407
 === RUN   FuzzSecp256k1/fd016d38db1a48bf6f1e763f4b68294f82b1fec9
 === RUN   FuzzSecp256k1/fda50b3eb8ff040ba154e5f139d68d29be5b47ac
 --- PASS: FuzzSecp256k1 (0.02s)
+    --- PASS: FuzzSecp256k1/05fe405753166f125559e7c9ac558654f107c7e9 (0.00s)
+    --- PASS: FuzzSecp256k1/0620a258e2b7832e5622ef1ce6bf70feef382efd (0.00s)
+    --- PASS: FuzzSecp256k1/06812b0df6c01248e732b43beae69e44b9c8e2b4 (0.00s)
     --- PASS: FuzzSecp256k1/07e49e14d52913576022944479ea90f4238fce1c (0.00s)
+    --- PASS: FuzzSecp256k1/07ea139fda130fe993990d2524c78c9c28b94787 (0.00s)
     --- PASS: FuzzSecp256k1/089a07ae7f5d0240a1fdfa1dd6e09f2ce4140cea (0.00s)
-    --- PASS: FuzzSecp256k1/090a4e09296174c452c0e009cfcc47efc227e5d6 (0.00s)
     --- PASS: FuzzSecp256k1/0f5b32304662179a482bd921c39f2038b1ffebe6 (0.00s)
     --- PASS: FuzzSecp256k1/0ff574c1acaa9925f7ff05eb34eed7f133abe6de (0.00s)
     --- PASS: FuzzSecp256k1/11d3eac0682a82b9661b87873d75799e6ef7475d (0.00s)
@@ -106,57 +115,58 @@
     --- PASS: FuzzSecp256k1/14915c61b99f4a13a3f1db6eb36974bc1b7fbe63 (0.00s)
     --- PASS: FuzzSecp256k1/19b522e8f8dbd01682b7def5ef5e265c97817658 (0.00s)
     --- PASS: FuzzSecp256k1/1c3a925f3f8c46ed93247912b5177e0034cdbe24 (0.00s)
+    --- PASS: FuzzSecp256k1/1f1c81a54ebba761887c66c3fed772a68a546088 (0.00s)
     --- PASS: FuzzSecp256k1/2030562bf9d67c6f371eb85504fe080db3d797d2 (0.00s)
     --- PASS: FuzzSecp256k1/20bd590a7054aeb457cc2f66fcc95a7ad6a6fad5 (0.00s)
     --- PASS: FuzzSecp256k1/225c29d61521473110f4e26a22a23f896ee5eced (0.00s)
     --- PASS: FuzzSecp256k1/24bb97e74ff208ac3ba2e8aa75269e13f0ffc7c2 (0.00s)
     --- PASS: FuzzSecp256k1/28c1494f8fa9c3f6927ac3ba961f7d1a486b9c1f (0.00s)
     --- PASS: FuzzSecp256k1/2aea4511700ca5e250049878400e62015d4ae2d5 (0.00s)
+    --- PASS: FuzzSecp256k1/2c96f9a6f89ea2788ec9c3a4b630fb2e44f4e36b (0.00s)
     --- PASS: FuzzSecp256k1/2ed3ce0129a65472a50d8ed6f9e08b4d993799fc (0.00s)
     --- PASS: FuzzSecp256k1/313fabad7d38957770ac320dd2282d3db527f484 (0.00s)
     --- PASS: FuzzSecp256k1/3164794e9fddb0beedcac6fc4ef2306a0209b3ff (0.00s)
-    --- PASS: FuzzSecp256k1/37c7d4560696cd59f33afbb04e08c83d9f67a5fb (0.00s)
     --- PASS: FuzzSecp256k1/3a86f7dcb54371acd51eabc32e3deae16bfaa4ca (0.00s)
     --- PASS: FuzzSecp256k1/3b50cfb2aee67acbcee63eacc30a3d2f51645815 (0.00s)
-    --- PASS: FuzzSecp256k1/3c56b4be58e5edd963227c3766698ecf608f53ba (0.00s)
     --- PASS: FuzzSecp256k1/3ceaf1d0f3e8dc54ea3390f260a996a810747202 (0.00s)
     --- PASS: FuzzSecp256k1/3de8e95cc2f3294602d96e44bd7ae0e14629d06f (0.00s)
-    --- PASS: FuzzSecp256k1/3eb0050cca7b743843d1521471c2cbfca5074e96 (0.00s)
     --- PASS: FuzzSecp256k1/422a3fa9b32ea134ae03c73d075bf0e54859b59c (0.00s)
     --- PASS: FuzzSecp256k1/423beffda29e2e6d512d0faf886dd021d298622f (0.00s)
     --- PASS: FuzzSecp256k1/4582a68d29607a82e388500e3b830f6ffe96415f (0.00s)
     --- PASS: FuzzSecp256k1/45c66502d88ba2129c2c73dc235df4f8b51a8e88 (0.00s)
     --- PASS: FuzzSecp256k1/46738511eae361dba2c2a7244b16b69a5a8a1162 (0.00s)
     --- PASS: FuzzSecp256k1/4c716d847b9082f7b77bf15c00880a90056c78e6 (0.00s)
+    --- PASS: FuzzSecp256k1/4c85543952e42d7ad73175f422d8a50b6f3d076f (0.00s)
+    --- PASS: FuzzSecp256k1/4f30c21ed75d6b1ec95fe569802dfb34eaeebd11 (0.00s)
     --- PASS: FuzzSecp256k1/5406e35958d4c561136692cf82fbd812932e5866 (0.00s)
     --- PASS: FuzzSecp256k1/54619edc3f170e8d951cd12d0bb3826ac0890496 (0.00s)
     --- PASS: FuzzSecp256k1/586d9ff8fa8bf8e5791c4f25ea072c4d96430e85 (0.00s)
+    --- PASS: FuzzSecp256k1/58d91d1b54af191d42c8f3c4c1b25ca923e9defe (0.00s)
+    --- PASS: FuzzSecp256k1/5965aa0426ba58e5707753865ef2f2163ebc575f (0.00s)
+    --- PASS: FuzzSecp256k1/59f2e8db52abbcd97bef17e2b40569ecdfcc3a97 (0.00s)
     --- PASS: FuzzSecp256k1/5d8abb0744463457e9a78f5041820b78798506bb (0.00s)
     --- PASS: FuzzSecp256k1/6051e434425840225d2c3c1988974bbf30f74681 (0.00s)
     --- PASS: FuzzSecp256k1/61252b0538adae8d27ca4f94ae7c1a01f9c508e6 (0.00s)
     --- PASS: FuzzSecp256k1/684d900f2208dd5463770cb5697aeafa2c811fb7 (0.00s)
-    --- PASS: FuzzSecp256k1/69621a4bcb239a70ea35b1337d7eede2995183be (0.00s)
-    --- PASS: FuzzSecp256k1/69ac08a6b58a2135811d91bde93a8b26ef18ba91 (0.00s)
     --- PASS: FuzzSecp256k1/6aea0a4640f7866a1a89aedcc8d9827d3ec6e796 (0.00s)
-    --- PASS: FuzzSecp256k1/6ebb78761afbe6429fd06e8f0f9394cc8e061c59 (0.00s)
+    --- PASS: FuzzSecp256k1/78dbeecefa17978b14df35a71692d4a1591380c1 (0.00s)
     --- PASS: FuzzSecp256k1/7944086159a46b2fbf898041f3e2cb58b5ff9b35 (0.00s)
     --- PASS: FuzzSecp256k1/7fa548ed0a0e408dc6c22a4f3d911268bab8d365 (0.00s)
     --- PASS: FuzzSecp256k1/8219ccfca45d4d160ca147e0c4c6c89b6e00a6a8 (0.00s)
     --- PASS: FuzzSecp256k1/82b0a732824daf549d4358e334aacd2fa4c4a091 (0.00s)
     --- PASS: FuzzSecp256k1/85435e7da8d723670a2bdcccd15ab874e056887f (0.00s)
-    --- PASS: FuzzSecp256k1/880c81cf9304f8cc681fdb97f5ebd205ab456df7 (0.00s)
+    --- PASS: FuzzSecp256k1/89127bacada76183579f586a179ea4860bc44866 (0.00s)
     --- PASS: FuzzSecp256k1/8c80d8ebc6cec26edd28571c12ff2500c818dd50 (0.00s)
     --- PASS: FuzzSecp256k1/8cbaa8cbefccbcfd9544140620c1541532d81e8b (0.00s)
     --- PASS: FuzzSecp256k1/9069ca78e7450a285173431b3e52c5c25299e473 (0.00s)
     --- PASS: FuzzSecp256k1/93deee3a7f948d00d2f3c068db57942cf2297ec2 (0.00s)
     --- PASS: FuzzSecp256k1/940e152914387c2be23f39047f23cf1c347f3c2d (0.00s)
+    --- PASS: FuzzSecp256k1/97130b0b991251826ce0b59716d281c25fbb4978 (0.00s)
     --- PASS: FuzzSecp256k1/9a0c810a04c2a838071fde218d0a6deff5d8a466 (0.00s)
     --- PASS: FuzzSecp256k1/9d3a92314c7939290f2d35c166d7c97b4fa2c0d2 (0.00s)
     --- PASS: FuzzSecp256k1/9eb8b3bc9c819f2622f62bfbc796243c4b6f6341 (0.00s)
     --- PASS: FuzzSecp256k1/a7cd10d1dc9d60482b62dde597800052b1ef2d75 (0.00s)
     --- PASS: FuzzSecp256k1/a7f7b23a9b0e7fecdbf2075126ce3271958aa140 (0.00s)
-    --- PASS: FuzzSecp256k1/a9f72e1f2ca945bf0c880224599d50d307e77b5b (0.00s)
-    --- PASS: FuzzSecp256k1/ad9cead8be717bde2e41a8c638ded0c576ae98b9 (0.00s)
     --- PASS: FuzzSecp256k1/ad9f754253769d6447847c06e4f04728347659c7 (0.00s)
     --- PASS: FuzzSecp256k1/adc83b19e793491b1c6ea0fd8b46cd9f32e592fc (0.00s)
     --- PASS: FuzzSecp256k1/b020310a3fc50e80859fed2537af65c6ad0dce2b (0.00s)
@@ -165,7 +175,6 @@
     --- PASS: FuzzSecp256k1/b3c2882da63d50056f88a289c46c9c11d90cdaae (0.00s)
     --- PASS: FuzzSecp256k1/b809f0a9f3eaa4815ddfc8ff6e4406f9c640502b (0.00s)
     --- PASS: FuzzSecp256k1/b85f4cf41c92c9c49216b5109ff3ae2aad2d3c43 (0.00s)
-    --- PASS: FuzzSecp256k1/b96c07a1f7d0851de3c5ef93137c51342bdc72e5 (0.00s)
     --- PASS: FuzzSecp256k1/bb8351c814f4776f359cbc867de102296623ea7d (0.00s)
     --- PASS: FuzzSecp256k1/bba07eae746b1048bb81dde01edba98c0d65d835 (0.00s)
     --- PASS: FuzzSecp256k1/c54c8600545b848169cb742af5abbccff31b00b2 (0.00s)
@@ -174,20 +183,23 @@
     --- PASS: FuzzSecp256k1/cc6b9d2f6a754c3365e4a94dfd4cb8e1fd797aa8 (0.00s)
     --- PASS: FuzzSecp256k1/d36c16ae8df5de8d3c39c8d64a120626b0889762 (0.00s)
     --- PASS: FuzzSecp256k1/d45a1324b15366a6beb9fe300f38ce3c5726648a (0.00s)
-    --- PASS: FuzzSecp256k1/d5201fd9c0c81dec0195209c752e23395ce9d7a9 (0.00s)
     --- PASS: FuzzSecp256k1/d552d66fbce6e865713fa6294ac02499b44691de (0.00s)
-    --- PASS: FuzzSecp256k1/dff3a52e0cde3b881ba312e1979220fe804ef99d (0.00s)
-    --- PASS: FuzzSecp256k1/e0b8f728a63b062a7fe9d16539cbf06505f38dfe (0.00s)
+    --- PASS: FuzzSecp256k1/d5c9c328b35412612f2b4d9bb666e3c6ff08dea5 (0.00s)
+    --- PASS: FuzzSecp256k1/d8d9cedb3077f2a5431bd05e57644b9faab359a3 (0.00s)
+    --- PASS: FuzzSecp256k1/dc24be1aa18c0d927bba3fb58f7737bafdb2ba06 (0.00s)
     --- PASS: FuzzSecp256k1/e1d424626f99df6146a88cd1bf7e9f6007ff11ab (0.00s)
+    --- PASS: FuzzSecp256k1/e443ecf54be167a2c528795c7bfbeeb147240e3b (0.00s)
     --- PASS: FuzzSecp256k1/e4c51fd29834324e2542d81a46b52948ce2c81ba (0.00s)
     --- PASS: FuzzSecp256k1/e6a49d4f053b3ed8fd189299b2c81b4919dc2850 (0.00s)
     --- PASS: FuzzSecp256k1/f1a8aa6b9389e655b68b08eb9bdc6d6b2eda8841 (0.00s)
     --- PASS: FuzzSecp256k1/f274d5683859c55af345f25805f6b8a7c4cfc9c4 (0.00s)
     --- PASS: FuzzSecp256k1/f4ace2a6db96f9dcf1625b9f1adc5bf56d8ece86 (0.00s)
+    --- PASS: FuzzSecp256k1/f66a0337265a8d2a8b6ac0a04f9c78a54d8b6e86 (0.00s)
+    --- PASS: FuzzSecp256k1/f6d1d3f6da7b231c391dad85ac9b3335186a4574 (0.00s)
     --- PASS: FuzzSecp256k1/f953ec8f0a7ae7653bc18aed2736ce892dd42e0b (0.00s)
     --- PASS: FuzzSecp256k1/fc467926f95d22fab61c57ce3ab7fc48b4212407 (0.00s)
     --- PASS: FuzzSecp256k1/fd016d38db1a48bf6f1e763f4b68294f82b1fec9 (0.00s)
     --- PASS: FuzzSecp256k1/fda50b3eb8ff040ba154e5f139d68d29be5b47ac (0.00s)
 PASS
 coverage: 81.8% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/secp256k1	0.040s	coverage: 81.8% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/secp256k1	0.041s	coverage: 81.8% of statements

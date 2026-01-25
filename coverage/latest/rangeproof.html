@@ -57,7 +57,7 @@
 				
 				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/debug/main.go (0.0%)</option>
 				
-				<option value="file1">github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/rangeproof-fuzzer.go (94.4%)</option>
+				<option value="file1">github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/rangeproof-fuzzer.go (93.3%)</option>
 				
 				</select>
 			</div>
@@ -217,7 +217,7 @@ func (f *fuzzer) fuzz() int <span class="cov8" title="1">{
         for _, kv := range vals </span><span class="cov8" title="1">{
                 entries = append(entries, kv)
         }</span>
-        <span class="cov8" title="1">if len(entries) &lt;= 1 </span><span class="cov8" title="1">{
+        <span class="cov8" title="1">if len(entries) &lt;= 1 </span><span class="cov0" title="0">{
                 return 0
         }</span>
         <span class="cov8" title="1">sort.Sort(entries)
