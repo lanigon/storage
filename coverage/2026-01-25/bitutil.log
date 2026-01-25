@@ -1,6 +1,7 @@
 === RUN   FuzzBitutil
 === RUN   FuzzBitutil/075e57157896d485dd2517797efb2a212fb961ee
 === RUN   FuzzBitutil/082913d2d862fab4967cf2f57f2c5e73190342f7
+=== RUN   FuzzBitutil/0a455f81edc6db61dd5a210a5dd8792d206d0ede
 === RUN   FuzzBitutil/0bd47eb481275fcbf9ed6af1c911800f815ae0da
 === RUN   FuzzBitutil/16c47d9f248585a0694c08291dd3caef3fbcae2c
 === RUN   FuzzBitutil/204ccbede56ee5a25c93ccd86248f357f3b620c5
@@ -11,11 +12,13 @@
 === RUN   FuzzBitutil/339fe377130af4c5a23a3dfdf9a68a06d72733e6
 === RUN   FuzzBitutil/3ac7c9d05c10d00c3237b98b505d954c8aeede42
 === RUN   FuzzBitutil/4e0f684219dcb4518aaf4166bd2b51c957ef36de
+=== RUN   FuzzBitutil/4ff447b8ef42ca51fa6fb287bed8d40f49be58f1
 === RUN   FuzzBitutil/5135c69c6aca6f4aad9cd65660398fc3a7bce387
 === RUN   FuzzBitutil/567bc46ed40fef98acb3d3235b3d30065b40141a
 === RUN   FuzzBitutil/5ff41703ff78619f12df30e63071739b37e6e7e8
 === RUN   FuzzBitutil/6ce8a8d49dc84a741a321e629bcc9cf6c7ab5d6d
 === RUN   FuzzBitutil/70d5a89e97f6200689ff1afc399a9877e261b84f
+=== RUN   FuzzBitutil/78b2881e8f5ed1dc1b0cfb142d2f9d49d4bbe9b3
 === RUN   FuzzBitutil/7e14c9ccbc36614d4602f58a54a0b80e616e10ae
 === RUN   FuzzBitutil/7f444851bd64b557aecbdd3eb690b976b423ce97
 === RUN   FuzzBitutil/8585ffb87a5a11f8c2665cf9477d19edf703f28c
@@ -31,20 +34,26 @@
 === RUN   FuzzBitutil/b61ac466d9a3ace4677e20ebb315935773cb1f14
 === RUN   FuzzBitutil/b66322f28f865454c81e7ea5c75aeb72dbf71dd6
 === RUN   FuzzBitutil/b6eee7eb55c8ce70b3e953c642ba591a00adb79d
+=== RUN   FuzzBitutil/b77c73d4705009d837cb301a44fe3df6ba505bc2
 === RUN   FuzzBitutil/b974d0d5a3aec301a8cf57c760434ad9117052c5
 === RUN   FuzzBitutil/bbc0f18f38018eb098c34d1eaafc438987854622
 === RUN   FuzzBitutil/c18c9bb6df0d5c60ce5a5d2d3d6111beb6f8cceb
+=== RUN   FuzzBitutil/c4ea21bb365bbeeaf5f2c654883e56d11e43c44e
 === RUN   FuzzBitutil/c509da08ba6c79e26cd6c008813a22f7aa6ff09a
 === RUN   FuzzBitutil/d7d90ee79cca66c4364f1d1510461118891f3ea9
+=== RUN   FuzzBitutil/d8912e91cd68b12ecf1b25d19eda9f1b50f7dbd7
 === RUN   FuzzBitutil/da14f09b4e37903ae20921a49db20c6e8ac8d690
 === RUN   FuzzBitutil/da66180699cf86a08be25d9bf73d22d048382d17
+=== RUN   FuzzBitutil/df94119514508e34f0731e46a3fd4a9234dc0ba4
 === RUN   FuzzBitutil/e374d282b26b3825fa8fe4bb83ad772b8f1e2386
 === RUN   FuzzBitutil/e963883285748791e4eebac16b040dcb7dd408b0
 === RUN   FuzzBitutil/ee494cd5e5f8813571c3bc7f123385b64cdb8a7d
+=== RUN   FuzzBitutil/f4a48de1bcb75f0117ebcd010a144d27178303bc
 === RUN   FuzzBitutil/fe32cb4fdad71ac70fc7685309ffcc3ae6f56d9a
 --- PASS: FuzzBitutil (0.00s)
     --- PASS: FuzzBitutil/075e57157896d485dd2517797efb2a212fb961ee (0.00s)
     --- PASS: FuzzBitutil/082913d2d862fab4967cf2f57f2c5e73190342f7 (0.00s)
+    --- PASS: FuzzBitutil/0a455f81edc6db61dd5a210a5dd8792d206d0ede (0.00s)
     --- PASS: FuzzBitutil/0bd47eb481275fcbf9ed6af1c911800f815ae0da (0.00s)
     --- PASS: FuzzBitutil/16c47d9f248585a0694c08291dd3caef3fbcae2c (0.00s)
     --- PASS: FuzzBitutil/204ccbede56ee5a25c93ccd86248f357f3b620c5 (0.00s)
@@ -55,11 +64,13 @@
     --- PASS: FuzzBitutil/339fe377130af4c5a23a3dfdf9a68a06d72733e6 (0.00s)
     --- PASS: FuzzBitutil/3ac7c9d05c10d00c3237b98b505d954c8aeede42 (0.00s)
     --- PASS: FuzzBitutil/4e0f684219dcb4518aaf4166bd2b51c957ef36de (0.00s)
+    --- PASS: FuzzBitutil/4ff447b8ef42ca51fa6fb287bed8d40f49be58f1 (0.00s)
     --- PASS: FuzzBitutil/5135c69c6aca6f4aad9cd65660398fc3a7bce387 (0.00s)
     --- PASS: FuzzBitutil/567bc46ed40fef98acb3d3235b3d30065b40141a (0.00s)
     --- PASS: FuzzBitutil/5ff41703ff78619f12df30e63071739b37e6e7e8 (0.00s)
     --- PASS: FuzzBitutil/6ce8a8d49dc84a741a321e629bcc9cf6c7ab5d6d (0.00s)
     --- PASS: FuzzBitutil/70d5a89e97f6200689ff1afc399a9877e261b84f (0.00s)
+    --- PASS: FuzzBitutil/78b2881e8f5ed1dc1b0cfb142d2f9d49d4bbe9b3 (0.00s)
     --- PASS: FuzzBitutil/7e14c9ccbc36614d4602f58a54a0b80e616e10ae (0.00s)
     --- PASS: FuzzBitutil/7f444851bd64b557aecbdd3eb690b976b423ce97 (0.00s)
     --- PASS: FuzzBitutil/8585ffb87a5a11f8c2665cf9477d19edf703f28c (0.00s)
@@ -75,17 +86,22 @@
     --- PASS: FuzzBitutil/b61ac466d9a3ace4677e20ebb315935773cb1f14 (0.00s)
     --- PASS: FuzzBitutil/b66322f28f865454c81e7ea5c75aeb72dbf71dd6 (0.00s)
     --- PASS: FuzzBitutil/b6eee7eb55c8ce70b3e953c642ba591a00adb79d (0.00s)
+    --- PASS: FuzzBitutil/b77c73d4705009d837cb301a44fe3df6ba505bc2 (0.00s)
     --- PASS: FuzzBitutil/b974d0d5a3aec301a8cf57c760434ad9117052c5 (0.00s)
     --- PASS: FuzzBitutil/bbc0f18f38018eb098c34d1eaafc438987854622 (0.00s)
     --- PASS: FuzzBitutil/c18c9bb6df0d5c60ce5a5d2d3d6111beb6f8cceb (0.00s)
+    --- PASS: FuzzBitutil/c4ea21bb365bbeeaf5f2c654883e56d11e43c44e (0.00s)
     --- PASS: FuzzBitutil/c509da08ba6c79e26cd6c008813a22f7aa6ff09a (0.00s)
     --- PASS: FuzzBitutil/d7d90ee79cca66c4364f1d1510461118891f3ea9 (0.00s)
+    --- PASS: FuzzBitutil/d8912e91cd68b12ecf1b25d19eda9f1b50f7dbd7 (0.00s)
     --- PASS: FuzzBitutil/da14f09b4e37903ae20921a49db20c6e8ac8d690 (0.00s)
     --- PASS: FuzzBitutil/da66180699cf86a08be25d9bf73d22d048382d17 (0.00s)
+    --- PASS: FuzzBitutil/df94119514508e34f0731e46a3fd4a9234dc0ba4 (0.00s)
     --- PASS: FuzzBitutil/e374d282b26b3825fa8fe4bb83ad772b8f1e2386 (0.00s)
     --- PASS: FuzzBitutil/e963883285748791e4eebac16b040dcb7dd408b0 (0.00s)
     --- PASS: FuzzBitutil/ee494cd5e5f8813571c3bc7f123385b64cdb8a7d (0.00s)
+    --- PASS: FuzzBitutil/f4a48de1bcb75f0117ebcd010a144d27178303bc (0.00s)
     --- PASS: FuzzBitutil/fe32cb4fdad71ac70fc7685309ffcc3ae6f56d9a (0.00s)
 PASS
-coverage: 71.4% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/bitutil	0.004s	coverage: 71.4% of statements
+coverage: 76.2% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/bitutil	0.005s	coverage: 76.2% of statements
