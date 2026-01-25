@@ -337,7 +337,6 @@
 === RUN   FuzzABI/e7dd378aabe6853fa1228440d997f5a1f54abc59
 === RUN   FuzzABI/e816e5ad3d941ef8277d00506e60c803a6157b4f
 === RUN   FuzzABI/e94c5939c36f1a177bbbe883d3345f4e755a9722
-=== RUN   FuzzABI/e97224be3cdde3b93a7c8a4ba40717f1dca29453
 === RUN   FuzzABI/ea1806ab8dda9c4745c247f561f8ab092c606155
 === RUN   FuzzABI/ea4a2eb4222b6598808f5183e5fdea7b7c9bb822
 === RUN   FuzzABI/eaa2963883367820fedd9e44c8e545e68e1e10cc
@@ -715,7 +714,6 @@
     --- PASS: FuzzABI/e7dd378aabe6853fa1228440d997f5a1f54abc59 (0.00s)
     --- PASS: FuzzABI/e816e5ad3d941ef8277d00506e60c803a6157b4f (0.00s)
     --- PASS: FuzzABI/e94c5939c36f1a177bbbe883d3345f4e755a9722 (0.00s)
-    --- PASS: FuzzABI/e97224be3cdde3b93a7c8a4ba40717f1dca29453 (0.00s)
     --- PASS: FuzzABI/ea1806ab8dda9c4745c247f561f8ab092c606155 (0.00s)
     --- PASS: FuzzABI/ea4a2eb4222b6598808f5183e5fdea7b7c9bb822 (0.00s)
     --- PASS: FuzzABI/eaa2963883367820fedd9e44c8e545e68e1e10cc (0.00s)
@@ -760,4 +758,4 @@
     --- PASS: FuzzABI/ffc24c4bc82fcf4cc71d805197a96af0d9e9af30 (0.00s)
 PASS
 coverage: 83.3% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/abi	0.102s	coverage: 83.3% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/abi	0.100s	coverage: 83.3% of statements
