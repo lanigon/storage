@@ -141,7 +141,6 @@
 === RUN   FuzzTrie/4fb875876787c1c6580a770a91143eab5628189b
 === RUN   FuzzTrie/51af8f0cde753f1f3ccbd0fd0f247b59cf71508b
 === RUN   FuzzTrie/51f41d0fbfab8fb1a420c5307b89eff4977f5c82
-=== RUN   FuzzTrie/53e7cededf52d6bad43a0c41b03a6d13a145cf42
 === RUN   FuzzTrie/5405f043177ecf30cba2d41d92c971b61ac5eb96
 === RUN   FuzzTrie/5407a5e63d8339809363889c69447c13cf468d7f
 === RUN   FuzzTrie/540d40a5639acdc0ea85767310fd6b9f499a84c3
@@ -157,7 +156,6 @@
 === RUN   FuzzTrie/5a1bc2c4ef70633508edaca42b7c4a50da3eafe3
 === RUN   FuzzTrie/5afbb8b8e6ec00651e46f6921cc83002aede96cb
 === RUN   FuzzTrie/5bd3bd9008839ef122e6f35e1ca93e967ab9f922
-=== RUN   FuzzTrie/5c2abc6af2f08c8fa18b3ce89d1f58966607fe69
 === RUN   FuzzTrie/5c892fa267a37e464bc74c30e73492730fa5d718
 === RUN   FuzzTrie/5cc803fb0390b3acdd22381e7a8481daeeb918cb
 === RUN   FuzzTrie/5e1c98dd2cc60185b87978e42096935037b65eb9
@@ -346,7 +344,6 @@
 === RUN   FuzzTrie/d8a83c2720113d529524eb630a8e9a76c6798e51
 === RUN   FuzzTrie/d8b08d06f8535a250dcc9a51390179698bc09e45
 === RUN   FuzzTrie/d8ec6fec2b29d72111128c9d6deb02bb72041565
-=== RUN   FuzzTrie/d9d3e915053be166e7576252886fda05a3e61d1d
 === RUN   FuzzTrie/dbe9bc0ec26cacea67d75c7d8f9b7c420f70298f
 === RUN   FuzzTrie/dbfc2eb2a72c2c4fb0bc01cb944a5275a8ac95f0
 === RUN   FuzzTrie/dc07d6da60d99a1c0a8c05088dea269cc5cab507
@@ -397,7 +394,7 @@
 === RUN   FuzzTrie/fe1b5d500d4f766eb0fd455fc7335634e930214f
 === RUN   FuzzTrie/fe874afe43e330455bf1dfd18c46bb5d9e7521a6
 === RUN   FuzzTrie/fea0c4aa3e07528dfb97d03f5a0dc16f18bf26a3
---- PASS: FuzzTrie (0.37s)
+--- PASS: FuzzTrie (0.34s)
     --- PASS: FuzzTrie/00803fc4cc784a9068c42cf554b4d2a40f198c78 (0.00s)
     --- PASS: FuzzTrie/00810f373e8c812d14122ea18dc74032ecd56bd7 (0.00s)
     --- PASS: FuzzTrie/00be865cdef6a007548cc0b04fc5c8356e618eab (0.00s)
@@ -540,7 +537,6 @@
     --- PASS: FuzzTrie/4fb875876787c1c6580a770a91143eab5628189b (0.00s)
     --- PASS: FuzzTrie/51af8f0cde753f1f3ccbd0fd0f247b59cf71508b (0.00s)
     --- PASS: FuzzTrie/51f41d0fbfab8fb1a420c5307b89eff4977f5c82 (0.00s)
-    --- PASS: FuzzTrie/53e7cededf52d6bad43a0c41b03a6d13a145cf42 (0.01s)
     --- PASS: FuzzTrie/5405f043177ecf30cba2d41d92c971b61ac5eb96 (0.00s)
     --- PASS: FuzzTrie/5407a5e63d8339809363889c69447c13cf468d7f (0.00s)
     --- PASS: FuzzTrie/540d40a5639acdc0ea85767310fd6b9f499a84c3 (0.00s)
@@ -556,7 +552,6 @@
     --- PASS: FuzzTrie/5a1bc2c4ef70633508edaca42b7c4a50da3eafe3 (0.00s)
     --- PASS: FuzzTrie/5afbb8b8e6ec00651e46f6921cc83002aede96cb (0.00s)
     --- PASS: FuzzTrie/5bd3bd9008839ef122e6f35e1ca93e967ab9f922 (0.00s)
-    --- PASS: FuzzTrie/5c2abc6af2f08c8fa18b3ce89d1f58966607fe69 (0.00s)
     --- PASS: FuzzTrie/5c892fa267a37e464bc74c30e73492730fa5d718 (0.00s)
     --- PASS: FuzzTrie/5cc803fb0390b3acdd22381e7a8481daeeb918cb (0.02s)
     --- PASS: FuzzTrie/5e1c98dd2cc60185b87978e42096935037b65eb9 (0.00s)
@@ -745,7 +740,6 @@
     --- PASS: FuzzTrie/d8a83c2720113d529524eb630a8e9a76c6798e51 (0.00s)
     --- PASS: FuzzTrie/d8b08d06f8535a250dcc9a51390179698bc09e45 (0.00s)
     --- PASS: FuzzTrie/d8ec6fec2b29d72111128c9d6deb02bb72041565 (0.00s)
-    --- PASS: FuzzTrie/d9d3e915053be166e7576252886fda05a3e61d1d (0.01s)
     --- PASS: FuzzTrie/dbe9bc0ec26cacea67d75c7d8f9b7c420f70298f (0.00s)
     --- PASS: FuzzTrie/dbfc2eb2a72c2c4fb0bc01cb944a5275a8ac95f0 (0.00s)
     --- PASS: FuzzTrie/dc07d6da60d99a1c0a8c05088dea269cc5cab507 (0.00s)
@@ -788,7 +782,7 @@
     --- PASS: FuzzTrie/f6199154b8b4c46b11f200669c43193c78b7b0d6 (0.00s)
     --- PASS: FuzzTrie/f7c43e80a116a41ef6a5608f946593ea43fa90a1 (0.00s)
     --- PASS: FuzzTrie/f818e4105a39f5cb60276b558b9d1bbe22be8331 (0.00s)
-    --- PASS: FuzzTrie/f8900470dc9af62b856b263acca302155ec60062 (0.01s)
+    --- PASS: FuzzTrie/f8900470dc9af62b856b263acca302155ec60062 (0.00s)
     --- PASS: FuzzTrie/f9eae61dc57bc6933ef9f1ef3010e852b885d91e (0.00s)
     --- PASS: FuzzTrie/fae3bfc49a36da2a870eee23a21f9229e026136e (0.00s)
     --- PASS: FuzzTrie/fc52ee48da965eda51b8dfce33758990b0f777f8 (0.00s)
@@ -798,4 +792,4 @@
     --- PASS: FuzzTrie/fea0c4aa3e07528dfb97d03f5a0dc16f18bf26a3 (0.00s)
 PASS
 coverage: 88.1% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/trie	0.406s	coverage: 88.1% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/trie	0.378s	coverage: 88.1% of statements
