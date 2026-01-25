@@ -328,7 +328,7 @@
 === RUN   FuzzStacktrie/fdd397b04ce7bc3f3696de5690b889a0cc691428
 === RUN   FuzzStacktrie/fee093ed533fe8a4716fe458bd2ed8801d6e86c9
 === RUN   FuzzStacktrie/ffbb0918862706ce19a03acd6caf9441dea293c9
---- PASS: FuzzStacktrie (0.12s)
+--- PASS: FuzzStacktrie (0.13s)
     --- PASS: FuzzStacktrie/010ec476d4dd7aca5a3d57271de3748e42eab89f (0.00s)
     --- PASS: FuzzStacktrie/021e5a8bc257ff1733f1c5ff69ad15a7a34cca2e (0.00s)
     --- PASS: FuzzStacktrie/02202d14cf589f4c36b32ce2031b9c01ddd889d1 (0.00s)
@@ -660,5 +660,5 @@
     --- PASS: FuzzStacktrie/ffbb0918862706ce19a03acd6caf9441dea293c9 (0.00s)
 PASS
 coverage: 75.0% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/stacktrie	0.159s	coverage: 75.0% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/stacktrie	0.170s	coverage: 75.0% of statements
 	github.com/morph-l2/go-ethereum/tests/fuzzers/stacktrie/debug		coverage: 0.0% of statements

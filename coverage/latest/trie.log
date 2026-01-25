@@ -463,7 +463,7 @@
 === RUN   FuzzTrie/fe1b5d500d4f766eb0fd455fc7335634e930214f
 === RUN   FuzzTrie/fe874afe43e330455bf1dfd18c46bb5d9e7521a6
 === RUN   FuzzTrie/fea0c4aa3e07528dfb97d03f5a0dc16f18bf26a3
---- PASS: FuzzTrie (0.52s)
+--- PASS: FuzzTrie (0.59s)
     --- PASS: FuzzTrie/00803fc4cc784a9068c42cf554b4d2a40f198c78 (0.00s)
     --- PASS: FuzzTrie/00810f373e8c812d14122ea18dc74032ecd56bd7 (0.00s)
     --- PASS: FuzzTrie/01592d83e3c667f36a9d73f0c1f4fe200ede7507 (0.00s)
@@ -547,7 +547,7 @@
     --- PASS: FuzzTrie/23013e0b24a2a31eb17b814e778f6b54167bc4f3 (0.00s)
     --- PASS: FuzzTrie/2303a70d076fcaf173bdbb4469f070fd2fe94eb6 (0.00s)
     --- PASS: FuzzTrie/2341bcc8bc88cba681d4963309d4bb97398c5135 (0.00s)
-    --- PASS: FuzzTrie/238300bae5b270838e63ea1f8eb1cff88e55e1d2 (0.00s)
+    --- PASS: FuzzTrie/238300bae5b270838e63ea1f8eb1cff88e55e1d2 (0.01s)
     --- PASS: FuzzTrie/23d6287e6c19190dbc3bf692585ccb1925ee7ed6 (0.00s)
     --- PASS: FuzzTrie/242ef02ac1b6ece7d01fa13365162533d519bb42 (0.00s)
     --- PASS: FuzzTrie/25d9531c49166f00c4d7bccbf3f1b9bd2d258e3a (0.00s)
@@ -635,15 +635,15 @@
     --- PASS: FuzzTrie/54e64046555db16616e2a8a9a02b353dc419ac41 (0.01s)
     --- PASS: FuzzTrie/55608fc8ac05a0d8b4f52e68aeceae68f5405bbc (0.01s)
     --- PASS: FuzzTrie/559894dc0b39a8ea2d7c880c1c2f00a279d472f8 (0.00s)
-    --- PASS: FuzzTrie/56b8ac065b74cc80d9ba3cb2630bb6c1b6de60c6 (0.00s)
+    --- PASS: FuzzTrie/56b8ac065b74cc80d9ba3cb2630bb6c1b6de60c6 (0.01s)
     --- PASS: FuzzTrie/56c3b94871ef3cf845ded40c8b016694c8539e7a (0.00s)
     --- PASS: FuzzTrie/5713194ee2174749834ca2362a91b0d9b892c7ad (0.00s)
     --- PASS: FuzzTrie/57adc3ef76776ab8379afd15129fd9d85836d583 (0.00s)
     --- PASS: FuzzTrie/581e9c461b0dd3bab87fb0950f1c68b9a2d37200 (0.00s)
     --- PASS: FuzzTrie/58ca756957b49b85cd3e8dbbc8c0f9dee03df1b9 (0.00s)
-    --- PASS: FuzzTrie/59508620be29f23e224d628b5ac2f8017896ffc9 (0.01s)
+    --- PASS: FuzzTrie/59508620be29f23e224d628b5ac2f8017896ffc9 (0.02s)
     --- PASS: FuzzTrie/59e5cadf19dd1865a4769784c46320a998c2e4e5 (0.00s)
-    --- PASS: FuzzTrie/5a1bc2c4ef70633508edaca42b7c4a50da3eafe3 (0.00s)
+    --- PASS: FuzzTrie/5a1bc2c4ef70633508edaca42b7c4a50da3eafe3 (0.01s)
     --- PASS: FuzzTrie/5afbb8b8e6ec00651e46f6921cc83002aede96cb (0.00s)
     --- PASS: FuzzTrie/5bd3bd9008839ef122e6f35e1ca93e967ab9f922 (0.00s)
     --- PASS: FuzzTrie/5c3223736e00a3652dd63dfdf54496d79072f317 (0.00s)
@@ -913,10 +913,10 @@
     --- PASS: FuzzTrie/f457892aeeda8f114276577b1cde37a77934b480 (0.00s)
     --- PASS: FuzzTrie/f58bdcd63fcde251218e02cf2c12c0456cedffb1 (0.00s)
     --- PASS: FuzzTrie/f6199154b8b4c46b11f200669c43193c78b7b0d6 (0.00s)
-    --- PASS: FuzzTrie/f6a809f3e784169c37598ebab01e5eff32ecc695 (0.01s)
+    --- PASS: FuzzTrie/f6a809f3e784169c37598ebab01e5eff32ecc695 (0.00s)
     --- PASS: FuzzTrie/f7bff74f0f5a2fe778d80b3f2b2b908bc60fc8f6 (0.00s)
     --- PASS: FuzzTrie/f7c43e80a116a41ef6a5608f946593ea43fa90a1 (0.00s)
-    --- PASS: FuzzTrie/f8900470dc9af62b856b263acca302155ec60062 (0.01s)
+    --- PASS: FuzzTrie/f8900470dc9af62b856b263acca302155ec60062 (0.00s)
     --- PASS: FuzzTrie/f8e24c7a1b65b89f1bda42428cd4b37c13314598 (0.00s)
     --- PASS: FuzzTrie/f964c4bd77b501cbc2aaac82e6c330a7f1ef5778 (0.00s)
     --- PASS: FuzzTrie/f9eae61dc57bc6933ef9f1ef3010e852b885d91e (0.00s)
@@ -930,4 +930,4 @@
     --- PASS: FuzzTrie/fea0c4aa3e07528dfb97d03f5a0dc16f18bf26a3 (0.00s)
 PASS
 coverage: 88.1% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/trie	0.560s	coverage: 88.1% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/trie	0.637s	coverage: 88.1% of statements

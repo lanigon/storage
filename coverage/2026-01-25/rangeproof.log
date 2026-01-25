@@ -576,7 +576,7 @@
 === RUN   FuzzRangeproof/ff5ccf941ba5dc45e307f0f78a83d46db5b9f4e2
 === RUN   FuzzRangeproof/ff901765160fe56fad9c51a57d389cac408f233f
 === RUN   FuzzRangeproof/fff5327a70991c806882264003763b8a394266dd
---- PASS: FuzzRangeproof (0.46s)
+--- PASS: FuzzRangeproof (0.48s)
     --- PASS: FuzzRangeproof/000779f1395e0207a86e11fc3704fa77cd3ffc36 (0.00s)
     --- PASS: FuzzRangeproof/0023e7f6d7a48d7d54fa496a155629e7d8799123 (0.00s)
     --- PASS: FuzzRangeproof/01826fbd1b0656fa4e1f8c55938448c9f7f7545e (0.00s)
@@ -1156,5 +1156,5 @@
     --- PASS: FuzzRangeproof/fff5327a70991c806882264003763b8a394266dd (0.00s)
 PASS
 coverage: 93.3% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof	0.500s	coverage: 93.3% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof	0.523s	coverage: 93.3% of statements
 	github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/debug		coverage: 0.0% of statements

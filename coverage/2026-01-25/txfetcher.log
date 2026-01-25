@@ -1039,7 +1039,7 @@
 === RUN   FuzzTxfetcher/ff929e0fb7d177a48bda2105c7b0b2276a5ef7c5
 === RUN   FuzzTxfetcher/ffbb9e73e4988484a79e9ca57d8b22d5431a5625
 === RUN   FuzzTxfetcher/ffc54ca808e7666f250133ad0ae2185ad688a826
---- PASS: FuzzTxfetcher (0.28s)
+--- PASS: FuzzTxfetcher (0.30s)
     --- PASS: FuzzTxfetcher/004e01ae3e37e52662711e8c82b65fa265c3d23d (0.00s)
     --- PASS: FuzzTxfetcher/0079f79fd3ec3c6c1a3984217116b3e44b734982 (0.00s)
     --- PASS: FuzzTxfetcher/00f807f173b8c6fa80dd4a4b57f137f3191feb24 (0.00s)
@@ -2082,4 +2082,4 @@
     --- PASS: FuzzTxfetcher/ffc54ca808e7666f250133ad0ae2185ad688a826 (0.00s)
 PASS
 coverage: 89.8% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/txfetcher	0.360s	coverage: 89.8% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/txfetcher	0.382s	coverage: 89.8% of statements
