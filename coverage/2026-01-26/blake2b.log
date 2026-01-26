@@ -24,8 +24,6 @@
 === RUN   FuzzBlake2bF/26ebcdeca1172f01b5f8b6d5afb023d95aa4796b
 === RUN   FuzzBlake2bF/277170bd1d4f9d9ea8ab37f6828d34cf7bf780c1
 === RUN   FuzzBlake2bF/29e2dcfbb16f63bb0254df7585a15bb6fb5e927d
-=== RUN   FuzzBlake2bF/36603d69da269c794ba4e7fc1ba6c6793532c9dd
-=== RUN   FuzzBlake2bF/39571bc2ef11de0f6996327206436ab4fbf3048a
 === RUN   FuzzBlake2bF/3e6f7a769a652ebd756450d91d3b41db44d23309
 === RUN   FuzzBlake2bF/44b178fca87662189195df839ce61e75a5498204
 === RUN   FuzzBlake2bF/4dcf498b5c797b62b5bd949d52d46538202b2274
@@ -37,15 +35,12 @@
 === RUN   FuzzBlake2bF/d1770d9a7c578aee91c53135023d97c2f796d04d
 === RUN   FuzzBlake2bF/e897fb1a0ffb4d418309ce2237708060f6382724
 === RUN   FuzzBlake2bF/e965d6b92c939f663db547780dbd2e0049153f70
-=== RUN   FuzzBlake2bF/f15172aa2fc1e91ca69f8a8c30a0b1b606052ea8
 --- PASS: FuzzBlake2bF (0.00s)
     --- PASS: FuzzBlake2bF/06456ceea2d4c9ae2863cc68280daeea7bec363d (0.00s)
     --- PASS: FuzzBlake2bF/172afb391f7df21dbf98faa4ae7047f2d97072d5 (0.00s)
     --- PASS: FuzzBlake2bF/26ebcdeca1172f01b5f8b6d5afb023d95aa4796b (0.00s)
     --- PASS: FuzzBlake2bF/277170bd1d4f9d9ea8ab37f6828d34cf7bf780c1 (0.00s)
     --- PASS: FuzzBlake2bF/29e2dcfbb16f63bb0254df7585a15bb6fb5e927d (0.00s)
-    --- PASS: FuzzBlake2bF/36603d69da269c794ba4e7fc1ba6c6793532c9dd (0.00s)
-    --- PASS: FuzzBlake2bF/39571bc2ef11de0f6996327206436ab4fbf3048a (0.00s)
     --- PASS: FuzzBlake2bF/3e6f7a769a652ebd756450d91d3b41db44d23309 (0.00s)
     --- PASS: FuzzBlake2bF/44b178fca87662189195df839ce61e75a5498204 (0.00s)
     --- PASS: FuzzBlake2bF/4dcf498b5c797b62b5bd949d52d46538202b2274 (0.00s)
@@ -57,7 +52,6 @@
     --- PASS: FuzzBlake2bF/d1770d9a7c578aee91c53135023d97c2f796d04d (0.00s)
     --- PASS: FuzzBlake2bF/e897fb1a0ffb4d418309ce2237708060f6382724 (0.00s)
     --- PASS: FuzzBlake2bF/e965d6b92c939f663db547780dbd2e0049153f70 (0.00s)
-    --- PASS: FuzzBlake2bF/f15172aa2fc1e91ca69f8a8c30a0b1b606052ea8 (0.00s)
 PASS
 coverage: 84.6% of statements
-ok  	github.com/morph-l2/go-ethereum/crypto/blake2b	0.035s	coverage: 84.6% of statements
+ok  	github.com/morph-l2/go-ethereum/crypto/blake2b	0.032s	coverage: 84.6% of statements
