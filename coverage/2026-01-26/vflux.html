@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>vflux: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/vflux/clientpool-fuzzer.go (95.5%)</option>
+				
+				<option value="file1">github.com/morph-l2/go-ethereum/tests/fuzzers/vflux/debug/main.go (0.0%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">// Copyright 2021 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package vflux
+
+import (
+        "bytes"
+        "encoding/binary"
+        "io"
+        "math"
+        "math/big"
+        "time"
+
+        "github.com/morph-l2/go-ethereum/common/mclock"
+        "github.com/morph-l2/go-ethereum/ethdb/memorydb"
+        "github.com/morph-l2/go-ethereum/les/vflux"
+        vfs "github.com/morph-l2/go-ethereum/les/vflux/server"
+        "github.com/morph-l2/go-ethereum/log"
+        "github.com/morph-l2/go-ethereum/p2p/enode"
+        "github.com/morph-l2/go-ethereum/p2p/enr"
+        "github.com/morph-l2/go-ethereum/rlp"
+)
+
+var (
+        debugMode = false
+        doLog     = func(msg string, ctx ...interface{}) <span class="cov8" title="1">{
+                if !debugMode </span><span class="cov8" title="1">{
+                        return
+                }</span>
+                <span class="cov0" title="0">log.Info(msg, ctx...)</span>
+        }
+)
+
+type fuzzer struct {
+        peers                  [256]*clientPeer
+        disconnectList         []*clientPeer
+        input                  io.Reader
+        exhausted              bool
+        activeCount, activeCap uint64
+        maxCount, maxCap       uint64
+}
+
+type clientPeer struct {
+        fuzzer  *fuzzer
+        node    *enode.Node
+        freeID  string
+        timeout time.Duration
+
+        balance  vfs.ConnectedBalance
+        capacity uint64
+}
+
+func (p *clientPeer) Node() *enode.Node <span class="cov8" title="1">{
+        return p.node
+}</span>
+
+func (p *clientPeer) FreeClientId() string <span class="cov8" title="1">{
+        return p.freeID
+}</span>
+
+func (p *clientPeer) InactiveAllowance() time.Duration <span class="cov8" title="1">{
+        return p.timeout
+}</span>
+
+func (p *clientPeer) UpdateCapacity(newCap uint64, requested bool) <span class="cov8" title="1">{
+        origin, originTotal := p.capacity, p.fuzzer.activeCap
+        p.fuzzer.activeCap -= p.capacity
+        if p.capacity != 0 </span><span class="cov8" title="1">{
+                p.fuzzer.activeCount--
+        }</span>
+        <span class="cov8" title="1">p.capacity = newCap
+        p.fuzzer.activeCap += p.capacity
+        if p.capacity != 0 </span><span class="cov8" title="1">{
+                p.fuzzer.activeCount++
+        }</span>
+        <span class="cov8" title="1">doLog("Update capacity", "peer", p.node.ID(), "origin", origin, "cap", newCap, "origintotal", originTotal, "total", p.fuzzer.activeCap, "requested", requested)</span>
+}
+
+func (p *clientPeer) Disconnect() <span class="cov8" title="1">{
+        origin, originTotal := p.capacity, p.fuzzer.activeCap
+        p.fuzzer.disconnectList = append(p.fuzzer.disconnectList, p)
+        p.fuzzer.activeCap -= p.capacity
+        if p.capacity != 0 </span><span class="cov8" title="1">{
+                p.fuzzer.activeCount--
+        }</span>
+        <span class="cov8" title="1">p.capacity = 0
+        p.balance = nil
+        doLog("Disconnect", "peer", p.node.ID(), "origin", origin, "origintotal", originTotal, "total", p.fuzzer.activeCap)</span>
+}
+
+func newFuzzer(input []byte) *fuzzer <span class="cov8" title="1">{
+        f := &amp;fuzzer{
+                input: bytes.NewReader(input),
+        }
+        for i := range f.peers </span><span class="cov8" title="1">{
+                f.peers[i] = &amp;clientPeer{
+                        fuzzer:  f,
+                        node:    enode.SignNull(new(enr.Record), enode.ID{byte(i)}),
+                        freeID:  string([]byte{byte(i)}),
+                        timeout: f.randomDelay(),
+                }
+        }</span>
+        <span class="cov8" title="1">return f</span>
+}
+
+func (f *fuzzer) read(size int) []byte <span class="cov8" title="1">{
+        out := make([]byte, size)
+        if _, err := f.input.Read(out); err != nil </span><span class="cov8" title="1">{
+                f.exhausted = true
+        }</span>
+        <span class="cov8" title="1">return out</span>
+}
+
+func (f *fuzzer) randomByte() byte <span class="cov8" title="1">{
+        d := f.read(1)
+        return d[0]
+}</span>
+
+func (f *fuzzer) randomBool() bool <span class="cov8" title="1">{
+        d := f.read(1)
+        return d[0]&amp;1 == 1
+}</span>
+
+func (f *fuzzer) randomInt(max int) int <span class="cov8" title="1">{
+        if max == 0 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">if max &lt;= 256 </span><span class="cov8" title="1">{
+                return int(f.randomByte()) % max
+        }</span>
+        <span class="cov8" title="1">var a uint16
+        if err := binary.Read(f.input, binary.LittleEndian, &amp;a); err != nil </span><span class="cov8" title="1">{
+                f.exhausted = true
+        }</span>
+        <span class="cov8" title="1">return int(a % uint16(max))</span>
+}
+
+func (f *fuzzer) randomTokenAmount(signed bool) int64 <span class="cov8" title="1">{
+        x := uint64(f.randomInt(65000))
+        x = x * x * x * x
+
+        if signed &amp;&amp; (x&amp;1) == 1 </span><span class="cov8" title="1">{
+                if x &lt;= math.MaxInt64 </span><span class="cov8" title="1">{
+                        return -int64(x)
+                }</span>
+                <span class="cov8" title="1">return math.MinInt64</span>
+        }
+        <span class="cov8" title="1">if x &lt;= math.MaxInt64 </span><span class="cov8" title="1">{
+                return int64(x)
+        }</span>
+        <span class="cov8" title="1">return math.MaxInt64</span>
+}
+
+func (f *fuzzer) randomDelay() time.Duration <span class="cov8" title="1">{
+        delay := f.randomByte()
+        if delay &lt; 128 </span><span class="cov8" title="1">{
+                return time.Duration(delay) * time.Second
+        }</span>
+        <span class="cov8" title="1">return 0</span>
+}
+
+func (f *fuzzer) randomFactors() vfs.PriceFactors <span class="cov8" title="1">{
+        return vfs.PriceFactors{
+                TimeFactor:     float64(f.randomByte()) / 25500,
+                CapacityFactor: float64(f.randomByte()) / 255,
+                RequestFactor:  float64(f.randomByte()) / 255,
+        }
+}</span>
+
+func (f *fuzzer) connectedBalanceOp(balance vfs.ConnectedBalance, id enode.ID) <span class="cov8" title="1">{
+        switch f.randomInt(3) </span>{
+        case 0:<span class="cov8" title="1">
+                cost := uint64(f.randomTokenAmount(false))
+                balance.RequestServed(cost)
+                doLog("Serve request cost", "id", id, "amount", cost)</span>
+        case 1:<span class="cov8" title="1">
+                posFactor, negFactor := f.randomFactors(), f.randomFactors()
+                balance.SetPriceFactors(posFactor, negFactor)
+                doLog("Set price factor", "pos", posFactor, "neg", negFactor)</span>
+        case 2:<span class="cov8" title="1">
+                balance.GetBalance()
+                balance.GetRawBalance()
+                balance.GetPriceFactors()</span>
+        }
+}
+
+func (f *fuzzer) atomicBalanceOp(balance vfs.AtomicBalanceOperator, id enode.ID) <span class="cov8" title="1">{
+        switch f.randomInt(3) </span>{
+        case 0:<span class="cov8" title="1">
+                amount := f.randomTokenAmount(true)
+                balance.AddBalance(amount)
+                doLog("Add balance", "id", id, "amount", amount)</span>
+        case 1:<span class="cov8" title="1">
+                pos, neg := uint64(f.randomTokenAmount(false)), uint64(f.randomTokenAmount(false))
+                balance.SetBalance(pos, neg)
+                doLog("Set balance", "id", id, "pos", pos, "neg", neg)</span>
+        case 2:<span class="cov8" title="1">
+                balance.GetBalance()
+                balance.GetRawBalance()
+                balance.GetPriceFactors()</span>
+        }
+}
+
+func FuzzClientPool(input []byte) int <span class="cov8" title="1">{
+        if len(input) &gt; 10000 </span><span class="cov0" title="0">{
+                return -1
+        }</span>
+        <span class="cov8" title="1">f := newFuzzer(input)
+        if f.exhausted </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">clock := &amp;mclock.Simulated{}
+        db := memorydb.New()
+        pool := vfs.NewClientPool(db, 10, f.randomDelay(), clock, func() bool </span><span class="cov8" title="1">{ return true }</span>)
+        <span class="cov8" title="1">pool.Start()
+        defer pool.Stop()
+
+        count := 0
+        for !f.exhausted &amp;&amp; count &lt; 1000 </span><span class="cov8" title="1">{
+                count++
+                switch f.randomInt(11) </span>{
+                case 0:<span class="cov8" title="1">
+                        i := int(f.randomByte())
+                        f.peers[i].balance = pool.Register(f.peers[i])
+                        doLog("Register peer", "id", f.peers[i].node.ID())</span>
+                case 1:<span class="cov8" title="1">
+                        i := int(f.randomByte())
+                        f.peers[i].Disconnect()
+                        doLog("Disconnect peer", "id", f.peers[i].node.ID())</span>
+                case 2:<span class="cov8" title="1">
+                        f.maxCount = uint64(f.randomByte())
+                        f.maxCap = uint64(f.randomByte())
+                        f.maxCap *= f.maxCap
+
+                        count, cap := pool.Limits()
+                        pool.SetLimits(f.maxCount, f.maxCap)
+                        doLog("Set limits", "maxcount", f.maxCount, "maxcap", f.maxCap, "origincount", count, "oricap", cap)</span>
+                case 3:<span class="cov8" title="1">
+                        bias := f.randomDelay()
+                        pool.SetConnectedBias(f.randomDelay())
+                        doLog("Set connection bias", "bias", bias)</span>
+                case 4:<span class="cov8" title="1">
+                        pos, neg := f.randomFactors(), f.randomFactors()
+                        pool.SetDefaultFactors(pos, neg)
+                        doLog("Set default factors", "pos", pos, "neg", neg)</span>
+                case 5:<span class="cov8" title="1">
+                        pos, neg := uint64(f.randomInt(50000)), uint64(f.randomInt(50000))
+                        pool.SetExpirationTCs(pos, neg)
+                        doLog("Set expiration constants", "pos", pos, "neg", neg)</span>
+                case 6:<span class="cov8" title="1">
+                        var (
+                                index     = f.randomByte()
+                                reqCap    = uint64(f.randomByte())
+                                bias      = f.randomDelay()
+                                requested = f.randomBool()
+                        )
+                        if _, err := pool.SetCapacity(f.peers[index].node, reqCap, bias, requested); err == vfs.ErrCantFindMaximum </span><span class="cov0" title="0">{
+                                panic(nil)</span>
+                        }
+                        <span class="cov8" title="1">doLog("Set capacity", "id", f.peers[index].node.ID(), "reqcap", reqCap, "bias", bias, "requested", requested)</span>
+                case 7:<span class="cov8" title="1">
+                        index := f.randomByte()
+                        if balance := f.peers[index].balance; balance != nil </span><span class="cov8" title="1">{
+                                f.connectedBalanceOp(balance, f.peers[index].node.ID())
+                        }</span>
+                case 8:<span class="cov8" title="1">
+                        index := f.randomByte()
+                        pool.BalanceOperation(f.peers[index].node.ID(), f.peers[index].freeID, func(balance vfs.AtomicBalanceOperator) </span><span class="cov8" title="1">{
+                                count := f.randomInt(4)
+                                for i := 0; i &lt; count; i++ </span><span class="cov8" title="1">{
+                                        f.atomicBalanceOp(balance, f.peers[index].node.ID())
+                                }</span>
+                        })
+                case 9:<span class="cov8" title="1">
+                        pool.TotalTokenAmount()
+                        pool.GetExpirationTCs()
+                        pool.Active()
+                        pool.Limits()
+                        pool.GetPosBalanceIDs(f.peers[f.randomByte()].node.ID(), f.peers[f.randomByte()].node.ID(), f.randomInt(100))</span>
+                case 10:<span class="cov8" title="1">
+                        req := vflux.CapacityQueryReq{
+                                Bias:      uint64(f.randomByte()),
+                                AddTokens: make([]vflux.IntOrInf, f.randomInt(vflux.CapacityQueryMaxLen+1)),
+                        }
+                        for i := range req.AddTokens </span><span class="cov8" title="1">{
+                                v := vflux.IntOrInf{Type: uint8(f.randomInt(4))}
+                                if v.Type &lt; 2 </span><span class="cov8" title="1">{
+                                        v.Value = *big.NewInt(f.randomTokenAmount(false))
+                                }</span>
+                                <span class="cov8" title="1">req.AddTokens[i] = v</span>
+                        }
+                        <span class="cov8" title="1">reqEnc, err := rlp.EncodeToBytes(&amp;req)
+                        if err != nil </span><span class="cov0" title="0">{
+                                panic(err)</span>
+                        }
+                        <span class="cov8" title="1">p := int(f.randomByte())
+                        if p &lt; len(reqEnc) </span><span class="cov8" title="1">{
+                                reqEnc[p] = f.randomByte()
+                        }</span>
+                        <span class="cov8" title="1">pool.Handle(f.peers[f.randomByte()].node.ID(), f.peers[f.randomByte()].freeID, vflux.CapacityQueryName, reqEnc)</span>
+                }
+
+                <span class="cov8" title="1">for _, peer := range f.disconnectList </span><span class="cov8" title="1">{
+                        pool.Unregister(peer)
+                        doLog("Unregister peer", "id", peer.node.ID())
+                }</span>
+                <span class="cov8" title="1">f.disconnectList = nil
+                if d := f.randomDelay(); d &gt; 0 </span><span class="cov8" title="1">{
+                        clock.Run(d)
+                }</span>
+                <span class="cov8" title="1">doLog("Clientpool stats in fuzzer", "count", f.activeCap, "maxcount", f.maxCount, "cap", f.activeCap, "maxcap", f.maxCap)
+                activeCount, activeCap := pool.Active()
+                doLog("Clientpool stats in pool", "count", activeCount, "cap", activeCap)
+                if activeCount != f.activeCount || activeCap != f.activeCap </span><span class="cov0" title="0">{
+                        panic(nil)</span>
+                }
+                <span class="cov8" title="1">if f.activeCount &gt; f.maxCount || f.activeCap &gt; f.maxCap </span><span class="cov0" title="0">{
+                        panic(nil)</span>
+                }
+        }
+        <span class="cov8" title="1">return 0</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">// Copyright 2020 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package main
+
+import (
+        "fmt"
+        "io/ioutil"
+        "os"
+
+        "github.com/morph-l2/go-ethereum/log"
+        "github.com/morph-l2/go-ethereum/tests/fuzzers/vflux"
+)
+
+func main() <span class="cov0" title="0">{
+        log.Root().SetHandler(log.LvlFilterHandler(log.LvlTrace, log.StreamHandler(os.Stderr, log.TerminalFormat(true))))
+
+        if len(os.Args) != 2 </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Usage: debug &lt;file&gt;\n")
+                fmt.Fprintf(os.Stderr, "Example\n")
+                fmt.Fprintf(os.Stderr, "        $ debug ../crashers/4bbef6857c733a87ecf6fd8b9e7238f65eb9862a\n")
+                os.Exit(1)
+        }</span>
+        <span class="cov0" title="0">crasher := os.Args[1]
+        data, err := ioutil.ReadFile(crasher)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "error loading crasher %v: %v", crasher, err)
+                os.Exit(1)
+        }</span>
+        <span class="cov0" title="0">vflux.FuzzClientPool(data)</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>

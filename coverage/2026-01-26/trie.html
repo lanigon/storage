@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>trie: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/trie/trie-fuzzer.go (88.1%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">// Copyright 2019 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package trie
+
+import (
+        "bytes"
+        "encoding/binary"
+        "fmt"
+
+        "github.com/morph-l2/go-ethereum/common"
+        "github.com/morph-l2/go-ethereum/ethdb/memorydb"
+        "github.com/morph-l2/go-ethereum/trie"
+)
+
+// randTest performs random trie operations.
+// Instances of this test are created by Generate.
+type randTest []randTestStep
+
+type randTestStep struct {
+        op    int
+        key   []byte // for opUpdate, opDelete, opGet
+        value []byte // for opUpdate
+        err   error  // for debugging
+}
+
+type proofDb struct{}
+
+func (proofDb) Put(key []byte, value []byte) error <span class="cov8" title="1">{
+        return nil
+}</span>
+
+func (proofDb) Delete(key []byte) error <span class="cov0" title="0">{
+        return nil
+}</span>
+
+const (
+        opUpdate = iota
+        opDelete
+        opGet
+        opCommit
+        opHash
+        opReset
+        opItercheckhash
+        opProve
+        opMax // boundary value, not an actual op
+)
+
+type dataSource struct {
+        input  []byte
+        reader *bytes.Reader
+}
+
+func newDataSource(input []byte) *dataSource <span class="cov8" title="1">{
+        return &amp;dataSource{
+                input, bytes.NewReader(input),
+        }
+}</span>
+func (ds *dataSource) readByte() byte <span class="cov8" title="1">{
+        if b, err := ds.reader.ReadByte(); err != nil </span><span class="cov8" title="1">{
+                return 0
+        }</span> else<span class="cov8" title="1"> {
+                return b
+        }</span>
+}
+func (ds *dataSource) Read(buf []byte) (int, error) <span class="cov8" title="1">{
+        return ds.reader.Read(buf)
+}</span>
+func (ds *dataSource) Ended() bool <span class="cov8" title="1">{
+        return ds.reader.Len() == 0
+}</span>
+
+func Generate(input []byte) randTest <span class="cov8" title="1">{
+
+        var allKeys [][]byte
+        r := newDataSource(input)
+        genKey := func() []byte </span><span class="cov8" title="1">{
+
+                if len(allKeys) &lt; 2 || r.readByte() &lt; 0x0f </span><span class="cov8" title="1">{
+                        // new key
+                        key := make([]byte, r.readByte()%50)
+                        r.Read(key)
+                        allKeys = append(allKeys, key)
+                        return key
+                }</span>
+                // use existing key
+                <span class="cov8" title="1">return allKeys[int(r.readByte())%len(allKeys)]</span>
+        }
+
+        <span class="cov8" title="1">var steps randTest
+
+        for i := 0; !r.Ended(); i++ </span><span class="cov8" title="1">{
+
+                step := randTestStep{op: int(r.readByte()) % opMax}
+                switch step.op </span>{
+                case opUpdate:<span class="cov8" title="1">
+                        step.key = genKey()
+                        step.value = make([]byte, 8)
+                        binary.BigEndian.PutUint64(step.value, uint64(i))</span>
+                case opGet, opDelete, opProve:<span class="cov8" title="1">
+                        step.key = genKey()</span>
+                }
+                <span class="cov8" title="1">steps = append(steps, step)
+                if len(steps) &gt; 500 </span><span class="cov8" title="1">{
+                        break</span>
+                }
+        }
+
+        <span class="cov8" title="1">return steps</span>
+}
+
+// The function must return
+// 1 if the fuzzer should increase priority of the
+//
+//        given input during subsequent fuzzing (for example, the input is lexically
+//        correct and was parsed successfully);
+//
+// -1 if the input must not be added to corpus even if gives new coverage; and
+// 0  otherwise
+// other values are reserved for future use.
+func Fuzz(input []byte) int <span class="cov8" title="1">{
+        program := Generate(input)
+        if len(program) == 0 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">if err := runRandTest(program); err != nil </span><span class="cov0" title="0">{
+                panic(err)</span>
+        }
+        <span class="cov8" title="1">return 1</span>
+}
+
+func runRandTest(rt randTest) error <span class="cov8" title="1">{
+
+        triedb := trie.NewDatabase(memorydb.New())
+
+        tr, _ := trie.New(common.Hash{}, triedb)
+        values := make(map[string]string) // tracks content of the trie
+
+        for i, step := range rt </span><span class="cov8" title="1">{
+                switch step.op </span>{
+                case opUpdate:<span class="cov8" title="1">
+                        tr.Update(step.key, step.value)
+                        values[string(step.key)] = string(step.value)</span>
+                case opDelete:<span class="cov8" title="1">
+                        tr.Delete(step.key)
+                        delete(values, string(step.key))</span>
+                case opGet:<span class="cov8" title="1">
+                        v := tr.Get(step.key)
+                        want := values[string(step.key)]
+                        if string(v) != want </span><span class="cov0" title="0">{
+                                rt[i].err = fmt.Errorf("mismatch for key 0x%x, got 0x%x want 0x%x", step.key, v, want)
+                        }</span>
+                case opCommit:<span class="cov8" title="1">
+                        _, _, rt[i].err = tr.Commit(nil)</span>
+                case opHash:<span class="cov8" title="1">
+                        tr.Hash()</span>
+                case opReset:<span class="cov8" title="1">
+                        hash, _, err := tr.Commit(nil)
+                        if err != nil </span><span class="cov0" title="0">{
+                                return err
+                        }</span>
+                        <span class="cov8" title="1">newtr, err := trie.New(hash, triedb)
+                        if err != nil </span><span class="cov0" title="0">{
+                                return err
+                        }</span>
+                        <span class="cov8" title="1">tr = newtr</span>
+                case opItercheckhash:<span class="cov8" title="1">
+                        checktr, _ := trie.New(common.Hash{}, triedb)
+                        it := trie.NewIterator(tr.NodeIterator(nil))
+                        for it.Next() </span><span class="cov8" title="1">{
+                                checktr.Update(it.Key, it.Value)
+                        }</span>
+                        <span class="cov8" title="1">if tr.Hash() != checktr.Hash() </span><span class="cov0" title="0">{
+                                return fmt.Errorf("hash mismatch in opItercheckhash")
+                        }</span>
+                case opProve:<span class="cov8" title="1">
+                        rt[i].err = tr.Prove(step.key, 0, proofDb{})</span>
+                }
+                // Abort the test on error.
+                <span class="cov8" title="1">if rt[i].err != nil </span><span class="cov0" title="0">{
+                        return rt[i].err
+                }</span>
+        }
+        <span class="cov8" title="1">return nil</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>

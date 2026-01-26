@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>bls12381: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/bls12381/bls12381_fuzz.go (93.0%)</option>
+				
+				<option value="file1">github.com/morph-l2/go-ethereum/tests/fuzzers/bls12381/precompile_fuzzer.go (52.2%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">// Copyright 2021 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+//go:build cgo
+// +build cgo
+
+package bls
+
+import (
+        "bytes"
+        "crypto/rand"
+        "fmt"
+        "io"
+        "math/big"
+
+        "github.com/consensys/gnark-crypto/ecc"
+        gnark "github.com/consensys/gnark-crypto/ecc/bls12-381"
+        "github.com/consensys/gnark-crypto/ecc/bls12-381/fp"
+        "github.com/consensys/gnark-crypto/ecc/bls12-381/fr"
+        blst "github.com/supranational/blst/bindings/go"
+
+        "github.com/morph-l2/go-ethereum/common"
+)
+
+func fuzzG1SubgroupChecks(data []byte) int <span class="cov8" title="1">{
+        input := bytes.NewReader(data)
+        cpG1, blG1, err := getG1Points(input)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">inSubGroupGnark := cpG1.IsInSubGroup()
+        inSubGroupBLST := blG1.InG1()
+        if inSubGroupGnark != inSubGroupBLST </span><span class="cov0" title="0">{
+                panic(fmt.Sprintf("differing subgroup check, gnark %v, blst %v", inSubGroupGnark, inSubGroupBLST))</span>
+        }
+        <span class="cov8" title="1">return 1</span>
+}
+
+func fuzzG2SubgroupChecks(data []byte) int <span class="cov8" title="1">{
+        input := bytes.NewReader(data)
+        gpG2, blG2, err := getG2Points(input)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">inSubGroupGnark := gpG2.IsInSubGroup()
+        inSubGroupBLST := blG2.InG2()
+        if inSubGroupGnark != inSubGroupBLST </span><span class="cov0" title="0">{
+                panic(fmt.Sprintf("differing subgroup check, gnark %v, blst %v", inSubGroupGnark, inSubGroupBLST))</span>
+        }
+        <span class="cov8" title="1">return 1</span>
+}
+
+func fuzzCrossPairing(data []byte) int <span class="cov8" title="1">{
+        input := bytes.NewReader(data)
+
+        // get random G1 points
+        cpG1, blG1, err := getG1Points(input)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+
+        // get random G2 points
+        <span class="cov8" title="1">cpG2, blG2, err := getG2Points(input)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+
+        // compute pairing using gnark
+        <span class="cov8" title="1">cResult, err := gnark.Pair([]gnark.G1Affine{*cpG1}, []gnark.G2Affine{*cpG2})
+        if err != nil </span><span class="cov0" title="0">{
+                panic(fmt.Sprintf("gnark/bls12381 encountered error: %v", err))</span>
+        }
+
+        // compute pairing using blst
+        <span class="cov8" title="1">blstResult := blst.Fp12MillerLoop(blG2, blG1)
+        blstResult.FinalExp()
+        res := massageBLST(blstResult.ToBendian())
+        if !(bytes.Equal(res, cResult.Marshal())) </span><span class="cov0" title="0">{
+                panic("pairing mismatch blst / geth")</span>
+        }
+
+        <span class="cov8" title="1">return 1</span>
+}
+
+func massageBLST(in []byte) []byte <span class="cov8" title="1">{
+        out := make([]byte, len(in))
+        len := 12 * 48
+        // 1
+        copy(out[0:], in[len-1*48:len])
+        copy(out[1*48:], in[len-2*48:len-1*48])
+        // 2
+        copy(out[6*48:], in[len-3*48:len-2*48])
+        copy(out[7*48:], in[len-4*48:len-3*48])
+        // 3
+        copy(out[2*48:], in[len-5*48:len-4*48])
+        copy(out[3*48:], in[len-6*48:len-5*48])
+        // 4
+        copy(out[8*48:], in[len-7*48:len-6*48])
+        copy(out[9*48:], in[len-8*48:len-7*48])
+        // 5
+        copy(out[4*48:], in[len-9*48:len-8*48])
+        copy(out[5*48:], in[len-10*48:len-9*48])
+        // 6
+        copy(out[10*48:], in[len-11*48:len-10*48])
+        copy(out[11*48:], in[len-12*48:len-11*48])
+        return out
+}</span>
+
+func fuzzCrossG1Add(data []byte) int <span class="cov8" title="1">{
+        input := bytes.NewReader(data)
+
+        // get random G1 points
+        cp1, bl1, err := getG1Points(input)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+
+        // get random G1 points
+        <span class="cov8" title="1">cp2, bl2, err := getG1Points(input)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+
+        // compute cp = cp1 + cp2
+        <span class="cov8" title="1">_cp1 := new(gnark.G1Jac).FromAffine(cp1)
+        _cp2 := new(gnark.G1Jac).FromAffine(cp2)
+        cp := new(gnark.G1Affine).FromJacobian(_cp1.AddAssign(_cp2))
+
+        bl3 := blst.P1AffinesAdd([]*blst.P1Affine{bl1, bl2})
+        if !(bytes.Equal(cp.Marshal(), bl3.Serialize())) </span><span class="cov0" title="0">{
+                panic("G1 point addition mismatch blst / geth ")</span>
+        }
+
+        <span class="cov8" title="1">return 1</span>
+}
+
+func fuzzCrossG2Add(data []byte) int <span class="cov8" title="1">{
+        input := bytes.NewReader(data)
+
+        // get random G2 points
+        gp1, bl1, err := getG2Points(input)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+
+        // get random G2 points
+        <span class="cov8" title="1">gp2, bl2, err := getG2Points(input)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+
+        // compute cp = cp1 + cp2
+        <span class="cov8" title="1">_gp1 := new(gnark.G2Jac).FromAffine(gp1)
+        _gp2 := new(gnark.G2Jac).FromAffine(gp2)
+        gp := new(gnark.G2Affine).FromJacobian(_gp1.AddAssign(_gp2))
+
+        bl3 := blst.P2AffinesAdd([]*blst.P2Affine{bl1, bl2})
+        if !(bytes.Equal(gp.Marshal(), bl3.Serialize())) </span><span class="cov0" title="0">{
+                panic("G2 point addition mismatch blst / geth ")</span>
+        }
+
+        <span class="cov8" title="1">return 1</span>
+}
+
+func fuzzCrossG1MultiExp(data []byte) int <span class="cov8" title="1">{
+        var (
+                input        = bytes.NewReader(data)
+                gnarkScalars []fr.Element
+                gnarkPoints  []gnark.G1Affine
+                blstScalars  []*blst.Scalar
+                blstPoints   []*blst.P1Affine
+        )
+        // n random scalars (max 17)
+        for i := 0; i &lt; 17; i++ </span><span class="cov8" title="1">{
+                // note that geth/crypto/bls12381 works only with scalars &lt;= 32bytes
+                s, err := randomScalar(input, fr.Modulus())
+                if err != nil </span><span class="cov8" title="1">{
+                        break</span>
+                }
+                // get a random G1 point as basis
+                <span class="cov8" title="1">cp1, bl1, err := getG1Points(input)
+                if err != nil </span><span class="cov8" title="1">{
+                        break</span>
+                }
+
+                <span class="cov8" title="1">gnarkScalar := new(fr.Element).SetBigInt(s)
+                gnarkScalars = append(gnarkScalars, *gnarkScalar)
+                gnarkPoints = append(gnarkPoints, *cp1)
+
+                blstScalar := new(blst.Scalar).FromBEndian(common.LeftPadBytes(s.Bytes(), 32))
+                blstScalars = append(blstScalars, blstScalar)
+                blstPoints = append(blstPoints, bl1)</span>
+        }
+
+        <span class="cov8" title="1">if len(gnarkScalars) == 0 || len(gnarkScalars) != len(gnarkPoints) </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+
+        // gnark multi exp
+        <span class="cov8" title="1">cp := new(gnark.G1Affine)
+        cp.MultiExp(gnarkPoints, gnarkScalars, ecc.MultiExpConfig{})
+
+        expectedGnark := multiExpG1Gnark(gnarkPoints, gnarkScalars)
+        if !bytes.Equal(cp.Marshal(), expectedGnark.Marshal()) </span><span class="cov0" title="0">{
+                panic("g1 multi exponentiation mismatch")</span>
+        }
+
+        // blst multi exp
+        <span class="cov8" title="1">expectedBlst := blst.P1AffinesMult(blstPoints, blstScalars, 256).ToAffine()
+        if !bytes.Equal(cp.Marshal(), expectedBlst.Serialize()) </span><span class="cov0" title="0">{
+                panic("g1 multi exponentiation mismatch, gnark/blst")</span>
+        }
+        <span class="cov8" title="1">return 1</span>
+}
+
+func fuzzCrossG2MultiExp(data []byte) int <span class="cov8" title="1">{
+        var (
+                input        = bytes.NewReader(data)
+                gnarkScalars []fr.Element
+                gnarkPoints  []gnark.G2Affine
+                blstScalars  []*blst.Scalar
+                blstPoints   []*blst.P2Affine
+        )
+        // n random scalars (max 17)
+        for i := 0; i &lt; 17; i++ </span><span class="cov8" title="1">{
+                // note that geth/crypto/bls12381 works only with scalars &lt;= 32bytes
+                s, err := randomScalar(input, fr.Modulus())
+                if err != nil </span><span class="cov8" title="1">{
+                        break</span>
+                }
+                // get a random G1 point as basis
+                <span class="cov8" title="1">cp1, bl1, err := getG2Points(input)
+                if err != nil </span><span class="cov8" title="1">{
+                        break</span>
+                }
+
+                <span class="cov8" title="1">gnarkScalar := new(fr.Element).SetBigInt(s)
+                gnarkScalars = append(gnarkScalars, *gnarkScalar)
+                gnarkPoints = append(gnarkPoints, *cp1)
+
+                blstScalar := new(blst.Scalar).FromBEndian(common.LeftPadBytes(s.Bytes(), 32))
+                blstScalars = append(blstScalars, blstScalar)
+                blstPoints = append(blstPoints, bl1)</span>
+        }
+
+        <span class="cov8" title="1">if len(gnarkScalars) == 0 || len(gnarkScalars) != len(gnarkPoints) </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+
+        // gnark multi exp
+        <span class="cov8" title="1">cp := new(gnark.G2Affine)
+        cp.MultiExp(gnarkPoints, gnarkScalars, ecc.MultiExpConfig{})
+
+        expectedGnark := multiExpG2Gnark(gnarkPoints, gnarkScalars)
+        if !bytes.Equal(cp.Marshal(), expectedGnark.Marshal()) </span><span class="cov0" title="0">{
+                panic("g1 multi exponentiation mismatch")</span>
+        }
+
+        // blst multi exp
+        <span class="cov8" title="1">expectedBlst := blst.P2AffinesMult(blstPoints, blstScalars, 256).ToAffine()
+        if !bytes.Equal(cp.Marshal(), expectedBlst.Serialize()) </span><span class="cov0" title="0">{
+                panic("g1 multi exponentiation mismatch, gnark/blst")</span>
+        }
+        <span class="cov8" title="1">return 1</span>
+}
+
+func getG1Points(input io.Reader) (*gnark.G1Affine, *blst.P1Affine, error) <span class="cov8" title="1">{
+        // sample a random scalar
+        s, err := randomScalar(input, fp.Modulus())
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, nil, err
+        }</span>
+
+        // compute a random point
+        <span class="cov8" title="1">cp := new(gnark.G1Affine)
+        _, _, g1Gen, _ := gnark.Generators()
+        cp.ScalarMultiplication(&amp;g1Gen, s)
+        cpBytes := cp.Marshal()
+
+        // marshal gnark point -&gt; blst point
+        scalar := new(blst.Scalar).FromBEndian(common.LeftPadBytes(s.Bytes(), 32))
+        p1 := new(blst.P1Affine).From(scalar)
+        blstRes := p1.Serialize()
+        if !bytes.Equal(blstRes, cpBytes) </span><span class="cov0" title="0">{
+                panic(fmt.Sprintf("bytes(blst.G1) != bytes(geth.G1)\nblst.G1: %x\ngeth.G1: %x\n", blstRes, cpBytes))</span>
+        }
+
+        <span class="cov8" title="1">return cp, p1, nil</span>
+}
+
+func getG2Points(input io.Reader) (*gnark.G2Affine, *blst.P2Affine, error) <span class="cov8" title="1">{
+        // sample a random scalar
+        s, err := randomScalar(input, fp.Modulus())
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, nil, err
+        }</span>
+
+        // compute a random point
+        <span class="cov8" title="1">gp := new(gnark.G2Affine)
+        _, _, _, g2Gen := gnark.Generators()
+        gp.ScalarMultiplication(&amp;g2Gen, s)
+        cpBytes := gp.Marshal()
+
+        // marshal gnark point -&gt; blst point
+        // Left pad the scalar to 32 bytes
+        scalar := new(blst.Scalar).FromBEndian(common.LeftPadBytes(s.Bytes(), 32))
+        p2 := new(blst.P2Affine).From(scalar)
+        if !bytes.Equal(p2.Serialize(), cpBytes) </span><span class="cov0" title="0">{
+                panic("bytes(blst.G2) != bytes(bls12381.G2)")</span>
+        }
+
+        <span class="cov8" title="1">return gp, p2, nil</span>
+}
+
+func randomScalar(r io.Reader, max *big.Int) (k *big.Int, err error) <span class="cov8" title="1">{
+        for </span><span class="cov8" title="1">{
+                k, err = rand.Int(r, max)
+                if err != nil || k.Sign() &gt; 0 </span><span class="cov8" title="1">{
+                        return
+                }</span>
+        }
+}
+
+// multiExpG1Gnark is a naive implementation of G1 multi-exponentiation
+func multiExpG1Gnark(gs []gnark.G1Affine, scalars []fr.Element) gnark.G1Affine <span class="cov8" title="1">{
+        res := gnark.G1Affine{}
+        for i := 0; i &lt; len(gs); i++ </span><span class="cov8" title="1">{
+                tmp := new(gnark.G1Affine)
+                sb := scalars[i].Bytes()
+                scalarBytes := new(big.Int).SetBytes(sb[:])
+                tmp.ScalarMultiplication(&amp;gs[i], scalarBytes)
+                res.Add(&amp;res, tmp)
+        }</span>
+        <span class="cov8" title="1">return res</span>
+}
+
+// multiExpG2Gnark is a naive implementation of G2 multi-exponentiation
+func multiExpG2Gnark(gs []gnark.G2Affine, scalars []fr.Element) gnark.G2Affine <span class="cov8" title="1">{
+        res := gnark.G2Affine{}
+        for i := 0; i &lt; len(gs); i++ </span><span class="cov8" title="1">{
+                tmp := new(gnark.G2Affine)
+                sb := scalars[i].Bytes()
+                scalarBytes := new(big.Int).SetBytes(sb[:])
+                tmp.ScalarMultiplication(&amp;gs[i], scalarBytes)
+                res.Add(&amp;res, tmp)
+        }</span>
+        <span class="cov8" title="1">return res</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">// Copyright 2020 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package bls
+
+import (
+        "bytes"
+        "fmt"
+
+        "github.com/morph-l2/go-ethereum/common"
+        "github.com/morph-l2/go-ethereum/core/vm"
+)
+
+const (
+        blsG1Add      = byte(11)
+        blsG1MultiExp = byte(12)
+        blsG2Add      = byte(13)
+        blsG2MultiExp = byte(14)
+        blsPairing    = byte(15)
+        blsMapG1      = byte(16)
+        blsMapG2      = byte(17)
+)
+
+func checkInput(id byte, inputLen int) bool <span class="cov8" title="1">{
+        switch id </span>{
+        case blsG1Add:<span class="cov8" title="1">
+                return inputLen == 256</span>
+        case blsG1MultiExp:<span class="cov8" title="1">
+                return inputLen%160 == 0</span>
+        case blsG2Add:<span class="cov8" title="1">
+                return inputLen == 512</span>
+        case blsG2MultiExp:<span class="cov8" title="1">
+                return inputLen%288 == 0</span>
+        case blsPairing:<span class="cov8" title="1">
+                return inputLen%384 == 0</span>
+        case blsMapG1:<span class="cov8" title="1">
+                return inputLen == 64</span>
+        case blsMapG2:<span class="cov8" title="1">
+                return inputLen == 128</span>
+        }
+        <span class="cov0" title="0">panic("programmer error")</span>
+}
+
+// The function must return
+//
+//   - 1 if the fuzzer should increase priority of the
+//     given input during subsequent fuzzing (for example, the input is lexically
+//     correct and was parsed successfully);
+//   - -1 if the input must not be added to corpus even if gives new coverage; and
+//   - 0 otherwise
+//
+// other values are reserved for future use.
+func fuzz(id byte, data []byte) int <span class="cov8" title="1">{
+        // Even on bad input, it should not crash, so we still test the gas calc
+        precompile := vm.PrecompiledContractsEmerald[common.BytesToAddress([]byte{id})]
+        gas := precompile.RequiredGas(data)
+        if !checkInput(id, len(data)) </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        // If the gas cost is too large (25M), bail out
+        <span class="cov0" title="0">if gas &gt; 25*1000*1000 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov0" title="0">cpy := make([]byte, len(data))
+        copy(cpy, data)
+        _, err := precompile.Run(cpy)
+        if !bytes.Equal(cpy, data) </span><span class="cov0" title="0">{
+                panic(fmt.Sprintf("input data modified, precompile %d: %x %x", id, data, cpy))</span>
+        }
+        <span class="cov0" title="0">if err != nil </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov0" title="0">return 1</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>

@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>txfetcher: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/txfetcher/txfetcher_fuzzer.go (89.8%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">// Copyright 2020 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package txfetcher
+
+import (
+        "bytes"
+        "fmt"
+        "math/big"
+        "math/rand"
+        "time"
+
+        "github.com/morph-l2/go-ethereum/common"
+        "github.com/morph-l2/go-ethereum/common/mclock"
+        "github.com/morph-l2/go-ethereum/core/types"
+        "github.com/morph-l2/go-ethereum/eth/fetcher"
+)
+
+var (
+        peers []string
+        txs   []*types.Transaction
+)
+
+func init() <span class="cov8" title="1">{
+        // Random is nice, but we need it deterministic
+        rand := rand.New(rand.NewSource(0x3a29))
+
+        peers = make([]string, 10)
+        for i := 0; i &lt; len(peers); i++ </span><span class="cov8" title="1">{
+                peers[i] = fmt.Sprintf("Peer #%d", i)
+        }</span>
+        <span class="cov8" title="1">txs = make([]*types.Transaction, 65536) // We need to bump enough to hit all the limits
+        for i := 0; i &lt; len(txs); i++ </span><span class="cov8" title="1">{
+                txs[i] = types.NewTransaction(rand.Uint64(), common.Address{byte(rand.Intn(256))}, new(big.Int), 0, new(big.Int), nil)
+        }</span>
+}
+
+func Fuzz(input []byte) int <span class="cov8" title="1">{
+        // Don't generate insanely large test cases, not much value in them
+        if len(input) &gt; 16*1024 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">verbose := false
+        r := bytes.NewReader(input)
+
+        // Reduce the problem space for certain fuzz runs. Small tx space is better
+        // for testing clashes and in general the fetcher, but we should still run
+        // some tests with large spaces to hit potential issues on limits.
+        limit, err := r.ReadByte()
+        if err != nil </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">switch limit % 4 </span>{
+        case 0:<span class="cov8" title="1">
+                txs = txs[:4]</span>
+        case 1:<span class="cov8" title="1">
+                txs = txs[:256]</span>
+        case 2:<span class="cov8" title="1">
+                txs = txs[:4096]</span>
+        case 3:<span class="cov8" title="1"></span>
+                // Full run
+        }
+        // Create a fetcher and hook into it's simulated fields
+        <span class="cov8" title="1">clock := new(mclock.Simulated)
+        rand := rand.New(rand.NewSource(0x3a29)) // Same used in package tests!!!
+
+        f := fetcher.NewTxFetcherForTests(
+                func(common.Hash) bool </span><span class="cov8" title="1">{ return false }</span>,
+                func(txs []*types.Transaction) []error <span class="cov8" title="1">{
+                        return make([]error, len(txs))
+                }</span>,
+                func(string, []common.Hash) error <span class="cov8" title="1">{ return nil }</span>,
+                clock, rand,
+        )
+        <span class="cov8" title="1">f.Start()
+        defer f.Stop()
+
+        // Try to throw random junk at the fetcher
+        for </span><span class="cov8" title="1">{
+                // Read the next command and abort if we're done
+                cmd, err := r.ReadByte()
+                if err != nil </span><span class="cov8" title="1">{
+                        return 0
+                }</span>
+                <span class="cov8" title="1">switch cmd % 4 </span>{
+                case 0:<span class="cov8" title="1">
+                        // Notify a new set of transactions:
+                        //   Byte 1:             Peer index to announce with
+                        //   Byte 2:             Number of hashes to announce
+                        //   Byte 3-4, 5-6, etc: Transaction indices (2 byte) to announce
+                        peerIdx, err := r.ReadByte()
+                        if err != nil </span><span class="cov8" title="1">{
+                                return 0
+                        }</span>
+                        <span class="cov8" title="1">peer := peers[int(peerIdx)%len(peers)]
+
+                        announceCnt, err := r.ReadByte()
+                        if err != nil </span><span class="cov8" title="1">{
+                                return 0
+                        }</span>
+                        <span class="cov8" title="1">announce := int(announceCnt) % (2 * len(txs)) // No point in generating too many duplicates
+
+                        var (
+                                announceIdxs = make([]int, announce)
+                                announces    = make([]common.Hash, announce)
+                        )
+                        for i := 0; i &lt; len(announces); i++ </span><span class="cov8" title="1">{
+                                annBuf := make([]byte, 2)
+                                if n, err := r.Read(annBuf); err != nil || n != 2 </span><span class="cov8" title="1">{
+                                        return 0
+                                }</span>
+                                <span class="cov8" title="1">announceIdxs[i] = (int(annBuf[0])*256 + int(annBuf[1])) % len(txs)
+                                announces[i] = txs[announceIdxs[i]].Hash()</span>
+                        }
+                        <span class="cov8" title="1">if verbose </span><span class="cov0" title="0">{
+                                fmt.Println("Notify", peer, announceIdxs)
+                        }</span>
+                        <span class="cov8" title="1">if err := f.Notify(peer, announces); err != nil </span><span class="cov0" title="0">{
+                                panic(err)</span>
+                        }
+
+                case 1:<span class="cov8" title="1">
+                        // Deliver a new set of transactions:
+                        //   Byte 1:             Peer index to announce with
+                        //   Byte 2:             Number of hashes to announce
+                        //   Byte 3-4, 5-6, etc: Transaction indices (2 byte) to announce
+                        peerIdx, err := r.ReadByte()
+                        if err != nil </span><span class="cov8" title="1">{
+                                return 0
+                        }</span>
+                        <span class="cov8" title="1">peer := peers[int(peerIdx)%len(peers)]
+
+                        deliverCnt, err := r.ReadByte()
+                        if err != nil </span><span class="cov8" title="1">{
+                                return 0
+                        }</span>
+                        <span class="cov8" title="1">deliver := int(deliverCnt) % (2 * len(txs)) // No point in generating too many duplicates
+
+                        var (
+                                deliverIdxs = make([]int, deliver)
+                                deliveries  = make([]*types.Transaction, deliver)
+                        )
+                        for i := 0; i &lt; len(deliveries); i++ </span><span class="cov8" title="1">{
+                                deliverBuf := make([]byte, 2)
+                                if n, err := r.Read(deliverBuf); err != nil || n != 2 </span><span class="cov8" title="1">{
+                                        return 0
+                                }</span>
+                                <span class="cov8" title="1">deliverIdxs[i] = (int(deliverBuf[0])*256 + int(deliverBuf[1])) % len(txs)
+                                deliveries[i] = txs[deliverIdxs[i]]</span>
+                        }
+                        <span class="cov8" title="1">directFlag, err := r.ReadByte()
+                        if err != nil </span><span class="cov8" title="1">{
+                                return 0
+                        }</span>
+                        <span class="cov8" title="1">direct := (directFlag % 2) == 0
+                        if verbose </span><span class="cov0" title="0">{
+                                fmt.Println("Enqueue", peer, deliverIdxs, direct)
+                        }</span>
+                        <span class="cov8" title="1">if err := f.Enqueue(peer, deliveries, direct); err != nil </span><span class="cov0" title="0">{
+                                panic(err)</span>
+                        }
+
+                case 2:<span class="cov8" title="1">
+                        // Drop a peer:
+                        //   Byte 1: Peer index to drop
+                        peerIdx, err := r.ReadByte()
+                        if err != nil </span><span class="cov8" title="1">{
+                                return 0
+                        }</span>
+                        <span class="cov8" title="1">peer := peers[int(peerIdx)%len(peers)]
+                        if verbose </span><span class="cov0" title="0">{
+                                fmt.Println("Drop", peer)
+                        }</span>
+                        <span class="cov8" title="1">if err := f.Drop(peer); err != nil </span><span class="cov0" title="0">{
+                                panic(err)</span>
+                        }
+
+                case 3:<span class="cov8" title="1">
+                        // Move the simulated clock forward
+                        //   Byte 1: 100ms increment to move forward
+                        tickCnt, err := r.ReadByte()
+                        if err != nil </span><span class="cov8" title="1">{
+                                return 0
+                        }</span>
+                        <span class="cov8" title="1">tick := time.Duration(tickCnt) * 100 * time.Millisecond
+                        if verbose </span><span class="cov0" title="0">{
+                                fmt.Println("Sleep", tick)
+                        }</span>
+                        <span class="cov8" title="1">clock.Run(tick)</span>
+                }
+        }
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
