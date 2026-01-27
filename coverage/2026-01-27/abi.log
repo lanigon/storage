@@ -111,7 +111,6 @@
 === RUN   FuzzABI/48df958132b2208d2aa4b6b85b7ddc888d857617
 === RUN   FuzzABI/48e2139f2af98b8c73a3776a93cc035a031316ed
 === RUN   FuzzABI/4907efbf16057d05309374a44115f611cc41e009
-=== RUN   FuzzABI/4a04daa87cad8289d3fbdb4f12fd286d0271d9bc
 === RUN   FuzzABI/4a83c5652e0ee864008aa0bd56fce3e0ca42c137
 === RUN   FuzzABI/4a8bebc272d27646f2ceeb78a48b3767f165c067
 === RUN   FuzzABI/4af5ee67404a69baf1251bd36253566aa5f64b99
@@ -191,7 +190,6 @@
 === RUN   FuzzABI/80223d689e0e300e381b499c71fbe26268b25f04
 === RUN   FuzzABI/8137193fa0a9a7908d873531f1c443cc9674d5ba
 === RUN   FuzzABI/8264434fda37bdf4e0eefd0ed60f8f8e64981db0
-=== RUN   FuzzABI/82b28a4a909906081bcdfd23480f712172bee4a7
 === RUN   FuzzABI/82b4c21e331d0d32d476d3df154967c34f297c25
 === RUN   FuzzABI/82dcf9cfb70ce5851b22d13a3f29ce8d300ef5eb
 === RUN   FuzzABI/844320e21009979a36bffd4d1d5b4b87d1ad80ca
@@ -264,7 +262,6 @@
 === RUN   FuzzABI/aeb96e6edc63cb2b86de1c22ce1eb13116d6714a
 === RUN   FuzzABI/aee994b1cae9d2e7597de19724c5c483d2a014c8
 === RUN   FuzzABI/af2432cb56708c00c478aa6d00359d4f483bf7f2
-=== RUN   FuzzABI/af74272d113abcd7a830211553584e246691f3f9
 === RUN   FuzzABI/b0705b4a931d7c0fb6f7aa323171f201e2624d58
 === RUN   FuzzABI/b0ff2c13ce9b9a80c7fb7385c41962cdeccdb7a9
 === RUN   FuzzABI/b197e45948cb53f01d16a50c6537be29bb0dd05d
@@ -312,7 +309,6 @@
 === RUN   FuzzABI/cbed2b16e1817aa97d40fdd54013a7b173f1578a
 === RUN   FuzzABI/cd7c1793d90f00606646395adb2767c7afc4f599
 === RUN   FuzzABI/ce23fc3a8c6fd82291fb38c4f5d879e411b1fc96
-=== RUN   FuzzABI/cf9c5c28ebaabc3887968b4b32c8793e8123c8ba
 === RUN   FuzzABI/cfd800ba0ac51145138202c5d117ad1bb082532e
 === RUN   FuzzABI/cfe91dd22e6d6e8af658451c1752d96a20e752cb
 === RUN   FuzzABI/d1aad7e9dcbfed2e9fdd6a986521bd4aa477e69f
@@ -381,7 +377,6 @@
 === RUN   FuzzABI/f3ba5402dac1eb933a1d82c0e949e7fc5f121081
 === RUN   FuzzABI/f58e7f8702a1d2812388fe091033a76aab75bda3
 === RUN   FuzzABI/f5b17137ae2df3ce572b6612f62216bac9de8818
-=== RUN   FuzzABI/f6218bb0250b9a4e932227523f6ddc65321c9bb6
 === RUN   FuzzABI/f79b690f84c8fa825320aa1c30e7b907fedc43fe
 === RUN   FuzzABI/f7b174abc9c5279bdc55dad9ab2f159c7b4fa968
 === RUN   FuzzABI/f80b1f7a4bfb724963f231fd581c0625b4ef76b3
@@ -399,7 +394,6 @@
 === RUN   FuzzABI/fca6230d8640b369c812b4d7c8d7df4ba7e36480
 === RUN   FuzzABI/fd4e6fef4c94ea800cb925dd63ce1ae9b5fb8521
 === RUN   FuzzABI/fd591d6d71e54093cd5cc867df352b836d36b5d5
-=== RUN   FuzzABI/fe6a659eee6790d49630b87321e941c665e9f455
 === RUN   FuzzABI/fe97e74d6bef88466aba3eb470c1f305d3148f7e
 === RUN   FuzzABI/feb037a7edb293ffda0e60b0e5a305ca7d895362
 === RUN   FuzzABI/ffc24c4bc82fcf4cc71d805197a96af0d9e9af30
@@ -512,7 +506,6 @@
     --- PASS: FuzzABI/48df958132b2208d2aa4b6b85b7ddc888d857617 (0.00s)
     --- PASS: FuzzABI/48e2139f2af98b8c73a3776a93cc035a031316ed (0.00s)
     --- PASS: FuzzABI/4907efbf16057d05309374a44115f611cc41e009 (0.00s)
-    --- PASS: FuzzABI/4a04daa87cad8289d3fbdb4f12fd286d0271d9bc (0.00s)
     --- PASS: FuzzABI/4a83c5652e0ee864008aa0bd56fce3e0ca42c137 (0.00s)
     --- PASS: FuzzABI/4a8bebc272d27646f2ceeb78a48b3767f165c067 (0.00s)
     --- PASS: FuzzABI/4af5ee67404a69baf1251bd36253566aa5f64b99 (0.00s)
@@ -592,7 +585,6 @@
     --- PASS: FuzzABI/80223d689e0e300e381b499c71fbe26268b25f04 (0.00s)
     --- PASS: FuzzABI/8137193fa0a9a7908d873531f1c443cc9674d5ba (0.00s)
     --- PASS: FuzzABI/8264434fda37bdf4e0eefd0ed60f8f8e64981db0 (0.00s)
-    --- PASS: FuzzABI/82b28a4a909906081bcdfd23480f712172bee4a7 (0.00s)
     --- PASS: FuzzABI/82b4c21e331d0d32d476d3df154967c34f297c25 (0.00s)
     --- PASS: FuzzABI/82dcf9cfb70ce5851b22d13a3f29ce8d300ef5eb (0.00s)
     --- PASS: FuzzABI/844320e21009979a36bffd4d1d5b4b87d1ad80ca (0.00s)
@@ -665,7 +657,6 @@
     --- PASS: FuzzABI/aeb96e6edc63cb2b86de1c22ce1eb13116d6714a (0.00s)
     --- PASS: FuzzABI/aee994b1cae9d2e7597de19724c5c483d2a014c8 (0.00s)
     --- PASS: FuzzABI/af2432cb56708c00c478aa6d00359d4f483bf7f2 (0.00s)
-    --- PASS: FuzzABI/af74272d113abcd7a830211553584e246691f3f9 (0.00s)
     --- PASS: FuzzABI/b0705b4a931d7c0fb6f7aa323171f201e2624d58 (0.00s)
     --- PASS: FuzzABI/b0ff2c13ce9b9a80c7fb7385c41962cdeccdb7a9 (0.00s)
     --- PASS: FuzzABI/b197e45948cb53f01d16a50c6537be29bb0dd05d (0.00s)
@@ -713,7 +704,6 @@
     --- PASS: FuzzABI/cbed2b16e1817aa97d40fdd54013a7b173f1578a (0.00s)
     --- PASS: FuzzABI/cd7c1793d90f00606646395adb2767c7afc4f599 (0.00s)
     --- PASS: FuzzABI/ce23fc3a8c6fd82291fb38c4f5d879e411b1fc96 (0.00s)
-    --- PASS: FuzzABI/cf9c5c28ebaabc3887968b4b32c8793e8123c8ba (0.00s)
     --- PASS: FuzzABI/cfd800ba0ac51145138202c5d117ad1bb082532e (0.00s)
     --- PASS: FuzzABI/cfe91dd22e6d6e8af658451c1752d96a20e752cb (0.00s)
     --- PASS: FuzzABI/d1aad7e9dcbfed2e9fdd6a986521bd4aa477e69f (0.00s)
@@ -782,7 +772,6 @@
     --- PASS: FuzzABI/f3ba5402dac1eb933a1d82c0e949e7fc5f121081 (0.00s)
     --- PASS: FuzzABI/f58e7f8702a1d2812388fe091033a76aab75bda3 (0.00s)
     --- PASS: FuzzABI/f5b17137ae2df3ce572b6612f62216bac9de8818 (0.00s)
-    --- PASS: FuzzABI/f6218bb0250b9a4e932227523f6ddc65321c9bb6 (0.00s)
     --- PASS: FuzzABI/f79b690f84c8fa825320aa1c30e7b907fedc43fe (0.00s)
     --- PASS: FuzzABI/f7b174abc9c5279bdc55dad9ab2f159c7b4fa968 (0.00s)
     --- PASS: FuzzABI/f80b1f7a4bfb724963f231fd581c0625b4ef76b3 (0.00s)
@@ -800,10 +789,9 @@
     --- PASS: FuzzABI/fca6230d8640b369c812b4d7c8d7df4ba7e36480 (0.00s)
     --- PASS: FuzzABI/fd4e6fef4c94ea800cb925dd63ce1ae9b5fb8521 (0.00s)
     --- PASS: FuzzABI/fd591d6d71e54093cd5cc867df352b836d36b5d5 (0.00s)
-    --- PASS: FuzzABI/fe6a659eee6790d49630b87321e941c665e9f455 (0.00s)
     --- PASS: FuzzABI/fe97e74d6bef88466aba3eb470c1f305d3148f7e (0.00s)
     --- PASS: FuzzABI/feb037a7edb293ffda0e60b0e5a305ca7d895362 (0.00s)
     --- PASS: FuzzABI/ffc24c4bc82fcf4cc71d805197a96af0d9e9af30 (0.00s)
 PASS
 coverage: 83.3% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/abi	0.105s	coverage: 83.3% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/abi	0.107s	coverage: 83.3% of statements
