@@ -1,6 +1,5 @@
 === RUN   FuzzRlp
 === RUN   FuzzRlp/004ebd07f456e1bb030d2e708624d29d91f9c813
-=== RUN   FuzzRlp/01c18100df6fd6d243895f6e17eb5845432aa51b
 === RUN   FuzzRlp/027a97ba5d360fd66ff073cb47da36e54fd815ad
 === RUN   FuzzRlp/029c61fb4709f12c50c654b47f4f586c7dcd226f
 === RUN   FuzzRlp/02b1e89a4e32f5041fae105cb0da187d052c4f98
@@ -53,13 +52,11 @@
 === RUN   FuzzRlp/1c19ab4795c2792e5f2f33d5bcd94b07898b2481
 === RUN   FuzzRlp/1c68ba121e09694b70d3cbfae5613a73bef35292
 === RUN   FuzzRlp/1ed1a1fb5d0f1776d5544254e4a4a2ddeaf49371
-=== RUN   FuzzRlp/1f0d601cc545516898ef08e012bc7e1ae371988d
 === RUN   FuzzRlp/1f5efa761ab84513ece757bbd54160c5ca8f416a
 === RUN   FuzzRlp/1fcd488cbf92dd0e1e8d6e7ec65a6e58408e0e44
 === RUN   FuzzRlp/1ffa7ce0861cddf5a3773092b7e4db7e618749a1
 === RUN   FuzzRlp/2031628cdb88d1ff0654321ab9183f3586664f8f
 === RUN   FuzzRlp/2090388879b9a93a897025b66feee93038f6cea9
-=== RUN   FuzzRlp/20ffc72abf2d8162fb8b4ccb8bc788501e1f3237
 === RUN   FuzzRlp/21817b1550ffc33ddeb1ed976d53d29e3a8f8822
 === RUN   FuzzRlp/22d7e6f214d540b41d4126499da1af923e550ad2
 === RUN   FuzzRlp/23258c358604437dafd638dae12effc018ddfdb6
@@ -70,7 +67,6 @@
 === RUN   FuzzRlp/29a7b9540177fecfe38bd539b06d7d2529537c26
 === RUN   FuzzRlp/29d57200f794cb69255cad6a9c21feacfe86b956
 === RUN   FuzzRlp/29e3002f36a1dfbb6c232afc840070bd61b1f706
-=== RUN   FuzzRlp/2b58036889cf19e26fda22a866d89fecb28ee1f8
 === RUN   FuzzRlp/2b98efa667d074d84ae9de6b9ca5afb6470c8eaa
 === RUN   FuzzRlp/2c1344e34c52a0fae616c70ee70db971df16fca3
 === RUN   FuzzRlp/2e3d6857b6d93c7bdd55ddb36418b01b8d3eb290
@@ -129,11 +125,8 @@
 === RUN   FuzzRlp/4b92d7eb4006b787d6d89ff746c9d228571c7d7f
 === RUN   FuzzRlp/4beb92c39efa72f1b6a207f5fb7d7eb4179c292d
 === RUN   FuzzRlp/4c193d75a629281d946292020ddd0ccc35a71d16
-=== RUN   FuzzRlp/4d05c999f0590a346df746ba270cb4ce26539ca0
 === RUN   FuzzRlp/4d80d87ddfbe12437c6ad501b8ac922726cdfb8f
 === RUN   FuzzRlp/4d985881695996d5b314752e0fc8afd364b355b9
-=== RUN   FuzzRlp/4da3b204b64ccfb7fc3ebda53c676f8b2fb5f8e1
-=== RUN   FuzzRlp/4e1266179f5e9595673184e6c0865113489c38f9
 === RUN   FuzzRlp/4ef20b0abd81f27cb4f53c153c902881f34a6188
 === RUN   FuzzRlp/4f42286906deb900bb533c29c5fa56bcaf539959
 === RUN   FuzzRlp/4fb8a7c7b6ab9ea782e8e393e1422da1dd0d2aa0
@@ -186,7 +179,6 @@
 === RUN   FuzzRlp/676e7cc6c1199800c939b2fb13f6c4ce3363ae80
 === RUN   FuzzRlp/6848df110bfd5f3654fe75f2b50c1de2b375babd
 === RUN   FuzzRlp/68b564aa45228ba0a7638261d1170a64633729ac
-=== RUN   FuzzRlp/68b769545f59ded0d4b8d1844e31031cdb37cd88
 === RUN   FuzzRlp/68be5e287256afac46ac6f3c67b35f3f75c720a5
 === RUN   FuzzRlp/69c6f6720ecfe0850c1d532e46e0fb4b54c89e31
 === RUN   FuzzRlp/6aaff2ab910ad9a04d49bf86990ed41be51ca918
@@ -207,8 +199,6 @@
 === RUN   FuzzRlp/7441065bb04183281bd3a6d73a9407bd56c25aa0
 === RUN   FuzzRlp/748e7ce41bff0e3b9dfd63115d09bde6fb0bcc4b
 === RUN   FuzzRlp/7493302a9f5d3c92ccfd103fcf3e02d8d3b6c277
-=== RUN   FuzzRlp/7530d333a6d6eaed8369be961101e180b65a80d2
-=== RUN   FuzzRlp/75d20097b31a42da605fd3021980da1886bc2b06
 === RUN   FuzzRlp/769244700d14b7ebafe5b5f16abdeaf3651fc47e
 === RUN   FuzzRlp/770b2933a250fe02ae2d83c2a25d5837d289d83c
 === RUN   FuzzRlp/7727c41f7251d4d639e50eadd7ffd05f15ca7317
@@ -225,7 +215,6 @@
 === RUN   FuzzRlp/7bddaee4d879d6b6c735af8a5b701c4c0b76a229
 === RUN   FuzzRlp/7cc62dc7f49655cd06749bac93bd2a9187c29090
 === RUN   FuzzRlp/7db0b72bc9dba7a4fe8c773f355c76fcc45fcc53
-=== RUN   FuzzRlp/7e131236864d13a9e5de31f2de22823517b5cd80
 === RUN   FuzzRlp/7e75079f25b7b39bc65aa7e9f391e0c419c000e9
 === RUN   FuzzRlp/7f2eb97bc9fb2352abe05a2325e07280f6b75401
 === RUN   FuzzRlp/7f50132af2ac98baa78206b95b1b3e384cb8ffdf
@@ -273,7 +262,6 @@
 === RUN   FuzzRlp/99682bf71bc958cb857b504af6a1f76ff81e92f6
 === RUN   FuzzRlp/99f7daba729d79986de04bb287add69c85738e72
 === RUN   FuzzRlp/9b0f8b1701a1a90e9e202a6d23d8873399cbd246
-=== RUN   FuzzRlp/9b759ac2858055e9e529535c1aa29e952d53485c
 === RUN   FuzzRlp/9b80d500bcc904e4637e8be1a75fc9a6b432ac9b
 === RUN   FuzzRlp/9ce67401a286dc2e3b8c1c80999f148654a1dffb
 === RUN   FuzzRlp/9e11fc4e8e2f7ca07692a3d11b4a4a8d52e26b11
@@ -297,7 +285,6 @@
 === RUN   FuzzRlp/a6c4a45d039c60c9561c05935a58a80b827ff803
 === RUN   FuzzRlp/a732e67d8ba1528292b55f5c4b28b193ad6ce8e5
 === RUN   FuzzRlp/a74b0288333cf4cb67c1fb2bedf5dba8d215d30d
-=== RUN   FuzzRlp/a7c78e40b4f46681e8955b27c551a0d4d26b19db
 === RUN   FuzzRlp/a95a709c7a9c6386bd4212e9e8c87a13128934af
 === RUN   FuzzRlp/a960f597e46c5b2fc213b3daa24702bcb15d6a78
 === RUN   FuzzRlp/a979ef10cc6f6a36df6b8a323307ee3bb2e2db9c
@@ -356,7 +343,6 @@
 === RUN   FuzzRlp/c95494a0e928b914a32b72ef8cb24e78d865156d
 === RUN   FuzzRlp/c97310d5fe7005e2617f7918bfded749013921b3
 === RUN   FuzzRlp/c974e6c10944b8669a6390a4c3b0c7eb421ec442
-=== RUN   FuzzRlp/c9cd6ce7c6df8e946103b792a4566ef9c0a55537
 === RUN   FuzzRlp/c9e2b508cf56db9363a5d897ea637f4b71f1ef36
 === RUN   FuzzRlp/c9e8c7c3de82d42f47207bcfea7aa2e8f5ad1e49
 === RUN   FuzzRlp/ca73aaf54fb6b34fe36f7f1d21524a527a15ed1b
@@ -369,7 +355,6 @@
 === RUN   FuzzRlp/cddc95e941bdf109a04113e6702c880d0a9c8a2c
 === RUN   FuzzRlp/ce0a63ea818b307f2fd1c83918e1fcca08fa1c33
 === RUN   FuzzRlp/ce27c86e1b76b687874ddaa413997af6dd0ef939
-=== RUN   FuzzRlp/ce2969868706288b72113fa51193848910a09b04
 === RUN   FuzzRlp/ce2b80f3ef5bfa16c7e6d7fba152e92e7baf7a56
 === RUN   FuzzRlp/ce85b9b3e486976b028a05160d032b4e13b20899
 === RUN   FuzzRlp/cf1141e85813211eaafe6dc87c73562c2497d045
@@ -385,7 +370,6 @@
 === RUN   FuzzRlp/d881a5d40f469404417533a4e1948131d9f1c27a
 === RUN   FuzzRlp/da4481f54c1cc484535de11fef30a70fe385812f
 === RUN   FuzzRlp/da66180699cf86a08be25d9bf73d22d048382d17
-=== RUN   FuzzRlp/db91f89e89ad965d9f6c58998c52d7bc7ed60449
 === RUN   FuzzRlp/dba0fcbb8757bd8c60a03407b0fe8fdae0fca36c
 === RUN   FuzzRlp/dc663403864775d0763364811c2811172f4b6408
 === RUN   FuzzRlp/dceceda36eaae7e12a12a880dc00eca5a413b3b6
@@ -414,7 +398,6 @@
 === RUN   FuzzRlp/e81d9116af71a9aa7c9a9324f2e86b39cf47c7b2
 === RUN   FuzzRlp/e8a9c3bc491e41493690f784603912f5193ac8bb
 === RUN   FuzzRlp/e8f079b2f1e1edf2d326c37888339dcc74277ff0
-=== RUN   FuzzRlp/e90d11dee0aac2b1ec34ce7f753b564976ed2395
 === RUN   FuzzRlp/e91f3ba235d04081b41275eed3e80f58b0b7af2a
 === RUN   FuzzRlp/e9a71d285f01ee81be03e47f66083102f1fb242a
 === RUN   FuzzRlp/eab833ef2ebfef99f03e7fcfb443c7cc575e99e5
@@ -426,7 +409,6 @@
 === RUN   FuzzRlp/efe223e5c1ef0889701b3497c6225d98ba52c451
 === RUN   FuzzRlp/f021f7caeef27bb070afce7a2ea7a456fb3bd336
 === RUN   FuzzRlp/f0469d61931c8c98919b414fe734df36bb172f30
-=== RUN   FuzzRlp/f0849a7016ac2a068c67976ef732c3ce269cdd94
 === RUN   FuzzRlp/f2641776a1e4cc8a8850b6bff2ed7328750dd474
 === RUN   FuzzRlp/f29c4bab4ed67c2071ccc593f1db912a5d3eb6ce
 === RUN   FuzzRlp/f30d6a414035f3accb1901c01e75791749601998
@@ -445,7 +427,6 @@
 === RUN   FuzzRlp/ff3562514a5e73a2304d790e9dff9c35c30b1ebb
 --- PASS: FuzzRlp (0.03s)
     --- PASS: FuzzRlp/004ebd07f456e1bb030d2e708624d29d91f9c813 (0.00s)
-    --- PASS: FuzzRlp/01c18100df6fd6d243895f6e17eb5845432aa51b (0.00s)
     --- PASS: FuzzRlp/027a97ba5d360fd66ff073cb47da36e54fd815ad (0.00s)
     --- PASS: FuzzRlp/029c61fb4709f12c50c654b47f4f586c7dcd226f (0.00s)
     --- PASS: FuzzRlp/02b1e89a4e32f5041fae105cb0da187d052c4f98 (0.00s)
@@ -498,13 +479,11 @@
     --- PASS: FuzzRlp/1c19ab4795c2792e5f2f33d5bcd94b07898b2481 (0.00s)
     --- PASS: FuzzRlp/1c68ba121e09694b70d3cbfae5613a73bef35292 (0.00s)
     --- PASS: FuzzRlp/1ed1a1fb5d0f1776d5544254e4a4a2ddeaf49371 (0.00s)
-    --- PASS: FuzzRlp/1f0d601cc545516898ef08e012bc7e1ae371988d (0.00s)
     --- PASS: FuzzRlp/1f5efa761ab84513ece757bbd54160c5ca8f416a (0.00s)
     --- PASS: FuzzRlp/1fcd488cbf92dd0e1e8d6e7ec65a6e58408e0e44 (0.00s)
     --- PASS: FuzzRlp/1ffa7ce0861cddf5a3773092b7e4db7e618749a1 (0.00s)
     --- PASS: FuzzRlp/2031628cdb88d1ff0654321ab9183f3586664f8f (0.00s)
     --- PASS: FuzzRlp/2090388879b9a93a897025b66feee93038f6cea9 (0.00s)
-    --- PASS: FuzzRlp/20ffc72abf2d8162fb8b4ccb8bc788501e1f3237 (0.00s)
     --- PASS: FuzzRlp/21817b1550ffc33ddeb1ed976d53d29e3a8f8822 (0.00s)
     --- PASS: FuzzRlp/22d7e6f214d540b41d4126499da1af923e550ad2 (0.00s)
     --- PASS: FuzzRlp/23258c358604437dafd638dae12effc018ddfdb6 (0.00s)
@@ -515,7 +494,6 @@
     --- PASS: FuzzRlp/29a7b9540177fecfe38bd539b06d7d2529537c26 (0.00s)
     --- PASS: FuzzRlp/29d57200f794cb69255cad6a9c21feacfe86b956 (0.00s)
     --- PASS: FuzzRlp/29e3002f36a1dfbb6c232afc840070bd61b1f706 (0.00s)
-    --- PASS: FuzzRlp/2b58036889cf19e26fda22a866d89fecb28ee1f8 (0.00s)
     --- PASS: FuzzRlp/2b98efa667d074d84ae9de6b9ca5afb6470c8eaa (0.00s)
     --- PASS: FuzzRlp/2c1344e34c52a0fae616c70ee70db971df16fca3 (0.00s)
     --- PASS: FuzzRlp/2e3d6857b6d93c7bdd55ddb36418b01b8d3eb290 (0.00s)
@@ -574,11 +552,8 @@
     --- PASS: FuzzRlp/4b92d7eb4006b787d6d89ff746c9d228571c7d7f (0.00s)
     --- PASS: FuzzRlp/4beb92c39efa72f1b6a207f5fb7d7eb4179c292d (0.00s)
     --- PASS: FuzzRlp/4c193d75a629281d946292020ddd0ccc35a71d16 (0.00s)
-    --- PASS: FuzzRlp/4d05c999f0590a346df746ba270cb4ce26539ca0 (0.00s)
     --- PASS: FuzzRlp/4d80d87ddfbe12437c6ad501b8ac922726cdfb8f (0.00s)
     --- PASS: FuzzRlp/4d985881695996d5b314752e0fc8afd364b355b9 (0.00s)
-    --- PASS: FuzzRlp/4da3b204b64ccfb7fc3ebda53c676f8b2fb5f8e1 (0.00s)
-    --- PASS: FuzzRlp/4e1266179f5e9595673184e6c0865113489c38f9 (0.00s)
     --- PASS: FuzzRlp/4ef20b0abd81f27cb4f53c153c902881f34a6188 (0.00s)
     --- PASS: FuzzRlp/4f42286906deb900bb533c29c5fa56bcaf539959 (0.00s)
     --- PASS: FuzzRlp/4fb8a7c7b6ab9ea782e8e393e1422da1dd0d2aa0 (0.00s)
@@ -631,7 +606,6 @@
     --- PASS: FuzzRlp/676e7cc6c1199800c939b2fb13f6c4ce3363ae80 (0.00s)
     --- PASS: FuzzRlp/6848df110bfd5f3654fe75f2b50c1de2b375babd (0.00s)
     --- PASS: FuzzRlp/68b564aa45228ba0a7638261d1170a64633729ac (0.00s)
-    --- PASS: FuzzRlp/68b769545f59ded0d4b8d1844e31031cdb37cd88 (0.00s)
     --- PASS: FuzzRlp/68be5e287256afac46ac6f3c67b35f3f75c720a5 (0.00s)
     --- PASS: FuzzRlp/69c6f6720ecfe0850c1d532e46e0fb4b54c89e31 (0.00s)
     --- PASS: FuzzRlp/6aaff2ab910ad9a04d49bf86990ed41be51ca918 (0.00s)
@@ -652,8 +626,6 @@
     --- PASS: FuzzRlp/7441065bb04183281bd3a6d73a9407bd56c25aa0 (0.00s)
     --- PASS: FuzzRlp/748e7ce41bff0e3b9dfd63115d09bde6fb0bcc4b (0.00s)
     --- PASS: FuzzRlp/7493302a9f5d3c92ccfd103fcf3e02d8d3b6c277 (0.00s)
-    --- PASS: FuzzRlp/7530d333a6d6eaed8369be961101e180b65a80d2 (0.00s)
-    --- PASS: FuzzRlp/75d20097b31a42da605fd3021980da1886bc2b06 (0.00s)
     --- PASS: FuzzRlp/769244700d14b7ebafe5b5f16abdeaf3651fc47e (0.00s)
     --- PASS: FuzzRlp/770b2933a250fe02ae2d83c2a25d5837d289d83c (0.00s)
     --- PASS: FuzzRlp/7727c41f7251d4d639e50eadd7ffd05f15ca7317 (0.00s)
@@ -670,7 +642,6 @@
     --- PASS: FuzzRlp/7bddaee4d879d6b6c735af8a5b701c4c0b76a229 (0.00s)
     --- PASS: FuzzRlp/7cc62dc7f49655cd06749bac93bd2a9187c29090 (0.00s)
     --- PASS: FuzzRlp/7db0b72bc9dba7a4fe8c773f355c76fcc45fcc53 (0.00s)
-    --- PASS: FuzzRlp/7e131236864d13a9e5de31f2de22823517b5cd80 (0.00s)
     --- PASS: FuzzRlp/7e75079f25b7b39bc65aa7e9f391e0c419c000e9 (0.00s)
     --- PASS: FuzzRlp/7f2eb97bc9fb2352abe05a2325e07280f6b75401 (0.00s)
     --- PASS: FuzzRlp/7f50132af2ac98baa78206b95b1b3e384cb8ffdf (0.00s)
@@ -718,7 +689,6 @@
     --- PASS: FuzzRlp/99682bf71bc958cb857b504af6a1f76ff81e92f6 (0.00s)
     --- PASS: FuzzRlp/99f7daba729d79986de04bb287add69c85738e72 (0.00s)
     --- PASS: FuzzRlp/9b0f8b1701a1a90e9e202a6d23d8873399cbd246 (0.00s)
-    --- PASS: FuzzRlp/9b759ac2858055e9e529535c1aa29e952d53485c (0.00s)
     --- PASS: FuzzRlp/9b80d500bcc904e4637e8be1a75fc9a6b432ac9b (0.00s)
     --- PASS: FuzzRlp/9ce67401a286dc2e3b8c1c80999f148654a1dffb (0.00s)
     --- PASS: FuzzRlp/9e11fc4e8e2f7ca07692a3d11b4a4a8d52e26b11 (0.00s)
@@ -742,7 +712,6 @@
     --- PASS: FuzzRlp/a6c4a45d039c60c9561c05935a58a80b827ff803 (0.00s)
     --- PASS: FuzzRlp/a732e67d8ba1528292b55f5c4b28b193ad6ce8e5 (0.00s)
     --- PASS: FuzzRlp/a74b0288333cf4cb67c1fb2bedf5dba8d215d30d (0.00s)
-    --- PASS: FuzzRlp/a7c78e40b4f46681e8955b27c551a0d4d26b19db (0.00s)
     --- PASS: FuzzRlp/a95a709c7a9c6386bd4212e9e8c87a13128934af (0.00s)
     --- PASS: FuzzRlp/a960f597e46c5b2fc213b3daa24702bcb15d6a78 (0.00s)
     --- PASS: FuzzRlp/a979ef10cc6f6a36df6b8a323307ee3bb2e2db9c (0.00s)
@@ -801,7 +770,6 @@
     --- PASS: FuzzRlp/c95494a0e928b914a32b72ef8cb24e78d865156d (0.00s)
     --- PASS: FuzzRlp/c97310d5fe7005e2617f7918bfded749013921b3 (0.00s)
     --- PASS: FuzzRlp/c974e6c10944b8669a6390a4c3b0c7eb421ec442 (0.00s)
-    --- PASS: FuzzRlp/c9cd6ce7c6df8e946103b792a4566ef9c0a55537 (0.00s)
     --- PASS: FuzzRlp/c9e2b508cf56db9363a5d897ea637f4b71f1ef36 (0.00s)
     --- PASS: FuzzRlp/c9e8c7c3de82d42f47207bcfea7aa2e8f5ad1e49 (0.00s)
     --- PASS: FuzzRlp/ca73aaf54fb6b34fe36f7f1d21524a527a15ed1b (0.00s)
@@ -814,7 +782,6 @@
     --- PASS: FuzzRlp/cddc95e941bdf109a04113e6702c880d0a9c8a2c (0.00s)
     --- PASS: FuzzRlp/ce0a63ea818b307f2fd1c83918e1fcca08fa1c33 (0.00s)
     --- PASS: FuzzRlp/ce27c86e1b76b687874ddaa413997af6dd0ef939 (0.00s)
-    --- PASS: FuzzRlp/ce2969868706288b72113fa51193848910a09b04 (0.00s)
     --- PASS: FuzzRlp/ce2b80f3ef5bfa16c7e6d7fba152e92e7baf7a56 (0.00s)
     --- PASS: FuzzRlp/ce85b9b3e486976b028a05160d032b4e13b20899 (0.00s)
     --- PASS: FuzzRlp/cf1141e85813211eaafe6dc87c73562c2497d045 (0.00s)
@@ -830,7 +797,6 @@
     --- PASS: FuzzRlp/d881a5d40f469404417533a4e1948131d9f1c27a (0.00s)
     --- PASS: FuzzRlp/da4481f54c1cc484535de11fef30a70fe385812f (0.00s)
     --- PASS: FuzzRlp/da66180699cf86a08be25d9bf73d22d048382d17 (0.00s)
-    --- PASS: FuzzRlp/db91f89e89ad965d9f6c58998c52d7bc7ed60449 (0.00s)
     --- PASS: FuzzRlp/dba0fcbb8757bd8c60a03407b0fe8fdae0fca36c (0.00s)
     --- PASS: FuzzRlp/dc663403864775d0763364811c2811172f4b6408 (0.00s)
     --- PASS: FuzzRlp/dceceda36eaae7e12a12a880dc00eca5a413b3b6 (0.00s)
@@ -859,7 +825,6 @@
     --- PASS: FuzzRlp/e81d9116af71a9aa7c9a9324f2e86b39cf47c7b2 (0.00s)
     --- PASS: FuzzRlp/e8a9c3bc491e41493690f784603912f5193ac8bb (0.00s)
     --- PASS: FuzzRlp/e8f079b2f1e1edf2d326c37888339dcc74277ff0 (0.00s)
-    --- PASS: FuzzRlp/e90d11dee0aac2b1ec34ce7f753b564976ed2395 (0.00s)
     --- PASS: FuzzRlp/e91f3ba235d04081b41275eed3e80f58b0b7af2a (0.00s)
     --- PASS: FuzzRlp/e9a71d285f01ee81be03e47f66083102f1fb242a (0.00s)
     --- PASS: FuzzRlp/eab833ef2ebfef99f03e7fcfb443c7cc575e99e5 (0.00s)
@@ -871,7 +836,6 @@
     --- PASS: FuzzRlp/efe223e5c1ef0889701b3497c6225d98ba52c451 (0.00s)
     --- PASS: FuzzRlp/f021f7caeef27bb070afce7a2ea7a456fb3bd336 (0.00s)
     --- PASS: FuzzRlp/f0469d61931c8c98919b414fe734df36bb172f30 (0.00s)
-    --- PASS: FuzzRlp/f0849a7016ac2a068c67976ef732c3ce269cdd94 (0.00s)
     --- PASS: FuzzRlp/f2641776a1e4cc8a8850b6bff2ed7328750dd474 (0.00s)
     --- PASS: FuzzRlp/f29c4bab4ed67c2071ccc593f1db912a5d3eb6ce (0.00s)
     --- PASS: FuzzRlp/f30d6a414035f3accb1901c01e75791749601998 (0.00s)
@@ -890,4 +854,4 @@
     --- PASS: FuzzRlp/ff3562514a5e73a2304d790e9dff9c35c30b1ebb (0.00s)
 PASS
 coverage: 93.6% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/rlp	0.056s	coverage: 93.6% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/rlp	0.041s	coverage: 93.6% of statements
