@@ -24,7 +24,6 @@
 === RUN   FuzzStacktrie/12a6cfe0e2223500f5709071664c2d69efe707c9
 === RUN   FuzzStacktrie/133c2b4133f514f35b68094995207f8bb4907e6e
 === RUN   FuzzStacktrie/13e27699505fe5e77b4dfd38836aca4cfca7ee4f
-=== RUN   FuzzStacktrie/168e97b3825f8f1f1f72c4bf3ce8e4e212ab5522
 === RUN   FuzzStacktrie/19087c3ed1acf7f67227275eea9c26d07866b35a
 === RUN   FuzzStacktrie/1961cca969c34b33cb61e12fbdc31aa891b26200
 === RUN   FuzzStacktrie/1999666312a6666e20481432c37fbb897eba99d8
@@ -69,7 +68,6 @@
 === RUN   FuzzStacktrie/3162476ab1088d7cb0498a2bf09632aab8ae1a2d
 === RUN   FuzzStacktrie/316a5fce694f33b316e4abca0b40f3decf381e01
 === RUN   FuzzStacktrie/31d4cffcdda18c8c03b6d5ac9d33511dfa290186
-=== RUN   FuzzStacktrie/3322b3cd8b3966b3305cb185143628c0e164c4d0
 === RUN   FuzzStacktrie/33fb31646f8ee4f18bf5ea9f73780027d209707b
 === RUN   FuzzStacktrie/350022739a986c5208bdeab0baf3851f07caa22d
 === RUN   FuzzStacktrie/35ce2043128c2cd59c1deb151c9b271f71559264
@@ -230,7 +228,6 @@
 === RUN   FuzzStacktrie/aa33b21dfc03acc3cdf695b8eda6c6c736e0fa15
 === RUN   FuzzStacktrie/ab8b4e226af66222388d352f51050dd08a85e362
 === RUN   FuzzStacktrie/ac16c37ddcb42749f9ea365a669fef0d41090862
-=== RUN   FuzzStacktrie/adc70a32eeb6e623b48910ec0f72929cb9cde8a6
 === RUN   FuzzStacktrie/ae1b903699af54678201e85d24f9d0b1b89c46a4
 === RUN   FuzzStacktrie/ae743137a5077212005c49dbcf4a17e3ad16c002
 === RUN   FuzzStacktrie/afdc6b413ee79c51de7d970f41f69fb32ea226e9
@@ -308,7 +305,6 @@
 === RUN   FuzzStacktrie/f143b7d1bd3486c58d6f36539816adbf4f211ec2
 === RUN   FuzzStacktrie/f1ba2ccdb2599bd824913b1821c99de8a751ef15
 === RUN   FuzzStacktrie/f1fb880eb7e8ce497337e4387f2a8835cb52a52d
-=== RUN   FuzzStacktrie/f435f666a16633952a5fc4b60df650f03bbe508c
 === RUN   FuzzStacktrie/f442db17a0ce39b5d1dd4a94522ae9eec1fc5080
 === RUN   FuzzStacktrie/f4b98c31dfc8782c4178be177fa51f216b97f209
 === RUN   FuzzStacktrie/f4cb3e93afa319474b6ff7a8712f33d4e04febb3
@@ -356,7 +352,6 @@
     --- PASS: FuzzStacktrie/12a6cfe0e2223500f5709071664c2d69efe707c9 (0.00s)
     --- PASS: FuzzStacktrie/133c2b4133f514f35b68094995207f8bb4907e6e (0.00s)
     --- PASS: FuzzStacktrie/13e27699505fe5e77b4dfd38836aca4cfca7ee4f (0.00s)
-    --- PASS: FuzzStacktrie/168e97b3825f8f1f1f72c4bf3ce8e4e212ab5522 (0.00s)
     --- PASS: FuzzStacktrie/19087c3ed1acf7f67227275eea9c26d07866b35a (0.00s)
     --- PASS: FuzzStacktrie/1961cca969c34b33cb61e12fbdc31aa891b26200 (0.00s)
     --- PASS: FuzzStacktrie/1999666312a6666e20481432c37fbb897eba99d8 (0.00s)
@@ -401,7 +396,6 @@
     --- PASS: FuzzStacktrie/3162476ab1088d7cb0498a2bf09632aab8ae1a2d (0.00s)
     --- PASS: FuzzStacktrie/316a5fce694f33b316e4abca0b40f3decf381e01 (0.00s)
     --- PASS: FuzzStacktrie/31d4cffcdda18c8c03b6d5ac9d33511dfa290186 (0.00s)
-    --- PASS: FuzzStacktrie/3322b3cd8b3966b3305cb185143628c0e164c4d0 (0.00s)
     --- PASS: FuzzStacktrie/33fb31646f8ee4f18bf5ea9f73780027d209707b (0.00s)
     --- PASS: FuzzStacktrie/350022739a986c5208bdeab0baf3851f07caa22d (0.00s)
     --- PASS: FuzzStacktrie/35ce2043128c2cd59c1deb151c9b271f71559264 (0.00s)
@@ -562,7 +556,6 @@
     --- PASS: FuzzStacktrie/aa33b21dfc03acc3cdf695b8eda6c6c736e0fa15 (0.00s)
     --- PASS: FuzzStacktrie/ab8b4e226af66222388d352f51050dd08a85e362 (0.00s)
     --- PASS: FuzzStacktrie/ac16c37ddcb42749f9ea365a669fef0d41090862 (0.00s)
-    --- PASS: FuzzStacktrie/adc70a32eeb6e623b48910ec0f72929cb9cde8a6 (0.00s)
     --- PASS: FuzzStacktrie/ae1b903699af54678201e85d24f9d0b1b89c46a4 (0.00s)
     --- PASS: FuzzStacktrie/ae743137a5077212005c49dbcf4a17e3ad16c002 (0.00s)
     --- PASS: FuzzStacktrie/afdc6b413ee79c51de7d970f41f69fb32ea226e9 (0.00s)
@@ -640,7 +633,6 @@
     --- PASS: FuzzStacktrie/f143b7d1bd3486c58d6f36539816adbf4f211ec2 (0.00s)
     --- PASS: FuzzStacktrie/f1ba2ccdb2599bd824913b1821c99de8a751ef15 (0.00s)
     --- PASS: FuzzStacktrie/f1fb880eb7e8ce497337e4387f2a8835cb52a52d (0.00s)
-    --- PASS: FuzzStacktrie/f435f666a16633952a5fc4b60df650f03bbe508c (0.00s)
     --- PASS: FuzzStacktrie/f442db17a0ce39b5d1dd4a94522ae9eec1fc5080 (0.00s)
     --- PASS: FuzzStacktrie/f4b98c31dfc8782c4178be177fa51f216b97f209 (0.00s)
     --- PASS: FuzzStacktrie/f4cb3e93afa319474b6ff7a8712f33d4e04febb3 (0.00s)
@@ -664,5 +656,5 @@
     --- PASS: FuzzStacktrie/ffbb0918862706ce19a03acd6caf9441dea293c9 (0.00s)
 PASS
 coverage: 75.0% of statements
-ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/stacktrie	0.172s	coverage: 75.0% of statements
+ok  	github.com/morph-l2/go-ethereum/tests/fuzzers/stacktrie	0.167s	coverage: 75.0% of statements
 	github.com/morph-l2/go-ethereum/tests/fuzzers/stacktrie/debug		coverage: 0.0% of statements
