@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>debug: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/morph-l2/go-ethereum/tests/fuzzers/les/debug/main.go (0.0%)</option>
+				
+				<option value="file1">github.com/morph-l2/go-ethereum/tests/fuzzers/les/les-fuzzer.go (96.6%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">// Copyright 2020 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package main
+
+import (
+        "fmt"
+        "io/ioutil"
+        "os"
+
+        "github.com/morph-l2/go-ethereum/tests/fuzzers/les"
+)
+
+func main() <span class="cov0" title="0">{
+        if len(os.Args) != 2 </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Usage: debug &lt;file&gt;\n")
+                fmt.Fprintf(os.Stderr, "Example\n")
+                fmt.Fprintf(os.Stderr, "        $ debug ../crashers/4bbef6857c733a87ecf6fd8b9e7238f65eb9862a\n")
+                os.Exit(1)
+        }</span>
+        <span class="cov0" title="0">crasher := os.Args[1]
+        data, err := ioutil.ReadFile(crasher)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "error loading crasher %v: %v", crasher, err)
+                os.Exit(1)
+        }</span>
+        <span class="cov0" title="0">les.Fuzz(data)</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">// Copyright 2021 The go-ethereum Authors
+// This file is part of the go-ethereum library.
+//
+// The go-ethereum library is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// The go-ethereum library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with the go-ethereum library. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package les
+
+import (
+        "bytes"
+        "encoding/binary"
+        "io"
+        "math/big"
+
+        "github.com/morph-l2/go-ethereum/common"
+        "github.com/morph-l2/go-ethereum/consensus/ethash"
+        "github.com/morph-l2/go-ethereum/core"
+        "github.com/morph-l2/go-ethereum/core/rawdb"
+        "github.com/morph-l2/go-ethereum/core/types"
+        "github.com/morph-l2/go-ethereum/core/vm"
+        "github.com/morph-l2/go-ethereum/crypto"
+        l "github.com/morph-l2/go-ethereum/les"
+        "github.com/morph-l2/go-ethereum/params"
+        "github.com/morph-l2/go-ethereum/rlp"
+        "github.com/morph-l2/go-ethereum/trie"
+)
+
+var (
+        bankKey, _ = crypto.HexToECDSA("b71c71a67e1177ad4e901695e1b4b9ee17ae16c6668d313eac2f96dbcda3f291")
+        bankAddr   = crypto.PubkeyToAddress(bankKey.PublicKey)
+        bankFunds  = new(big.Int).Mul(big.NewInt(100), big.NewInt(params.Ether))
+
+        testChainLen     = 256
+        testContractCode = common.Hex2Bytes("606060405260cc8060106000396000f360606040526000357c01000000000000000000000000000000000000000000000000000000009004806360cd2685146041578063c16431b914606b57603f565b005b6055600480803590602001909190505060a9565b6040518082815260200191505060405180910390f35b60886004808035906020019091908035906020019091905050608a565b005b80600060005083606481101560025790900160005b50819055505b5050565b6000600060005082606481101560025790900160005b5054905060c7565b91905056")
+
+        chain      *core.BlockChain
+        addrHashes []common.Hash
+        txHashes   []common.Hash
+
+        chtTrie   *trie.Trie
+        bloomTrie *trie.Trie
+        chtKeys   [][]byte
+        bloomKeys [][]byte
+)
+
+func makechain() (bc *core.BlockChain, addrHashes, txHashes []common.Hash) <span class="cov8" title="1">{
+        db := rawdb.NewMemoryDatabase()
+        gspec := core.Genesis{
+                Config:   params.TestChainConfig,
+                Alloc:    core.GenesisAlloc{bankAddr: {Balance: bankFunds}},
+                GasLimit: 100000000,
+        }
+        genesis := gspec.MustCommit(db)
+        signer := types.HomesteadSigner{}
+        blocks, _ := core.GenerateChain(gspec.Config, genesis, ethash.NewFaker(), db, testChainLen,
+                func(i int, gen *core.BlockGen) </span><span class="cov8" title="1">{
+                        var (
+                                tx   *types.Transaction
+                                addr common.Address
+                        )
+                        nonce := uint64(i)
+                        if i%4 == 0 </span><span class="cov8" title="1">{
+                                tx, _ = types.SignTx(types.NewContractCreation(nonce, big.NewInt(0), 200000, big.NewInt(params.GWei), testContractCode), signer, bankKey)
+                                addr = crypto.CreateAddress(bankAddr, nonce)
+                        }</span> else<span class="cov8" title="1"> {
+                                addr = common.BigToAddress(big.NewInt(int64(i)))
+                                tx, _ = types.SignTx(types.NewTransaction(nonce, addr, big.NewInt(10000), params.TxGas, big.NewInt(params.GWei), nil), signer, bankKey)
+                        }</span>
+                        <span class="cov8" title="1">gen.AddTx(tx)
+                        addrHashes = append(addrHashes, crypto.Keccak256Hash(addr[:]))
+                        txHashes = append(txHashes, tx.Hash())</span>
+                })
+        <span class="cov8" title="1">bc, _ = core.NewBlockChain(db, nil, gspec.Config, ethash.NewFaker(), vm.Config{}, nil, nil)
+        if _, err := bc.InsertChain(blocks); err != nil </span><span class="cov0" title="0">{
+                panic(err)</span>
+        }
+        <span class="cov8" title="1">return</span>
+}
+
+func makeTries() (chtTrie *trie.Trie, bloomTrie *trie.Trie, chtKeys, bloomKeys [][]byte) <span class="cov8" title="1">{
+        chtTrie, _ = trie.New(common.Hash{}, trie.NewDatabase(rawdb.NewMemoryDatabase()))
+        bloomTrie, _ = trie.New(common.Hash{}, trie.NewDatabase(rawdb.NewMemoryDatabase()))
+        for i := 0; i &lt; testChainLen; i++ </span><span class="cov8" title="1">{
+                // The element in CHT is &lt;big-endian block number&gt; -&gt; &lt;block hash&gt;
+                key := make([]byte, 8)
+                binary.BigEndian.PutUint64(key, uint64(i+1))
+                chtTrie.Update(key, []byte{0x1, 0xf})
+                chtKeys = append(chtKeys, key)
+
+                // The element in Bloom trie is &lt;2 byte bit index&gt; + &lt;big-endian block number&gt; -&gt; bloom
+                key2 := make([]byte, 10)
+                binary.BigEndian.PutUint64(key2[2:], uint64(i+1))
+                bloomTrie.Update(key2, []byte{0x2, 0xe})
+                bloomKeys = append(bloomKeys, key2)
+        }</span>
+        <span class="cov8" title="1">return</span>
+}
+
+func init() <span class="cov8" title="1">{
+        chain, addrHashes, txHashes = makechain()
+        chtTrie, bloomTrie, chtKeys, bloomKeys = makeTries()
+}</span>
+
+type fuzzer struct {
+        chain *core.BlockChain
+        pool  *core.TxPool
+
+        chainLen  int
+        addr, txs []common.Hash
+        nonce     uint64
+
+        chtKeys   [][]byte
+        bloomKeys [][]byte
+        chtTrie   *trie.Trie
+        bloomTrie *trie.Trie
+
+        input     io.Reader
+        exhausted bool
+}
+
+func newFuzzer(input []byte) *fuzzer <span class="cov8" title="1">{
+        return &amp;fuzzer{
+                chain:     chain,
+                chainLen:  testChainLen,
+                addr:      addrHashes,
+                txs:       txHashes,
+                chtTrie:   chtTrie,
+                bloomTrie: bloomTrie,
+                chtKeys:   chtKeys,
+                bloomKeys: bloomKeys,
+                nonce:     uint64(len(txHashes)),
+                pool:      core.NewTxPool(core.DefaultTxPoolConfig, params.TestChainConfig, chain),
+                input:     bytes.NewReader(input),
+        }
+}</span>
+
+func (f *fuzzer) read(size int) []byte <span class="cov8" title="1">{
+        out := make([]byte, size)
+        if _, err := f.input.Read(out); err != nil </span><span class="cov8" title="1">{
+                f.exhausted = true
+        }</span>
+        <span class="cov8" title="1">return out</span>
+}
+
+func (f *fuzzer) randomByte() byte <span class="cov8" title="1">{
+        d := f.read(1)
+        return d[0]
+}</span>
+
+func (f *fuzzer) randomBool() bool <span class="cov8" title="1">{
+        d := f.read(1)
+        return d[0]&amp;1 == 1
+}</span>
+
+func (f *fuzzer) randomInt(max int) int <span class="cov8" title="1">{
+        if max == 0 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">if max &lt;= 256 </span><span class="cov8" title="1">{
+                return int(f.randomByte()) % max
+        }</span>
+        <span class="cov8" title="1">var a uint16
+        if err := binary.Read(f.input, binary.LittleEndian, &amp;a); err != nil </span><span class="cov8" title="1">{
+                f.exhausted = true
+        }</span>
+        <span class="cov8" title="1">return int(a % uint16(max))</span>
+}
+
+func (f *fuzzer) randomX(max int) uint64 <span class="cov8" title="1">{
+        var a uint16
+        if err := binary.Read(f.input, binary.LittleEndian, &amp;a); err != nil </span><span class="cov8" title="1">{
+                f.exhausted = true
+        }</span>
+        <span class="cov8" title="1">if a &lt; 0x8000 </span><span class="cov8" title="1">{
+                return uint64(a%uint16(max+1)) - 1
+        }</span>
+        <span class="cov8" title="1">return (uint64(1)&lt;&lt;(a%64+1) - 1) &amp; (uint64(a) * 343897772345826595)</span>
+}
+
+func (f *fuzzer) randomBlockHash() common.Hash <span class="cov8" title="1">{
+        h := f.chain.GetCanonicalHash(uint64(f.randomInt(3 * f.chainLen)))
+        if h != (common.Hash{}) </span><span class="cov8" title="1">{
+                return h
+        }</span>
+        <span class="cov8" title="1">return common.BytesToHash(f.read(common.HashLength))</span>
+}
+
+func (f *fuzzer) randomAddrHash() []byte <span class="cov8" title="1">{
+        i := f.randomInt(3 * len(f.addr))
+        if i &lt; len(f.addr) </span><span class="cov8" title="1">{
+                return f.addr[i].Bytes()
+        }</span>
+        <span class="cov8" title="1">return f.read(common.HashLength)</span>
+}
+
+func (f *fuzzer) randomCHTTrieKey() []byte <span class="cov8" title="1">{
+        i := f.randomInt(3 * len(f.chtKeys))
+        if i &lt; len(f.chtKeys) </span><span class="cov8" title="1">{
+                return f.chtKeys[i]
+        }</span>
+        <span class="cov8" title="1">return f.read(8)</span>
+}
+
+func (f *fuzzer) randomBloomTrieKey() []byte <span class="cov8" title="1">{
+        i := f.randomInt(3 * len(f.bloomKeys))
+        if i &lt; len(f.bloomKeys) </span><span class="cov8" title="1">{
+                return f.bloomKeys[i]
+        }</span>
+        <span class="cov8" title="1">return f.read(10)</span>
+}
+
+func (f *fuzzer) randomTxHash() common.Hash <span class="cov8" title="1">{
+        i := f.randomInt(3 * len(f.txs))
+        if i &lt; len(f.txs) </span><span class="cov8" title="1">{
+                return f.txs[i]
+        }</span>
+        <span class="cov8" title="1">return common.BytesToHash(f.read(common.HashLength))</span>
+}
+
+func (f *fuzzer) BlockChain() *core.BlockChain <span class="cov8" title="1">{
+        return f.chain
+}</span>
+
+func (f *fuzzer) TxPool() *core.TxPool <span class="cov8" title="1">{
+        return f.pool
+}</span>
+
+func (f *fuzzer) ArchiveMode() bool <span class="cov8" title="1">{
+        return false
+}</span>
+
+func (f *fuzzer) AddTxsSync() bool <span class="cov8" title="1">{
+        return false
+}</span>
+
+func (f *fuzzer) GetHelperTrie(typ uint, index uint64) *trie.Trie <span class="cov8" title="1">{
+        if typ == 0 </span><span class="cov8" title="1">{
+                return f.chtTrie
+        }</span> else<span class="cov8" title="1"> if typ == 1 </span><span class="cov8" title="1">{
+                return f.bloomTrie
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+type dummyMsg struct {
+        data []byte
+}
+
+func (d dummyMsg) Decode(val interface{}) error <span class="cov8" title="1">{
+        return rlp.DecodeBytes(d.data, val)
+}</span>
+
+func (f *fuzzer) doFuzz(msgCode uint64, packet interface{}) <span class="cov8" title="1">{
+        enc, err := rlp.EncodeToBytes(packet)
+        if err != nil </span><span class="cov0" title="0">{
+                panic(err)</span>
+        }
+        <span class="cov8" title="1">version := f.randomInt(3) + 2 // [LES2, LES3, LES4]
+        peer, closeFn := l.NewFuzzerPeer(version)
+        defer closeFn()
+        fn, _, _, err := l.Les3[msgCode].Handle(dummyMsg{enc})
+        if err != nil </span><span class="cov0" title="0">{
+                panic(err)</span>
+        }
+        <span class="cov8" title="1">fn(f, peer, func() bool </span><span class="cov8" title="1">{ return true }</span>)
+}
+
+func Fuzz(input []byte) int <span class="cov8" title="1">{
+        // We expect some large inputs
+        if len(input) &lt; 100 </span><span class="cov8" title="1">{
+                return -1
+        }</span>
+        <span class="cov8" title="1">f := newFuzzer(input)
+        if f.exhausted </span><span class="cov0" title="0">{
+                return -1
+        }</span>
+        <span class="cov8" title="1">for !f.exhausted </span><span class="cov8" title="1">{
+                switch f.randomInt(8) </span>{
+                case 0:<span class="cov8" title="1">
+                        req := &amp;l.GetBlockHeadersPacket{
+                                Query: l.GetBlockHeadersData{
+                                        Amount:  f.randomX(l.MaxHeaderFetch + 1),
+                                        Skip:    f.randomX(10),
+                                        Reverse: f.randomBool(),
+                                },
+                        }
+                        if f.randomBool() </span><span class="cov8" title="1">{
+                                req.Query.Origin.Hash = f.randomBlockHash()
+                        }</span> else<span class="cov8" title="1"> {
+                                req.Query.Origin.Number = uint64(f.randomInt(f.chainLen * 2))
+                        }</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetBlockHeadersMsg, req)</span>
+
+                case 1:<span class="cov8" title="1">
+                        req := &amp;l.GetBlockBodiesPacket{Hashes: make([]common.Hash, f.randomInt(l.MaxBodyFetch+1))}
+                        for i := range req.Hashes </span><span class="cov8" title="1">{
+                                req.Hashes[i] = f.randomBlockHash()
+                        }</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetBlockBodiesMsg, req)</span>
+
+                case 2:<span class="cov8" title="1">
+                        req := &amp;l.GetCodePacket{Reqs: make([]l.CodeReq, f.randomInt(l.MaxCodeFetch+1))}
+                        for i := range req.Reqs </span><span class="cov8" title="1">{
+                                req.Reqs[i] = l.CodeReq{
+                                        BHash:  f.randomBlockHash(),
+                                        AccKey: f.randomAddrHash(),
+                                }
+                        }</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetCodeMsg, req)</span>
+
+                case 3:<span class="cov8" title="1">
+                        req := &amp;l.GetReceiptsPacket{Hashes: make([]common.Hash, f.randomInt(l.MaxReceiptFetch+1))}
+                        for i := range req.Hashes </span><span class="cov8" title="1">{
+                                req.Hashes[i] = f.randomBlockHash()
+                        }</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetReceiptsMsg, req)</span>
+
+                case 4:<span class="cov8" title="1">
+                        req := &amp;l.GetProofsPacket{Reqs: make([]l.ProofReq, f.randomInt(l.MaxProofsFetch+1))}
+                        for i := range req.Reqs </span><span class="cov8" title="1">{
+                                if f.randomBool() </span><span class="cov8" title="1">{
+                                        req.Reqs[i] = l.ProofReq{
+                                                BHash:     f.randomBlockHash(),
+                                                AccKey:    f.randomAddrHash(),
+                                                Key:       f.randomAddrHash(),
+                                                FromLevel: uint(f.randomX(3)),
+                                        }
+                                }</span> else<span class="cov8" title="1"> {
+                                        req.Reqs[i] = l.ProofReq{
+                                                BHash:     f.randomBlockHash(),
+                                                Key:       f.randomAddrHash(),
+                                                FromLevel: uint(f.randomX(3)),
+                                        }
+                                }</span>
+                        }
+                        <span class="cov8" title="1">f.doFuzz(l.GetProofsV2Msg, req)</span>
+
+                case 5:<span class="cov8" title="1">
+                        req := &amp;l.GetHelperTrieProofsPacket{Reqs: make([]l.HelperTrieReq, f.randomInt(l.MaxHelperTrieProofsFetch+1))}
+                        for i := range req.Reqs </span><span class="cov8" title="1">{
+                                switch f.randomInt(3) </span>{
+                                case 0:<span class="cov8" title="1">
+                                        // Canonical hash trie
+                                        req.Reqs[i] = l.HelperTrieReq{
+                                                Type:      0,
+                                                TrieIdx:   f.randomX(3),
+                                                Key:       f.randomCHTTrieKey(),
+                                                FromLevel: uint(f.randomX(3)),
+                                                AuxReq:    uint(2),
+                                        }</span>
+                                case 1:<span class="cov8" title="1">
+                                        // Bloom trie
+                                        req.Reqs[i] = l.HelperTrieReq{
+                                                Type:      1,
+                                                TrieIdx:   f.randomX(3),
+                                                Key:       f.randomBloomTrieKey(),
+                                                FromLevel: uint(f.randomX(3)),
+                                                AuxReq:    0,
+                                        }</span>
+                                default:<span class="cov8" title="1">
+                                        // Random trie
+                                        req.Reqs[i] = l.HelperTrieReq{
+                                                Type:      2,
+                                                TrieIdx:   f.randomX(3),
+                                                Key:       f.randomCHTTrieKey(),
+                                                FromLevel: uint(f.randomX(3)),
+                                                AuxReq:    0,
+                                        }</span>
+                                }
+                        }
+                        <span class="cov8" title="1">f.doFuzz(l.GetHelperTrieProofsMsg, req)</span>
+
+                case 6:<span class="cov8" title="1">
+                        req := &amp;l.SendTxPacket{Txs: make([]*types.Transaction, f.randomInt(l.MaxTxSend+1))}
+                        signer := types.HomesteadSigner{}
+                        for i := range req.Txs </span><span class="cov8" title="1">{
+                                var nonce uint64
+                                if f.randomBool() </span><span class="cov8" title="1">{
+                                        nonce = uint64(f.randomByte())
+                                }</span> else<span class="cov8" title="1"> {
+                                        nonce = f.nonce
+                                        f.nonce += 1
+                                }</span>
+                                <span class="cov8" title="1">req.Txs[i], _ = types.SignTx(types.NewTransaction(nonce, common.Address{}, big.NewInt(10000), params.TxGas, big.NewInt(1000000000*int64(f.randomByte())), nil), signer, bankKey)</span>
+                        }
+                        <span class="cov8" title="1">f.doFuzz(l.SendTxV2Msg, req)</span>
+
+                case 7:<span class="cov8" title="1">
+                        req := &amp;l.GetTxStatusPacket{Hashes: make([]common.Hash, f.randomInt(l.MaxTxStatus+1))}
+                        for i := range req.Hashes </span><span class="cov8" title="1">{
+                                req.Hashes[i] = f.randomTxHash()
+                        }</span>
+                        <span class="cov8" title="1">f.doFuzz(l.GetTxStatusMsg, req)</span>
+                }
+        }
+        <span class="cov8" title="1">return 0</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>

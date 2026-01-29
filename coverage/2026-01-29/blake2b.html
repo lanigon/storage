@@ -1,0 +1,928 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>blake2b: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/morph-l2/go-ethereum/crypto/blake2b/blake2b.go (91.2%)</option>
+				
+				<option value="file1">github.com/morph-l2/go-ethereum/crypto/blake2b/blake2bAVX2_amd64.go (100.0%)</option>
+				
+				<option value="file2">github.com/morph-l2/go-ethereum/crypto/blake2b/blake2b_f_fuzz.go (7.1%)</option>
+				
+				<option value="file3">github.com/morph-l2/go-ethereum/crypto/blake2b/blake2b_generic.go (92.0%)</option>
+				
+				<option value="file4">github.com/morph-l2/go-ethereum/crypto/blake2b/blake2x.go (92.6%)</option>
+				
+				<option value="file5">github.com/morph-l2/go-ethereum/crypto/blake2b/register.go (50.0%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">// Copyright 2016 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+// Package blake2b implements the BLAKE2b hash algorithm defined by RFC 7693
+// and the extendable output function (XOF) BLAKE2Xb.
+//
+// For a detailed specification of BLAKE2b see https://blake2.net/blake2.pdf
+// and for BLAKE2Xb see https://blake2.net/blake2x.pdf
+//
+// If you aren't sure which function you need, use BLAKE2b (Sum512 or New512).
+// If you need a secret-key MAC (message authentication code), use the New512
+// function with a non-nil key.
+//
+// BLAKE2X is a construction to compute hash values larger than 64 bytes. It
+// can produce hash values between 0 and 4 GiB.
+package blake2b
+
+import (
+        "encoding/binary"
+        "errors"
+        "hash"
+)
+
+const (
+        // The blocksize of BLAKE2b in bytes.
+        BlockSize = 128
+        // The hash size of BLAKE2b-512 in bytes.
+        Size = 64
+        // The hash size of BLAKE2b-384 in bytes.
+        Size384 = 48
+        // The hash size of BLAKE2b-256 in bytes.
+        Size256 = 32
+)
+
+var (
+        useAVX2 bool
+        useAVX  bool
+        useSSE4 bool
+)
+
+var (
+        errKeySize  = errors.New("blake2b: invalid key size")
+        errHashSize = errors.New("blake2b: invalid hash size")
+)
+
+var iv = [8]uint64{
+        0x6a09e667f3bcc908, 0xbb67ae8584caa73b, 0x3c6ef372fe94f82b, 0xa54ff53a5f1d36f1,
+        0x510e527fade682d1, 0x9b05688c2b3e6c1f, 0x1f83d9abfb41bd6b, 0x5be0cd19137e2179,
+}
+
+// Sum512 returns the BLAKE2b-512 checksum of the data.
+func Sum512(data []byte) [Size]byte <span class="cov8" title="1">{
+        var sum [Size]byte
+        checkSum(&amp;sum, Size, data)
+        return sum
+}</span>
+
+// Sum384 returns the BLAKE2b-384 checksum of the data.
+func Sum384(data []byte) [Size384]byte <span class="cov8" title="1">{
+        var sum [Size]byte
+        var sum384 [Size384]byte
+        checkSum(&amp;sum, Size384, data)
+        copy(sum384[:], sum[:Size384])
+        return sum384
+}</span>
+
+// Sum256 returns the BLAKE2b-256 checksum of the data.
+func Sum256(data []byte) [Size256]byte <span class="cov8" title="1">{
+        var sum [Size]byte
+        var sum256 [Size256]byte
+        checkSum(&amp;sum, Size256, data)
+        copy(sum256[:], sum[:Size256])
+        return sum256
+}</span>
+
+// New512 returns a new hash.Hash computing the BLAKE2b-512 checksum. A non-nil
+// key turns the hash into a MAC. The key must be between zero and 64 bytes long.
+func New512(key []byte) (hash.Hash, error) <span class="cov8" title="1">{ return newDigest(Size, key) }</span>
+
+// New384 returns a new hash.Hash computing the BLAKE2b-384 checksum. A non-nil
+// key turns the hash into a MAC. The key must be between zero and 64 bytes long.
+func New384(key []byte) (hash.Hash, error) <span class="cov8" title="1">{ return newDigest(Size384, key) }</span>
+
+// New256 returns a new hash.Hash computing the BLAKE2b-256 checksum. A non-nil
+// key turns the hash into a MAC. The key must be between zero and 64 bytes long.
+func New256(key []byte) (hash.Hash, error) <span class="cov8" title="1">{ return newDigest(Size256, key) }</span>
+
+// New returns a new hash.Hash computing the BLAKE2b checksum with a custom length.
+// A non-nil key turns the hash into a MAC. The key must be between zero and 64 bytes long.
+// The hash size can be a value between 1 and 64 but it is highly recommended to use
+// values equal or greater than:
+// - 32 if BLAKE2b is used as a hash function (The key is zero bytes long).
+// - 16 if BLAKE2b is used as a MAC function (The key is at least 16 bytes long).
+// When the key is nil, the returned hash.Hash implements BinaryMarshaler
+// and BinaryUnmarshaler for state (de)serialization as documented by hash.Hash.
+func New(size int, key []byte) (hash.Hash, error) <span class="cov8" title="1">{ return newDigest(size, key) }</span>
+
+// F is a compression function for BLAKE2b. It takes as an argument the state
+// vector `h`, message block vector `m`, offset counter `t`, final block indicator
+// flag `f`, and number of rounds `rounds`. The state vector provided as the first
+// parameter is modified by the function.
+func F(h *[8]uint64, m [16]uint64, c [2]uint64, final bool, rounds uint32) <span class="cov8" title="1">{
+        var flag uint64
+        if final </span><span class="cov8" title="1">{
+                flag = 0xFFFFFFFFFFFFFFFF
+        }</span>
+        <span class="cov8" title="1">f(h, &amp;m, c[0], c[1], flag, uint64(rounds))</span>
+}
+
+func newDigest(hashSize int, key []byte) (*digest, error) <span class="cov8" title="1">{
+        if hashSize &lt; 1 || hashSize &gt; Size </span><span class="cov0" title="0">{
+                return nil, errHashSize
+        }</span>
+        <span class="cov8" title="1">if len(key) &gt; Size </span><span class="cov0" title="0">{
+                return nil, errKeySize
+        }</span>
+        <span class="cov8" title="1">d := &amp;digest{
+                size:   hashSize,
+                keyLen: len(key),
+        }
+        copy(d.key[:], key)
+        d.Reset()
+        return d, nil</span>
+}
+
+func checkSum(sum *[Size]byte, hashSize int, data []byte) <span class="cov8" title="1">{
+        h := iv
+        h[0] ^= uint64(hashSize) | (1 &lt;&lt; 16) | (1 &lt;&lt; 24)
+        var c [2]uint64
+
+        if length := len(data); length &gt; BlockSize </span><span class="cov8" title="1">{
+                n := length &amp;^ (BlockSize - 1)
+                if length == n </span><span class="cov8" title="1">{
+                        n -= BlockSize
+                }</span>
+                <span class="cov8" title="1">hashBlocks(&amp;h, &amp;c, 0, data[:n])
+                data = data[n:]</span>
+        }
+
+        <span class="cov8" title="1">var block [BlockSize]byte
+        offset := copy(block[:], data)
+        remaining := uint64(BlockSize - offset)
+        if c[0] &lt; remaining </span><span class="cov8" title="1">{
+                c[1]--
+        }</span>
+        <span class="cov8" title="1">c[0] -= remaining
+
+        hashBlocks(&amp;h, &amp;c, 0xFFFFFFFFFFFFFFFF, block[:])
+
+        for i, v := range h[:(hashSize+7)/8] </span><span class="cov8" title="1">{
+                binary.LittleEndian.PutUint64(sum[8*i:], v)
+        }</span>
+}
+
+func hashBlocks(h *[8]uint64, c *[2]uint64, flag uint64, blocks []byte) <span class="cov8" title="1">{
+        var m [16]uint64
+        c0, c1 := c[0], c[1]
+
+        for i := 0; i &lt; len(blocks); </span><span class="cov8" title="1">{
+                c0 += BlockSize
+                if c0 &lt; BlockSize </span><span class="cov8" title="1">{
+                        c1++
+                }</span>
+                <span class="cov8" title="1">for j := range m </span><span class="cov8" title="1">{
+                        m[j] = binary.LittleEndian.Uint64(blocks[i:])
+                        i += 8
+                }</span>
+                <span class="cov8" title="1">f(h, &amp;m, c0, c1, flag, 12)</span>
+        }
+        <span class="cov8" title="1">c[0], c[1] = c0, c1</span>
+}
+
+type digest struct {
+        h      [8]uint64
+        c      [2]uint64
+        size   int
+        block  [BlockSize]byte
+        offset int
+
+        key    [BlockSize]byte
+        keyLen int
+}
+
+const (
+        magic         = "b2b"
+        marshaledSize = len(magic) + 8*8 + 2*8 + 1 + BlockSize + 1
+)
+
+func (d *digest) MarshalBinary() ([]byte, error) <span class="cov8" title="1">{
+        if d.keyLen != 0 </span><span class="cov0" title="0">{
+                return nil, errors.New("crypto/blake2b: cannot marshal MACs")
+        }</span>
+        <span class="cov8" title="1">b := make([]byte, 0, marshaledSize)
+        b = append(b, magic...)
+        for i := 0; i &lt; 8; i++ </span><span class="cov8" title="1">{
+                b = appendUint64(b, d.h[i])
+        }</span>
+        <span class="cov8" title="1">b = appendUint64(b, d.c[0])
+        b = appendUint64(b, d.c[1])
+        // Maximum value for size is 64
+        b = append(b, byte(d.size))
+        b = append(b, d.block[:]...)
+        b = append(b, byte(d.offset))
+        return b, nil</span>
+}
+
+func (d *digest) UnmarshalBinary(b []byte) error <span class="cov8" title="1">{
+        if len(b) &lt; len(magic) || string(b[:len(magic)]) != magic </span><span class="cov0" title="0">{
+                return errors.New("crypto/blake2b: invalid hash state identifier")
+        }</span>
+        <span class="cov8" title="1">if len(b) != marshaledSize </span><span class="cov0" title="0">{
+                return errors.New("crypto/blake2b: invalid hash state size")
+        }</span>
+        <span class="cov8" title="1">b = b[len(magic):]
+        for i := 0; i &lt; 8; i++ </span><span class="cov8" title="1">{
+                b, d.h[i] = consumeUint64(b)
+        }</span>
+        <span class="cov8" title="1">b, d.c[0] = consumeUint64(b)
+        b, d.c[1] = consumeUint64(b)
+        d.size = int(b[0])
+        b = b[1:]
+        copy(d.block[:], b[:BlockSize])
+        b = b[BlockSize:]
+        d.offset = int(b[0])
+        return nil</span>
+}
+
+func (d *digest) BlockSize() int <span class="cov0" title="0">{ return BlockSize }</span>
+
+func (d *digest) Size() int <span class="cov0" title="0">{ return d.size }</span>
+
+func (d *digest) Reset() <span class="cov8" title="1">{
+        d.h = iv
+        d.h[0] ^= uint64(d.size) | (uint64(d.keyLen) &lt;&lt; 8) | (1 &lt;&lt; 16) | (1 &lt;&lt; 24)
+        d.offset, d.c[0], d.c[1] = 0, 0, 0
+        if d.keyLen &gt; 0 </span><span class="cov8" title="1">{
+                d.block = d.key
+                d.offset = BlockSize
+        }</span>
+}
+
+func (d *digest) Write(p []byte) (n int, err error) <span class="cov8" title="1">{
+        n = len(p)
+
+        if d.offset &gt; 0 </span><span class="cov8" title="1">{
+                remaining := BlockSize - d.offset
+                if n &lt;= remaining </span><span class="cov8" title="1">{
+                        d.offset += copy(d.block[d.offset:], p)
+                        return
+                }</span>
+                <span class="cov8" title="1">copy(d.block[d.offset:], p[:remaining])
+                hashBlocks(&amp;d.h, &amp;d.c, 0, d.block[:])
+                d.offset = 0
+                p = p[remaining:]</span>
+        }
+
+        <span class="cov8" title="1">if length := len(p); length &gt; BlockSize </span><span class="cov8" title="1">{
+                nn := length &amp;^ (BlockSize - 1)
+                if length == nn </span><span class="cov8" title="1">{
+                        nn -= BlockSize
+                }</span>
+                <span class="cov8" title="1">hashBlocks(&amp;d.h, &amp;d.c, 0, p[:nn])
+                p = p[nn:]</span>
+        }
+
+        <span class="cov8" title="1">if len(p) &gt; 0 </span><span class="cov8" title="1">{
+                d.offset += copy(d.block[:], p)
+        }</span>
+
+        <span class="cov8" title="1">return</span>
+}
+
+func (d *digest) Sum(sum []byte) []byte <span class="cov8" title="1">{
+        var hash [Size]byte
+        d.finalize(&amp;hash)
+        return append(sum, hash[:d.size]...)
+}</span>
+
+func (d *digest) finalize(hash *[Size]byte) <span class="cov8" title="1">{
+        var block [BlockSize]byte
+        copy(block[:], d.block[:d.offset])
+        remaining := uint64(BlockSize - d.offset)
+
+        c := d.c
+        if c[0] &lt; remaining </span><span class="cov8" title="1">{
+                c[1]--
+        }</span>
+        <span class="cov8" title="1">c[0] -= remaining
+
+        h := d.h
+        hashBlocks(&amp;h, &amp;c, 0xFFFFFFFFFFFFFFFF, block[:])
+
+        for i, v := range h </span><span class="cov8" title="1">{
+                binary.LittleEndian.PutUint64(hash[8*i:], v)
+        }</span>
+}
+
+func appendUint64(b []byte, x uint64) []byte <span class="cov8" title="1">{
+        var a [8]byte
+        binary.BigEndian.PutUint64(a[:], x)
+        return append(b, a[:]...)
+}</span>
+
+func appendUint32(b []byte, x uint32) []byte <span class="cov0" title="0">{
+        var a [4]byte
+        binary.BigEndian.PutUint32(a[:], x)
+        return append(b, a[:]...)
+}</span>
+
+func consumeUint64(b []byte) ([]byte, uint64) <span class="cov8" title="1">{
+        x := binary.BigEndian.Uint64(b)
+        return b[8:], x
+}</span>
+
+func consumeUint32(b []byte) ([]byte, uint32) <span class="cov0" title="0">{
+        x := binary.BigEndian.Uint32(b)
+        return b[4:], x
+}</span>
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">// Copyright 2016 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+//go:build go1.7 &amp;&amp; amd64 &amp;&amp; !gccgo &amp;&amp; !appengine
+// +build go1.7,amd64,!gccgo,!appengine
+
+package blake2b
+
+import "golang.org/x/sys/cpu"
+
+func init() <span class="cov8" title="1">{
+        useAVX2 = cpu.X86.HasAVX2
+        useAVX = cpu.X86.HasAVX
+        useSSE4 = cpu.X86.HasSSE41
+}</span>
+
+//go:noescape
+func fAVX2(h *[8]uint64, m *[16]uint64, c0, c1 uint64, flag uint64, rounds uint64)
+
+//go:noescape
+func fAVX(h *[8]uint64, m *[16]uint64, c0, c1 uint64, flag uint64, rounds uint64)
+
+//go:noescape
+func fSSE4(h *[8]uint64, m *[16]uint64, c0, c1 uint64, flag uint64, rounds uint64)
+
+func f(h *[8]uint64, m *[16]uint64, c0, c1 uint64, flag uint64, rounds uint64) <span class="cov8" title="1">{
+        switch </span>{
+        case useAVX2:<span class="cov8" title="1">
+                fAVX2(h, m, c0, c1, flag, rounds)</span>
+        case useAVX:<span class="cov8" title="1">
+                fAVX(h, m, c0, c1, flag, rounds)</span>
+        case useSSE4:<span class="cov8" title="1">
+                fSSE4(h, m, c0, c1, flag, rounds)</span>
+        default:<span class="cov8" title="1">
+                fGeneric(h, m, c0, c1, flag, rounds)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">//go:build gofuzz
+// +build gofuzz
+
+package blake2b
+
+import (
+        "encoding/binary"
+)
+
+func Fuzz(data []byte) int <span class="cov8" title="1">{
+        // Make sure the data confirms to the input model
+        if len(data) != 211 </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        // Parse everything and call all the implementations
+        <span class="cov0" title="0">var (
+                rounds = binary.BigEndian.Uint16(data[0:2])
+
+                h [8]uint64
+                m [16]uint64
+                t [2]uint64
+                f uint64
+        )
+        for i := 0; i &lt; 8; i++ </span><span class="cov0" title="0">{
+                offset := 2 + i*8
+                h[i] = binary.LittleEndian.Uint64(data[offset : offset+8])
+        }</span>
+        <span class="cov0" title="0">for i := 0; i &lt; 16; i++ </span><span class="cov0" title="0">{
+                offset := 66 + i*8
+                m[i] = binary.LittleEndian.Uint64(data[offset : offset+8])
+        }</span>
+        <span class="cov0" title="0">t[0] = binary.LittleEndian.Uint64(data[194:202])
+        t[1] = binary.LittleEndian.Uint64(data[202:210])
+
+        if data[210]%2 == 1 </span><span class="cov0" title="0">{ // Avoid spinning the fuzzer to hit 0/1
+                f = 0xFFFFFFFFFFFFFFFF
+        }</span>
+        // Run the blake2b compression on all instruction sets and cross reference
+        <span class="cov0" title="0">want := h
+        fGeneric(&amp;want, &amp;m, t[0], t[1], f, uint64(rounds))
+
+        have := h
+        fSSE4(&amp;have, &amp;m, t[0], t[1], f, uint64(rounds))
+        if have != want </span><span class="cov0" title="0">{
+                panic("SSE4 mismatches generic algo")</span>
+        }
+        <span class="cov0" title="0">have = h
+        fAVX(&amp;have, &amp;m, t[0], t[1], f, uint64(rounds))
+        if have != want </span><span class="cov0" title="0">{
+                panic("AVX mismatches generic algo")</span>
+        }
+        <span class="cov0" title="0">have = h
+        fAVX2(&amp;have, &amp;m, t[0], t[1], f, uint64(rounds))
+        if have != want </span><span class="cov0" title="0">{
+                panic("AVX2 mismatches generic algo")</span>
+        }
+        <span class="cov0" title="0">return 1</span>
+}
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">// Copyright 2016 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+package blake2b
+
+import (
+        "encoding/binary"
+        "math/bits"
+)
+
+// the precomputed values for BLAKE2b
+// there are 10 16-byte arrays - one for each round
+// the entries are calculated from the sigma constants.
+var precomputed = [10][16]byte{
+        {0, 2, 4, 6, 1, 3, 5, 7, 8, 10, 12, 14, 9, 11, 13, 15},
+        {14, 4, 9, 13, 10, 8, 15, 6, 1, 0, 11, 5, 12, 2, 7, 3},
+        {11, 12, 5, 15, 8, 0, 2, 13, 10, 3, 7, 9, 14, 6, 1, 4},
+        {7, 3, 13, 11, 9, 1, 12, 14, 2, 5, 4, 15, 6, 10, 0, 8},
+        {9, 5, 2, 10, 0, 7, 4, 15, 14, 11, 6, 3, 1, 12, 8, 13},
+        {2, 6, 0, 8, 12, 10, 11, 3, 4, 7, 15, 1, 13, 5, 14, 9},
+        {12, 1, 14, 4, 5, 15, 13, 10, 0, 6, 9, 8, 7, 3, 2, 11},
+        {13, 7, 12, 3, 11, 14, 1, 9, 5, 15, 8, 2, 0, 4, 6, 10},
+        {6, 14, 11, 0, 15, 9, 3, 8, 12, 13, 1, 10, 2, 7, 4, 5},
+        {10, 8, 7, 1, 2, 4, 6, 5, 15, 9, 3, 13, 11, 14, 12, 0},
+}
+
+func hashBlocksGeneric(h *[8]uint64, c *[2]uint64, flag uint64, blocks []byte) <span class="cov0" title="0">{
+        var m [16]uint64
+        c0, c1 := c[0], c[1]
+
+        for i := 0; i &lt; len(blocks); </span><span class="cov0" title="0">{
+                c0 += BlockSize
+                if c0 &lt; BlockSize </span><span class="cov0" title="0">{
+                        c1++
+                }</span>
+                <span class="cov0" title="0">for j := range m </span><span class="cov0" title="0">{
+                        m[j] = binary.LittleEndian.Uint64(blocks[i:])
+                        i += 8
+                }</span>
+                <span class="cov0" title="0">fGeneric(h, &amp;m, c0, c1, flag, 12)</span>
+        }
+        <span class="cov0" title="0">c[0], c[1] = c0, c1</span>
+}
+
+func fGeneric(h *[8]uint64, m *[16]uint64, c0, c1 uint64, flag uint64, rounds uint64) <span class="cov8" title="1">{
+        v0, v1, v2, v3, v4, v5, v6, v7 := h[0], h[1], h[2], h[3], h[4], h[5], h[6], h[7]
+        v8, v9, v10, v11, v12, v13, v14, v15 := iv[0], iv[1], iv[2], iv[3], iv[4], iv[5], iv[6], iv[7]
+        v12 ^= c0
+        v13 ^= c1
+        v14 ^= flag
+
+        for i := 0; i &lt; int(rounds); i++ </span><span class="cov8" title="1">{
+                s := &amp;(precomputed[i%10])
+
+                v0 += m[s[0]]
+                v0 += v4
+                v12 ^= v0
+                v12 = bits.RotateLeft64(v12, -32)
+                v8 += v12
+                v4 ^= v8
+                v4 = bits.RotateLeft64(v4, -24)
+                v1 += m[s[1]]
+                v1 += v5
+                v13 ^= v1
+                v13 = bits.RotateLeft64(v13, -32)
+                v9 += v13
+                v5 ^= v9
+                v5 = bits.RotateLeft64(v5, -24)
+                v2 += m[s[2]]
+                v2 += v6
+                v14 ^= v2
+                v14 = bits.RotateLeft64(v14, -32)
+                v10 += v14
+                v6 ^= v10
+                v6 = bits.RotateLeft64(v6, -24)
+                v3 += m[s[3]]
+                v3 += v7
+                v15 ^= v3
+                v15 = bits.RotateLeft64(v15, -32)
+                v11 += v15
+                v7 ^= v11
+                v7 = bits.RotateLeft64(v7, -24)
+
+                v0 += m[s[4]]
+                v0 += v4
+                v12 ^= v0
+                v12 = bits.RotateLeft64(v12, -16)
+                v8 += v12
+                v4 ^= v8
+                v4 = bits.RotateLeft64(v4, -63)
+                v1 += m[s[5]]
+                v1 += v5
+                v13 ^= v1
+                v13 = bits.RotateLeft64(v13, -16)
+                v9 += v13
+                v5 ^= v9
+                v5 = bits.RotateLeft64(v5, -63)
+                v2 += m[s[6]]
+                v2 += v6
+                v14 ^= v2
+                v14 = bits.RotateLeft64(v14, -16)
+                v10 += v14
+                v6 ^= v10
+                v6 = bits.RotateLeft64(v6, -63)
+                v3 += m[s[7]]
+                v3 += v7
+                v15 ^= v3
+                v15 = bits.RotateLeft64(v15, -16)
+                v11 += v15
+                v7 ^= v11
+                v7 = bits.RotateLeft64(v7, -63)
+
+                v0 += m[s[8]]
+                v0 += v5
+                v15 ^= v0
+                v15 = bits.RotateLeft64(v15, -32)
+                v10 += v15
+                v5 ^= v10
+                v5 = bits.RotateLeft64(v5, -24)
+                v1 += m[s[9]]
+                v1 += v6
+                v12 ^= v1
+                v12 = bits.RotateLeft64(v12, -32)
+                v11 += v12
+                v6 ^= v11
+                v6 = bits.RotateLeft64(v6, -24)
+                v2 += m[s[10]]
+                v2 += v7
+                v13 ^= v2
+                v13 = bits.RotateLeft64(v13, -32)
+                v8 += v13
+                v7 ^= v8
+                v7 = bits.RotateLeft64(v7, -24)
+                v3 += m[s[11]]
+                v3 += v4
+                v14 ^= v3
+                v14 = bits.RotateLeft64(v14, -32)
+                v9 += v14
+                v4 ^= v9
+                v4 = bits.RotateLeft64(v4, -24)
+
+                v0 += m[s[12]]
+                v0 += v5
+                v15 ^= v0
+                v15 = bits.RotateLeft64(v15, -16)
+                v10 += v15
+                v5 ^= v10
+                v5 = bits.RotateLeft64(v5, -63)
+                v1 += m[s[13]]
+                v1 += v6
+                v12 ^= v1
+                v12 = bits.RotateLeft64(v12, -16)
+                v11 += v12
+                v6 ^= v11
+                v6 = bits.RotateLeft64(v6, -63)
+                v2 += m[s[14]]
+                v2 += v7
+                v13 ^= v2
+                v13 = bits.RotateLeft64(v13, -16)
+                v8 += v13
+                v7 ^= v8
+                v7 = bits.RotateLeft64(v7, -63)
+                v3 += m[s[15]]
+                v3 += v4
+                v14 ^= v3
+                v14 = bits.RotateLeft64(v14, -16)
+                v9 += v14
+                v4 ^= v9
+                v4 = bits.RotateLeft64(v4, -63)
+        }</span>
+        <span class="cov8" title="1">h[0] ^= v0 ^ v8
+        h[1] ^= v1 ^ v9
+        h[2] ^= v2 ^ v10
+        h[3] ^= v3 ^ v11
+        h[4] ^= v4 ^ v12
+        h[5] ^= v5 ^ v13
+        h[6] ^= v6 ^ v14
+        h[7] ^= v7 ^ v15</span>
+}
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">// Copyright 2017 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+package blake2b
+
+import (
+        "encoding/binary"
+        "errors"
+        "io"
+)
+
+// XOF defines the interface to hash functions that
+// support arbitrary-length output.
+type XOF interface {
+        // Write absorbs more data into the hash's state. It panics if called
+        // after Read.
+        io.Writer
+
+        // Read reads more output from the hash. It returns io.EOF if the limit
+        // has been reached.
+        io.Reader
+
+        // Clone returns a copy of the XOF in its current state.
+        Clone() XOF
+
+        // Reset resets the XOF to its initial state.
+        Reset()
+}
+
+// OutputLengthUnknown can be used as the size argument to NewXOF to indicate
+// the length of the output is not known in advance.
+const OutputLengthUnknown = 0
+
+// magicUnknownOutputLength is a magic value for the output size that indicates
+// an unknown number of output bytes.
+const magicUnknownOutputLength = (1 &lt;&lt; 32) - 1
+
+// maxOutputLength is the absolute maximum number of bytes to produce when the
+// number of output bytes is unknown.
+const maxOutputLength = (1 &lt;&lt; 32) * 64
+
+// NewXOF creates a new variable-output-length hash. The hash either produce a
+// known number of bytes (1 &lt;= size &lt; 2**32-1), or an unknown number of bytes
+// (size == OutputLengthUnknown). In the latter case, an absolute limit of
+// 256GiB applies.
+//
+// A non-nil key turns the hash into a MAC. The key must between
+// zero and 32 bytes long.
+func NewXOF(size uint32, key []byte) (XOF, error) <span class="cov8" title="1">{
+        if len(key) &gt; Size </span><span class="cov0" title="0">{
+                return nil, errKeySize
+        }</span>
+        <span class="cov8" title="1">if size == magicUnknownOutputLength </span><span class="cov0" title="0">{
+                // 2^32-1 indicates an unknown number of bytes and thus isn't a
+                // valid length.
+                return nil, errors.New("blake2b: XOF length too large")
+        }</span>
+        <span class="cov8" title="1">if size == OutputLengthUnknown </span><span class="cov8" title="1">{
+                size = magicUnknownOutputLength
+        }</span>
+        <span class="cov8" title="1">x := &amp;xof{
+                d: digest{
+                        size:   Size,
+                        keyLen: len(key),
+                },
+                length: size,
+        }
+        copy(x.d.key[:], key)
+        x.Reset()
+        return x, nil</span>
+}
+
+type xof struct {
+        d                digest
+        length           uint32
+        remaining        uint64
+        cfg, root, block [Size]byte
+        offset           int
+        nodeOffset       uint32
+        readMode         bool
+}
+
+func (x *xof) Write(p []byte) (n int, err error) <span class="cov8" title="1">{
+        if x.readMode </span><span class="cov0" title="0">{
+                panic("blake2b: write to XOF after read")</span>
+        }
+        <span class="cov8" title="1">return x.d.Write(p)</span>
+}
+
+func (x *xof) Clone() XOF <span class="cov8" title="1">{
+        clone := *x
+        return &amp;clone
+}</span>
+
+func (x *xof) Reset() <span class="cov8" title="1">{
+        x.cfg[0] = byte(Size)
+        binary.LittleEndian.PutUint32(x.cfg[4:], uint32(Size)) // leaf length
+        binary.LittleEndian.PutUint32(x.cfg[12:], x.length)    // XOF length
+        x.cfg[17] = byte(Size)                                 // inner hash size
+
+        x.d.Reset()
+        x.d.h[1] ^= uint64(x.length) &lt;&lt; 32
+
+        x.remaining = uint64(x.length)
+        if x.remaining == magicUnknownOutputLength </span><span class="cov8" title="1">{
+                x.remaining = maxOutputLength
+        }</span>
+        <span class="cov8" title="1">x.offset, x.nodeOffset = 0, 0
+        x.readMode = false</span>
+}
+
+func (x *xof) Read(p []byte) (n int, err error) <span class="cov8" title="1">{
+        if !x.readMode </span><span class="cov8" title="1">{
+                x.d.finalize(&amp;x.root)
+                x.readMode = true
+        }</span>
+
+        <span class="cov8" title="1">if x.remaining == 0 </span><span class="cov8" title="1">{
+                return 0, io.EOF
+        }</span>
+
+        <span class="cov8" title="1">n = len(p)
+        if uint64(n) &gt; x.remaining </span><span class="cov0" title="0">{
+                n = int(x.remaining)
+                p = p[:n]
+        }</span>
+
+        <span class="cov8" title="1">if x.offset &gt; 0 </span><span class="cov8" title="1">{
+                blockRemaining := Size - x.offset
+                if n &lt; blockRemaining </span><span class="cov8" title="1">{
+                        x.offset += copy(p, x.block[x.offset:])
+                        x.remaining -= uint64(n)
+                        return
+                }</span>
+                <span class="cov8" title="1">copy(p, x.block[x.offset:])
+                p = p[blockRemaining:]
+                x.offset = 0
+                x.remaining -= uint64(blockRemaining)</span>
+        }
+
+        <span class="cov8" title="1">for len(p) &gt;= Size </span><span class="cov8" title="1">{
+                binary.LittleEndian.PutUint32(x.cfg[8:], x.nodeOffset)
+                x.nodeOffset++
+
+                x.d.initConfig(&amp;x.cfg)
+                x.d.Write(x.root[:])
+                x.d.finalize(&amp;x.block)
+
+                copy(p, x.block[:])
+                p = p[Size:]
+                x.remaining -= uint64(Size)
+        }</span>
+
+        <span class="cov8" title="1">if todo := len(p); todo &gt; 0 </span><span class="cov8" title="1">{
+                if x.remaining &lt; uint64(Size) </span><span class="cov8" title="1">{
+                        x.cfg[0] = byte(x.remaining)
+                }</span>
+                <span class="cov8" title="1">binary.LittleEndian.PutUint32(x.cfg[8:], x.nodeOffset)
+                x.nodeOffset++
+
+                x.d.initConfig(&amp;x.cfg)
+                x.d.Write(x.root[:])
+                x.d.finalize(&amp;x.block)
+
+                x.offset = copy(p, x.block[:todo])
+                x.remaining -= uint64(todo)</span>
+        }
+        <span class="cov8" title="1">return</span>
+}
+
+func (d *digest) initConfig(cfg *[Size]byte) <span class="cov8" title="1">{
+        d.offset, d.c[0], d.c[1] = 0, 0, 0
+        for i := range d.h </span><span class="cov8" title="1">{
+                d.h[i] = iv[i] ^ binary.LittleEndian.Uint64(cfg[i*8:])
+        }</span>
+}
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">// Copyright 2017 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+//go:build go1.9
+// +build go1.9
+
+package blake2b
+
+import (
+        "crypto"
+        "hash"
+)
+
+func init() <span class="cov8" title="1">{
+        newHash256 := func() hash.Hash </span><span class="cov0" title="0">{
+                h, _ := New256(nil)
+                return h
+        }</span>
+        <span class="cov8" title="1">newHash384 := func() hash.Hash </span><span class="cov0" title="0">{
+                h, _ := New384(nil)
+                return h
+        }</span>
+
+        <span class="cov8" title="1">newHash512 := func() hash.Hash </span><span class="cov0" title="0">{
+                h, _ := New512(nil)
+                return h
+        }</span>
+
+        <span class="cov8" title="1">crypto.RegisterHash(crypto.BLAKE2b_256, newHash256)
+        crypto.RegisterHash(crypto.BLAKE2b_384, newHash384)
+        crypto.RegisterHash(crypto.BLAKE2b_512, newHash512)</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
