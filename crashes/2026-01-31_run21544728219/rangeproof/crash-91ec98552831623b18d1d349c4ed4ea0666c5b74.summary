@@ -1,0 +1,581 @@
+/github/workspace/build-out/fuzz_rangeproof -timeout=25 -rss_limit_mb=2560 -len_control=0 -artifact_prefix=/tmp/tmp26r8frhf/ -max_total_time=464 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz_rangeproof >fuzz-0.log 2>&1
+/github/workspace/build-out/fuzz_rangeproof -timeout=25 -rss_limit_mb=2560 -len_control=0 -artifact_prefix=/tmp/tmp26r8frhf/ -max_total_time=464 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz_rangeproof >fuzz-1.log 2>&1
+/github/workspace/build-out/fuzz_rangeproof -timeout=25 -rss_limit_mb=2560 -len_control=0 -artifact_prefix=/tmp/tmp26r8frhf/ -max_total_time=464 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz_rangeproof >fuzz-2.log 2>&1
+/github/workspace/build-out/fuzz_rangeproof -timeout=25 -rss_limit_mb=2560 -len_control=0 -artifact_prefix=/tmp/tmp26r8frhf/ -max_total_time=464 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz_rangeproof >fuzz-3.log 2>&1
+================== Job 2 exited with exit code 77 ============
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 416417057
+INFO: Loaded 1 modules   (23195 inline 8-bit counters): 23195 [0x55affc9bbbc0, 0x55affc9c165b), 
+INFO: Loaded 1 PC tables (23195 PCs): 23195 [0x10c000080000,0x10c0000da9b0), 
+INFO:      899 files found in /github/workspace/cifuzz-corpus/fuzz_rangeproof
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 899 min: 1b max: 4092b total: 933463b rss: 52Mb
+#128	pulse  cov: 1060 ft: 2718 corp: 93/9254b exec/s: 42 rss: 58Mb
+#256	pulse  cov: 1102 ft: 3588 corp: 187/19Kb exec/s: 51 rss: 60Mb
+#512	pulse  cov: 1126 ft: 4719 corp: 347/69Kb exec/s: 42 rss: 64Mb
+#903	INITED cov: 1136 ft: 5626 corp: 511/362Kb exec/s: 14 rss: 75Mb
+#936	NEW    cov: 1136 ft: 5627 corp: 512/362Kb lim: 4096 exec/s: 15 rss: 75Mb L: 872/4092 MS: 3 CopyPart-ChangeASCIIInt-CrossOver-
+#938	NEW    cov: 1136 ft: 5641 corp: 513/366Kb lim: 4096 exec/s: 14 rss: 75Mb L: 3907/4092 MS: 2 CrossOver-EraseBytes-
+#1024	pulse  cov: 1136 ft: 5645 corp: 514/367Kb lim: 4096 exec/s: 14 rss: 78Mb
+#1328	RELOAD cov: 1136 ft: 5651 corp: 518/374Kb lim: 4096 exec/s: 13 rss: 78Mb
+#1336	NEW    cov: 1136 ft: 5652 corp: 519/376Kb lim: 4096 exec/s: 13 rss: 78Mb L: 1395/4092 MS: 3 CrossOver-InsertByte-CopyPart-
+#1397	NEW    cov: 1136 ft: 5653 corp: 520/378Kb lim: 4096 exec/s: 14 rss: 78Mb L: 2445/4092 MS: 1 EraseBytes-
+runtime: g2: frame.sp=0x10c000050788 top=0x10c0000507e0
+	stack=[0x10c000050000-0x10c000050800
+fatal error: traceback did not unwind completely
+
+runtime stack:
+runtime.throw({0x55affb63fed3?, 0x0?})
+	runtime/panic.go:1094 +0x4a fp=0x7b7e129fea20 sp=0x7b7e129fe9f0 pc=0x55affbaff10a
+runtime.(*unwinder).finishInternal(0x0?)
+	runtime/traceback.go:566 +0x12a fp=0x7b7e129fea60 sp=0x7b7e129fea20 pc=0x55affbaedd0a
+runtime.(*unwinder).next(0x7b7e129feb10?)
+	runtime/traceback.go:447 +0x232 fp=0x7b7e129fead8 sp=0x7b7e129fea60 pc=0x55affbaedb12
+runtime.scanstack(0x10c000002e00, 0x10c000045e50)
+	runtime/mgcmark.go:924 +0x2c9 fp=0x7b7e129febf0 sp=0x7b7e129fead8 pc=0x55affbaaf869
+runtime.markroot.func1()
+	runtime/mgcmark.go:248 +0xb1 fp=0x7b7e129fec40 sp=0x7b7e129febf0 pc=0x55affbaae191
+runtime.markroot(0x10c000045e50, 0x18, 0x1)
+	runtime/mgcmark.go:222 +0x1a5 fp=0x7b7e129fecf0 sp=0x7b7e129fec40 pc=0x55affbaadde5
+runtime.gcDrain(0x10c000045e50, 0x7)
+	runtime/mgcmark.go:1206 +0x3d3 fp=0x7b7e129fed58 sp=0x7b7e129fecf0 pc=0x55affbab02d3
+runtime.gcDrainMarkWorkerIdle(...)
+	runtime/mgcmark.go:1120
+runtime.gcBgMarkWorker.func2()
+	runtime/mgc.go:1560 +0x67 fp=0x7b7e129feda8 sp=0x7b7e129fed58 pc=0x55affbaac447
+runtime.systemstack(0x55affbb09445)
+	runtime/asm_amd64.s:513 +0x47 fp=0x7b7e129fedb8 sp=0x7b7e129feda8 pc=0x55affbb04947
+
+goroutine 35 gp=0x10c000202540 m=0 mp=0x55affc985d00 [GC worker (active)]:
+runtime.systemstack_switch()
+	runtime/asm_amd64.s:478 +0x8 fp=0x10c000462f38 sp=0x10c000462f28 pc=0x55affbb048e8
+runtime.gcBgMarkWorker(0x10c0004cc000)
+	runtime/mgc.go:1523 +0x1fa fp=0x10c000462fc8 sp=0x10c000462f38 pc=0x55affbaac11a
+runtime.gcBgMarkStartWorkers.gowrap1()
+	runtime/mgc.go:1373 +0x25 fp=0x10c000462fe0 sp=0x10c000462fc8 pc=0x55affbaabee5
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000462fe8 sp=0x10c000462fe0 pc=0x55affbb06901
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	runtime/mgc.go:1373 +0x105
+
+goroutine 17 gp=0x10c0000028c0 m=nil [sync.WaitGroup.Wait, locked to thread]:
+runtime.gopark(0x55affc9a7b60?, 0x6400048f00?, 0xe0?, 0xc7?, 0x10c000036bc8?)
+	runtime/proc.go:460 +0xce fp=0x10c000036b50 sp=0x10c000036b30 pc=0x55affbaff1ee
+runtime.goparkunlock(...)
+	runtime/proc.go:466
+runtime.semacquire1(0x10c0002e8ba8, 0x0, 0x1, 0x0, 0x19)
+	runtime/sema.go:192 +0x229 fp=0x10c000036bb8 sp=0x10c000036b50 pc=0x55affbadfc29
+sync.runtime_SemacquireWaitGroup(0x55affbad795f?, 0xad?)
+	runtime/sema.go:114 +0x2e fp=0x10c000036bf0 sp=0x10c000036bb8 pc=0x55affbb005ae
+sync.(*WaitGroup).Wait(0x10c0002e8ba0)
+	sync/waitgroup.go:206 +0x1f9 fp=0x10c000036c30 sp=0x10c000036bf0 pc=0x55affbb0e559
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren(0x10c00028b440, 0x10c0005292c0)
+	github.com/morph-l2/go-ethereum/trie/hasher.go:139 +0x485 fp=0x10c000036ca8 sp=0x10c000036c30 pc=0x55affbd3adc5
+github.com/morph-l2/go-ethereum/trie.(*hasher).hash(0x10c00028b440, {0x55affbdf9178, 0x10c0005292c0}, 0x0)
+	github.com/morph-l2/go-ethereum/trie/hasher.go:88 +0x276 fp=0x10c000036ce8 sp=0x10c000036ca8 pc=0x55affbd3a536
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashShortNodeChildren(0x10c00028b440, 0x10c00051bea0)
+	github.com/morph-l2/go-ethereum/trie/hasher.go:115 +0x1f3 fp=0x10c000036d38 sp=0x10c000036ce8 pc=0x55affbd3a893
+github.com/morph-l2/go-ethereum/trie.(*hasher).hash(0x10c00028b440, {0x55affbdf9150, 0x10c00051bea0}, 0x1)
+	github.com/morph-l2/go-ethereum/trie/hasher.go:77 +0x135 fp=0x10c000036d78 sp=0x10c000036d38 pc=0x55affbd3a3f5
+github.com/morph-l2/go-ethereum/trie.(*Trie).hashRoot(0x10c000037010)
+	github.com/morph-l2/go-ethereum/trie/trie.go:580 +0x105 fp=0x10c000036e00 sp=0x10c000036d78 pc=0x55affbd4ade5
+github.com/morph-l2/go-ethereum/trie.(*Trie).Hash(0x10c000037010)
+	github.com/morph-l2/go-ethereum/trie/trie.go:520 +0x4b fp=0x10c000036e78 sp=0x10c000036e00 pc=0x55affbd4ab2b
+github.com/morph-l2/go-ethereum/trie.VerifyRangeProof({0x87, 0x45, 0xa6, 0x13, 0x99, 0x3b, 0x69, 0x99, 0xf6, 0x33, ...}, ...)
+	github.com/morph-l2/go-ethereum/trie/proof.go:569 +0xf72 fp=0x10c000037110 sp=0x10c000036e78 pc=0x55affbd43632
+github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof.(*fuzzer).fuzz(0x10c0000373c8)
+	github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/rangeproof-fuzzer.go:173 +0xfb8 fp=0x10c0000373b0 sp=0x10c000037110 pc=0x55affbd582d8
+github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof.Fuzz({0x7d1e14217884, 0x4ef, 0x547})
+	github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/rangeproof-fuzzer.go:200 +0x10a fp=0x10c0000373f0 sp=0x10c0000373b0 pc=0x55affbd58a0a
+main.LibFuzzerFuzzRangeproof.FuzzRangeproof.func1(0x0?, {0x7d1e14217884?, 0x55affbb01733?, 0x0?})
+	github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/rangeproof_test.go_fuzz.go:7 +0x3e fp=0x10c000037418 sp=0x10c0000373f0 pc=0x55affbd5951e
+runtime.call32(0x10c00028bdd0, 0x55affbdf5eb0, 0x0, 0x0, 0x0, 0x20, 0x10c000037718)
+	runtime/asm_amd64.s:775 +0x45 fp=0x10c000037448 sp=0x10c000037418 pc=0x55affbb04ee5
+runtime.reflectcall(0x10c000037718?, 0x3?, 0x8?, 0x569f48?, 0x10c0?, 0x12?, 0x55affbda5e00?)
+	<autogenerated>:1 +0x36 fp=0x10c000037488 sp=0x10c000037448 pc=0x55affbb09596
+reflect.Value.call({0x55affbdada60?, 0x55affbdf5eb0?, 0x30?}, {0x55affb63205d, 0x4}, {0x10c00028a1e0, 0x2, 0x39?})
+	reflect/value.go:581 +0x1ed1 fp=0x10c000037a80 sp=0x10c000037488 pc=0x55affbb5ad31
+reflect.Value.Call({0x55affbdada60?, 0x55affbdf5eb0?, 0x55affb633ef1?}, {0x10c00028a1e0, 0x2, 0x2})
+	reflect/value.go:365 +0x18e fp=0x10c000037b00 sp=0x10c000037a80 pc=0x55affbb58d8e
+github.com/AdamKorcz/go-118-fuzz-build/testing.(*F).Fuzz(0x10c000037dd8, {0x55affbdada60?, 0x55affbdf5eb0?})
+	github.com/AdamKorcz/go-118-fuzz-build@v0.0.0-20250520111509-a70c2aa677fa/testing/f.go:149 +0x237a fp=0x10c000037da0 sp=0x10c000037b00 pc=0x55affbd566fa
+github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof.FuzzRangeproof(...)
+	github.com/morph-l2/go-ethereum/tests/fuzzers/rangeproof/rangeproof_test.go_fuzz.go:6
+main.LibFuzzerFuzzRangeproof({0x7d1e14217880, 0x54b, 0x54b})
+	./main.3993701406.go:31 +0xe7 fp=0x10c000037e18 sp=0x10c000037da0 pc=0x55affbd58f47
+main.LLVMFuzzerTestOneInput(0x0?, 0x55affbb04901?)
+	./main.3993701406.go:24 +0x6c fp=0x10c000037e50 sp=0x10c000037e18 pc=0x55affbd58dec
+_cgoexp_261390db719a_LLVMFuzzerTestOneInput(0x7ffd4a1282f8)
+	_cgo_gotypes.go:55 +0x3f fp=0x10c000037e70 sp=0x10c000037e50 pc=0x55affbd5959f
+runtime.cgocallbackg1(0x55affbd59560, 0x7ffd4a1282f8, 0x0)
+	runtime/cgocall.go:446 +0x289 fp=0x10c000037f28 sp=0x10c000037e70 pc=0x55affba97529
+runtime.cgocallbackg(0x55affbd59560, 0x7ffd4a1282f8, 0x0)
+	runtime/cgocall.go:350 +0x132 fp=0x10c000037f90 sp=0x10c000037f28 pc=0x55affba971b2
+runtime.cgocallbackg(0x55affbd59560, 0x7ffd4a1282f8, 0x0)
+	<autogenerated>:1 +0x2b fp=0x10c000037fb8 sp=0x10c000037f90 pc=0x55affbb0910b
+runtime.cgocallback(0x0, 0x0, 0x0)
+	runtime/asm_amd64.s:1082 +0xcd fp=0x10c000037fe0 sp=0x10c000037fb8 pc=0x55affbb066cd
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000037fe8 sp=0x10c000037fe0 pc=0x55affbb06901
+
+goroutine 2 gp=0x10c000002e00 m=nil [force gc (idle) (scan), 1 minutes]:
+runtime.gopark(0x10c000003340?, 0x10c000050d90?, 0x20?, 0x74?, 0x7?)
+	runtime/proc.go:460 +0xce fp=0x10c0000507a8 sp=0x10c000050788 pc=0x55affbaff1ee
+created by runtime.init.8 in goroutine 1
+	runtime/proc.go:361 +0x1a
+
+goroutine 3 gp=0x10c000003340 m=nil [GC sweep wait]:
+runtime.gopark(0x55affc983d01?, 0x55affc983d20?, 0xc?, 0x9?, 0x1?)
+	runtime/proc.go:460 +0xce fp=0x10c000050f80 sp=0x10c000050f60 pc=0x55affbaff1ee
+runtime.goparkunlock(...)
+	runtime/proc.go:466
+runtime.bgsweep(0x10c000024100)
+	runtime/mgcsweep.go:323 +0xdf fp=0x10c000050fc8 sp=0x10c000050f80 pc=0x55affbab593f
+runtime.gcenable.gowrap1()
+	runtime/mgc.go:212 +0x25 fp=0x10c000050fe0 sp=0x10c000050fc8 pc=0x55affbaa98e5
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000050fe8 sp=0x10c000050fe0 pc=0x55affbb06901
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:212 +0x66
+
+goroutine 4 gp=0x10c000003500 m=nil [GC scavenge wait]:
+runtime.gopark(0x1ad9b21?, 0x3b9aca00?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c000051778 sp=0x10c000051758 pc=0x55affbaff1ee
+runtime.goparkunlock(...)
+	runtime/proc.go:466
+runtime.(*scavengerState).park(0x55affc9844a0)
+	runtime/mgcscavenge.go:425 +0x49 fp=0x10c0000517a8 sp=0x10c000051778 pc=0x55affbab33c9
+runtime.bgscavenge(0x10c000024100)
+	runtime/mgcscavenge.go:658 +0x59 fp=0x10c0000517c8 sp=0x10c0000517a8 pc=0x55affbab3979
+runtime.gcenable.gowrap2()
+	runtime/mgc.go:213 +0x25 fp=0x10c0000517e0 sp=0x10c0000517c8 pc=0x55affbaa9885
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c0000517e8 sp=0x10c0000517e0 pc=0x55affbb06901
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:213 +0xa5
+
+goroutine 18 gp=0x10c0000e6700 m=nil [finalizer wait, 1 minutes]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c00004c620 sp=0x10c00004c600 pc=0x55affbaff1ee
+runtime.runFinalizers()
+	runtime/mfinal.go:210 +0x107 fp=0x10c00004c7e0 sp=0x10c00004c620 pc=0x55affbaa87e7
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00004c7e8 sp=0x10c00004c7e0 pc=0x55affbb06901
+created by runtime.createfing in goroutine 1
+	runtime/mfinal.go:172 +0x3d
+
+goroutine 19 gp=0x10c0000e6a80 m=nil [cleanup wait, 1 minutes]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c00004cf68 sp=0x10c00004cf48 pc=0x55affbaff1ee
+runtime.goparkunlock(...)
+	runtime/proc.go:466
+runtime.(*cleanupQueue).dequeue(0x55affc984880)
+	runtime/mcleanup.go:439 +0xc5 fp=0x10c00004cfa0 sp=0x10c00004cf68 pc=0x55affbaa59c5
+runtime.runCleanups()
+	runtime/mcleanup.go:635 +0x45 fp=0x10c00004cfe0 sp=0x10c00004cfa0 pc=0x55affbaa6085
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00004cfe8 sp=0x10c00004cfe0 pc=0x55affbb06901
+created by runtime.(*cleanupQueue).createGs in goroutine 1
+	runtime/mcleanup.go:589 +0xa5
+
+goroutine 36 gp=0x10c000202700 m=nil [GC worker (idle)]:
+runtime.gopark(0xa687874b2bc?, 0x10c0004da200?, 0x1c?, 0xa?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c00054ff38 sp=0x10c00054ff18 pc=0x55affbaff1ee
+runtime.gcBgMarkWorker(0x10c0004cc000)
+	runtime/mgc.go:1463 +0xeb fp=0x10c00054ffc8 sp=0x10c00054ff38 pc=0x55affbaac00b
+runtime.gcBgMarkStartWorkers.gowrap1()
+	runtime/mgc.go:1373 +0x25 fp=0x10c00054ffe0 sp=0x10c00054ffc8 pc=0x55affbaabee5
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00054ffe8 sp=0x10c00054ffe0 pc=0x55affbb06901
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	runtime/mgc.go:1373 +0x105
+
+goroutine 37 gp=0x10c0002028c0 m=nil [GC worker (idle)]:
+runtime.gopark(0xa687612cc91?, 0x3?, 0xd?, 0xd6?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c00054bf38 sp=0x10c00054bf18 pc=0x55affbaff1ee
+runtime.gcBgMarkWorker(0x10c0004cc000)
+	runtime/mgc.go:1463 +0xeb fp=0x10c00054bfc8 sp=0x10c00054bf38 pc=0x55affbaac00b
+runtime.gcBgMarkStartWorkers.gowrap1()
+	runtime/mgc.go:1373 +0x25 fp=0x10c00054bfe0 sp=0x10c00054bfc8 pc=0x55affbaabee5
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00054bfe8 sp=0x10c00054bfe0 pc=0x55affbb06901
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	runtime/mgc.go:1373 +0x105
+
+goroutine 38 gp=0x10c000202a80 m=nil [GC worker (idle)]:
+runtime.gopark(0xa68745eb710?, 0x3?, 0x56?, 0x83?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c0003a5f38 sp=0x10c0003a5f18 pc=0x55affbaff1ee
+runtime.gcBgMarkWorker(0x10c0004cc000)
+	runtime/mgc.go:1463 +0xeb fp=0x10c0003a5fc8 sp=0x10c0003a5f38 pc=0x55affbaac00b
+runtime.gcBgMarkStartWorkers.gowrap1()
+	runtime/mgc.go:1373 +0x25 fp=0x10c0003a5fe0 sp=0x10c0003a5fc8 pc=0x55affbaabee5
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c0003a5fe8 sp=0x10c0003a5fe0 pc=0x55affbb06901
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	runtime/mgc.go:1373 +0x105
+
+goroutine 240110 gp=0x10c0000e6fc0 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c000551fe0 sp=0x10c000551fd8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000551fe8 sp=0x10c000551fe0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240179 gp=0x10c0000e7180 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00054a7e0 sp=0x10c00054a7d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00054a7e8 sp=0x10c00054a7e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240103 gp=0x10c0000e7500 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c0005a37e0 sp=0x10c0005a37d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c0005a37e8 sp=0x10c0005a37e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240181 gp=0x10c0005f5340 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00054b7e0 sp=0x10c00054b7d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00054b7e8 sp=0x10c00054b7e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240106 gp=0x10c0005f5880 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00059efe0 sp=0x10c00059efd8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00059efe8 sp=0x10c00059efe0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240108 gp=0x10c00052e380 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c000461fe0 sp=0x10c000461fd8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000461fe8 sp=0x10c000461fe0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240114 gp=0x10c0004ff500 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00054afe0 sp=0x10c00054afd8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00054afe8 sp=0x10c00054afe0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240180 gp=0x10c00069f340 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00054dfe0 sp=0x10c00054dfd8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00054dfe8 sp=0x10c00054dfe0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240113 gp=0x10c00069f880 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00054cfe0 sp=0x10c00054cfd8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00054cfe8 sp=0x10c00054cfe0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240111 gp=0x10c0005da1c0 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c0005507e0 sp=0x10c0005507d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c0005507e8 sp=0x10c0005507e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240105 gp=0x10c0005da8c0 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00045f7e0 sp=0x10c00045f7d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00045f7e8 sp=0x10c00045f7e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240104 gp=0x10c00058c380 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c0004637e0 sp=0x10c0004637d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c0004637e8 sp=0x10c0004637e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240112 gp=0x10c00058ca80 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00054e7e0 sp=0x10c00054e7d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00054e7e8 sp=0x10c00054e7e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240107 gp=0x10c00058cc40 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00045e7e0 sp=0x10c00045e7d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00045e7e8 sp=0x10c00045e7e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240102 gp=0x10c00058da40 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c00059f7e0 sp=0x10c00059f7d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00059f7e8 sp=0x10c00059f7e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+
+goroutine 240109 gp=0x10c000590a80 m=nil [runnable]:
+github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren.gowrap1()
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 fp=0x10c0005c27e0 sp=0x10c0005c27d8 pc=0x55affbd3ae00
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c0005c27e8 sp=0x10c0005c27e0 pc=0x55affbb06901
+created by github.com/morph-l2/go-ethereum/trie.(*hasher).hashFullNodeChildren in goroutine 17
+	github.com/morph-l2/go-ethereum/trie/hasher.go:128 +0x374
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==6159==ERROR: AddressSanitizer: ABRT on unknown address 0x00000000180f (pc 0x55affbb084e1 bp 0x7b7e129fe958 sp 0x7b7e129fe940 T1)
+SCARINESS: 10 (signal)
+    #0 0x55affbb084e1 in runtime.raise.abi0 runtime/sys_linux_amd64.s:154
+    #1 0x55affbaca5fd in runtime.crash runtime/signal_unix.go:1056
+    #2 0x55affbaca5fd in runtime.fatalthrow.func1 runtime/panic.go:1284
+    #3 0x55affbaca557 in runtime.fatalthrow runtime/panic.go:1273
+    #4 0x55affbaff109 in runtime.throw runtime/panic.go:1094
+    #5 0x55affbaedd09 in runtime.(*unwinder).finishInternal runtime/traceback.go:566
+    #6 0x55affbaedb11 in runtime.(*unwinder).next runtime/traceback.go:447
+    #7 0x55affbaaf868 in runtime.scanstack runtime/mgcmark.go:924
+    #8 0x55affbaae190 in runtime.markroot.func1 runtime/mgcmark.go:248
+    #9 0x55affbaadde4 in runtime.markroot runtime/mgcmark.go:222
+    #10 0x55affbab02d2 in runtime.gcDrain runtime/mgcmark.go:1206
+    #11 0x55affbaac446 in runtime.gcDrainMarkWorkerIdle runtime/mgcmark.go:1120
+    #12 0x55affbaac446 in runtime.gcBgMarkWorker.func2 runtime/mgc.go:1560
+    #13 0x55affbb04946 in runtime.systemstack.abi0 runtime/asm_amd64.s:513
+
+DEDUP_TOKEN: runtime.raise.abi0--runtime.crash--runtime.fatalthrow.func1
+==6159==Register values:
+rax = 0x0000000000000000  rbx = 0x0000000000000000  rcx = 0x000055affbb084e1  rdx = 0x0000000000000006  
+rdi = 0x000000000000180f  rsi = 0x0000000000001817  rbp = 0x00007b7e129fe958  rsp = 0x00007b7e129fe940  
+ r8 = 0x00007b7e129fe4a0   r9 = 0x0000000000000000  r10 = 0x0000000000000008  r11 = 0x0000000000000246  
+r12 = 0x000000000000180f  r13 = 0x000055affbd3acb3  r14 = 0x000055affc984c00  r15 = 0x0000000000000001  
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: ABRT runtime/sys_linux_amd64.s:154 in runtime.raise.abi0
+Thread T1 created by T0 here:
+    #0 0x55affb990a21 in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:250:3
+    #1 0x55affbd86ed2 in _cgo_try_pthread_create /_/GOROOT/src/runtime/cgo/gcc_libinit.c:161:9
+    #2 0x55affbd86ed2 in x_cgo_sys_thread_create /_/GOROOT/src/runtime/cgo/gcc_libinit.c:46:8
+    #3 0x55affbd879fc in __libc_csu_init (build-out/fuzz_rangeproof+0x8c79fc)
+
+DEDUP_TOKEN: ___interceptor_pthread_create--_cgo_try_pthread_create--x_cgo_sys_thread_create
+==6159==ABORTING
+MS: 5 ShuffleBytes-ChangeASCIIInt-CopyPart-EraseBytes-InsertByte-; base unit: a29cbdf3c91bea54c2bdbcf2b71ba2b45146f86a
+artifact_prefix='/tmp/tmp26r8frhf/'; Test unit written to /tmp/tmp26r8frhf/crash-91ec98552831623b18d1d349c4ed4ea0666c5b74
+stat::number_of_executed_units: 1533
+stat::average_exec_per_sec:     14
+stat::new_units_added:          4
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              78
+================== Job 3 exited with exit code 0 ============
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 416420008
+INFO: Loaded 1 modules   (23195 inline 8-bit counters): 23195 [0x558cf0ee5bc0, 0x558cf0eeb65b), 
+INFO: Loaded 1 PC tables (23195 PCs): 23195 [0x10c000080000,0x10c0000da9b0), 
+INFO:      899 files found in /github/workspace/cifuzz-corpus/fuzz_rangeproof
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 899 min: 1b max: 4092b total: 933463b rss: 51Mb
+#64	pulse  cov: 1056 ft: 2512 corp: 54/5081b exec/s: 32 rss: 56Mb
+#128	pulse  cov: 1094 ft: 2773 corp: 94/9361b exec/s: 42 rss: 58Mb
+#256	pulse  cov: 1105 ft: 3592 corp: 187/19Kb exec/s: 51 rss: 60Mb
+#512	pulse  cov: 1129 ft: 4787 corp: 348/69Kb exec/s: 42 rss: 64Mb
+#903	INITED cov: 1136 ft: 5667 corp: 506/355Kb exec/s: 14 rss: 75Mb
+#943	NEW    cov: 1136 ft: 5668 corp: 507/359Kb lim: 4096 exec/s: 14 rss: 75Mb L: 3846/3995 MS: 5 ChangeBinInt-ChangeASCIIInt-CopyPart-ShuffleBytes-ChangeBinInt-
+#1024	pulse  cov: 1136 ft: 5683 corp: 510/365Kb lim: 4096 exec/s: 14 rss: 77Mb
+#1340	RELOAD cov: 1136 ft: 5696 corp: 515/375Kb lim: 4096 exec/s: 13 rss: 78Mb
+#1619	NEW    cov: 1136 ft: 5697 corp: 516/376Kb lim: 4096 exec/s: 15 rss: 78Mb L: 483/3996 MS: 1 ChangeBinInt-
+#1748	NEW    cov: 1136 ft: 5699 corp: 517/376Kb lim: 4096 exec/s: 16 rss: 78Mb L: 603/3996 MS: 2 InsertRepeatedBytes-CrossOver-
+#1874	NEW    cov: 1136 ft: 5700 corp: 518/377Kb lim: 4096 exec/s: 17 rss: 78Mb L: 792/3996 MS: 4 CMP-ChangeBinInt-InsertByte-InsertByte- DE: "\003\372"-
+#1993	NEW    cov: 1136 ft: 5701 corp: 519/379Kb lim: 4096 exec/s: 17 rss: 78Mb L: 1764/3996 MS: 1 InsertRepeatedBytes-
+#2004	NEW    cov: 1136 ft: 5705 corp: 520/379Kb lim: 4096 exec/s: 17 rss: 78Mb L: 210/3996 MS: 1 ShuffleBytes-
+#2048	pulse  cov: 1136 ft: 5705 corp: 520/379Kb lim: 4096 exec/s: 18 rss: 78Mb
+#2311	NEW    cov: 1136 ft: 5706 corp: 521/380Kb lim: 4096 exec/s: 19 rss: 79Mb L: 1443/3996 MS: 3 CMP-CrossOver-PersAutoDict- DE: "\377\377\377\377\377\377\377\377\3772\377\377\377\377\377\377\377\377\377\377"-"\003\372"-
+#2428	NEW    cov: 1137 ft: 5707 corp: 522/383Kb lim: 4096 exec/s: 19 rss: 79Mb L: 3093/3996 MS: 5 ShuffleBytes-ChangeByte-CopyPart-ChangeBit-InsertByte-
+#2593	NEW    cov: 1137 ft: 5711 corp: 523/384Kb lim: 4096 exec/s: 20 rss: 79Mb L: 799/3996 MS: 3 ChangeBit-InsertByte-ChangeBit-
+#2777	NEW    cov: 1139 ft: 5713 corp: 524/387Kb lim: 4096 exec/s: 21 rss: 80Mb L: 3473/3996 MS: 5 ShuffleBytes-PersAutoDict-ChangeByte-EraseBytes-ChangeByte- DE: "\377\377\377\377\377\377\377\377\3772\377\377\377\377\377\377\377\377\377\377"-
+#2784	RELOAD cov: 1139 ft: 5717 corp: 525/391Kb lim: 4096 exec/s: 21 rss: 80Mb
+#4096	pulse  cov: 1139 ft: 5717 corp: 525/391Kb lim: 4096 exec/s: 25 rss: 81Mb
+#4279	NEW    cov: 1139 ft: 5718 corp: 526/394Kb lim: 4096 exec/s: 26 rss: 82Mb L: 2596/3996 MS: 5 PersAutoDict-PersAutoDict-InsertByte-EraseBytes-ChangeByte- DE: "\377\377\377\377\377\377\377\377\3772\377\377\377\377\377\377\377\377\377\377"-"\377\377\377\377\377\377\377\377\3772\377\377\377\377\377\377\377\377\377\377"-
+#4430	NEW    cov: 1139 ft: 5720 corp: 527/394Kb lim: 4096 exec/s: 26 rss: 82Mb L: 680/3996 MS: 5 ChangeBinInt-InsertRepeatedBytes-CMP-EraseBytes-ChangeBinInt- DE: "DecodeRLP"-
+#4841	NEW    cov: 1139 ft: 5721 corp: 528/396Kb lim: 4096 exec/s: 27 rss: 82Mb L: 1336/3996 MS: 1 ChangeBit-
+#4908	NEW    cov: 1139 ft: 5723 corp: 529/397Kb lim: 4096 exec/s: 27 rss: 82Mb L: 1442/3996 MS: 2 InsertByte-CrossOver-
+#4938	NEW    cov: 1139 ft: 5724 corp: 530/398Kb lim: 4096 exec/s: 27 rss: 82Mb L: 503/3996 MS: 5 ChangeBit-ChangeBit-InsertRepeatedBytes-InsertByte-ShuffleBytes-
+#5064	NEW    cov: 1139 ft: 5726 corp: 531/398Kb lim: 4096 exec/s: 27 rss: 82Mb L: 657/3996 MS: 1 ChangeByte-
+#5919	NEW    cov: 1139 ft: 5727 corp: 532/398Kb lim: 4096 exec/s: 29 rss: 82Mb L: 188/3996 MS: 5 ChangeBit-InsertRepeatedBytes-ShuffleBytes-ChangeASCIIInt-ShuffleBytes-
+#5941	RELOAD cov: 1139 ft: 5728 corp: 533/401Kb lim: 4096 exec/s: 29 rss: 82Mb
+#6510	NEW    cov: 1139 ft: 5729 corp: 534/402Kb lim: 4096 exec/s: 29 rss: 82Mb L: 1218/3996 MS: 1 CMP- DE: "w\000\000\000"-
+#6565	NEW    cov: 1139 ft: 5730 corp: 535/402Kb lim: 4096 exec/s: 29 rss: 82Mb L: 221/3996 MS: 4 CMP-ChangeBit-ChangeBinInt-ChangeBit- DE: "\377\377\377\377\377\377\377\377"-
+#6569	REDUCE cov: 1139 ft: 5730 corp: 535/402Kb lim: 4096 exec/s: 29 rss: 82Mb L: 107/3996 MS: 4 ChangeByte-EraseBytes-ChangeASCIIInt-CopyPart-
+#6810	NEW    cov: 1139 ft: 5731 corp: 536/406Kb lim: 4096 exec/s: 30 rss: 82Mb L: 4057/4057 MS: 4 InsertByte-CrossOver-PersAutoDict-CrossOver- DE: "\003\372"-
+#7860	NEW    cov: 1139 ft: 5732 corp: 537/408Kb lim: 4096 exec/s: 31 rss: 82Mb L: 1680/4057 MS: 3 CrossOver-ChangeByte-CrossOver-
+#8192	pulse  cov: 1139 ft: 5732 corp: 537/408Kb lim: 4096 exec/s: 32 rss: 84Mb
+#8693	NEW    cov: 1139 ft: 5733 corp: 538/411Kb lim: 4096 exec/s: 32 rss: 84Mb L: 3920/4057 MS: 4 ShuffleBytes-CopyPart-ChangeBit-ShuffleBytes-
+#8786	NEW    cov: 1139 ft: 5734 corp: 539/415Kb lim: 4096 exec/s: 32 rss: 84Mb L: 3887/4057 MS: 2 ChangeBit-ChangeBinInt-
+#8812	NEW    cov: 1139 ft: 5735 corp: 540/418Kb lim: 4096 exec/s: 32 rss: 84Mb L: 2434/4057 MS: 1 InsertByte-
+#8824	NEW    cov: 1139 ft: 5736 corp: 541/422Kb lim: 4096 exec/s: 32 rss: 84Mb L: 4015/4057 MS: 2 PersAutoDict-ChangeByte- DE: "\377\377\377\377\377\377\377\377\3772\377\377\377\377\377\377\377\377\377\377"-
+#9727	NEW    cov: 1142 ft: 5739 corp: 542/425Kb lim: 4096 exec/s: 33 rss: 91Mb L: 3684/4057 MS: 5 ShuffleBytes-ChangeBinInt-CopyPart-PersAutoDict-CrossOver- DE: "DecodeRLP"-
+#10161	NEW    cov: 1142 ft: 5740 corp: 543/427Kb lim: 4096 exec/s: 33 rss: 91Mb L: 1512/4057 MS: 3 CopyPart-CrossOver-ChangeBinInt-
+#12091	NEW    cov: 1142 ft: 5741 corp: 544/427Kb lim: 4096 exec/s: 34 rss: 91Mb L: 428/4057 MS: 5 PersAutoDict-EraseBytes-PersAutoDict-CMP-CrossOver- DE: "\377\377\377\377\377\377\377\377\3772\377\377\377\377\377\377\377\377\377\377"-"w\000\000\000"-"\377\377\377\377\377\377\377["-
+#14204	NEW    cov: 1142 ft: 5742 corp: 545/430Kb lim: 4096 exec/s: 34 rss: 91Mb L: 3048/4057 MS: 2 InsertByte-InsertRepeatedBytes-
+#15542	REDUCE cov: 1142 ft: 5742 corp: 545/430Kb lim: 4096 exec/s: 35 rss: 91Mb L: 537/4057 MS: 5 CopyPart-ChangeBinInt-EraseBytes-ShuffleBytes-EraseBytes-
+#16384	pulse  cov: 1142 ft: 5742 corp: 545/430Kb lim: 4096 exec/s: 35 rss: 91Mb
+#16574	DONE   cov: 1142 ft: 5742 corp: 545/430Kb lim: 4096 exec/s: 35 rss: 91Mb
+###### Recommended dictionary. ######
+"\003\372" # Uses: 333
+"\377\377\377\377\377\377\377\377\3772\377\377\377\377\377\377\377\377\377\377" # Uses: 347
+"DecodeRLP" # Uses: 256
+"w\000\000\000" # Uses: 194
+"\377\377\377\377\377\377\377\377" # Uses: 162
+"\377\377\377\377\377\377\377[" # Uses: 62
+###### End of recommended dictionary. ######
+Done 16574 runs in 465 second(s)
+stat::number_of_executed_units: 16574
+stat::average_exec_per_sec:     35
+stat::new_units_added:          31
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              91
+================== Job 1 exited with exit code 0 ============
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 416423799
+INFO: Loaded 1 modules   (23195 inline 8-bit counters): 23195 [0x563198abebc0, 0x563198ac465b), 
+INFO: Loaded 1 PC tables (23195 PCs): 23195 [0x10c000080000,0x10c0000da9b0), 
+INFO:      899 files found in /github/workspace/cifuzz-corpus/fuzz_rangeproof
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 899 min: 1b max: 4092b total: 933463b rss: 52Mb
+#64	pulse  cov: 1050 ft: 2420 corp: 56/5295b exec/s: 32 rss: 57Mb
+#128	pulse  cov: 1086 ft: 2719 corp: 95/9468b exec/s: 42 rss: 58Mb
+#256	pulse  cov: 1100 ft: 3600 corp: 195/20Kb exec/s: 51 rss: 60Mb
+#512	pulse  cov: 1121 ft: 4752 corp: 356/70Kb exec/s: 42 rss: 64Mb
+#902	INITED cov: 1136 ft: 5618 corp: 510/355Kb exec/s: 14 rss: 75Mb
+#1024	pulse  cov: 1136 ft: 5624 corp: 515/368Kb lim: 4096 exec/s: 15 rss: 78Mb
+#1374	RELOAD cov: 1140 ft: 5669 corp: 527/391Kb lim: 4096 exec/s: 14 rss: 78Mb
+#1407	NEW    cov: 1140 ft: 5670 corp: 528/391Kb lim: 4096 exec/s: 14 rss: 78Mb L: 739/4092 MS: 3 CrossOver-ShuffleBytes-CopyPart-
+#1531	NEW    cov: 1140 ft: 5673 corp: 529/391Kb lim: 4096 exec/s: 15 rss: 78Mb L: 107/4092 MS: 3 ChangeBit-ChangeBit-CopyPart-
+#1574	REDUCE cov: 1140 ft: 5673 corp: 529/391Kb lim: 4096 exec/s: 15 rss: 78Mb L: 1355/4092 MS: 2 EraseBytes-InsertRepeatedBytes-
+#1703	NEW    cov: 1140 ft: 5679 corp: 530/395Kb lim: 4096 exec/s: 16 rss: 78Mb L: 4077/4092 MS: 4 ChangeByte-InsertRepeatedBytes-ChangeASCIIInt-ShuffleBytes-
+#1771	NEW    cov: 1140 ft: 5682 corp: 531/398Kb lim: 4096 exec/s: 16 rss: 78Mb L: 2614/4092 MS: 1 ChangeBinInt-
+#2007	NEW    cov: 1140 ft: 5683 corp: 532/398Kb lim: 4096 exec/s: 17 rss: 79Mb L: 352/4092 MS: 5 EraseBytes-ChangeBit-ChangeByte-ChangeBinInt-InsertRepeatedBytes-
+#2048	pulse  cov: 1140 ft: 5683 corp: 532/398Kb lim: 4096 exec/s: 17 rss: 79Mb
+#2251	NEW    cov: 1140 ft: 5684 corp: 533/399Kb lim: 4096 exec/s: 18 rss: 79Mb L: 688/4092 MS: 5 CopyPart-InsertByte-CrossOver-ChangeBit-EraseBytes-
+#2273	RELOAD cov: 1140 ft: 5686 corp: 534/403Kb lim: 4096 exec/s: 19 rss: 80Mb
+#2814	NEW    cov: 1140 ft: 5687 corp: 535/407Kb lim: 4096 exec/s: 21 rss: 81Mb L: 4077/4092 MS: 1 ShuffleBytes-
+#2913	NEW    cov: 1140 ft: 5689 corp: 536/408Kb lim: 4096 exec/s: 21 rss: 81Mb L: 1472/4092 MS: 2 InsertByte-InsertByte-
+#2930	NEW    cov: 1140 ft: 5691 corp: 537/408Kb lim: 4096 exec/s: 22 rss: 81Mb L: 214/4092 MS: 2 CrossOver-ChangeByte-
+#2967	NEW    cov: 1140 ft: 5694 corp: 538/410Kb lim: 4096 exec/s: 22 rss: 81Mb L: 1234/4092 MS: 1 InsertByte-
+#3077	NEW    cov: 1140 ft: 5696 corp: 539/413Kb lim: 4096 exec/s: 22 rss: 81Mb L: 3996/4092 MS: 5 CrossOver-ChangeByte-ShuffleBytes-ChangeBit-ShuffleBytes-
+#3213	NEW    cov: 1140 ft: 5697 corp: 540/414Kb lim: 4096 exec/s: 22 rss: 82Mb L: 846/4092 MS: 1 InsertRepeatedBytes-
+#3279	NEW    cov: 1140 ft: 5698 corp: 541/416Kb lim: 4096 exec/s: 23 rss: 82Mb L: 1778/4092 MS: 1 CMP- DE: " \000\000\000\000\000\000\000"-
+#3639	NEW    cov: 1140 ft: 5717 corp: 542/420Kb lim: 4096 exec/s: 24 rss: 82Mb L: 3672/4092 MS: 5 ChangeBit-ChangeBit-ChangeBinInt-ChangeBit-InsertRepeatedBytes-
+#3683	NEW    cov: 1140 ft: 5718 corp: 543/422Kb lim: 4096 exec/s: 24 rss: 82Mb L: 2632/4092 MS: 3 PersAutoDict-InsertRepeatedBytes-ShuffleBytes- DE: " \000\000\000\000\000\000\000"-
+#3749	NEW    cov: 1140 ft: 5720 corp: 544/423Kb lim: 4096 exec/s: 24 rss: 82Mb L: 708/4092 MS: 1 CMP- DE: "Encode"-
+#3757	NEW    cov: 1141 ft: 5721 corp: 545/425Kb lim: 4096 exec/s: 24 rss: 82Mb L: 2258/4092 MS: 3 EraseBytes-ChangeBinInt-ChangeByte-
+#3790	NEW    cov: 1141 ft: 5722 corp: 546/427Kb lim: 4096 exec/s: 24 rss: 82Mb L: 2055/4092 MS: 3 CrossOver-ChangeByte-ChangeBinInt-
+#4032	NEW    cov: 1141 ft: 5724 corp: 547/431Kb lim: 4096 exec/s: 25 rss: 82Mb L: 3752/4092 MS: 2 CrossOver-ChangeASCIIInt-
+#4058	REDUCE cov: 1141 ft: 5724 corp: 547/431Kb lim: 4096 exec/s: 25 rss: 82Mb L: 489/4092 MS: 1 EraseBytes-
+#4096	pulse  cov: 1141 ft: 5724 corp: 547/431Kb lim: 4096 exec/s: 25 rss: 82Mb
+#5897	NEW    cov: 1141 ft: 5728 corp: 548/433Kb lim: 4096 exec/s: 29 rss: 82Mb L: 2259/4092 MS: 4 ChangeBinInt-ShuffleBytes-ShuffleBytes-ChangeBinInt-
+#6694	NEW    cov: 1141 ft: 5729 corp: 549/435Kb lim: 4096 exec/s: 30 rss: 82Mb L: 2365/4092 MS: 2 InsertRepeatedBytes-EraseBytes-
+#6861	NEW    cov: 1141 ft: 5730 corp: 550/439Kb lim: 4096 exec/s: 30 rss: 82Mb L: 3653/4092 MS: 2 CMP-CopyPart- DE: "\007\000\000\000"-
+#7751	NEW    cov: 1141 ft: 5733 corp: 551/441Kb lim: 4096 exec/s: 31 rss: 83Mb L: 2576/4092 MS: 1 ShuffleBytes-
+#8192	pulse  cov: 1141 ft: 5733 corp: 551/441Kb lim: 4096 exec/s: 31 rss: 83Mb
+#8887	NEW    cov: 1141 ft: 5734 corp: 552/445Kb lim: 4096 exec/s: 32 rss: 83Mb L: 3691/4092 MS: 1 InsertRepeatedBytes-
+#10136	REDUCE cov: 1141 ft: 5734 corp: 552/445Kb lim: 4096 exec/s: 32 rss: 87Mb L: 2270/4092 MS: 3 EraseBytes-CrossOver-CMP- DE: "\000\000\000\000\000\000\004\332"-
+#11943	REDUCE cov: 1141 ft: 5734 corp: 552/445Kb lim: 4096 exec/s: 33 rss: 95Mb L: 448/4092 MS: 1 EraseBytes-
+#12065	NEW    cov: 1141 ft: 5735 corp: 553/449Kb lim: 4096 exec/s: 33 rss: 95Mb L: 4092/4092 MS: 1 ChangeByte-
+#13167	NEW    cov: 1141 ft: 5736 corp: 554/451Kb lim: 4096 exec/s: 34 rss: 95Mb L: 2384/4092 MS: 1 ShuffleBytes-
+#13377	NEW    cov: 1141 ft: 5737 corp: 555/451Kb lim: 4096 exec/s: 34 rss: 95Mb L: 121/4092 MS: 5 ChangeBinInt-CopyPart-ChangeByte-ShuffleBytes-ChangeBinInt-
+#13928	NEW    cov: 1141 ft: 5738 corp: 556/455Kb lim: 4096 exec/s: 34 rss: 95Mb L: 4085/4092 MS: 5 InsertRepeatedBytes-ChangeBinInt-ShuffleBytes-InsertByte-InsertRepeatedBytes-
+#14704	NEW    cov: 1141 ft: 5739 corp: 557/459Kb lim: 4096 exec/s: 34 rss: 95Mb L: 4023/4092 MS: 3 ChangeBinInt-InsertRepeatedBytes-ShuffleBytes-
+#16214	DONE   cov: 1141 ft: 5739 corp: 557/459Kb lim: 4096 exec/s: 34 rss: 95Mb
+###### Recommended dictionary. ######
+" \000\000\000\000\000\000\000" # Uses: 451
+"Encode" # Uses: 344
+"\007\000\000\000" # Uses: 259
+"\000\000\000\000\000\000\004\332" # Uses: 138
+###### End of recommended dictionary. ######
+Done 16214 runs in 465 second(s)
+stat::number_of_executed_units: 16214
+stat::average_exec_per_sec:     34
+stat::new_units_added:          33
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              95
+================== Job 0 exited with exit code 0 ============
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 416419359
+INFO: Loaded 1 modules   (23195 inline 8-bit counters): 23195 [0x55a9a2ffdbc0, 0x55a9a300365b), 
+INFO: Loaded 1 PC tables (23195 PCs): 23195 [0x10c000080000,0x10c0000da9b0), 
+INFO:      899 files found in /github/workspace/cifuzz-corpus/fuzz_rangeproof
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 899 min: 1b max: 4092b total: 933463b rss: 53Mb
+#128	pulse  cov: 1091 ft: 2787 corp: 94/9361b exec/s: 42 rss: 59Mb
+#256	pulse  cov: 1103 ft: 3663 corp: 190/19Kb exec/s: 51 rss: 61Mb
+#512	pulse  cov: 1123 ft: 4766 corp: 342/67Kb exec/s: 42 rss: 66Mb
+#902	INITED cov: 1133 ft: 5614 corp: 492/348Kb exec/s: 14 rss: 76Mb
+#918	NEW    cov: 1133 ft: 5617 corp: 493/348Kb lim: 4096 exec/s: 15 rss: 76Mb L: 107/4092 MS: 1 ChangeBit-
+#966	NEW    cov: 1133 ft: 5618 corp: 494/349Kb lim: 4096 exec/s: 15 rss: 76Mb L: 586/4092 MS: 3 ChangeBinInt-ShuffleBytes-ShuffleBytes-
+#1024	pulse  cov: 1133 ft: 5618 corp: 494/349Kb lim: 4096 exec/s: 15 rss: 79Mb
+#1399	RELOAD cov: 1138 ft: 5674 corp: 509/388Kb lim: 4096 exec/s: 14 rss: 79Mb
+#1715	NEW    cov: 1138 ft: 5675 corp: 510/392Kb lim: 4096 exec/s: 15 rss: 79Mb L: 3316/4092 MS: 1 ChangeBinInt-
+#1844	NEW    cov: 1138 ft: 5677 corp: 511/392Kb lim: 4096 exec/s: 16 rss: 80Mb L: 790/4092 MS: 4 ShuffleBytes-ChangeByte-CMP-ChangeBinInt- DE: "\377\377\377\377\377\377\377\222"-
+#1978	NEW    cov: 1141 ft: 5683 corp: 512/395Kb lim: 4096 exec/s: 17 rss: 80Mb L: 2522/4092 MS: 1 InsertRepeatedBytes-
+#1986	NEW    cov: 1141 ft: 5684 corp: 513/395Kb lim: 4096 exec/s: 17 rss: 80Mb L: 575/4092 MS: 3 ChangeBinInt-CMP-ChangeASCIIInt- DE: "DecodeRLP"-
+#2048	pulse  cov: 1141 ft: 5684 corp: 513/395Kb lim: 4096 exec/s: 17 rss: 80Mb
+#2169	NEW    cov: 1141 ft: 5685 corp: 514/399Kb lim: 4096 exec/s: 18 rss: 81Mb L: 4092/4092 MS: 1 CopyPart-
+#2188	NEW    cov: 1141 ft: 5686 corp: 515/403Kb lim: 4096 exec/s: 18 rss: 81Mb L: 3989/4092 MS: 4 ChangeASCIIInt-PersAutoDict-InsertByte-ChangeBit- DE: "DecodeRLP"-
+#2578	NEW    cov: 1141 ft: 5687 corp: 516/406Kb lim: 4096 exec/s: 20 rss: 81Mb L: 3140/4092 MS: 5 InsertByte-CrossOver-CrossOver-ChangeByte-EraseBytes-
+#2686	NEW    cov: 1141 ft: 5711 corp: 517/407Kb lim: 4096 exec/s: 21 rss: 81Mb L: 302/4092 MS: 1 InsertRepeatedBytes-
+#2805	NEW    cov: 1141 ft: 5712 corp: 518/410Kb lim: 4096 exec/s: 21 rss: 82Mb L: 3887/4092 MS: 3 ChangeBit-PersAutoDict-ShuffleBytes- DE: "\377\377\377\377\377\377\377\222"-
+#4096	pulse  cov: 1141 ft: 5712 corp: 518/410Kb lim: 4096 exec/s: 24 rss: 83Mb
+#5180	RELOAD cov: 1141 ft: 5713 corp: 519/411Kb lim: 4096 exec/s: 28 rss: 83Mb
+#5612	NEW    cov: 1141 ft: 5718 corp: 520/412Kb lim: 4096 exec/s: 28 rss: 83Mb L: 1403/4092 MS: 2 ChangeByte-ShuffleBytes-
+#5638	REDUCE cov: 1141 ft: 5718 corp: 520/411Kb lim: 4096 exec/s: 29 rss: 83Mb L: 2762/4092 MS: 1 EraseBytes-
+#5835	NEW    cov: 1141 ft: 5719 corp: 521/411Kb lim: 4096 exec/s: 29 rss: 83Mb L: 349/4092 MS: 1 ShuffleBytes-
+#5846	NEW    cov: 1141 ft: 5720 corp: 522/415Kb lim: 4096 exec/s: 29 rss: 83Mb L: 3887/4092 MS: 1 ChangeASCIIInt-
+#6721	REDUCE cov: 1141 ft: 5720 corp: 522/415Kb lim: 4096 exec/s: 31 rss: 86Mb L: 789/4092 MS: 2 EraseBytes-PersAutoDict- DE: "\377\377\377\377\377\377\377\222"-
+#7014	NEW    cov: 1141 ft: 5742 corp: 523/417Kb lim: 4096 exec/s: 31 rss: 86Mb L: 1550/4092 MS: 1 PersAutoDict- DE: "DecodeRLP"-
+#7594	NEW    cov: 1141 ft: 5744 corp: 524/417Kb lim: 4096 exec/s: 31 rss: 88Mb L: 136/4092 MS: 1 ChangeBit-
+#7989	NEW    cov: 1141 ft: 5745 corp: 525/417Kb lim: 4096 exec/s: 32 rss: 92Mb L: 230/4092 MS: 2 InsertRepeatedBytes-PersAutoDict- DE: "DecodeRLP"-
+#8192	pulse  cov: 1141 ft: 5745 corp: 525/417Kb lim: 4096 exec/s: 32 rss: 92Mb
+#8365	NEW    cov: 1141 ft: 5746 corp: 526/418Kb lim: 4096 exec/s: 33 rss: 92Mb L: 807/4092 MS: 4 ChangeByte-PersAutoDict-PersAutoDict-ChangeByte- DE: "DecodeRLP"-"\377\377\377\377\377\377\377\222"-
+#9290	NEW    cov: 1141 ft: 5747 corp: 527/420Kb lim: 4096 exec/s: 33 rss: 92Mb L: 2494/4092 MS: 1 ChangeByte-
+#10648	REDUCE cov: 1141 ft: 5747 corp: 527/420Kb lim: 4096 exec/s: 34 rss: 92Mb L: 1346/4092 MS: 4 ChangeBit-ChangeByte-PersAutoDict-EraseBytes- DE: "\377\377\377\377\377\377\377\222"-
+#11331	NEW    cov: 1142 ft: 5748 corp: 528/423Kb lim: 4096 exec/s: 34 rss: 92Mb L: 3082/4092 MS: 1 ChangeByte-
+#12601	NEW    cov: 1142 ft: 5749 corp: 529/427Kb lim: 4096 exec/s: 35 rss: 92Mb L: 3995/4092 MS: 1 CrossOver-
+#12887	NEW    cov: 1143 ft: 5750 corp: 530/428Kb lim: 4096 exec/s: 35 rss: 92Mb L: 576/4092 MS: 4 ShuffleBytes-PersAutoDict-InsertByte-CrossOver- DE: "\377\377\377\377\377\377\377\222"-
+#13246	NEW    cov: 1143 ft: 5752 corp: 531/430Kb lim: 4096 exec/s: 35 rss: 92Mb L: 2818/4092 MS: 3 CrossOver-EraseBytes-ChangeBit-
+#13381	NEW    cov: 1143 ft: 5753 corp: 532/431Kb lim: 4096 exec/s: 35 rss: 92Mb L: 669/4092 MS: 5 ChangeBit-ShuffleBytes-CMP-ChangeByte-ChangeBit- DE: "!!!!!!!!!!!!!!!!!!!!"-
+#13535	NEW    cov: 1143 ft: 5754 corp: 533/433Kb lim: 4096 exec/s: 35 rss: 92Mb L: 1582/4092 MS: 4 InsertByte-CopyPart-InsertRepeatedBytes-ChangeByte-
+#13641	REDUCE cov: 1143 ft: 5754 corp: 533/433Kb lim: 4096 exec/s: 35 rss: 92Mb L: 147/4092 MS: 1 EraseBytes-
+#14669	NEW    cov: 1143 ft: 5757 corp: 534/436Kb lim: 4096 exec/s: 36 rss: 92Mb L: 3161/4092 MS: 5 CopyPart-ShuffleBytes-CMP-InsertRepeatedBytes-PersAutoDict- DE: "RRRRRRR"-"\377\377\377\377\377\377\377\222"-
+#15562	NEW    cov: 1143 ft: 5758 corp: 535/440Kb lim: 4096 exec/s: 36 rss: 92Mb L: 4048/4092 MS: 1 ChangeByte-
+#16101	REDUCE cov: 1143 ft: 5758 corp: 535/440Kb lim: 4096 exec/s: 36 rss: 92Mb L: 671/4092 MS: 5 ShuffleBytes-InsertRepeatedBytes-InsertByte-EraseBytes-ChangeByte-
+#16384	pulse  cov: 1143 ft: 5758 corp: 535/440Kb lim: 4096 exec/s: 36 rss: 92Mb
+#16827	DONE   cov: 1143 ft: 5758 corp: 535/440Kb lim: 4096 exec/s: 36 rss: 92Mb
+###### Recommended dictionary. ######
+"\377\377\377\377\377\377\377\222" # Uses: 607
+"DecodeRLP" # Uses: 609
+"!!!!!!!!!!!!!!!!!!!!" # Uses: 94
+"RRRRRRR" # Uses: 53
+###### End of recommended dictionary. ######
+Done 16827 runs in 465 second(s)
+stat::number_of_executed_units: 16827
+stat::average_exec_per_sec:     36
+stat::new_units_added:          32
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              92
