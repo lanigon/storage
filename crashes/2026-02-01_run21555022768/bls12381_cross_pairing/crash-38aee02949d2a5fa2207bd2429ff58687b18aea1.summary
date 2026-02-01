@@ -1,0 +1,583 @@
+/github/workspace/build-out/fuzz_bls12381_cross_pairing -timeout=25 -rss_limit_mb=2560 -len_control=0 -artifact_prefix=/tmp/tmppvqxu50y/ -max_total_time=464 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz_bls12381_cross_pairing >fuzz-0.log 2>&1
+/github/workspace/build-out/fuzz_bls12381_cross_pairing -timeout=25 -rss_limit_mb=2560 -len_control=0 -artifact_prefix=/tmp/tmppvqxu50y/ -max_total_time=464 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz_bls12381_cross_pairing >fuzz-3.log 2>&1
+/github/workspace/build-out/fuzz_bls12381_cross_pairing -timeout=25 -rss_limit_mb=2560 -len_control=0 -artifact_prefix=/tmp/tmppvqxu50y/ -max_total_time=464 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz_bls12381_cross_pairing >fuzz-2.log 2>&1
+/github/workspace/build-out/fuzz_bls12381_cross_pairing -timeout=25 -rss_limit_mb=2560 -len_control=0 -artifact_prefix=/tmp/tmppvqxu50y/ -max_total_time=464 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz_bls12381_cross_pairing >fuzz-1.log 2>&1
+================== Job 0 exited with exit code 77 ============
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1372502407
+INFO: Loaded 1 modules   (25703 inline 8-bit counters): 25703 [0x56248a4a0580, 0x56248a4a69e7), 
+INFO: Loaded 1 PC tables (25703 PCs): 25703 [0x10c000080000,0x10c0000e4670), 
+INFO:      134 files found in /github/workspace/cifuzz-corpus/fuzz_bls12381_cross_pairing
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 134 min: 1b max: 2984b total: 31333b rss: 54Mb
+#135	INITED cov: 637 ft: 1467 corp: 133/30Kb exec/s: 135 rss: 58Mb
+#649	NEW    cov: 637 ft: 1468 corp: 134/32Kb lim: 4096 exec/s: 649 rss: 61Mb L: 2218/2984 MS: 4 ShuffleBytes-ShuffleBytes-CrossOver-ShuffleBytes-
+#1024	pulse  cov: 637 ft: 1468 corp: 134/32Kb lim: 4096 exec/s: 512 rss: 64Mb
+#2048	pulse  cov: 637 ft: 1468 corp: 134/32Kb lim: 4096 exec/s: 682 rss: 64Mb
+#4096	pulse  cov: 637 ft: 1468 corp: 134/32Kb lim: 4096 exec/s: 682 rss: 65Mb
+#8192	pulse  cov: 637 ft: 1468 corp: 134/32Kb lim: 4096 exec/s: 682 rss: 67Mb
+#16384	pulse  cov: 637 ft: 1468 corp: 134/32Kb lim: 4096 exec/s: 682 rss: 71Mb
+#32768	pulse  cov: 637 ft: 1468 corp: 134/32Kb lim: 4096 exec/s: 697 rss: 76Mb
+#65536	pulse  cov: 637 ft: 1468 corp: 134/32Kb lim: 4096 exec/s: 697 rss: 77Mb
+runtime: marked free object in span 0x7b8764323fe0, elemsize=32 freeindex=0 (bad use of unsafe.Pointer or having race conditions? try -d=checkptr or -race)
+0x10c000322000 free  unmarked
+0x10c000322020 alloc marked  
+0x10c000322040 free  unmarked
+0x10c000322060 alloc marked  
+0x10c000322080 free  unmarked
+0x10c0003220a0 alloc marked  
+0x10c0003220c0 free  unmarked
+0x10c0003220e0 alloc marked  
+0x10c000322100 free  unmarked
+0x10c000322120 alloc marked  
+0x10c000322140 free  unmarked
+0x10c000322160 alloc marked  
+0x10c000322180 free  unmarked
+0x10c0003221a0 alloc marked  
+0x10c0003221c0 free  unmarked
+0x10c0003221e0 alloc marked  
+0x10c000322200 free  unmarked
+0x10c000322220 alloc marked  
+0x10c000322240 free  unmarked
+0x10c000322260 alloc marked  
+0x10c000322280 free  unmarked
+0x10c0003222a0 alloc marked  
+0x10c0003222c0 free  unmarked
+0x10c0003222e0 alloc marked  
+0x10c000322300 free  unmarked
+0x10c000322320 alloc marked  
+0x10c000322340 free  unmarked
+0x10c000322360 alloc marked  
+0x10c000322380 free  unmarked
+0x10c0003223a0 alloc marked  
+0x10c0003223c0 free  unmarked
+0x10c0003223e0 alloc marked  
+0x10c000322400 free  unmarked
+0x10c000322420 alloc marked  
+0x10c000322440 free  unmarked
+0x10c000322460 alloc marked  
+0x10c000322480 free  unmarked
+0x10c0003224a0 alloc marked  
+0x10c0003224c0 free  unmarked
+0x10c0003224e0 alloc marked  
+0x10c000322500 free  unmarked
+0x10c000322520 alloc marked  
+0x10c000322540 free  unmarked
+0x10c000322560 alloc marked  
+0x10c000322580 free  unmarked
+0x10c0003225a0 alloc marked  
+0x10c0003225c0 free  unmarked
+0x10c0003225e0 alloc marked  
+0x10c000322600 free  unmarked
+0x10c000322620 alloc marked  
+0x10c000322640 free  unmarked
+0x10c000322660 alloc marked  
+0x10c000322680 free  unmarked
+0x10c0003226a0 alloc marked  
+0x10c0003226c0 free  unmarked
+0x10c0003226e0 alloc marked  
+0x10c000322700 free  unmarked
+0x10c000322720 alloc marked  
+0x10c000322740 free  unmarked
+0x10c000322760 alloc marked  
+0x10c000322780 free  unmarked
+0x10c0003227a0 alloc marked  
+0x10c0003227c0 free  unmarked
+0x10c0003227e0 alloc marked  
+0x10c000322800 free  unmarked
+0x10c000322820 alloc marked  
+0x10c000322840 free  unmarked
+0x10c000322860 alloc marked  
+0x10c000322880 free  unmarked
+0x10c0003228a0 alloc marked  
+0x10c0003228c0 free  unmarked
+0x10c0003228e0 alloc marked  
+0x10c000322900 free  unmarked
+0x10c000322920 alloc marked  
+0x10c000322940 free  unmarked
+0x10c000322960 alloc marked  
+0x10c000322980 free  unmarked
+0x10c0003229a0 alloc marked  
+0x10c0003229c0 free  unmarked
+0x10c0003229e0 alloc marked  
+0x10c000322a00 free  unmarked
+0x10c000322a20 alloc marked  
+0x10c000322a40 free  unmarked
+0x10c000322a60 alloc marked  
+0x10c000322a80 free  unmarked
+0x10c000322aa0 alloc marked  
+0x10c000322ac0 free  unmarked
+0x10c000322ae0 alloc marked  
+0x10c000322b00 free  unmarked
+0x10c000322b20 alloc marked  
+0x10c000322b40 free  unmarked
+0x10c000322b60 alloc marked  
+0x10c000322b80 free  unmarked
+0x10c000322ba0 alloc marked  
+0x10c000322bc0 free  unmarked
+0x10c000322be0 alloc marked  
+0x10c000322c00 free  unmarked
+0x10c000322c20 alloc marked  
+0x10c000322c40 free  unmarked
+0x10c000322c60 alloc marked  
+0x10c000322c80 free  unmarked
+0x10c000322ca0 alloc marked  
+0x10c000322cc0 free  unmarked
+0x10c000322ce0 alloc marked  
+0x10c000322d00 free  unmarked
+0x10c000322d20 alloc marked  
+0x10c000322d40 free  unmarked
+0x10c000322d60 alloc marked  
+0x10c000322d80 free  unmarked
+0x10c000322da0 alloc marked  
+0x10c000322dc0 free  unmarked
+0x10c000322de0 alloc marked  
+0x10c000322e00 free  unmarked
+0x10c000322e20 alloc marked  
+0x10c000322e40 free  unmarked
+0x10c000322e60 alloc marked  
+0x10c000322e80 free  unmarked
+0x10c000322ea0 alloc marked  
+0x10c000322ec0 free  unmarked
+0x10c000322ee0 alloc marked  
+0x10c000322f00 free  unmarked
+0x10c000322f20 alloc marked  
+0x10c000322f40 free  unmarked
+0x10c000322f60 alloc marked  
+0x10c000322f80 free  unmarked
+0x10c000322fa0 alloc marked  
+0x10c000322fc0 free  unmarked
+0x10c000322fe0 alloc marked  
+0x10c000323000 free  unmarked
+0x10c000323020 alloc marked  
+0x10c000323040 free  unmarked
+0x10c000323060 alloc marked  
+0x10c000323080 free  unmarked
+0x10c0003230a0 alloc marked  
+0x10c0003230c0 free  unmarked
+0x10c0003230e0 alloc marked  
+0x10c000323100 free  unmarked
+0x10c000323120 alloc marked  
+0x10c000323140 free  unmarked
+0x10c000323160 alloc marked  
+0x10c000323180 free  unmarked
+0x10c0003231a0 alloc marked  
+0x10c0003231c0 free  unmarked
+0x10c0003231e0 alloc marked  
+0x10c000323200 free  unmarked
+0x10c000323220 alloc marked  
+0x10c000323240 free  unmarked
+0x10c000323260 alloc marked  
+0x10c000323280 free  unmarked
+0x10c0003232a0 alloc marked  
+0x10c0003232c0 free  unmarked
+0x10c0003232e0 alloc marked  
+0x10c000323300 free  unmarked
+0x10c000323320 free  marked   zombie
+0x000010c000323320:  0xf8b2f47577922da4  0x49c37c46f4fa97b6 
+0x000010c000323330:  0xead42bc5207ce75b  0x1e6197b9dc74448b 
+0x10c000323340 free  unmarked
+0x10c000323360 free  unmarked
+0x10c000323380 free  unmarked
+0x10c0003233a0 free  unmarked
+0x10c0003233c0 free  unmarked
+0x10c0003233e0 free  unmarked
+0x10c000323400 free  unmarked
+0x10c000323420 alloc marked  
+0x10c000323440 free  unmarked
+0x10c000323460 alloc marked  
+0x10c000323480 free  unmarked
+0x10c0003234a0 alloc marked  
+0x10c0003234c0 free  unmarked
+0x10c0003234e0 alloc marked  
+0x10c000323500 free  unmarked
+0x10c000323520 alloc marked  
+0x10c000323540 free  unmarked
+0x10c000323560 alloc marked  
+0x10c000323580 free  unmarked
+0x10c0003235a0 alloc marked  
+0x10c0003235c0 free  unmarked
+0x10c0003235e0 alloc marked  
+0x10c000323600 free  unmarked
+0x10c000323620 alloc marked  
+0x10c000323640 free  unmarked
+0x10c000323660 alloc marked  
+0x10c000323680 free  unmarked
+0x10c0003236a0 alloc marked  
+0x10c0003236c0 free  unmarked
+0x10c0003236e0 alloc marked  
+0x10c000323700 free  unmarked
+0x10c000323720 alloc marked  
+0x10c000323740 free  unmarked
+0x10c000323760 alloc marked  
+0x10c000323780 free  unmarked
+0x10c0003237a0 alloc marked  
+0x10c0003237c0 free  unmarked
+0x10c0003237e0 alloc marked  
+0x10c000323800 free  unmarked
+0x10c000323820 alloc marked  
+0x10c000323840 free  unmarked
+0x10c000323860 alloc marked  
+0x10c000323880 free  unmarked
+0x10c0003238a0 alloc marked  
+0x10c0003238c0 free  unmarked
+0x10c0003238e0 alloc marked  
+0x10c000323900 free  unmarked
+0x10c000323920 alloc marked  
+0x10c000323940 free  unmarked
+0x10c000323960 alloc marked  
+0x10c000323980 free  unmarked
+0x10c0003239a0 alloc marked  
+0x10c0003239c0 free  unmarked
+0x10c0003239e0 alloc marked  
+0x10c000323a00 free  unmarked
+0x10c000323a20 alloc marked  
+0x10c000323a40 free  unmarked
+0x10c000323a60 alloc marked  
+0x10c000323a80 free  unmarked
+0x10c000323aa0 alloc marked  
+0x10c000323ac0 free  unmarked
+0x10c000323ae0 alloc marked  
+0x10c000323b00 free  unmarked
+0x10c000323b20 alloc marked  
+0x10c000323b40 free  unmarked
+0x10c000323b60 alloc marked  
+0x10c000323b80 free  unmarked
+0x10c000323ba0 alloc marked  
+0x10c000323bc0 free  unmarked
+0x10c000323be0 alloc marked  
+0x10c000323c00 free  unmarked
+0x10c000323c20 alloc marked  
+0x10c000323c40 free  unmarked
+0x10c000323c60 alloc marked  
+0x10c000323c80 free  unmarked
+0x10c000323ca0 alloc marked  
+0x10c000323cc0 free  unmarked
+0x10c000323ce0 alloc marked  
+0x10c000323d00 free  unmarked
+0x10c000323d20 alloc marked  
+0x10c000323d40 free  unmarked
+0x10c000323d60 alloc marked  
+0x10c000323d80 free  unmarked
+0x10c000323da0 alloc marked  
+0x10c000323dc0 free  unmarked
+0x10c000323de0 alloc marked  
+0x10c000323e00 free  unmarked
+0x10c000323e20 alloc marked  
+0x10c000323e40 free  unmarked
+0x10c000323e60 alloc marked  
+0x10c000323e80 free  unmarked
+0x10c000323ea0 alloc marked  
+0x10c000323ec0 free  unmarked
+0x10c000323ee0 alloc marked  
+0x10c000323f00 free  unmarked
+0x10c000323f20 alloc marked  
+0x10c000323f40 free  unmarked
+0x10c000323f60 alloc marked  
+0x10c000323f80 free  unmarked
+0x10c000323fa0 alloc marked  
+0x10c000323fc0 free  unmarked
+0x10c000323fe0 alloc marked  
+fatal error: found pointer to free object
+
+goroutine 3 gp=0x10c000003340 m=7 mp=0x10c000280008 [running]:
+runtime.throw({0x562488ff2144?, 0x10c000323340?})
+	runtime/panic.go:1094 +0x4a fp=0x10c000050d88 sp=0x10c000050d58 pc=0x5624894d3eaa
+runtime.(*mspan).reportZombies(0x7b8764323fe0)
+	runtime/mgcsweep.go:892 +0x2ea fp=0x10c000050e08 sp=0x10c000050d88 pc=0x56248948c2ca
+runtime.(*sweepLocked).sweep(0x56248a473460?, 0x0)
+	runtime/mgcsweep.go:672 +0xb14 fp=0x10c000050f30 sp=0x10c000050e08 pc=0x56248948b994
+runtime.sweepone()
+	runtime/mgcsweep.go:395 +0xdd fp=0x10c000050f80 sp=0x10c000050f30 pc=0x56248948abbd
+runtime.bgsweep(0x10c000024100)
+	runtime/mgcsweep.go:300 +0x105 fp=0x10c000050fc8 sp=0x10c000050f80 pc=0x56248948a9a5
+runtime.gcenable.gowrap1()
+	runtime/mgc.go:212 +0x25 fp=0x10c000050fe0 sp=0x10c000050fc8 pc=0x56248947e925
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000050fe8 sp=0x10c000050fe0 pc=0x5624894db5e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:212 +0x66
+
+goroutine 17 gp=0x10c0000028c0 m=nil [runnable, locked to thread]:
+runtime.cgocall(0x5624897e7fc0, 0x10c000036b70)
+	runtime/cgocall.go:167 +0x4b fp=0x10c000036b48 sp=0x10c000036b10 pc=0x5624894d180b
+github.com/supranational/blst/bindings/go._Cfunc_blst_final_exp(0x10c00057a000, 0x10c00057a000)
+	_cgo_gotypes.go:334 +0x5f fp=0x10c000036b70 sp=0x10c000036b48 pc=0x5624896821df
+github.com/supranational/blst/bindings/go.(*Fp12).FinalExp(...)
+	github.com/supranational/blst@v0.3.16-0.20250831170142-f48500c1fdbe/bindings/go/blst.go:450
+github.com/morph-l2/go-ethereum/tests/fuzzers/bls12381.fuzzCrossPairing({0x7cf7b4035904, 0x274, 0x27f})
+	github.com/morph-l2/go-ethereum/tests/fuzzers/bls12381/bls12381_fuzz.go:89 +0x30b fp=0x10c0000373f0 sp=0x10c000036b70 pc=0x56248979734b
+main.LibFuzzerFuzzCrossPairing.FuzzCrossPairing.func1(0x0?, {0x7cf7b4035904?, 0x5624894d6433?, 0x0?})
+	github.com/morph-l2/go-ethereum/tests/fuzzers/bls12381/bls12381_test.go_fuzz.go:7 +0x3e fp=0x10c000037418 sp=0x10c0000373f0 pc=0x56248979947e
+runtime.call32(0x10c00019a7e0, 0x56248988ad30, 0x0, 0x0, 0x0, 0x20, 0x10c000037718)
+	runtime/asm_amd64.s:775 +0x45 fp=0x10c000037448 sp=0x10c000037418 pc=0x5624894d9bc5
+runtime.reflectcall(0x10c000037718?, 0x3?, 0x8?, 0x3f3ba0?, 0x10c0?, 0x12?, 0x5624898322c0?)
+	<autogenerated>:1 +0x36 fp=0x10c000037488 sp=0x10c000037448 pc=0x5624894de236
+reflect.Value.call({0x56248983a660?, 0x56248988ad30?, 0x30?}, {0x562488fe6e33, 0x4}, {0x10c00059b140, 0x2, 0x39?})
+	reflect/value.go:581 +0x1ed1 fp=0x10c000037a80 sp=0x10c000037488 pc=0x562489568db1
+reflect.Value.Call({0x56248983a660?, 0x56248988ad30?, 0x562488fe8dab?}, {0x10c00059b140, 0x2, 0x2})
+	reflect/value.go:365 +0x18e fp=0x10c000037b00 sp=0x10c000037a80 pc=0x562489566e0e
+github.com/AdamKorcz/go-118-fuzz-build/testing.(*F).Fuzz(0x10c000037dd8, {0x56248983a660?, 0x56248988ad30?})
+	github.com/AdamKorcz/go-118-fuzz-build@v0.0.0-20250520111509-a70c2aa677fa/testing/f.go:149 +0x237a fp=0x10c000037da0 sp=0x10c000037b00 pc=0x5624896ed1fa
+github.com/morph-l2/go-ethereum/tests/fuzzers/bls12381.FuzzCrossPairing(...)
+	github.com/morph-l2/go-ethereum/tests/fuzzers/bls12381/bls12381_test.go_fuzz.go:6
+main.LibFuzzerFuzzCrossPairing({0x7cf7b4035900, 0x283, 0x283})
+	./main.1500451896.go:31 +0xe7 fp=0x10c000037e18 sp=0x10c000037da0 pc=0x562489798ea7
+main.LLVMFuzzerTestOneInput(0x0?, 0x5624894d9601?)
+	./main.1500451896.go:24 +0x6c fp=0x10c000037e50 sp=0x10c000037e18 pc=0x562489798d4c
+_cgoexp_2016c2e1a761_LLVMFuzzerTestOneInput(0x7ffd240815e8)
+	_cgo_gotypes.go:55 +0x3f fp=0x10c000037e70 sp=0x10c000037e50 pc=0x5624897994ff
+runtime.cgocallbackg1(0x5624897994c0, 0x7ffd240815e8, 0x0)
+	runtime/cgocall.go:446 +0x289 fp=0x10c000037f28 sp=0x10c000037e70 pc=0x56248946c589
+runtime.cgocallbackg(0x5624897994c0, 0x7ffd240815e8, 0x0)
+	runtime/cgocall.go:350 +0x132 fp=0x10c000037f90 sp=0x10c000037f28 pc=0x56248946c212
+runtime.cgocallbackg(0x5624897994c0, 0x7ffd240815e8, 0x0)
+	<autogenerated>:1 +0x2b fp=0x10c000037fb8 sp=0x10c000037f90 pc=0x5624894dddeb
+runtime.cgocallback(0x0, 0x0, 0x0)
+	runtime/asm_amd64.s:1082 +0xcd fp=0x10c000037fe0 sp=0x10c000037fb8 pc=0x5624894db3ad
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000037fe8 sp=0x10c000037fe0 pc=0x5624894db5e1
+
+goroutine 2 gp=0x10c000002e00 m=nil [force gc (idle), 2 minutes]:
+runtime.gopark(0x562489aa8b40?, 0x56248a4639e0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c0000507a8 sp=0x10c000050788 pc=0x5624894d3f8e
+runtime.goparkunlock(...)
+	runtime/proc.go:466
+runtime.forcegchelper()
+	runtime/proc.go:373 +0xb8 fp=0x10c0000507e0 sp=0x10c0000507a8 pc=0x5624894a2b38
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c0000507e8 sp=0x10c0000507e0 pc=0x5624894db5e1
+created by runtime.init.8 in goroutine 1
+	runtime/proc.go:361 +0x1a
+
+goroutine 4 gp=0x10c000003500 m=nil [GC scavenge wait]:
+runtime.gopark(0x170ab3a?, 0x163c3f7?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c000051778 sp=0x10c000051758 pc=0x5624894d3f8e
+runtime.goparkunlock(...)
+	runtime/proc.go:466
+runtime.(*scavengerState).park(0x56248a462260)
+	runtime/mgcscavenge.go:425 +0x49 fp=0x10c0000517a8 sp=0x10c000051778 pc=0x562489488409
+runtime.bgscavenge(0x10c000024100)
+	runtime/mgcscavenge.go:658 +0x59 fp=0x10c0000517c8 sp=0x10c0000517a8 pc=0x5624894889b9
+runtime.gcenable.gowrap2()
+	runtime/mgc.go:213 +0x25 fp=0x10c0000517e0 sp=0x10c0000517c8 pc=0x56248947e8c5
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c0000517e8 sp=0x10c0000517e0 pc=0x5624894db5e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:213 +0xa5
+
+goroutine 5 gp=0x10c000003dc0 m=nil [finalizer wait, 2 minutes]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c000051e20 sp=0x10c000051e00 pc=0x5624894d3f8e
+runtime.runFinalizers()
+	runtime/mfinal.go:210 +0x107 fp=0x10c000051fe0 sp=0x10c000051e20 pc=0x56248947d827
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000051fe8 sp=0x10c000051fe0 pc=0x5624894db5e1
+created by runtime.createfing in goroutine 1
+	runtime/mfinal.go:172 +0x3d
+
+goroutine 19 gp=0x10c000182700 m=nil [cleanup wait, 2 minutes]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c00004c768 sp=0x10c00004c748 pc=0x5624894d3f8e
+runtime.goparkunlock(...)
+	runtime/proc.go:466
+runtime.(*cleanupQueue).dequeue(0x56248a462560)
+	runtime/mcleanup.go:439 +0xc5 fp=0x10c00004c7a0 sp=0x10c00004c768 pc=0x56248947aa05
+runtime.runCleanups()
+	runtime/mcleanup.go:635 +0x45 fp=0x10c00004c7e0 sp=0x10c00004c7a0 pc=0x56248947b0c5
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00004c7e8 sp=0x10c00004c7e0 pc=0x5624894db5e1
+created by runtime.(*cleanupQueue).createGs in goroutine 1
+	runtime/mcleanup.go:589 +0xa5
+
+goroutine 20 gp=0x10c0001828c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x9819522275c?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c00004df38 sp=0x10c00004df18 pc=0x5624894d3f8e
+runtime.gcBgMarkWorker(0x10c0002002a0)
+	runtime/mgc.go:1463 +0xeb fp=0x10c00004dfc8 sp=0x10c00004df38 pc=0x56248948104b
+runtime.gcBgMarkStartWorkers.gowrap1()
+	runtime/mgc.go:1373 +0x25 fp=0x10c00004dfe0 sp=0x10c00004dfc8 pc=0x562489480f25
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c00004dfe8 sp=0x10c00004dfe0 pc=0x5624894db5e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	runtime/mgc.go:1373 +0x105
+
+goroutine 21 gp=0x10c000182a80 m=nil [GC worker (idle)]:
+runtime.gopark(0x987578e533a?, 0x3?, 0x85?, 0x8c?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c000053738 sp=0x10c000053718 pc=0x5624894d3f8e
+runtime.gcBgMarkWorker(0x10c0002002a0)
+	runtime/mgc.go:1463 +0xeb fp=0x10c0000537c8 sp=0x10c000053738 pc=0x56248948104b
+runtime.gcBgMarkStartWorkers.gowrap1()
+	runtime/mgc.go:1373 +0x25 fp=0x10c0000537e0 sp=0x10c0000537c8 pc=0x562489480f25
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c0000537e8 sp=0x10c0000537e0 pc=0x5624894db5e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	runtime/mgc.go:1373 +0x105
+
+goroutine 22 gp=0x10c000182c40 m=nil [GC worker (idle)]:
+runtime.gopark(0x987579fc418?, 0x3?, 0xae?, 0xb8?, 0x0?)
+	runtime/proc.go:460 +0xce fp=0x10c000062f38 sp=0x10c000062f18 pc=0x5624894d3f8e
+runtime.gcBgMarkWorker(0x10c0002002a0)
+	runtime/mgc.go:1463 +0xeb fp=0x10c000062fc8 sp=0x10c000062f38 pc=0x56248948104b
+runtime.gcBgMarkStartWorkers.gowrap1()
+	runtime/mgc.go:1373 +0x25 fp=0x10c000062fe0 sp=0x10c000062fc8 pc=0x562489480f25
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000062fe8 sp=0x10c000062fe0 pc=0x5624894db5e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	runtime/mgc.go:1373 +0x105
+
+goroutine 23 gp=0x10c000182e00 m=nil [runnable]:
+runtime.gopark(0x10c00007d5c0?, 0x10c000057808?, 0x20?, 0xd6?, 0x10c000182e00?)
+	runtime/proc.go:460 +0xce fp=0x10c000064e30 sp=0x10c000064e10 pc=0x5624894d3f8e
+runtime.goparkunlock(...)
+	runtime/proc.go:466
+runtime.semacquire1(0x56248a462ddc, 0x0, 0x0, 0x0, 0x13)
+	runtime/sema.go:192 +0x229 fp=0x10c000064e98 sp=0x10c000064e30 pc=0x5624894b4c69
+runtime.semacquire(...)
+	runtime/sema.go:143
+runtime.gcMarkDone()
+	runtime/mgc.go:890 +0x32 fp=0x10c000064f38 sp=0x10c000064e98 pc=0x56248947f592
+runtime.gcBgMarkWorker(0x10c0002002a0)
+	runtime/mgc.go:1600 +0x345 fp=0x10c000064fc8 sp=0x10c000064f38 pc=0x5624894812a5
+runtime.gcBgMarkStartWorkers.gowrap1()
+	runtime/mgc.go:1373 +0x25 fp=0x10c000064fe0 sp=0x10c000064fc8 pc=0x562489480f25
+runtime.goexit({})
+	runtime/asm_amd64.s:1693 +0x1 fp=0x10c000064fe8 sp=0x10c000064fe0 pc=0x5624894db5e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	runtime/mgc.go:1373 +0x105
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==5130==ERROR: AddressSanitizer: ABRT on unknown address 0x00000000140a (pc 0x5624894dd1c1 bp 0x7b8764314d28 sp 0x7b8764314d10 T7)
+SCARINESS: 10 (signal)
+    #0 0x5624894dd1c1 in runtime.raise.abi0 runtime/sys_linux_amd64.s:154
+    #1 0x56248949f63d in runtime.crash runtime/signal_unix.go:1056
+    #2 0x56248949f63d in runtime.fatalthrow.func1 runtime/panic.go:1284
+    #3 0x5624894d9626 in runtime.systemstack.abi0 runtime/asm_amd64.s:513
+
+DEDUP_TOKEN: runtime.raise.abi0--runtime.crash--runtime.fatalthrow.func1
+==5130==Register values:
+rax = 0x0000000000000000  rbx = 0x0000000000000000  rcx = 0x00005624894dd1c1  rdx = 0x0000000000000006  
+rdi = 0x000000000000140a  rsi = 0x000000000000142c  rbp = 0x00007b8764314d28  rsp = 0x00007b8764314d10  
+ r8 = 0x00007b8764314870   r9 = 0x0000000000000000  r10 = 0x0000000000000008  r11 = 0x0000000000000246  
+r12 = 0x000000000000140a  r13 = 0x0000562489480ea4  r14 = 0x000010c0002821c0  r15 = 0x0000000000000000  
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: ABRT runtime/sys_linux_amd64.s:154 in runtime.raise.abi0
+Thread T7 created by T4 here:
+    #0 0x562489365a81 in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:250:3
+    #1 0x5624897e75b0 in _cgo_try_pthread_create /_/GOROOT/src/runtime/cgo/gcc_libinit.c:161:9
+    #2 0x5624894a7484 in runtime.newm1 runtime/proc.go:2913
+    #3 0x5624894a7384 in runtime.newm runtime/proc.go:2893
+    #4 0x5624894a7978 in runtime.startm runtime/proc.go:3087
+    #5 0x5624894d412b in runtime.wakep runtime/proc.go:3234
+    #6 0x5624894aa0fd in runtime.resetspinning runtime/proc.go:4008
+    #7 0x5624894aa609 in runtime.schedule runtime/proc.go:4161
+    #8 0x5624894aaa24 in runtime.park_m runtime/proc.go:4266
+    #9 0x5624894d95b6 in runtime.mcall runtime/asm_amd64.s:458
+
+DEDUP_TOKEN: ___interceptor_pthread_create--_cgo_try_pthread_create--runtime.newm1
+Thread T4 created by T1 here:
+    #0 0x562489365a81 in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:250:3
+    #1 0x5624897e75b0 in _cgo_try_pthread_create /_/GOROOT/src/runtime/cgo/gcc_libinit.c:161:9
+    #2 0x5624894a7484 in runtime.newm1 runtime/proc.go:2913
+    #3 0x5624894a7384 in runtime.newm runtime/proc.go:2893
+    #4 0x5624894a7978 in runtime.startm runtime/proc.go:3087
+    #5 0x5624894a7e44 in runtime.handoffp runtime/proc.go:3128
+    #6 0x5624894a7eb1 in runtime.stoplockedm runtime/proc.go:3250
+    #7 0x5624894aa539 in runtime.schedule runtime/proc.go:4117
+    #8 0x5624894aaa24 in runtime.park_m runtime/proc.go:4266
+    #9 0x5624894d95b6 in runtime.mcall runtime/asm_amd64.s:458
+
+DEDUP_TOKEN: ___interceptor_pthread_create--_cgo_try_pthread_create--runtime.newm1
+Thread T1 created by T0 here:
+    #0 0x562489365a81 in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:250:3
+    #1 0x5624897e7512 in _cgo_try_pthread_create /_/GOROOT/src/runtime/cgo/gcc_libinit.c:161:9
+    #2 0x5624897e7512 in x_cgo_sys_thread_create /_/GOROOT/src/runtime/cgo/gcc_libinit.c:46:8
+    #3 0x56248980fa5c in __libc_csu_init (build-out/fuzz_bls12381_cross_pairing+0x9a4a5c)
+
+DEDUP_TOKEN: ___interceptor_pthread_create--_cgo_try_pthread_create--x_cgo_sys_thread_create
+==5130==ABORTING
+MS: 2 ChangeASCIIInt-CopyPart-; base unit: 8e7fbabad8a800fcd3cb061d2aa7e9871eb24900
+artifact_prefix='/tmp/tmppvqxu50y/'; Test unit written to /tmp/tmppvqxu50y/crash-38aee02949d2a5fa2207bd2429ff58687b18aea1
+stat::number_of_executed_units: 118654
+stat::average_exec_per_sec:     702
+stat::new_units_added:          1
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              77
+================== Job 2 exited with exit code 0 ============
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1372502041
+INFO: Loaded 1 modules   (25703 inline 8-bit counters): 25703 [0x562027807580, 0x56202780d9e7), 
+INFO: Loaded 1 PC tables (25703 PCs): 25703 [0x10c000080000,0x10c0000e4670), 
+INFO:      134 files found in /github/workspace/cifuzz-corpus/fuzz_bls12381_cross_pairing
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 134 min: 1b max: 2984b total: 31333b rss: 54Mb
+#135	INITED cov: 637 ft: 1467 corp: 133/30Kb exec/s: 135 rss: 58Mb
+#763	NEW    cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 763 rss: 62Mb L: 302/2984 MS: 3 ChangeBit-ChangeBit-ChangeByte-
+#1024	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 512 rss: 64Mb
+#2048	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 682 rss: 65Mb
+#4096	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 682 rss: 66Mb
+#8192	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 682 rss: 68Mb
+#16384	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 682 rss: 72Mb
+#32768	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 697 rss: 77Mb
+#65536	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 697 rss: 77Mb
+#131072	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 708 rss: 77Mb
+#262144	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 768 rss: 78Mb
+#360578	DONE   cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 775 rss: 78Mb
+Done 360578 runs in 465 second(s)
+stat::number_of_executed_units: 360578
+stat::average_exec_per_sec:     775
+stat::new_units_added:          1
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              78
+================== Job 1 exited with exit code 0 ============
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1372511671
+INFO: Loaded 1 modules   (25703 inline 8-bit counters): 25703 [0x556995e3f580, 0x556995e459e7), 
+INFO: Loaded 1 PC tables (25703 PCs): 25703 [0x10c000080000,0x10c0000e4670), 
+INFO:      134 files found in /github/workspace/cifuzz-corpus/fuzz_bls12381_cross_pairing
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 134 min: 1b max: 2984b total: 31333b rss: 54Mb
+#135	INITED cov: 637 ft: 1467 corp: 134/30Kb exec/s: 135 rss: 58Mb
+#711	NEW    cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 711 rss: 61Mb L: 102/2984 MS: 1 ShuffleBytes-
+#1024	pulse  cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 512 rss: 64Mb
+#2048	pulse  cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 682 rss: 65Mb
+#4096	pulse  cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 682 rss: 66Mb
+#8192	pulse  cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 630 rss: 68Mb
+#16384	pulse  cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 682 rss: 71Mb
+#32768	pulse  cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 697 rss: 76Mb
+#65536	pulse  cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 697 rss: 78Mb
+#131072	pulse  cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 708 rss: 78Mb
+#262144	pulse  cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 757 rss: 78Mb
+#360106	DONE   cov: 637 ft: 1468 corp: 135/30Kb lim: 4096 exec/s: 774 rss: 78Mb
+Done 360106 runs in 465 second(s)
+stat::number_of_executed_units: 360106
+stat::average_exec_per_sec:     774
+stat::new_units_added:          1
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              78
+================== Job 3 exited with exit code 0 ============
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1372514971
+INFO: Loaded 1 modules   (25703 inline 8-bit counters): 25703 [0x5651f2f92580, 0x5651f2f989e7), 
+INFO: Loaded 1 PC tables (25703 PCs): 25703 [0x10c000080000,0x10c0000e4670), 
+INFO:      134 files found in /github/workspace/cifuzz-corpus/fuzz_bls12381_cross_pairing
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 134 min: 1b max: 2984b total: 31333b rss: 52Mb
+#135	INITED cov: 637 ft: 1467 corp: 133/30Kb exec/s: 135 rss: 56Mb
+#799	NEW    cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 799 rss: 60Mb L: 104/2984 MS: 4 ChangeASCIIInt-CopyPart-ChangeBinInt-ChangeBinInt-
+#1024	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 512 rss: 62Mb
+#2048	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 682 rss: 63Mb
+#4096	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 682 rss: 64Mb
+#8192	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 682 rss: 66Mb
+#16384	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 712 rss: 69Mb
+#32768	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 697 rss: 74Mb
+#65536	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 697 rss: 75Mb
+#131072	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 708 rss: 75Mb
+#262144	pulse  cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 762 rss: 76Mb
+#362098	DONE   cov: 637 ft: 1468 corp: 134/30Kb lim: 4096 exec/s: 778 rss: 76Mb
+Done 362098 runs in 465 second(s)
+stat::number_of_executed_units: 362098
+stat::average_exec_per_sec:     778
+stat::new_units_added:          1
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              76
